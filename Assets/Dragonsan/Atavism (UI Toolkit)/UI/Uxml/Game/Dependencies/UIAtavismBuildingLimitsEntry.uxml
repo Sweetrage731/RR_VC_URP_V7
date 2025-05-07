@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <ui:VisualElement class="building-limits-entry">
+        <ui:Label tabindex="-1" text="100/100" parse-escape-sequences="true" display-tooltip-when-elided="true" name="limit-value" class="Text-Light building-limits-entry-value" />
+        <ui:Label tabindex="-1" text="Trade House" parse-escape-sequences="true" display-tooltip-when-elided="true" name="limit-name" class="Text-Gray building-limits-entry-name" />
+    </ui:VisualElement>
+</ui:UXML>

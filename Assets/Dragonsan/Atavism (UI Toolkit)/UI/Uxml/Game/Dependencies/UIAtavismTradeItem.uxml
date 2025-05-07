@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:VisualElement name="my-item-1" class="trade-item-container">
+        <ui:VisualElement name="slot" class="trade-item-slot" />
+        <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="name" class="Text-Gray trade-item-name" />
+    </ui:VisualElement>
+</ui:UXML>

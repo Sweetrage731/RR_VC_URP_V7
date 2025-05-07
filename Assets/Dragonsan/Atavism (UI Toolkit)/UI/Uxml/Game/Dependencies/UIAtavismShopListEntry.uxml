@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:VisualElement name="shop-panel" class="shop-list-entry">
+        <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="name" class="Text-Gray shop-list-entry-name" />
+        <ui:Button text="Close" parse-escape-sequences="true" display-tooltip-when-elided="true" name="close-button" class="Button-XS Button-Light-Overlay shop-list-entry-button" />
+    </ui:VisualElement>
+</ui:UXML>

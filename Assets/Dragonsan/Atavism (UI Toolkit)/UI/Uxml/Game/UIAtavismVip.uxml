@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="Screen" picking-mode="Ignore" style="-unity-font: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/Fonts/Cambria.ttf?fileID=12800000&amp;guid=36ef3a2444bc15847bd874b9b0c98ae6&amp;type=3#Cambria&quot;); -unity-font-definition: url(&quot;project://database/Assets/Atavism%20(UI%20Toolkit)/UI/Fonts/Cambria%20SDF.asset?fileID=11400000&amp;guid=171debed56e16fd4daf65623c92ecac2&amp;type=2#Cambria SDF&quot;); font-size: 12px; flex-grow: 1;">
+        <ui:VisualElement name="vip-panel" style="height: 100px; width: 100px; left: 500px; top: 13px;">
+            <ui:VisualElement name="background" picking-mode="Ignore" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/Icons/Custom/VIP.png?fileID=2800000&amp;guid=25036f5029262f040bb61ccc7fd0ef0e&amp;type=3#VIP&quot;); align-items: center; align-self: auto; justify-content: center;">
+                <ui:Label tabindex="-1" text="99" parse-escape-sequences="true" display-tooltip-when-elided="true" name="level" picking-mode="Ignore" class="Text-Dark" style="font-size: 50px;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,12 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="Screen" style="left: 25%; top: 25%; width: 50%; height: 50%; opacity: 0.9;">
+        <ui:IMGUIContainer name="image-container-root" style="width: auto; height: 100%; background-color: rgb(22, 22, 22); left: auto; top: auto; right: auto; bottom: auto; background-image: none; border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0);">
+            <ui:Label text="Servers" display-tooltip-when-elided="true" name="server-list-label" style="align-items: stretch; justify-content: flex-start; -unity-text-align: upper-center; font-size: 25px; color: rgb(245, 245, 245);" />
+            <ui:ScrollView  mouse-wheel-scroll-size="18" name="server-list" style="height: 80%;" />
+            <ui:GroupBox style="align-items: stretch; justify-content: flex-start; flex-direction: row;">
+                <ui:Button text="Connect" display-tooltip-when-elided="true" name="connect-button" style="width: 20%; position: relative; left: auto; top: auto; flex-direction: column; align-items: auto; height: 30px; font-size: 20px; background-image: none; border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-top-left-radius: 3px; border-bottom-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; padding-left: 6px; padding-right: 6px; padding-top: 1px; padding-bottom: 1px; margin-left: 3px; margin-right: 3px; margin-top: 1px; margin-bottom: 1px;" />
+                <ui:Button text="Cancel" display-tooltip-when-elided="true" name="cancel-button" style="width: 20%; white-space: nowrap; -unity-text-align: middle-center; left: auto; align-items: auto; top: auto; flex-basis: auto; flex-direction: column; flex-wrap: wrap-reverse; height: 30px; font-size: 20px;" />
+            </ui:GroupBox>
+        </ui:IMGUIContainer>
+    </ui:VisualElement>
+</ui:UXML>

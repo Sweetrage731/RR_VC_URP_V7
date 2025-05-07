@@ -1,0 +1,6458 @@
+:root {
+    --color-atavismDefault: rgb(42, 40, 39);
+    --color-atavismDefaultButtonBorderHover: rgb(30, 30, 30);
+    --color-atavismDefaultButtonBorder: rgb(48, 48, 48);
+    --color-atavismDefaultButtonBackground: rgb(26, 24, 24);
+    --color-atavismDefaultButtonBackgroundHover: rgb(26, 24, 24);
+    --color-atavismDefaultButtonBackgroundDisabled: rgb(0, 0, 0);
+    --color-atavismDefaultButtonBorderDisabled: rgb(48, 48, 48);
+    --color-atavismCloseButtonTint: rgb(158, 154, 147);
+    --color-atavismCloseButtonTintHover: rgb(223, 205, 177);
+    --color-atavismCloseButtonBackground: rgba(0, 0, 0, 0);
+    --color-atavismCloseButtonBorder: rgba(0, 0, 0, 0);
+    --color-atavismCloseButtonBackgroundHover: rgba(0, 0, 0, 0);
+    --color-atavismCloseButtonBorderHover: rgba(0, 0, 0, 0);
+    --color-atavismTextDefault: rgb(158, 154, 147);
+    --color-atavismTextTitle: rgb(237, 231, 221);
+    --color-atavismTextHighlighted: rgb(246, 241, 233);
+    --color-atavismTextHint: rgb(139, 139, 139);
+    --color-atavismTextLight: rgb(223, 205, 177);
+    --color-atavismTextDark: rgb(122, 115, 105);
+    --color-atavism-TextField-Caret: rgb(139, 139, 139);
+    --color-atavism-TextField-Selection: rgba(139, 139, 139, 0.5);
+    --color-atavism-TextField-InputBackground: rgb(42, 40, 39);
+    --color-atavism-TextField-InputBorder: rgba(139, 139, 139, 0.5);
+    --color-atavism-TextField-InputBackgroundHover: rgb(42, 40, 39);
+    --color-atavism-TextField-InputBorderHover: rgba(139, 139, 139, 0.5);
+    --color-atavismSelection: rgb(223, 205, 177);
+    --color-atavismListSelection: rgba(70, 70, 70, 0.5);
+    --color-atavismCheckmarkBackground: rgba(0, 0, 0, 0);
+    --color-atavismCheckmarkTint: rgb(158, 154, 147);
+    --color-atavismCheckmarkCheckedBackground: rgb(158, 154, 147);
+    --color-atavismCheckmarkCheckedBackgroundHover: rgb(158, 154, 147);
+    --color-atavismCheckmarkCheckedTint: rgb(74, 123, 74);
+    --color-atavismCheckmarkCheckedTintHover: rgb(74, 123, 74);
+    --color-atavismWindowHeaderBackgroundTint: rgb(200, 169, 141);
+    --color-atavismWindowHeaderFrameTint: rgb(200, 169, 141);
+    --color-atavism-builderCircleIconSelectedTint: rgb(255, 255, 255);
+    --color-atavism-builderCircleName: rgb(255, 255, 255);
+    --color-atavism-builderCircleDescription: rgb(255, 255, 255);
+    --color-atavism-builderCircleInner: rgba(0, 0, 0, 0.2);
+    --color-atavism-builderCircleBacground: rgba(0, 0, 0, 0.2);
+    --color-atavism-builderCircleCone: rgba(0, 0, 0, 0.24);
+    --color-atavism-builderCircleSelectionBacground: rgba(0, 0, 0, 0.1);
+    --unity-metrics-single_line-height: 430px;
+}
+
+.unity-ui-document__root {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.Text-Default {
+    color: var(--color-atavismTextDefault);
+    -unity-font: url("project://database/Assets/Dragonsan/AtavismObjects/Fonts/Cambria.ttf?fileID=12800000&guid=36ef3a2444bc15847bd874b9b0c98ae6&type=3#Cambria");
+}
+
+.Text-Title {
+    color: var(--color-atavismTextTitle);
+    -unity-text-align: middle-center;
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 22px;
+    -unity-font: url("project://database/Assets/Dragonsan/AtavismObjects/Fonts/Cambria.ttf?fileID=12800000&guid=36ef3a2444bc15847bd874b9b0c98ae6&type=3#Cambria");
+}
+
+.Text-Light {
+    color: var(--color-atavismTextLight);
+    -unity-text-align: middle-center;
+    font-size: 12px;
+}
+
+.Text-Gray {
+    color: var(--color-atavismTextDefault);
+    -unity-font: url("project://database/Assets/Dragonsan/AtavismObjects/Fonts/Cambria.ttf?fileID=12800000&guid=36ef3a2444bc15847bd874b9b0c98ae6&type=3#Cambria");
+    font-size: 12px;
+}
+
+.Text-Dark {
+    color: var(--color-atavismTextDark);
+    -unity-font: url("project://database/Assets/Dragonsan/AtavismObjects/Fonts/Cambria.ttf?fileID=12800000&guid=36ef3a2444bc15847bd874b9b0c98ae6&type=3#Cambria");
+}
+
+UITextField {
+    color: var(--color-atavismTextTitle);
+    --unity-selection-color: var(--color-atavism-TextField-Selection);
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 14px;
+    height: 22px;
+    -unity-font: url("project://database/Assets/Dragonsan/AtavismObjects/Fonts/Cambria.ttf?fileID=12800000&guid=36ef3a2444bc15847bd874b9b0c98ae6&type=3#Cambria");
+}
+
+UITextField unitytextinput {
+    color: var(--color-atavismTextTitle);
+    --unity-selection-color: var(--color-atavism-TextField-Selection);
+    background-color: var(--color-atavism-TextField-InputBackground);
+    border-color: var(--color-atavism-TextField-InputBorder);
+}
+
+UITextField unitytextinput:hover:enabled {
+    color: var(--color-atavismTextTitle);
+    --unity-selection-color: var(--color-atavism-TextField-Selection);
+    background-color: var(--color-atavism-TextField-InputBackgroundHover);
+    border-color: var(--color-atavism-TextField-InputBorderHover);
+}
+
+.UITextField-100 {
+    width: 100px;
+}
+
+.UITextField-150 {
+    width: 150px;
+}
+
+UITextField .unity-text-field__input {
+    --unity-selection-color: var(--color-atavism-TextField-Selection);
+    background-color: var(--color-atavism-TextField-InputBackground);
+    border-color: var(--color-atavism-TextField-InputBorder);
+}
+
+UITextField .unity-text-field__input:hover:enabled {
+    --unity-selection-color: var(--color-atavism-TextField-Selection);
+    background-color: var(--color-atavism-TextField-InputBackgroundHover);
+    border-color: var(--color-atavism-TextField-InputBorderHover);
+}
+
+UITextField .unity-text-element {
+    --unity-selection-color: var(--color-atavism-TextField-Selection);
+    background-color: var(--color-atavism-TextField-InputBackground);
+    border-color: var(--color-atavism-TextField-InputBorder);
+}
+
+UITextField .unity-text-element:hover:enabled {
+    --unity-selection-color: var(--color-atavism-TextField-Selection);
+    background-color: var(--color-atavism-TextField-InputBackgroundHover);
+    border-color: var(--color-atavism-TextField-InputBorderHover);
+}
+
+Button {
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    -unity-text-align: middle-center;
+    border-left-color: var(--color-atavismDefaultButtonBorder);
+    border-right-color: var(--color-atavismDefaultButtonBorder);
+    border-top-color: var(--color-atavismDefaultButtonBorder);
+    border-bottom-color: var(--color-atavismDefaultButtonBorder);
+    -unity-font-style: bold;
+    background-color: var(--color-atavismDefaultButtonBackground);
+    flex-shrink: 0;
+}
+
+Button:hover:enabled {
+    transition-duration: 0.1s;
+    transition-timing-function: linear;
+    transition-property: background-color;
+    border-left-color: var(--color-atavismDefaultButtonBorderHover);
+    border-right-color: var(--color-atavismDefaultButtonBorderHover);
+    border-top-color: var(--color-atavismDefaultButtonBorderHover);
+    border-bottom-color: var(--color-atavismDefaultButtonBorderHover);
+    background-color: var(--color-atavismDefaultButtonBackgroundHover);
+}
+
+Button:focus:enabled {
+    transition-duration: 0.1s;
+    transition-timing-function: linear;
+    transition-property: background-color;
+    border-left-color: var(--color-atavismDefaultButtonBorderHover);
+    border-right-color: var(--color-atavismDefaultButtonBorderHover);
+    border-top-color: var(--color-atavismDefaultButtonBorderHover);
+    border-bottom-color: var(--color-atavismDefaultButtonBorderHover);
+    background-color: var(--color-atavismDefaultButtonBackgroundHover);
+}
+
+Button:disabled {
+    border-left-color: var(--color-atavismDefaultButtonBorderDisabled);
+    border-right-color: var(--color-atavismDefaultButtonBorderDisabled);
+    border-top-color: var(--color-atavismDefaultButtonBorderDisabled);
+    border-bottom-color: var(--color-atavismDefaultButtonBorderDisabled);
+    -unity-font-style: bold;
+    background-color: var(--color-atavismDefaultButtonBackgroundDisabled);
+    flex-shrink: 0;
+}
+
+.Button-100 {
+    width: 100px;
+}
+
+.Button-XVS {
+    width: 30px;
+    height: 22px;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 11px;
+    -unity-text-align: middle-center;
+    border-left-color: var(--color-atavismDefaultButtonBorder);
+    border-right-color: var(--color-atavismDefaultButtonBorder);
+    border-top-color: var(--color-atavismDefaultButtonBorder);
+    border-bottom-color: var(--color-atavismDefaultButtonBorder);
+    -unity-font-style: bold;
+    background-color: var(--color-atavismDefaultButtonBackground);
+    flex-shrink: 0;
+}
+
+.Button-XVS:hover {
+    transition-duration: 0.1s;
+    transition-timing-function: linear;
+    transition-property: background-color;
+    border-left-color: var(--color-atavismDefaultButtonBorder);
+    border-right-color: var(--color-atavismDefaultButtonBorder);
+    border-top-color: var(--color-atavismDefaultButtonBorder);
+    border-bottom-color: var(--color-atavismDefaultButtonBorder);
+    background-color: var(--color-atavismDefaultButtonBackgroundHover);
+}
+
+.Button-XVS:hover:enabled {
+    transition-duration: 0.1s;
+    transition-timing-function: linear;
+    transition-property: background-color;
+    border-left-color: var(--color-atavismDefaultButtonBorderHover);
+    border-right-color: var(--color-atavismDefaultButtonBorderHover);
+    border-top-color: var(--color-atavismDefaultButtonBorderHover);
+    border-bottom-color: var(--color-atavismDefaultButtonBorderHover);
+    background-color: var(--color-atavismDefaultButtonBackgroundHover);
+}
+
+.Button-XVS:focus:enabled {
+    transition-duration: 0.1s;
+    transition-timing-function: linear;
+    transition-property: background-color;
+    border-left-color: var(--color-atavismDefaultButtonBorderHover);
+    border-right-color: var(--color-atavismDefaultButtonBorderHover);
+    border-top-color: var(--color-atavismDefaultButtonBorderHover);
+    border-bottom-color: var(--color-atavismDefaultButtonBorderHover);
+    background-color: var(--color-atavismDefaultButtonBackgroundHover);
+}
+
+.Button-XVS:disabled {
+    border-left-color: var(--color-atavismDefaultButtonBorder);
+    border-right-color: var(--color-atavismDefaultButtonBorder);
+    border-top-color: var(--color-atavismDefaultButtonBorder);
+    border-bottom-color: var(--color-atavismDefaultButtonBorder);
+    -unity-font-style: bold;
+    background-color: rgba(0, 0, 0, 0);
+    flex-shrink: 0;
+}
+
+.Button-XS {
+    width: 60px;
+    height: 20px;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 11px;
+    -unity-text-align: middle-center;
+    border-left-color: var(--color-atavismDefaultButtonBorder);
+    border-right-color: var(--color-atavismDefaultButtonBorder);
+    border-top-color: var(--color-atavismDefaultButtonBorder);
+    border-bottom-color: var(--color-atavismDefaultButtonBorder);
+    -unity-font-style: bold;
+    background-color: var(--color-atavismDefaultButtonBackground);
+    flex-shrink: 0;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+}
+
+.Button-XS:hover {
+    transition-duration: 0.1s;
+    transition-timing-function: linear;
+    transition-property: background-color;
+    border-left-color: var(--color-atavismDefaultButtonBorderHover);
+    border-right-color: var(--color-atavismDefaultButtonBorderHover);
+    border-top-color: var(--color-atavismDefaultButtonBorderHover);
+    border-bottom-color: var(--color-atavismDefaultButtonBorder);
+    background-color: var(--color-atavismDefaultButtonBackgroundHover);
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+}
+
+.Button-XS:hover:enabled {
+    transition-duration: 0.1s;
+    transition-timing-function: linear;
+    transition-property: background-color;
+    border-left-color: var(--color-atavismDefaultButtonBorderHover);
+    border-right-color: var(--color-atavismDefaultButtonBorderHover);
+    border-top-color: var(--color-atavismDefaultButtonBorderHover);
+    border-bottom-color: var(--color-atavismDefaultButtonBorderHover);
+    background-color: var(--color-atavismDefaultButtonBackgroundHover);
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+}
+
+.Button-XS:focus:enabled {
+    transition-duration: 0.1s;
+    transition-timing-function: linear;
+    transition-property: background-color;
+    border-left-color: var(--color-atavismDefaultButtonBorderHover);
+    border-right-color: var(--color-atavismDefaultButtonBorderHover);
+    border-top-color: var(--color-atavismDefaultButtonBorderHover);
+    border-bottom-color: var(--color-atavismDefaultButtonBorderHover);
+    background-color: var(--color-atavismDefaultButtonBackgroundHover);
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+}
+
+.Button-XS:disabled {
+    border-left-color: var(--color-atavismDefaultButtonBorder);
+    border-right-color: var(--color-atavismDefaultButtonBorder);
+    border-top-color: var(--color-atavismDefaultButtonBorder);
+    border-bottom-color: var(--color-atavismDefaultButtonBorder);
+    -unity-font-style: bold;
+    background-color: rgba(0, 0, 0, 0);
+    flex-shrink: 0;
+}
+
+.Button-XM {
+    width: 120px;
+    height: 40px;
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 16px;
+    -unity-text-align: middle-center;
+    border-left-color: var(--color-atavismDefaultButtonBorder);
+    border-right-color: var(--color-atavismDefaultButtonBorder);
+    border-top-color: var(--color-atavismDefaultButtonBorder);
+    border-bottom-color: var(--color-atavismDefaultButtonBorder);
+    -unity-font-style: bold;
+    background-color: var(--color-atavismDefaultButtonBackground);
+    flex-shrink: 0;
+}
+
+.Button-XM:hover {
+    transition-duration: 0.1s;
+    transition-timing-function: linear;
+    transition-property: background-color;
+    border-left-color: var(--color-atavismDefaultButtonBorderHover);
+    border-right-color: var(--color-atavismDefaultButtonBorderHover);
+    border-top-color: var(--color-atavismDefaultButtonBorderHover);
+    border-bottom-color: var(--color-atavismDefaultButtonBorderHover);
+    background-color: var(--color-atavismDefaultButtonBackgroundHover);
+}
+
+.Button-XM:hover:enabled {
+    transition-duration: 0.1s;
+    transition-timing-function: linear;
+    transition-property: background-color;
+    border-left-color: var(--color-atavismDefaultButtonBorderHover);
+    border-right-color: var(--color-atavismDefaultButtonBorderHover);
+    border-top-color: var(--color-atavismDefaultButtonBorderHover);
+    border-bottom-color: var(--color-atavismDefaultButtonBorderHover);
+    background-color: var(--color-atavismDefaultButtonBackgroundHover);
+}
+
+.Button-XM:focus:enabled {
+    transition-duration: 0.1s;
+    transition-timing-function: linear;
+    transition-property: background-color;
+    border-left-color: var(--color-atavismDefaultButtonBorderHover);
+    border-right-color: var(--color-atavismDefaultButtonBorderHover);
+    border-top-color: var(--color-atavismDefaultButtonBorderHover);
+    border-bottom-color: var(--color-atavismDefaultButtonBorderHover);
+    background-color: var(--color-atavismDefaultButtonBackgroundHover);
+}
+
+.Button-XM:disabled {
+    border-left-color: var(--color-atavismDefaultButtonBorder);
+    border-right-color: var(--color-atavismDefaultButtonBorder);
+    border-top-color: var(--color-atavismDefaultButtonBorder);
+    border-bottom-color: var(--color-atavismDefaultButtonBorder);
+    -unity-font-style: bold;
+    background-color: rgba(0, 0, 0, 0);
+    flex-shrink: 0;
+}
+
+.Button-XL {
+    width: 128px;
+    height: 60px;
+    margin-left: 6px;
+    margin-right: 6px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 18px;
+    -unity-text-align: middle-center;
+    border-left-color: var(--color-atavismDefaultButtonBorder);
+    border-right-color: var(--color-atavismDefaultButtonBorder);
+    border-top-color: var(--color-atavismDefaultButtonBorder);
+    border-bottom-color: var(--color-atavismDefaultButtonBorder);
+    -unity-font-style: bold;
+    background-color: var(--color-atavismDefault);
+    flex-shrink: 0;
+}
+
+.Button-XL:disabled {
+    border-left-color: var(--color-atavismDefaultButtonBorder);
+    border-right-color: var(--color-atavismDefaultButtonBorder);
+    border-top-color: var(--color-atavismDefaultButtonBorder);
+    border-bottom-color: var(--color-atavismDefaultButtonBorder);
+    -unity-font-style: bold;
+    background-color: rgba(0, 0, 0, 0);
+    flex-shrink: 0;
+}
+
+.Button-XL:hover {
+    transition-duration: 0.1s;
+    transition-timing-function: linear;
+    transition-property: background-color;
+    border-left-color: var(--color-atavismDefaultButtonBorderHover);
+    border-right-color: var(--color-atavismDefaultButtonBorderHover);
+    border-top-color: var(--color-atavismDefaultButtonBorderHover);
+    border-bottom-color: var(--color-atavismDefaultButtonBorderHover);
+    background-color: var(--color-atavismDefaultButtonBackgroundHover);
+}
+
+.Button-XL:hover:enabled {
+    transition-duration: 0.1s;
+    transition-timing-function: linear;
+    transition-property: background-color;
+    border-left-color: var(--color-atavismDefaultButtonBorderHover);
+    border-right-color: var(--color-atavismDefaultButtonBorderHover);
+    border-top-color: var(--color-atavismDefaultButtonBorderHover);
+    border-bottom-color: var(--color-atavismDefaultButtonBorderHover);
+    background-color: var(--color-atavismDefaultButtonBackgroundHover);
+}
+
+.Button-XL:focus:enabled {
+    transition-duration: 0.1s;
+    transition-timing-function: linear;
+    transition-property: background-color;
+    border-left-color: var(--color-atavismDefaultButtonBorderHover);
+    border-right-color: var(--color-atavismDefaultButtonBorderHover);
+    border-top-color: var(--color-atavismDefaultButtonBorderHover);
+    border-bottom-color: var(--color-atavismDefaultButtonBorderHover);
+    background-color: var(--color-atavismDefaultButtonBackgroundHover);
+}
+
+.Button-XL-2 {
+    width: 200px;
+    height: 60px;
+    margin-left: 6px;
+    margin-right: 6px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 18px;
+    -unity-text-align: middle-center;
+    border-left-color: var(--color-atavismDefaultButtonBorder);
+    border-right-color: var(--color-atavismDefaultButtonBorder);
+    border-top-color: var(--color-atavismDefaultButtonBorder);
+    border-bottom-color: var(--color-atavismDefaultButtonBorder);
+    -unity-font-style: bold;
+    background-color: var(--color-atavismDefaultButtonBackground);
+    flex-shrink: 0;
+}
+
+.Button-XL-2:hover:enabled {
+    transition-duration: 0.1s;
+    transition-timing-function: linear;
+    transition-property: background-color;
+    border-left-color: var(--color-atavismDefaultButtonBorderHover);
+    border-right-color: var(--color-atavismDefaultButtonBorderHover);
+    border-top-color: var(--color-atavismDefaultButtonBorderHover);
+    border-bottom-color: var(--color-atavismDefaultButtonBorderHover);
+    background-color: var(--color-atavismDefaultButtonBackgroundHover);
+}
+
+.Button-XL-2:hover {
+    transition-duration: 0.1s;
+    transition-timing-function: linear;
+    transition-property: background-color;
+    border-left-color: var(--color-atavismDefaultButtonBorderHover);
+    border-right-color: var(--color-atavismDefaultButtonBorderHover);
+    border-top-color: var(--color-atavismDefaultButtonBorderHover);
+    border-bottom-color: var(--color-atavismDefaultButtonBorderHover);
+    background-color: var(--color-atavismDefaultButtonBackgroundHover);
+}
+
+.Button-XL-2:focus:enabled {
+    transition-duration: 0.1s;
+    transition-timing-function: linear;
+    transition-property: background-color;
+    border-left-color: var(--color-atavismDefaultButtonBorder);
+    border-right-color: var(--color-atavismDefaultButtonBorder);
+    border-top-color: var(--color-atavismDefaultButtonBorder);
+    border-bottom-color: var(--color-atavismDefaultButtonBorder);
+    background-color: var(--color-atavismDefaultButtonBackgroundHover);
+}
+
+.Button-XL-2:disabled {
+    border-left-color: var(--color-atavismDefaultButtonBorder);
+    border-right-color: var(--color-atavismDefaultButtonBorder);
+    border-top-color: var(--color-atavismDefaultButtonBorder);
+    border-bottom-color: var(--color-atavismDefaultButtonBorder);
+    -unity-font-style: bold;
+    background-color: rgba(0, 0, 0, 0);
+    flex-shrink: 0;
+}
+
+.Button-Light-Overlay {
+    color: var(--color-atavismTextLight);
+}
+
+.Button-Light-Overlay:hover:enabled {
+}
+
+.Button-Gray-Overlay {
+    color: var(--color-atavismTextHint);
+}
+
+.Button-Gray-Overlay:hover:enabled {
+}
+
+.Button-Dark-Overlay {
+    color: var(--color-atavismTextDark);
+    background-color: var(--color-atavismDefault);
+}
+
+.Button-Dark-Overlay:hover:enabled {
+    background-color: var(--color-atavismDefaultButtonBackgroundHover);
+    transition-duration: 0.1s;
+    transition-timing-function: linear;
+    transition-property: background-color;
+}
+
+.Button-Highlighted-Overlay {
+    color: var(--color-atavismTextHighlighted);
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/Login/login_button.png?fileID=2800000&guid=98bc409adf8f18648a452da505a28e3c&type=3#login_button");
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    -unity-font-style: bold;
+}
+
+.Button-Highlighted-Overlay:hover:enabled {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/Login/login_button_hover.png?fileID=2800000&guid=1283759aa638816498bc9579504fcd4c&type=3#login_button_hover");
+}
+
+.inner-panel {
+    flex-grow: 1;
+    margin-top: 63px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+
+.Toggle-Default {
+    flex-direction: row-reverse;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    flex-wrap: nowrap;
+    font-size: 14px;
+    -unity-text-align: middle-left;
+}
+
+.Toggle-Default:focus:enabled .unity-toggle__label {
+    color: var(--color-atavismTextHint);
+}
+
+.Toggle-Default:focus:enabled {
+    color: var(--color-atavismTextHint);
+}
+
+.Toggle-Default .unity-toggle__label {
+    color: var(--color-atavismTextHint);
+    margin-left: 10px;
+}
+
+.Toggle-Default .unity-toggle__checkmark {
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    -unity-background-image-tint-color: var(--color-atavismCheckmarkTint);
+    background-color: var(--color-atavismCheckmarkBackground);
+    -unity-background-scale-mode: stretch-to-fill;
+    height: 18px;
+    width: 18px;
+    flex-shrink: 0;
+}
+
+.Toggle-Default:checked .unity-toggle__checkmark {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/checkbox_mark_2.png?fileID=2800000&guid=0dab8918d5e51f64fabe1a5f8c59c3bd&type=3#checkbox_mark_2");
+    -unity-background-image-tint-color: var(--color-atavismCheckmarkCheckedTint);
+    background-color: var(--color-atavismCheckmarkCheckedBackground);
+}
+
+.Toggle-Default > .unity-toggle__input:checked > .unity-toggle__checkmark {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/checkbox_mark_2.png?fileID=2800000&guid=0dab8918d5e51f64fabe1a5f8c59c3bd&type=3#checkbox_mark_2");
+    -unity-background-image-tint-color: var(--color-atavismCheckmarkCheckedTint);
+    background-color: var(--color-atavismCheckmarkCheckedBackground);
+}
+
+.Toggle-Default > .unity-toggle__input:focus:checked > .unity-toggle__checkmark {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/checkbox_mark_2.png?fileID=2800000&guid=0dab8918d5e51f64fabe1a5f8c59c3bd&type=3#checkbox_mark_2");
+    -unity-background-image-tint-color: var(--color-atavismCheckmarkCheckedTint);
+    background-color: var(--color-atavismCheckmarkCheckedBackgroundHover);
+}
+
+.Toggle-Default > .unity-toggle__input:focus:checked:enabled > .unity-toggle__checkmark {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/checkbox_mark_2.png?fileID=2800000&guid=0dab8918d5e51f64fabe1a5f8c59c3bd&type=3#checkbox_mark_2");
+    -unity-background-image-tint-color: var(--color-atavismCheckmarkCheckedTint);
+    background-color: var(--color-atavismCheckmarkCheckedBackgroundHover);
+}
+
+.Toggle-Default > .unity-toggle__input:hover:checked:enabled > .unity-toggle__checkmark {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/checkbox_mark_2.png?fileID=2800000&guid=0dab8918d5e51f64fabe1a5f8c59c3bd&type=3#checkbox_mark_2");
+    -unity-background-image-tint-color: var(--color-atavismCheckmarkCheckedTintHover);
+    background-color: var(--color-atavismCheckmarkCheckedBackgroundHover);
+}
+
+.Toggle-Default .unity-toggle__input {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/OldUI/checbox.png?fileID=2800000&guid=88aeef57330bc4a41b3323dc644418cf&type=3#checbox");
+    padding-top: 3px;
+    padding-right: 3px;
+    padding-bottom: 3px;
+    padding-left: 3px;
+    height: 24px;
+    max-height: 24px;
+    min-height: 24px;
+    width: 24px;
+    max-width: 24px;
+    min-width: 24px;
+}
+
+.Toggle-right {
+    -unity-font-style: bold;
+    flex-direction: row;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    flex-wrap: nowrap;
+    font-size: 14px;
+    -unity-text-align: middle-left;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    margin-right: 4px;
+    margin-left: 2px;
+}
+
+.Toggle-right .unity-toggle__label {
+    color: var(--color-atavismTextHint);
+    margin-left: 0;
+    font-size: 12px;
+    -unity-font-style: normal;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+}
+
+.Toggle-right .unity-toggle__checkmark {
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    -unity-background-image-tint-color: var(--color-atavismCheckmarkTint);
+    background-color: var(--color-atavismCheckmarkBackground);
+    -unity-background-scale-mode: stretch-to-fill;
+    height: 16px;
+    width: 16px;
+    flex-shrink: 0;
+    left: -1px;
+}
+
+.Toggle-right:checked .unity-toggle__checkmark {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/checkbox_mark_2.png?fileID=2800000&guid=0dab8918d5e51f64fabe1a5f8c59c3bd&type=3#checkbox_mark_2");
+    -unity-background-image-tint-color: var(--color-atavismCheckmarkCheckedTint);
+    background-color: var(--color-atavismCheckmarkCheckedBackground);
+}
+
+.Toggle-right > .unity-toggle__input:hover:checked:enabled > .unity-toggle__checkmark {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/checkbox_mark_2.png?fileID=2800000&guid=0dab8918d5e51f64fabe1a5f8c59c3bd&type=3#checkbox_mark_2");
+    -unity-background-image-tint-color: var(--color-atavismCheckmarkCheckedTintHover);
+    background-color: var(--color-atavismCheckmarkCheckedBackgroundHover);
+}
+
+.Toggle-right > .unity-toggle__input:focus:checked:enabled > .unity-toggle__checkmark {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/checkbox_mark_2.png?fileID=2800000&guid=0dab8918d5e51f64fabe1a5f8c59c3bd&type=3#checkbox_mark_2");
+    -unity-background-image-tint-color: var(--color-atavismCheckmarkCheckedTintHover);
+    background-color: var(--color-atavismCheckmarkCheckedBackgroundHover);
+}
+
+.Toggle-right .unity-toggle__input {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/OldUI/checbox.png?fileID=2800000&guid=88aeef57330bc4a41b3323dc644418cf&type=3#checbox");
+    padding-top: 3px;
+    padding-right: 3px;
+    padding-bottom: 3px;
+    padding-left: 3px;
+    height: 20px;
+    max-height: 20px;
+    min-height: 20px;
+    width: 20px;
+    max-width: 20px;
+    min-width: 20px;
+}
+
+.Toggle-Auction .unity-toggle__label {
+    color: var(--color-atavismTextHint);
+    margin-left: 2px;
+    width: auto;
+    max-width: initial;
+    min-width: auto;
+}
+
+.Toggle-Auction {
+    height: 25px;
+    max-height: 25px;
+    min-height: 25px;
+    align-items: flex-start;
+    width: auto;
+    -unity-font-style: bold;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    font-size: 14px;
+    -unity-text-align: middle-left;
+    align-self: center;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 8px;
+}
+
+.Auction {
+}
+
+.Auction .unity-tree-view {
+}
+
+.Auction .unity-tree-view__item {
+    justify-content: flex-start;
+}
+
+.Auction .unity-tree-view__item:hover:enabled {
+    background-color: rgba(65, 64, 57, 0.6);
+}
+
+.Auction .unity-tree-view__item-toggle {
+}
+
+.Auction .unity-tree-view__item-indents {
+}
+
+.Auction .unity-tree-view__item-indent {
+}
+
+.Auction .unity-tree-view__item-content {
+    justify-content: flex-start;
+    -unity-text-align: middle-left;
+}
+
+.Auction .unity-disabled1 {
+}
+
+.Auction .unity-collection-view__item--selected {
+    color: var(--color-atavismTextLight);
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.auction-tab-button {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/tab_active.png?fileID=2800000&guid=1b225c8385d3d804e920d4630c6903f2&type=3#tab_active");
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0);
+    background-color: rgba(0, 0, 0, 0);
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
+    border-radius: 0;
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-top: -8px;
+    margin-bottom: -11px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 10px;
+    padding-bottom: 14px;
+    font-size: 16px;
+    -unity-text-align: middle-center;
+    flex-shrink: 0;
+    color: rgb(158, 154, 147);
+    width: 180px;
+    -unity-font-style: bold;
+}
+
+.auction-tab-button:hover {
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/tab_active.png?fileID=2800000&guid=1b225c8385d3d804e920d4630c6903f2&type=3#tab_active");
+    background-color: rgba(0, 0, 0, 0);
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0.45);
+    border-color: rgba(0, 0, 0, 0);
+}
+
+.auction-menu-button {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/button.png?fileID=2800000&guid=117f3be3b5d96bb4e80cf46626abd6aa&type=3#button");
+    -unity-background-scale-mode: scale-and-crop;
+    -unity-slice-scale: initial;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0);
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+    -unity-text-align: upper-center;
+    font-size: 18px;
+    margin-top: 2px;
+    margin-right: 2px;
+    margin-bottom: 2px;
+    margin-left: 2px;
+    padding-top: 4px;
+    padding-right: 4px;
+    padding-bottom: 4px;
+    padding-left: 4px;
+}
+
+.auction-menu-button:hover {
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0.58);
+}
+
+.auction-menu-button__selected {
+}
+
+.auction-menu-button__selected:hover {
+}
+
+.auction-tab-button__selected {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/tab_active.png?fileID=2800000&guid=1b225c8385d3d804e920d4630c6903f2&type=3#tab_active");
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+    -unity-background-scale-mode: scale-and-crop;
+    border-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.auction-tab-button__selected:hover {
+}
+
+.auction-window {
+    width: 900px;
+    height: 760px;
+}
+
+.auction-sub-window {
+    position: absolute;
+    align-self: stretch;
+    width: 658px;
+    height: 525px;
+    top: 73px;
+    left: 109px;
+    max-width: 658px;
+    min-width: 658px;
+    max-height: 525px;
+    min-height: 525px;
+    display: flex;
+}
+
+.auction-sub-top {
+    flex-grow: 1;
+    min-width: 644px;
+    min-height: -381px;
+    height: 241px;
+}
+
+.auction-sub-top-item-panel {
+    flex-grow: 1;
+    align-self: center;
+    width: 50%;
+}
+
+.auction-sub-top-item-sub-panel {
+    flex-grow: 1;
+    flex-direction: row;
+    align-items: center;
+}
+
+.auction-sub-top-quantity-panel {
+    flex-grow: 1;
+    flex-direction: row;
+    min-width: auto;
+    align-items: center;
+}
+
+.auction-sub-top-quantity-label {
+    width: 160px;
+    -unity-text-align: upper-right;
+}
+
+.auction-sub-top-quantity-input {
+    width: 50px;
+}
+
+.auction-sub-top-quantity-slider {
+    width: 285px;
+    display: flex;
+    min-height: 19px;
+    height: 20px;
+}
+
+.auction-sub-top-price-panel {
+    flex-grow: 1;
+    flex-direction: row;
+    height: 40px;
+    max-height: 40px;
+    min-height: 40px;
+    align-items: center;
+}
+
+.auction-sub-top-price-label {
+    -unity-text-align: upper-right;
+    width: 160px;
+}
+
+.auction-sub-top-price-input-panel {
+    flex-grow: 1;
+    flex-direction: row;
+    width: auto;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.auction-sub-bottom-panel {
+    flex-grow: 1;
+    flex-direction: row;
+    height: 157px;
+}
+
+.auction-sub-bottom-sub-panel {
+    flex-grow: 1;
+    width: 50%;
+    height: 180px;
+    align-items: center;
+}
+
+.auction-sub-bottom-sub-title {
+    width: 90%;
+    height: 20px;
+    max-height: 20px;
+    min-height: 20px;
+    -unity-text-align: middle-left;
+    -unity-font-style: bold;
+}
+
+.auction-sub-bottom-sub-header {
+    flex-grow: 1;
+    flex-direction: row;
+    width: 90%;
+    align-items: center;
+    height: 20px;
+    max-height: 20px;
+    align-self: center;
+    min-height: 20px;
+}
+
+.auction-sub-bottom-sub-list {
+    width: 90%;
+    height: 124px;
+    max-height: 124px;
+    min-height: 124px;
+}
+
+.unity-text-field .unity-text-element {
+    color: var(--color-atavismTextDark);
+    background-color: var(--color-atavism-TextField-InputBackground);
+    --unity-cursor-color: var(--color-atavism-TextField-Caret);
+    --unity-selection-color: var(--color-atavismListSelection);
+}
+
+.unity-text-field:focus:enabled .unity-text-element {
+    color: var(--color-atavismTextDark);
+    background-color: var(--color-atavism-TextField-InputBackgroundHover);
+    --unity-cursor-color: var(--color-atavism-TextField-Caret);
+    --unity-selection-color: var(--color-atavismListSelection);
+}
+
+.unity-text-field .unity-text-field__input {
+    color: var(--color-atavismTextDark);
+    background-color: var(--color-atavism-TextField-InputBackground);
+    --unity-cursor-color: var(--color-atavism-TextField-Caret);
+    --unity-selection-color: var(--color-atavismListSelection);
+}
+
+.unity-text-field .unity-scroll-view {
+}
+
+.unity-text-field .unity-scroller--vertical > .unity-scroller__slider {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.unity-text-field .unity-scroller--vertical {
+    width: 20px;
+}
+
+.unity-text-field .unity-scroller--vertical > .unity-scroller__high-button {
+    margin: 0;
+}
+
+.unity-text-field {
+    --unity-cursor-color: var(--color-atavism-TextField-Caret);
+    --unity-selection-color: var(--color-atavism-TextField-Selection);
+}
+
+.unity-text-field:focus:enabled {
+    --unity-cursor-color: var(--color-atavism-TextField-Caret);
+    --unity-selection-color: var(--color-atavism-TextField-Selection);
+}
+
+.unity-text-field:hover:enabled {
+    --unity-cursor-color: var(--color-atavism-TextField-Caret);
+    --unity-selection-color: var(--color-atavism-TextField-Selection);
+}
+
+.unity-text-field:focus:enabled > .unity-base-text-field__input {
+    border-color: var(--color-atavismSelection);
+}
+
+.unity-base-text-field__input--single-line {
+    color: var(--color-atavismTextDark);
+    background-color: var(--color-atavism-TextField-InputBackground);
+    -unity-text-align: middle-center;
+}
+
+.unity-base-text-field__input--single-line:focus:enabled {
+    color: var(--color-atavismTextDark);
+    background-color: var(--color-atavism-TextField-InputBackground);
+    -unity-text-align: middle-center;
+}
+
+.unity-base-text-field__input--single-line:disabled {
+    color: var(--color-atavismTextDark);
+    background-color: var(--color-atavism-TextField-InputBackground);
+    -unity-text-align: middle-center;
+}
+
+.unity-base-text-field__input--multiline {
+    color: var(--color-atavismTextDark);
+    background-color: var(--color-atavism-TextField-InputBackground);
+}
+
+.unity-base-text-field__input--multiline:disabled {
+    color: var(--color-atavismTextDark);
+    background-color: var(--color-atavism-TextField-InputBackground);
+}
+
+.unity-base-text-field__input {
+    padding: 1px;
+}
+
+.unity-text-field__placeholder {
+    -unity-font-style: italic;
+    font-size: 18px;
+    -unity-text-align: middle-center;
+}
+
+.unity-base-text-field__input--single-line:focus {
+    border-color: var(--color-atavismSelection);
+}
+
+.unity-base-text-field__input--multiline:focus {
+    border-color: var(--color-atavismSelection);
+}
+
+.unity-radio-button {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.unity-radio-button__checkmark-background {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/checkbox.png?fileID=2800000&guid=c1e82849618ff4f4ca5ca3ecade6c5b0&type=3#checkbox");
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    justify-content: center;
+    align-items: center;
+    -unity-slice-left: 5;
+    -unity-slice-top: 5;
+    -unity-slice-right: 5;
+    -unity-slice-bottom: 5;
+}
+
+.unity-radio-button__checkmark {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/checkbox_mark_2.png?fileID=2800000&guid=0dab8918d5e51f64fabe1a5f8c59c3bd&type=3#checkbox_mark_2");
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    display: none;
+    translate: 0 -1px;
+    -unity-background-image-tint-color: var(--color-atavismCheckmarkCheckedTint);
+    background-color: var(--color-atavismCheckmarkBackground);
+    -unity-background-scale-mode: stretch-to-fill;
+    height: 18px;
+    width: 18px;
+    flex-shrink: 0;
+}
+
+.unity-base-slider__text-field {
+    height: 100%;
+}
+
+.Dropdown {
+    background-color: rgb(48, 48, 48);
+}
+
+.UIDropdown__label {
+    color: var(--color-atavismTextDefault);
+    -unity-text-align: middle-left;
+    margin-left: 10px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    -unity-font-style: normal;
+}
+
+.UIDropdown__label:hover:enabled {
+    color: var(--color-atavismSelection);
+    -unity-text-align: middle-left;
+}
+
+.UIDropdown__label:focus:enabled {
+    color: var(--color-atavismSelection);
+    -unity-text-align: middle-left;
+}
+
+.UIDropdown__arrow {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/dropdown_arrow.png?fileID=2800000&guid=724d898ae25ce5245ab429635f04f042&type=3#dropdown_arrow");
+}
+
+.UIDropdown__container {
+    background-color: rgb(48, 48, 48);
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/Login/login_input.png?fileID=2800000&guid=11030eaf6696a694faaca62164b4169f&type=3#login_input");
+}
+
+.UIDropdown__popup {
+    position: absolute;
+    background-color: rgb(29, 31, 33);
+    opacity: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    max-height: 200px;
+}
+
+.UIDropdown__popup:enabled {
+    transition-duration: 0.25s;
+    opacity: 1;
+    transition-property: opacity;
+}
+
+.UIDropdown__item {
+    -unity-text-align: middle-left;
+    background-color: rgb(34, 34, 34);
+    color: var(--color-atavismTextDefault);
+    height: 20px;
+    margin-left: 12px;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.UIDropdown__item:hover:enabled {
+    background-color: var(--color-atavismListSelection);
+}
+
+.UIDropdown__selected {
+    background-color: var(--color-atavismListSelection);
+}
+
+.UIDropdown {
+}
+
+.UIDropdown .unity-popup-field__label {
+    flex-direction: row-reverse;
+    color: var(--color-atavismTextDefault);
+    -unity-text-align: middle-left;
+    margin-left: 10px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    -unity-font-style: normal;
+    width: auto;
+    min-width: 10px;
+}
+
+.UIDropdown .unity-popup-field__label:hover:enabled {
+    color: var(--color-atavismSelection);
+    -unity-text-align: middle-left;
+}
+
+.UIDropdown .unity-popup-field__label:focus:enabled {
+    color: var(--color-atavismSelection);
+    -unity-text-align: middle-left;
+}
+
+.UIDropdown .unity-popup-field__input {
+    padding-top: 4px;
+    padding-right: 4px;
+    padding-bottom: 4px;
+    padding-left: 4px;
+    width: 120px;
+    min-width: 100px;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/input.png?fileID=2800000&guid=fafd81fa68c56e4419ac3835b456b3b7&type=3#input");
+    -unity-slice-left: 5;
+    -unity-slice-top: 5;
+    -unity-slice-right: 5;
+    -unity-slice-bottom: 5;
+    color: var(--color-atavismTextDefault);
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+}
+
+.UIDropdown .unity-popup-field__text {
+    color: rgb(127, 127, 127);
+    -unity-text-align: middle-left;
+    margin-left: 10px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    -unity-font-style: normal;
+}
+
+.UIDropdown .unity-popup-field__arrow {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/dropdown_arrow.png?fileID=2800000&guid=724d898ae25ce5245ab429635f04f042&type=3#dropdown_arrow");
+}
+
+.unity-base-dropdown {
+}
+
+.unity-base-dropdown__container-outer {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.unity-base-dropdown__container-inner {
+    background-color: var(--color-atavismDefault);
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+}
+
+.unity-popup-field:hover:enabled .unity-popup-field__input {
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
+}
+
+.unity-popup-field:active:enabled .unity-popup-field__input {
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
+}
+
+.unity-base-dropdown__item {
+    color: var(--color-atavismTextDefault);
+}
+
+.unity-base-dropdown__item:hover:enabled {
+    color: var(--color-atavismTextDefault);
+    background-color: var(--color-atavismListSelection);
+}
+
+.unity-base-dropdown__item:focus:enabled {
+    color: var(--color-atavismTextDefault);
+    background-color: var(--color-atavismListSelection);
+}
+
+.unity-base-dropdown__label {
+    color: var(--color-atavismTextDefault);
+}
+
+.unity-base-dropdown__checkmark {
+    display: none;
+}
+
+.ItemDisplay__frame {
+    width: 41px;
+    height: 41%;
+    flex-shrink: 0;
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/OldUI/Hud/inventory/items/healing_potion/frame.png?fileID=2800000&guid=b098138c553277f4fab7acd229bcd7b8&type=3#frame");
+    -unity-background-image-tint-color: rgb(72, 67, 61);
+    max-height: 41px;
+    min-height: 41px;
+    max-width: 41px;
+    min-width: 41px;
+    padding-top: 3px;
+    padding-right: 3px;
+    padding-bottom: 3px;
+    padding-left: 3px;
+}
+
+.ItemDisplay__icon {
+    width: 100%;
+    height: 100%;
+    -unity-background-scale-mode: scale-and-crop;
+    background-image: none;
+    position: relative;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+}
+
+.ItemDisplay__title {
+    flex-grow: 1;
+    -unity-text-align: middle-left;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: var(--color-atavismTextHighlighted);
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.ItemDisplay__count {
+    flex-grow: 1;
+    -unity-text-align: middle-right;
+    padding-left: 0;
+    padding-right: 0;
+    color: var(--color-atavismTextHighlighted);
+    position: absolute;
+    padding-top: 0;
+    padding-bottom: 0;
+    flex-direction: column;
+}
+
+.Window {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/window_bg99.png?fileID=2800000&guid=eacf47a0fa20c984a996e8870552147f&type=3#window_bg99");
+    -unity-slice-left: 6;
+    -unity-slice-top: 6;
+    -unity-slice-right: 6;
+    -unity-slice-bottom: 6;
+}
+
+.Window-header {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/header_h.png?fileID=21300000&guid=4f20a9aef3aaffe4b8066d3bb668fc92&type=3#header_h");
+    -unity-background-image-tint-color: var(--color-atavismWindowHeaderBackgroundTint);
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.Window-header-frame {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/header_g.png?fileID=2800000&guid=c33a5062010b29d4595e8ac3c931896d&type=3#header_g");
+    -unity-background-image-tint-color: var(--color-atavismWindowHeaderFrameTint);
+}
+
+.Window-header-background {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/header_h.png?fileID=2800000&guid=4f20a9aef3aaffe4b8066d3bb668fc92&type=3#header_h");
+    -unity-background-image-tint-color: var(--color-atavismWindowHeaderBackgroundTint);
+}
+
+.Window-title {
+    color: var(--color-atavismTextTitle);
+    font-size: 28px;
+    -unity-text-align: middle-center;
+    -unity-font: url("project://database/Assets/Dragonsan/AtavismObjects/Fonts/Assassin$.ttf?fileID=12800000&guid=505efa8c2cf85954780092e5eb269cc7&type=3#Assassin$");
+}
+
+.Window-close-button {
+    overflow: visible;
+    visibility: visible;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/close3.png?fileID=21300000&guid=e48235184425cad4c89a41d4cbd38f16&type=3#close3");
+    translate: -5px 0;
+    flex-shrink: 0;
+    max-width: 23px;
+    min-width: 23px;
+    max-height: 25px;
+    min-height: 25px;
+    height: 25px;
+    width: 23px;
+    margin-right: 12px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    position: absolute;
+    top: 19px;
+    right: 0;
+    display: flex;
+    -unity-background-image-tint-color: var(--color-atavismCloseButtonTint);
+    -unity-background-scale-mode: stretch-to-fill;
+    border-left-color: var(--color-atavismCloseButtonBorder);
+    border-right-color: var(--color-atavismCloseButtonBorder);
+    border-top-color: var(--color-atavismCloseButtonBorder);
+    border-bottom-color: var(--color-atavismCloseButtonBorder);
+    background-color: var(--color-atavismCloseButtonBackground);
+}
+
+.Window-close-button:enabled {
+    overflow: visible;
+    visibility: visible;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/close3.png?fileID=21300000&guid=e48235184425cad4c89a41d4cbd38f16&type=3#close3");
+    translate: -5px 0;
+    flex-shrink: 0;
+    max-width: 23px;
+    min-width: 23px;
+    max-height: 25px;
+    min-height: 25px;
+    height: 25px;
+    width: 23px;
+    margin-right: 12px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    position: absolute;
+    top: 19px;
+    right: 0;
+    display: flex;
+    -unity-background-image-tint-color: var(--color-atavismCloseButtonTint);
+    -unity-background-scale-mode: stretch-to-fill;
+    border-left-color: var(--color-atavismCloseButtonBorder);
+    border-right-color: var(--color-atavismCloseButtonBorder);
+    border-top-color: var(--color-atavismCloseButtonBorder);
+    border-bottom-color: var(--color-atavismCloseButtonBorder);
+    background-color: var(--color-atavismCloseButtonBackground);
+}
+
+.Window-close-button:hover:enabled {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/close3.png?fileID=2800000&guid=e48235184425cad4c89a41d4cbd38f16&type=3#close3");
+    -unity-background-image-tint-color: var(--color-atavismCloseButtonTintHover);
+    -unity-background-scale-mode: stretch-to-fill;
+    border-left-color: var(--color-atavismCloseButtonBorderHover);
+    border-right-color: var(--color-atavismCloseButtonBorderHover);
+    border-top-color: var(--color-atavismCloseButtonBorderHover);
+    border-bottom-color: var(--color-atavismCloseButtonBorderHover);
+    background-color: var(--color-atavismCloseButtonBackgroundHover);
+}
+
+.Window-close-button_mini {
+    overflow: visible;
+    visibility: visible;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/close3.png?fileID=21300000&guid=e48235184425cad4c89a41d4cbd38f16&type=3#close3");
+    translate: -5px 0;
+    flex-shrink: 0;
+    max-width: 23px;
+    min-width: 23px;
+    max-height: 25px;
+    min-height: 25px;
+    height: 25px;
+    width: 23px;
+    margin-right: 12px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    position: absolute;
+    top: 3px;
+    right: 0;
+    display: flex;
+    -unity-background-image-tint-color: var(--color-atavismCloseButtonTint);
+    -unity-background-scale-mode: stretch-to-fill;
+    border-left-color: var(--color-atavismCloseButtonBorder);
+    border-right-color: var(--color-atavismCloseButtonBorder);
+    border-top-color: var(--color-atavismCloseButtonBorder);
+    border-bottom-color: var(--color-atavismCloseButtonBorder);
+    background-color: var(--color-atavismCloseButtonBackground);
+}
+
+.Window-close-button_mini:enabled {
+    overflow: visible;
+    visibility: visible;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/close3.png?fileID=21300000&guid=e48235184425cad4c89a41d4cbd38f16&type=3#close3");
+    translate: -5px 0;
+    flex-shrink: 0;
+    max-width: 23px;
+    min-width: 23px;
+    max-height: 25px;
+    min-height: 25px;
+    height: 25px;
+    width: 23px;
+    margin-right: 12px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    position: absolute;
+    top: 3px;
+    right: 0;
+    display: flex;
+    -unity-background-image-tint-color: var(--color-atavismCloseButtonTint);
+    -unity-background-scale-mode: stretch-to-fill;
+    border-left-color: var(--color-atavismCloseButtonBorder);
+    border-right-color: var(--color-atavismCloseButtonBorder);
+    border-top-color: var(--color-atavismCloseButtonBorder);
+    border-bottom-color: var(--color-atavismCloseButtonBorder);
+    background-color: var(--color-atavismCloseButtonBackground);
+}
+
+.Window-close-button_mini:hover:enabled {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/close3.png?fileID=2800000&guid=e48235184425cad4c89a41d4cbd38f16&type=3#close3");
+    -unity-background-image-tint-color: var(--color-atavismCloseButtonTintHover);
+    -unity-background-scale-mode: stretch-to-fill;
+    border-left-color: var(--color-atavismCloseButtonBorderHover);
+    border-right-color: var(--color-atavismCloseButtonBorderHover);
+    border-top-color: var(--color-atavismCloseButtonBorderHover);
+    border-bottom-color: var(--color-atavismCloseButtonBorderHover);
+    background-color: var(--color-atavismCloseButtonBackgroundHover);
+}
+
+.UISlider {
+    display: flex;
+    width: 100%;
+}
+
+.UISlider .unity-base-slider__dragger {
+    top: 50%;
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/slider-handler.png?fileID=2800000&guid=0e44d02ba08f8374d9c4064e34117f5d&type=3#slider-handler");
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    background-color: rgba(0, 0, 0, 0);
+    width: 70px;
+}
+
+.UISlider .unity-base-slider__dragger:focus:enabled {
+    top: 50%;
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/slider-handler.png?fileID=2800000&guid=0e44d02ba08f8374d9c4064e34117f5d&type=3#slider-handler");
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    background-color: rgba(0, 0, 0, 0);
+    width: 70px;
+}
+
+.UISlider:focus:enabled .unity-base-slider__dragger {
+    top: 50%;
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/slider-handler.png?fileID=2800000&guid=0e44d02ba08f8374d9c4064e34117f5d&type=3#slider-handler");
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    background-color: rgba(0, 0, 0, 0);
+    width: 70px;
+}
+
+.UISlider:hover:enabled .unity-base-slider__dragger {
+    top: 50%;
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/slider-handler.png?fileID=2800000&guid=0e44d02ba08f8374d9c4064e34117f5d&type=3#slider-handler");
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    background-color: rgba(0, 0, 0, 0);
+    width: 70px;
+}
+
+.UISlider .unity-base-slider__drag-container {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/slider.png?fileID=2800000&guid=d2269059901dca849b93b8346c8ea663&type=3#slider");
+}
+
+.UISlider .unity-base-slider--horizontal {
+    display: flex;
+}
+
+.unity-base-slider__drag-container {
+    background-color: rgb(1, 1, 1);
+}
+
+.unity-scroller {
+    background-color: rgba(48, 48, 48, 0);
+}
+
+.unity-scroller--horizontal {
+    background-image: url('project://database/Assets/UnityDefaultRuntimeTheme.tss?fileID=-3753015318093942961&guid=380c3556abec8734483c8091433f6b7f&type=3#arrow-left');
+    width: 9px;
+    background-color: rgba(45, 45, 45, 0.01);
+    display: none;
+}
+
+.unity-scroll-view__horizontal-scroller {
+    background-color: rgb(48, 48, 48);
+    width: 9px;
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/scroll.png?fileID=2800000&guid=45f33fbba8fca1b4c8972c4aa7d6e6a0&type=3#scroll");
+    display: none;
+    visibility: hidden;
+    overflow: visible;
+}
+
+.unity-scroller__low-button {
+    position: absolute;
+    background-color: rgb(34, 34, 34);
+    height: 1px;
+    width: 1px;
+    display: none;
+}
+
+.unity-scroller__high-button {
+    background-color: rgb(34, 34, 34);
+    height: 1px;
+    width: 1px;
+    display: none;
+}
+
+.unity-base-slider__drag-container {
+    background-color: rgba(48, 48, 48, 0);
+    display: flex;
+}
+
+.unity-base-slider--horizontal {
+    width: 9px;
+    background-color: rgba(48, 48, 48, 0.1);
+    display: none;
+}
+
+.unity-base-slider--vertical {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+}
+
+.unity-base-slider__dragger {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/scroller.png?fileID=2800000&guid=7ed1352c21a59c74fb040955b1b69533&type=3#scroller");
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.unity-base-slider__dragger-border {
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 8px;
+}
+
+.unity-scroller--vertical .unity-base-slider__dragger {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/scroller.png?fileID=2800000&guid=7ed1352c21a59c74fb040955b1b69533&type=3#scroller");
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
+}
+
+.unity-scroller--vertical .unity-base-slider__dragger:hover:enabled {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/scroller.png?fileID=2800000&guid=7ed1352c21a59c74fb040955b1b69533&type=3#scroller");
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
+}
+
+.unity-scroller--vertical .unity-base-slider__dragger:active:enabled {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/scroller.png?fileID=2800000&guid=7ed1352c21a59c74fb040955b1b69533&type=3#scroller");
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
+}
+
+.unity-scroller--vertical .unity-base-slider__dragger:focus:enabled {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/scroller.png?fileID=2800000&guid=7ed1352c21a59c74fb040955b1b69533&type=3#scroller");
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
+}
+
+.unity-scroller--vertical:hover:enabled .unity-base-slider__dragger {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/scroller.png?fileID=2800000&guid=7ed1352c21a59c74fb040955b1b69533&type=3#scroller");
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
+}
+
+.unity-scroller--vertical:active:enabled .unity-base-slider__dragger {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/scroller.png?fileID=2800000&guid=7ed1352c21a59c74fb040955b1b69533&type=3#scroller");
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
+}
+
+.unity-scroller--vertical:focus:enabled .unity-base-slider__dragger {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/scroller.png?fileID=2800000&guid=7ed1352c21a59c74fb040955b1b69533&type=3#scroller");
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
+}
+
+.unity-base-slider:hover:enabled .unity-base-slider__dragger {
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
+}
+
+.unity-base-slider:focus:enabled .unity-base-slider__dragger {
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
+}
+
+.unity-scroller--vertical > .unity-scroller__slider {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.unity-scroller--vertical #unity-dragger {
+    min-height: 32px;
+}
+
+#unity-dragger .unity-base-slider__dragger:hover:enabled {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#unity-dragger:hover:enabled {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.unity-base-slider__tracker {
+    display: none;
+}
+
+.error-message {
+    -unity-font-style: bold;
+    font-size: 22px;
+    color: rgb(255, 0, 0);
+    visibility: visible;
+    align-items: center;
+    justify-content: center;
+}
+
+.admin-message {
+    -unity-font-style: bold;
+    font-size: 36px;
+    color: rgb(255, 255, 0);
+    visibility: visible;
+    -unity-text-align: middle-center;
+    align-items: center;
+    justify-content: center;
+}
+
+.announcement-message {
+    -unity-font-style: bold;
+    font-size: 26px;
+    color: rgb(255, 0, 255);
+    visibility: visible;
+    align-items: center;
+    justify-content: center;
+}
+
+.region-message {
+    -unity-font-style: bold;
+    font-size: 46px;
+    color: rgb(255, 234, 183);
+    visibility: visible;
+    align-items: center;
+    justify-content: center;
+}
+
+.message-holder {
+    align-items: center;
+    justify-content: center;
+    top: 20%;
+}
+
+.spacer-img {
+    height: 2px;
+    max-height: 2px;
+    min-height: 2px;
+    width: 90%;
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/spacer.png?fileID=2800000&guid=ae67ca0abcba95444bc9b858f2780fa9&type=3#spacer");
+    align-self: center;
+}
+
+.spacer-vertical-img {
+    height: 90%;
+    width: 2px;
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/spacer_vertical.png?fileID=2800000&guid=66f23171ac7a0ab4391b1b0df32a3045&type=3#spacer_vertical");
+    align-self: center;
+    max-width: 2px;
+    min-width: 2px;
+}
+
+.currency-panel-icon {
+    flex-grow: 0;
+    height: 22px;
+    width: 22px;
+    max-height: 22px;
+    min-height: 22px;
+    min-width: 22px;
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/bronze.png?fileID=2800000&guid=af66f84532318654cb6b7c5769ada361&type=3#bronze");
+    align-items: auto;
+}
+
+.currency-panel-value {
+    color: rgb(200, 200, 200);
+}
+
+.currency-panel-container {
+    flex-grow: 1;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    height: 30px;
+    align-self: flex-end;
+    max-height: 30px;
+    min-height: 30px;
+}
+
+.slot-image {
+    flex-grow: 1;
+    height: 60px;
+    width: 60px;
+    max-height: 60px;
+    min-height: 60px;
+    max-width: 60px;
+    min-width: 60px;
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/Inventory/invenory_slot.png?fileID=2800000&guid=598da58c652569946a5db5644295ac6b&type=3#invenory_slot");
+}
+
+.slot-item-image {
+    flex-grow: 1;
+    background-image: resource('AT_icon_background');
+    margin-top: 7px;
+    margin-right: 7px;
+    margin-bottom: 7px;
+    margin-left: 7px;
+}
+
+.slot-item-count {
+    position: absolute;
+    bottom: 0;
+    -unity-text-align: lower-right;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    align-items: stretch;
+    align-self: flex-end;
+    justify-content: space-around;
+    width: auto;
+    flex-direction: row-reverse;
+    font-size: 10px;
+}
+
+.reputation-name {
+    justify-content: center;
+    -unity-text-align: middle-left;
+}
+
+.reputation-value {
+    -unity-text-align: middle-left;
+}
+
+.reputation-positive {
+    color: rgb(11, 255, 0);
+}
+
+.reputation-negative {
+    color: rgb(255, 0, 0);
+}
+
+.confirm-panel {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/msg_bg.png?fileID=2800000&guid=80808ed110c58ca48a6773ea879d9cb4&type=3#msg_bg");
+    width: 537px;
+    height: 135px;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.confirm-panel__message {
+    -unity-text-align: middle-center;
+    white-space: normal;
+    height: 119px;
+}
+
+.button-timer {
+    position: absolute;
+    top: 28px;
+    left: 66px;
+    color: rgb(255, 0, 29);
+}
+
+.confirm-panel__button-holder {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 0;
+}
+
+.guild-permission-group {
+    flex-grow: 1;
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/arena%20list_hover.png?fileID=2800000&guid=b285134d30db8634eb7d0a006189ee95&type=3#arena list_hover");
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-right: 2px;
+    margin-left: 2px;
+}
+
+.guild-rank-element {
+    flex-grow: 1;
+    flex-direction: row;
+    align-self: stretch;
+    align-items: center;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.guild-rank-element .unity-text-field {
+    width: 280px;
+}
+
+.guild-rank-element .unity-button {
+    height: 25px;
+    width: 70px;
+}
+
+.Guild-UIProgressBar__container {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.Guild-UIProgressBar__background {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/Actionbar/xp_bar.png?fileID=2800000&guid=99ff8acd8594aea4b824f1c0cddd4829&type=3#xp_bar");
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0);
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    height: 100%;
+    width: 100%;
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+    -unity-slice-left: 6;
+    -unity-slice-top: 6;
+    -unity-slice-right: 6;
+    -unity-slice-bottom: 6;
+}
+
+.Guild-UIProgressBar__progressBar {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/Actionbar/xp_bar_color.png?fileID=2800000&guid=3c2a6d5266a02dc498a9ace199d943e5&type=3#xp_bar_color");
+    height: 5px;
+    justify-content: flex-end;
+    align-items: center;
+    -unity-background-scale-mode: stretch-to-fill;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-top: 6px;
+    margin-right: 6px;
+    margin-bottom: 6px;
+    margin-left: 6px;
+}
+
+.Guild-UIProgressBar-title__container {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.Guild-UIProgressBar__title {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.mini-tooltip-panel {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/window_bg7.png?fileID=2800000&guid=9a06e7bebb8a3b241bdbf4398def8034&type=3#window_bg7");
+    -unity-slice-left: 2;
+    -unity-slice-top: 2;
+    -unity-slice-right: 2;
+    -unity-slice-bottom: 2;
+    position: absolute;
+}
+
+.mini-tooltip-panel__message {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    -unity-text-align: middle-center;
+}
+
+.tooltip-attribute-negative {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/Tooltip/Arrow2.png?fileID=2800000&guid=0ea67563959eab8448b3f91b63dcff5c&type=3#Arrow2");
+}
+
+.tooltip-attribute-neutral {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/Tooltip/Arrow3.png?fileID=2800000&guid=ab98efed7d19bed44ad15f42952944ae&type=3#Arrow3");
+}
+
+.tooltip-attribute-positive {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/Tooltip/Arrow1.png?fileID=2800000&guid=bd6b46cb92f9bcc41bc360c06de65c0f&type=3#Arrow1");
+}
+
+.tooltip-attribute-new {
+}
+
+.Achievement-UIProgressBar__container {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    width: 100%;
+    height: 30px;
+}
+
+.Achievement-UIProgressBar__background {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/Actionbar/xp_bar.png?fileID=2800000&guid=99ff8acd8594aea4b824f1c0cddd4829&type=3#xp_bar");
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0);
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    height: 100%;
+    width: 100%;
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+    -unity-slice-left: 6;
+    -unity-slice-top: 6;
+    -unity-slice-right: 6;
+    -unity-slice-bottom: 6;
+}
+
+.Achievement-UIProgressBar__progressBar {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/Actionbar/xp_bar_color.png?fileID=2800000&guid=3c2a6d5266a02dc498a9ace199d943e5&type=3#xp_bar_color");
+    height: 6px;
+    justify-content: flex-end;
+    align-items: center;
+    -unity-background-scale-mode: stretch-to-fill;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-top: 6px;
+    margin-right: 6px;
+    margin-bottom: 6px;
+    margin-left: 6px;
+}
+
+.Achievement-UIProgressBar-title__container {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.Achievement-UIProgressBar__title {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    color: rgb(173, 173, 173);
+    font-size: 8px;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    flex-grow: 1;
+    width: 50px;
+}
+
+.achievement-active {
+    color: var(--color-atavismTextLight);
+}
+
+.achievement-activated {
+}
+
+.achievement-row {
+    flex-grow: 1;
+    width: 100%;
+    height: 35px;
+    max-height: 35px;
+    min-height: 35px;
+}
+
+.achievement-row-name {
+    right: auto;
+    bottom: auto;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 6px;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+}
+
+.unity-button {
+    border-left-color: rgb(48, 48, 48);
+    border-right-color: rgb(48, 48, 48);
+    border-top-color: rgb(48, 48, 48);
+    border-bottom-color: rgb(48, 48, 48);
+    background-color: var(--color-atavismDefault);
+    border-radius: 0;
+    -unity-text-align: middle-center;
+    overflow: hidden;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 2px;
+    margin-right: 4px;
+    margin-bottom: 2px;
+    margin-left: 4px;
+}
+
+Button .unity-button:hover:enabled {
+    border-left-color: var(--color-atavismDefaultButtonBackgroundHover);
+    border-right-color: rgb(48, 48, 48);
+    border-top-color: rgb(48, 48, 48);
+    border-bottom-color: rgb(48, 48, 48);
+    background-color: var(--color-atavismDefaultButtonBackgroundHover);
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0.65);
+}
+
+.unity-text-element {
+}
+
+.unity-text-element:active:enabled {
+}
+
+.unity-text-element:hover:enabled {
+}
+
+.spawner-row {
+    flex-grow: 1;
+    flex-direction: row;
+    height: 20px;
+    max-height: 20px;
+    min-height: 20px;
+    align-self: auto;
+    align-items: center;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+.spawner-template-label {
+    width: 70px;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    margin-top: 0;
+    margin-right: 4px;
+    margin-bottom: 0;
+    margin-left: 2px;
+}
+
+.spawner-template-name {
+    width: 219px;
+    margin-top: 0;
+    margin-right: 4px;
+    margin-bottom: 0;
+    margin-left: 2px;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+}
+
+.spawner-alt-template-label {
+    width: 128px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+}
+
+.spawner-alt-template-name {
+    width: 161px;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.spawner-row30 {
+    flex-grow: 1;
+    flex-direction: row;
+    height: 30px;
+    max-height: 30px;
+    min-height: 30px;
+    align-self: auto;
+    align-items: center;
+    min-width: auto;
+    width: 100%;
+}
+
+.Button-Transparent {
+    background-color: rgba(42, 40, 39, 0.67);
+}
+
+.AdminPanel-UIProgressBar__container {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    width: 100%;
+    height: 30px;
+}
+
+.AdminPanel-UIProgressBar__background {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/Actionbar/xp_bar.png?fileID=2800000&guid=99ff8acd8594aea4b824f1c0cddd4829&type=3#xp_bar");
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0);
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    height: 100%;
+    width: 100%;
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+    -unity-slice-left: 6;
+    -unity-slice-top: 6;
+    -unity-slice-right: 6;
+    -unity-slice-bottom: 6;
+}
+
+.AdminPanel-UIProgressBar__progressBar {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/Actionbar/xp_bar_color.png?fileID=2800000&guid=3c2a6d5266a02dc498a9ace199d943e5&type=3#xp_bar_color");
+    height: 6px;
+    justify-content: flex-end;
+    align-items: center;
+    -unity-background-scale-mode: stretch-to-fill;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-top: 6px;
+    margin-right: 6px;
+    margin-bottom: 6px;
+    margin-left: 6px;
+}
+
+.AdminPanel-UIProgressBar-title__container {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.AdminPanel-UIProgressBar__title {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    color: rgb(173, 173, 173);
+    font-size: 8px;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+.achievement-window {
+    width: 300px;
+    height: 495px;
+}
+
+.achievement-list {
+    max-width: 100%;
+    max-height: 4000%;
+    width: 100%;
+    height: 100%;
+}
+
+.unity-collection-view__item {
+    height: auto;
+}
+
+.unity-collection-view__item:hover {
+    height: auto;
+    background-color: var(--color-atavismListSelection);
+}
+
+.achievement-list .unity-collection-view__item:hover {
+    background-color: var(--color-atavismListSelection);
+}
+
+.achievement-list:focus:enabled .unity-collection-view__item--selected {
+    background-color: var(--color-atavismListSelection);
+}
+
+.achievement-list:focus:enabled .unity-collection-view__item--selected {
+    background-color: var(--color-atavismListSelection);
+}
+
+.unity-list-view__item {
+    height: auto;
+}
+
+.unity-list-view__empty-label {
+    display: none;
+}
+
+.unity-collection-view__item--selected {
+    background-color: var(--color-atavismListSelection);
+}
+
+.unity-collection-view:focus:enabled .unity-collection-view__item--selected {
+    background-color: var(--color-atavismListSelection);
+    color: var(--color-atavismTextLight);
+}
+
+.unity-collection-view:focus:hover:enabled .unity-collection-view__item--selected {
+    background-color: var(--color-atavismListSelection);
+    color: var(--color-atavismTextLight);
+}
+
+.unity-list-view__item:hover:enabled {
+    background-color: var(--color-atavismListSelection);
+    color: var(--color-atavismTextLight);
+}
+
+.unity-list-view__item:focus:enabled {
+    background-color: var(--color-atavismListSelection);
+    color: var(--color-atavismTextLight);
+}
+
+.quest-tab-button {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/tab_active.png?fileID=2800000&guid=1b225c8385d3d804e920d4630c6903f2&type=3#tab_active");
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0);
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
+    border-radius: 0;
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-top: -8px;
+    margin-bottom: -11px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 10px;
+    padding-bottom: 14px;
+    font-size: 16px;
+    -unity-text-align: middle-center;
+    flex-shrink: 0;
+    color: rgb(158, 154, 147);
+    width: 137px;
+    -unity-font-style: bold;
+}
+
+.quest-tab-button:hover {
+    border-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/tab_active.png?fileID=2800000&guid=1b225c8385d3d804e920d4630c6903f2&type=3#tab_active");
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0.65);
+}
+
+.quest-tab-button__selected {
+    border-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/tab_active.png?fileID=2800000&guid=1b225c8385d3d804e920d4630c6903f2&type=3#tab_active");
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+}
+
+.quest-preview-container {
+    position: absolute;
+    right: 10px;
+    top: 250px;
+    width: 300px;
+    flex-grow: 1;
+    background-image: resource('AT_icon_background');
+    background-color: rgba(0, 0, 0, 0);
+    -unity-background-image-tint-color: rgba(0, 0, 0, 0.2);
+}
+
+.quest-preview-container .unity-label {
+    flex: 1 1 auto;
+    white-space: normal;
+}
+
+.quest-objectives {
+}
+
+.quest-preview-title-text {
+    -unity-font: url("project://database/Assets/Dragonsan/AtavismObjects/Fonts/Cambria.ttf?fileID=12800000&guid=36ef3a2444bc15847bd874b9b0c98ae6&type=3#Cambria");
+    color: rgb(46, 134, 255);
+    font-size: 15px;
+    -unity-font-style: bold;
+}
+
+.quest-preview-objectives {
+}
+
+.quest-preview-objectives-text {
+    white-space: normal;
+    flex: 1 1 auto;
+    -unity-text-align: upper-left;
+}
+
+Label .quest-preview-objectives-text {
+    white-space: normal;
+    flex-grow: 1;
+    -unity-text-align: upper-left;
+}
+
+.quest-preview-objective-text {
+}
+
+.quest-reputation {
+    flex-grow: 1;
+    flex-direction: row;
+    height: 24px;
+    max-height: 24px;
+    min-height: 24px;
+    align-self: stretch;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.quest-offer-scroll-view {
+}
+
+.quests-menu {
+    display: flex;
+    height: 61px;
+    flex-direction: row;
+    justify-content: space-around;
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/menu_bg.png?fileID=2800000&guid=439c2fa62227dee4aa0641f2b809a943&type=3#menu_bg");
+}
+
+.quests-detale {
+    position: absolute;
+    top: -63px;
+    left: 382px;
+    height: 470px;
+    width: 370px;
+}
+
+.quest-offer-panel {
+    flex-grow: 1;
+    height: 350px;
+    flex-direction: column;
+    padding-right: 2px;
+    padding-left: 2px;
+    margin-right: 2px;
+    margin-left: 2px;
+    display: flex;
+    margin-top: 5px;
+}
+
+.quests-button-panel {
+    flex-grow: 1;
+    height: auto;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.quests-objectives-label {
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+}
+
+.quest-offer-reward-title {
+    white-space: normal;
+    -unity-font: url("project://database/Assets/Dragonsan/AtavismObjects/Fonts/Cambria.ttf?fileID=12800000&guid=36ef3a2444bc15847bd874b9b0c98ae6&type=3#Cambria");
+    font-size: 15px;
+    color: rgb(223, 205, 177);
+}
+
+.quest-offer-title {
+    white-space: normal;
+    -unity-font: url("project://database/Assets/Dragonsan/AtavismObjects/Fonts/Cambria.ttf?fileID=12800000&guid=36ef3a2444bc15847bd874b9b0c98ae6&type=3#Cambria");
+    font-size: 15px;
+    color: rgb(223, 205, 177);
+}
+
+.quest-offer-description {
+}
+
+.quest-offer-objective-title {
+}
+
+.quest-offer-objective-text {
+    white-space: normal;
+}
+
+.quest-offer-reward-list {
+    flex-grow: 1;
+}
+
+.quest-offer-currency-list {
+    flex-grow: 1;
+}
+
+.quest-offer-choose-reward-title {
+    white-space: normal;
+    -unity-font: url("project://database/Assets/Dragonsan/AtavismObjects/Fonts/Cambria.ttf?fileID=12800000&guid=36ef3a2444bc15847bd874b9b0c98ae6&type=3#Cambria");
+    font-size: 15px;
+    color: rgb(223, 205, 177);
+}
+
+.quest-offer-choose-reward-list {
+    flex-grow: 1;
+}
+
+.quest-offer-reputation-list {
+    flex-grow: 1;
+}
+
+.offer-view-list {
+    flex-grow: 1;
+    justify-content: space-between;
+    display: flex;
+}
+
+.quests-list-panel {
+    flex-grow: 1;
+    height: 350px;
+    flex-direction: column;
+    padding-right: 2px;
+    padding-left: 2px;
+    margin-right: 4px;
+    margin-left: 4px;
+    display: flex;
+    visibility: visible;
+    margin-top: -4px;
+    margin-bottom: 0;
+    padding-bottom: 5px;
+}
+
+.quests-window {
+    height: 470px;
+    width: 370px;
+}
+
+.quests-window .unity-scroll-view__content-container {
+    height: auto;
+}
+
+.quests-window .unity-scroll-view__content-container--vertical {
+    height: auto;
+}
+
+.quest-reward-slot {
+    flex-grow: 1;
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/OldUI/Hud/trade/frames_active/object_frame.png?fileID=2800000&guid=82d29c40f08109448a0d32e476893447&type=3#object_frame");
+    max-height: 60px;
+    min-height: 60px;
+    flex-direction: row;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    background-color: rgba(0, 0, 0, 0);
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+    margin-right: 0;
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+}
+
+.quest-reward-slot:hover:enabled {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/OldUI/Hud/trade/frames_active/object_frame.png?fileID=2800000&guid=82d29c40f08109448a0d32e476893447&type=3#object_frame");
+    background-color: rgba(0, 0, 0, 0);
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+}
+
+.quest-reward-slot-selected {
+    -unity-background-image-tint-color: rgb(255, 255, 4);
+}
+
+.quest-reward-slot-selected:hover:enabled {
+    -unity-background-image-tint-color: rgb(255, 255, 4);
+}
+
+.quest-reward-slot:disabled {
+    flex-grow: 1;
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/OldUI/Hud/trade/frames_active/object_frame.png?fileID=2800000&guid=82d29c40f08109448a0d32e476893447&type=3#object_frame");
+    max-height: 60px;
+    min-height: 60px;
+    flex-direction: row;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    background-color: rgba(0, 0, 0, 0);
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+    margin-right: 0;
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+}
+
+.reward-item-name {
+    white-space: normal;
+    max-width: 288px;
+    width: 286px;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 4px;
+    padding-right: 0;
+    padding-bottom: 4px;
+    padding-left: 0;
+}
+
+.pet-button-selected {
+    color: var(--color-atavismSelection);
+}
+
+.pet-window {
+    flex-grow: 1;
+    background-color: rgba(0, 0, 0, 0);
+    width: 300px;
+    height: 90px;
+    max-height: 90px;
+    min-height: 90px;
+    max-width: 300px;
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/window_bg99.png?fileID=2800000&guid=eacf47a0fa20c984a996e8870552147f&type=3#window_bg99");
+    bottom: 10px;
+    right: 10px;
+    flex-direction: column;
+    position: absolute;
+}
+
+.Pet-UIProgressBar__container {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.Pet-UIProgressBar__background {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/Actionbar/xp_bar.png?fileID=2800000&guid=99ff8acd8594aea4b824f1c0cddd4829&type=3#xp_bar");
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0);
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    height: 100%;
+    width: 100%;
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+    -unity-slice-right: 6;
+    -unity-slice-left: 6;
+    -unity-slice-top: 6;
+    -unity-slice-bottom: 6;
+    -unity-background-scale-mode: stretch-to-fill;
+}
+
+.Pet-UIProgressBar__progressBar {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/OldUI/Hud/boss_frame/red_bar/red_bar.png?fileID=2800000&guid=f0180442404db4f45b77fe71186e385c&type=3#red_bar");
+    height: 5px;
+    justify-content: flex-end;
+    align-items: center;
+    -unity-background-scale-mode: stretch-to-fill;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-top: 6px;
+    margin-right: 6px;
+    margin-bottom: 6px;
+    margin-left: 6px;
+}
+
+.Pet-UIProgressBar-title__container {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.Pet-UIProgressBar__title {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.prefab-panel-background {
+    flex-grow: 1;
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/Loading/Promotion_AtavismX_04.jpg?fileID=2800000&guid=97514fd4d0c38064da95b61692aad776&type=3#Promotion_AtavismX_04");
+}
+
+.prefab-panel-slider {
+    bottom: -4px;
+    position: absolute;
+    flex-grow: 1;
+    width: 100%;
+}
+
+.prefab-UIProgressBar__container {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.prefab-UIProgressBar__background {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/Actionbar/xp_bar.png?fileID=2800000&guid=99ff8acd8594aea4b824f1c0cddd4829&type=3#xp_bar");
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0);
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    height: 100%;
+    width: 100%;
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+    -unity-slice-left: 6;
+    -unity-slice-top: 6;
+    -unity-slice-right: 6;
+    -unity-slice-bottom: 6;
+}
+
+.prefab-UIProgressBar__progressBar {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/OldUI/Hud/boss_frame/red_bar/red_bar.png?fileID=2800000&guid=f0180442404db4f45b77fe71186e385c&type=3#red_bar");
+    height: 5px;
+    justify-content: flex-end;
+    align-items: center;
+    -unity-background-scale-mode: stretch-to-fill;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-top: 6px;
+    margin-right: 6px;
+    margin-bottom: 6px;
+    margin-left: 6px;
+}
+
+.prefab-UIProgressBar-title__container {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.prefab-UIProgressBar__title {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.population-low {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/OldUI/Avatar/Avatar_Mask.png?fileID=2800000&guid=2f17155b3fa507049a03e6529e960e94&type=3#Avatar_Mask");
+    -unity-background-image-tint-color: rgb(0, 255, 51);
+}
+
+.population-medium {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/OldUI/Avatar/Avatar_Mask.png?fileID=2800000&guid=2f17155b3fa507049a03e6529e960e94&type=3#Avatar_Mask");
+    -unity-background-image-tint-color: rgb(255, 152, 0);
+}
+
+.population-high {
+    -unity-background-image-tint-color: rgb(255, 0, 0);
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/OldUI/Avatar/Avatar_Mask.png?fileID=2800000&guid=2f17155b3fa507049a03e6529e960e94&type=3#Avatar_Mask");
+}
+
+.server-list-buttons {
+    flex-grow: 1;
+    height: 40px;
+    flex-direction: row-reverse;
+    max-height: 40px;
+    min-height: 40px;
+    align-self: flex-end;
+    align-items: center;
+}
+
+.server-list-panel {
+    width: 560px;
+    height: 460px;
+    left: auto;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/window_bg99.png?fileID=2800000&guid=eacf47a0fa20c984a996e8870552147f&type=3#window_bg99");
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-left-color: rgb(0, 0, 0);
+    border-right-color: rgb(0, 0, 0);
+    border-top-color: rgb(0, 0, 0);
+    border-bottom-color: rgb(0, 0, 0);
+    align-items: stretch;
+    -unity-slice-left: 10;
+    -unity-slice-top: 10;
+    -unity-slice-right: 10;
+    -unity-slice-bottom: 10;
+    margin-top: 4px;
+    margin-right: 4px;
+    margin-bottom: 4px;
+    margin-left: 4px;
+    padding-top: 3px;
+    padding-right: 3px;
+    padding-bottom: 3px;
+    padding-left: 3px;
+}
+
+.server-list-title {
+    align-items: stretch;
+    justify-content: flex-start;
+    -unity-text-align: upper-center;
+    font-size: 25px;
+    color: rgb(217, 199, 173);
+}
+
+.server-list-header {
+    flex-grow: 1;
+    flex-direction: row;
+    height: 20px;
+    max-height: 20px;
+    min-height: 20px;
+    align-self: stretch;
+    align-items: center;
+    justify-content: flex-start;
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/Character%20Selection/char_list_slot.png?fileID=2800000&guid=e224a64dceb5f3f4998711eac857b4fd&type=3#char_list_slot");
+}
+
+.server-list-header-name {
+    width: 200px;
+    -unity-text-align: middle-left;
+}
+
+.server-list-header-population {
+    width: 73px;
+    -unity-text-align: middle-center;
+}
+
+.server-list-header-queue {
+    width: 100px;
+    -unity-text-align: middle-center;
+}
+
+.server-list-header-load {
+    width: 100px;
+    -unity-text-align: middle-center;
+}
+
+.server-list {
+    flex-grow: 1;
+}
+
+.server-list-middle-panel {
+    width: 60%;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+}
+
+.server-list-left-panel {
+    width: 20%;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.server-list-right-panel {
+    width: 20%;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.merchant-item {
+    flex-direction: row;
+    height: 60px;
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/OldUI/Hud/trade/frames_active/object_frame.png?fileID=2800000&guid=82d29c40f08109448a0d32e476893447&type=3#object_frame");
+    -unity-font: url("project://database/Assets/Dragonsan/AtavismObjects/Fonts/Cambria.ttf?fileID=12800000&guid=36ef3a2444bc15847bd874b9b0c98ae6&type=3#Cambria");
+    -unity-font-definition: url("project://database/Assets/Dragonsan/Atavism%20(UI%20Toolkit)/UI/Fonts/Cambria%20SDF.asset?fileID=11400000&guid=171debed56e16fd4daf65623c92ecac2&type=2#Cambria SDF");
+    width: 242px;
+}
+
+.merchant-item-icon-bacground {
+    width: 60px;
+    height: 60px;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.merchant-item-thught {
+    color: rgb(255, 0, 0);
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    font-size: 10px;
+    height: 9px;
+    max-height: 9px;
+    min-height: 9px;
+    -unity-text-align: middle-left;
+}
+
+.merchant-item-name {
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 1px;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    white-space: normal;
+    font-size: 10px;
+    color: rgb(255, 255, 255);
+}
+
+.merchant-item-currency {
+    height: 30px;
+    max-height: 30px;
+    min-height: 30px;
+    margin-right: 7px;
+}
+
+.merchant-item-right-panel {
+    width: auto;
+    flex-grow: 1;
+}
+
+.merchant-item-quality-icon {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/Inventory/invenory_slot.png?fileID=2800000&guid=598da58c652569946a5db5644295ac6b&type=3#invenory_slot");
+    width: 60px;
+    height: 60px;
+    position: absolute;
+}
+
+.merchant-item-icon {
+    flex-grow: 1;
+    border-left-width: 6px;
+    border-right-width: 6px;
+    border-top-width: 6px;
+    border-bottom-width: 6px;
+    -unity-text-align: upper-center;
+    flex-direction: column-reverse;
+}
+
+.merchant-item-count {
+    flex-direction: column;
+}
+
+.merchant-window {
+    width: 500px;
+    height: 436px;
+}
+
+.merchant-prev-button {
+    flex-grow: 1;
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/stat_prev2.png?fileID=2800000&guid=8f04d2805c2c5844baa7157d854c32ab&type=3#stat_prev2");
+    height: 34px;
+    max-height: 34px;
+    min-height: 34px;
+    width: 27px;
+    max-width: 27px;
+    background-color: rgba(0, 0, 0, 0);
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+}
+
+.merchant-prev-button:hover:enabled {
+    flex-grow: 1;
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/stat_prev2.png?fileID=2800000&guid=8f04d2805c2c5844baa7157d854c32ab&type=3#stat_prev2");
+    height: 34px;
+    max-height: 34px;
+    min-height: 34px;
+    width: 27px;
+    max-width: 27px;
+    background-color: rgba(0, 0, 0, 0);
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0.59);
+}
+
+.merchant-next-button {
+    flex-grow: 1;
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/stat_next2.png?fileID=2800000&guid=3401cb42489619c49b0b7d73680e435b&type=3#stat_next2");
+    width: 27px;
+    max-width: 27px;
+    min-width: 27px;
+    height: 34px;
+    max-height: 34px;
+    min-height: 34px;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+}
+
+.merchant-next-button:hover:enabled {
+    flex-grow: 1;
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/stat_next2.png?fileID=2800000&guid=3401cb42489619c49b0b7d73680e435b&type=3#stat_next2");
+    width: 27px;
+    max-width: 27px;
+    min-width: 27px;
+    height: 34px;
+    max-height: 34px;
+    min-height: 34px;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0.59);
+}
+
+.merchant-page-label {
+    width: 200px;
+    -unity-text-align: middle-center;
+    font-size: 15px;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    background-color: rgba(0, 0, 0, 0);
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+}
+
+.merchant-header {
+    flex-grow: 1;
+    height: 34px;
+    max-height: 34px;
+    min-height: 34px;
+    flex-direction: row;
+    align-self: center;
+}
+
+.merchant-item-list {
+    flex-grow: 1;
+    height: 350px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.merchant-currency {
+    margin-right: 8px;
+    margin-bottom: 5px;
+}
+
+.merchant-bottom {
+    flex-grow: 1;
+    align-self: stretch;
+    align-items: stretch;
+    justify-content: flex-start;
+}
+
+.merchant-count-panel {
+    flex-grow: 1;
+    position: absolute;
+    width: 350px;
+    height: 240px;
+    top: 99px;
+    left: 67px;
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/window_bg7.png?fileID=2800000&guid=9a06e7bebb8a3b241bdbf4398def8034&type=3#window_bg7");
+    -unity-slice-left: 5;
+    -unity-slice-top: 5;
+    -unity-slice-right: 5;
+    -unity-slice-bottom: 5;
+}
+
+.merchant-count-panel-item-name {
+    -unity-text-align: upper-center;
+}
+
+.merchant-count-panel-label-text {
+    -unity-text-align: upper-center;
+}
+
+.merchant-count-panel-minus-button {
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/OldUI/Hud/minimap/minus.png?fileID=2800000&guid=5a98a00f02584674c9596bc2f6da1876&type=3#minus");
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+}
+
+.merchant-count-panel-minus-button:hover:enabled {
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/OldUI/Hud/minimap/minus_hover.png?fileID=2800000&guid=0b56e1337fc8a5a41a87c11bd4e3268b&type=3#minus_hover");
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0.59);
+}
+
+.merchant-count-panel-item-count {
+    width: 50px;
+}
+
+.merchant-count-panel-plus-button {
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/OldUI/Hud/minimap/plus.png?fileID=2800000&guid=d0d22a5943387f2469f07c1cd1797528&type=3#plus");
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+}
+
+.merchant-count-panel-plus-button:hover:enabled {
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/OldUI/Hud/minimap/plus_hover.png?fileID=2800000&guid=8d7eec87e5677be4491dd86b14d5c313&type=3#plus_hover");
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0.59);
+}
+
+.merchant-count-panel-currency-frame {
+    flex-grow: 1;
+    align-self: flex-end;
+    width: 240px;
+    height: 30px;
+    max-height: 30px;
+    min-height: 30px;
+}
+
+.merchant-count-panel-currency {
+    align-self: stretch;
+    align-items: stretch;
+}
+
+.merchant-count-panel-buttons {
+    flex-grow: 1;
+    flex-direction: row;
+    align-self: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.merchant-count-panel-button {
+    width: 80px;
+}
+
+.merchant-count-panel-input {
+    flex-grow: 1;
+    flex-direction: row;
+    align-self: center;
+    height: 30px;
+    max-height: 30px;
+    min-height: 30px;
+}
+
+.merchant-count-panel-top {
+    flex-grow: 1;
+    align-self: center;
+    margin-top: 14px;
+}
+
+.repair-window {
+    width: 271px;
+    height: 262px;
+}
+
+.repair-slot-panel {
+    flex-grow: 1;
+    height: 233px;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.repair-slot-scrollview {
+    flex-grow: 1;
+}
+
+.repair-slots {
+    flex-grow: 1;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.repair-currency-panel {
+    flex-grow: 1;
+    height: 40px;
+    max-height: 40px;
+    min-height: 40px;
+    width: 98%;
+    align-self: stretch;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.repair-button-panel {
+    flex-grow: 1;
+    height: 40px;
+    flex-direction: row;
+    align-self: stretch;
+    justify-content: space-around;
+    max-height: 40px;
+    min-height: 40px;
+    align-items: center;
+}
+
+.repair-button {
+    width: 90px;
+}
+
+.shop-list-panel {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/window_bg99.png?fileID=2800000&guid=eacf47a0fa20c984a996e8870552147f&type=3#window_bg99");
+    position: absolute;
+    right: 259px;
+    top: 12px;
+    width: 246px;
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+
+.shop-list-title {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    bottom: 0;
+}
+
+.shop-list {
+    flex-grow: 1;
+}
+
+.shop-list-entry {
+    flex-grow: 1;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 30px;
+    max-height: 30px;
+    min-height: 30px;
+    align-items: center;
+    width: 100%;
+}
+
+.shop-list-entry-name {
+    width: 175px;
+    white-space: normal;
+}
+
+.shop-list-entry-button {
+}
+
+.shop-menu {
+    display: flex;
+    height: 61px;
+    flex-direction: row;
+    justify-content: space-around;
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/menu_bg.png?fileID=2800000&guid=439c2fa62227dee4aa0641f2b809a943&type=3#menu_bg");
+}
+
+.shop-tab-button {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/tab_active.png?fileID=2800000&guid=1b225c8385d3d804e920d4630c6903f2&type=3#tab_active");
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0);
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
+    border-radius: 0;
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-top: -8px;
+    margin-bottom: -11px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 10px;
+    padding-bottom: 14px;
+    font-size: 16px;
+    -unity-text-align: middle-center;
+    flex-shrink: 0;
+    color: rgb(158, 154, 147);
+    width: 137px;
+    -unity-font-style: bold;
+}
+
+.shop-tab-button:hover {
+    border-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/tab_active.png?fileID=2800000&guid=1b225c8385d3d804e920d4630c6903f2&type=3#tab_active");
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0.65);
+}
+
+.shop-tab-button__selected {
+    border-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/tab_active.png?fileID=2800000&guid=1b225c8385d3d804e920d4630c6903f2&type=3#tab_active");
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+}
+
+.shop-tab-button__selected:hover {
+    border-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+}
+
+.shop-items-list {
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.guild-create-window {
+    width: 280px;
+    height: 170px;
+}
+
+.guild-create-top-panel {
+    flex-grow: 1;
+    margin-top: 7px;
+    align-self: center;
+}
+
+.guild-create-bottom {
+    flex-grow: 1;
+    height: 50px;
+    align-self: center;
+}
+
+.guild-create-button {
+    width: 120px;
+}
+
+.guild-create-input {
+    width: 200px;
+}
+
+.guild-member-away {
+    color: rgb(229, 159, 59);
+}
+
+.guild-member-online {
+    color: rgb(5, 255, 0);
+}
+
+.guild-member-offline {
+    color: rgb(149, 149, 149);
+}
+
+.guild-member-info {
+    flex-grow: 1;
+    flex-direction: row;
+}
+
+.guild-member-name {
+    width: 132px;
+}
+
+.guild-member-rank {
+    width: 107px;
+    -unity-text-align: upper-center;
+}
+
+.guild-member-level {
+    -unity-text-align: middle-center;
+    width: 40px;
+}
+
+.guild-member-status {
+    width: 57px;
+}
+
+.global-events-panel {
+    position: absolute;
+    right: 259px;
+    top: 78px;
+    width: 246px;
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+
+.global-events-grid {
+    flex-grow: 1;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.global-events-container {
+    flex-grow: 1;
+    height: 60px;
+    max-height: 60px;
+    min-height: 60px;
+    width: 60px;
+    max-width: 60px;
+    min-width: 60px;
+}
+
+.global-events-icon {
+    flex-grow: 1;
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Icons/atavism_avatar06.png?fileID=2800000&guid=540b8a04699fdbc4c9a26110777e705d&type=3#atavism_avatar06");
+}
+
+.ability-slot {
+    flex-grow: 1;
+    flex-direction: row;
+    height: 60px;
+    max-height: 60px;
+    min-height: 60px;
+}
+
+.ability-entry {
+    flex-direction: row;
+    height: 60px;
+    max-height: 60px;
+    min-height: 60px;
+    flex-grow: 1;
+}
+
+.ability-entry-left {
+    flex-grow: 1;
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/Inventory/invenory_slot.png?fileID=2800000&guid=598da58c652569946a5db5644295ac6b&type=3#invenory_slot");
+    height: 59px;
+    max-height: 59px;
+    min-height: 59px;
+    min-width: 59px;
+    max-width: 59px;
+    width: 59px;
+}
+
+.ability-entry-slot {
+    flex-grow: 1;
+    margin-top: 7px;
+    margin-right: 7px;
+    margin-bottom: 7px;
+    margin-left: 7px;
+}
+
+.ability-entry-slot-icon {
+    flex-grow: 1;
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Icons/atavism_avatar06.png?fileID=2800000&guid=540b8a04699fdbc4c9a26110777e705d&type=3#atavism_avatar06");
+    position: absolute;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.ability-entry-labels {
+    flex-grow: 1;
+    align-items: flex-start;
+    align-self: center;
+}
+
+.ability-entry-name {
+    margin-top: 1px;
+    margin-right: 1px;
+    margin-bottom: 1px;
+    margin-left: 1px;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    font-size: 14px;
+}
+
+.ability-entry-description {
+    margin-top: 1px;
+    margin-right: 1px;
+    margin-bottom: 1px;
+    margin-left: 1px;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    font-size: 11px;
+}
+
+.skill-button-slot {
+    flex-grow: 1;
+    width: 30px;
+    max-width: 30px;
+    min-width: 30px;
+    min-height: 30px;
+    max-height: 30px;
+    height: 30px;
+}
+
+.skill-button-slot-icon {
+    flex-grow: 1;
+}
+
+.skill-tab-button {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/tab_active.png?fileID=2800000&guid=1b225c8385d3d804e920d4630c6903f2&type=3#tab_active");
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0);
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
+    border-radius: 0;
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-top: -8px;
+    margin-bottom: -11px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 10px;
+    padding-bottom: 14px;
+    font-size: 16px;
+    -unity-text-align: middle-center;
+    flex-shrink: 0;
+    color: rgb(158, 154, 147);
+    width: 101px;
+    -unity-font-style: bold;
+}
+
+.skill-tab-button:hover {
+    border-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/tab_active.png?fileID=2800000&guid=1b225c8385d3d804e920d4630c6903f2&type=3#tab_active");
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0.65);
+}
+
+.skill-tab-button__selected {
+    border-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/tab_active.png?fileID=2800000&guid=1b225c8385d3d804e920d4630c6903f2&type=3#tab_active");
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+}
+
+.skill-menu {
+    display: flex;
+    height: 61px;
+    flex-direction: row;
+    justify-content: space-around;
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/menu_bg.png?fileID=2800000&guid=439c2fa62227dee4aa0641f2b809a943&type=3#menu_bg");
+}
+
+.skill-UIProgressBar__container {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.skill-UIProgressBar__background {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/Actionbar/xp_bar.png?fileID=2800000&guid=99ff8acd8594aea4b824f1c0cddd4829&type=3#xp_bar");
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0);
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    height: 100%;
+    width: 100%;
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+    -unity-slice-left: 6;
+    -unity-slice-top: 6;
+    -unity-slice-right: 6;
+    -unity-slice-bottom: 6;
+}
+
+.skill-UIProgressBar__progressBar {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/Actionbar/xp_bar_color.png?fileID=2800000&guid=3c2a6d5266a02dc498a9ace199d943e5&type=3#xp_bar_color");
+    height: 5px;
+    justify-content: flex-end;
+    align-items: center;
+    -unity-background-scale-mode: stretch-to-fill;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-top: 6px;
+    margin-right: 6px;
+    margin-bottom: 6px;
+    margin-left: 6px;
+}
+
+.skill-UIProgressBar-title__container {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.skill-UIProgressBar__title {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    color: var(--color-atavismTextDefault);
+    font-size: 10px;
+    position: relative;
+    top: -7px;
+    height: 17px;
+}
+
+#skill-list .unity-scroll-view__content-container--vertical {
+    align-items: center;
+}
+
+.skill-craft-container {
+    flex-grow: 1;
+    height: 45px;
+    max-height: 45px;
+    min-height: 45px;
+}
+
+.skill-craft-name {
+    font-size: 14px;
+    margin-top: 0;
+    margin-right: 4px;
+    margin-bottom: 4px;
+    margin-left: 4px;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    -unity-text-align: middle-left;
+}
+
+.skill-craft-progress {
+}
+
+.mail-entry-background {
+    flex-grow: 1;
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/blank.png?fileID=2800000&guid=c4a8c5bb7ee20d143acb23ef3868472d&type=3#blank");
+    height: 60px;
+    width: auto;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+    max-height: 60px;
+    min-height: 60px;
+}
+
+.mail-entry-selected {
+    flex-grow: 1;
+    flex-direction: row;
+    visibility: visible;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/arena_list_select.png?fileID=2800000&guid=a0e3220a1c8eb3d4391ab578e094392c&type=3#arena_list_select");
+}
+
+.mail-entry-icon {
+    flex-grow: 1;
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Icons/Custom/Scrolls%20and%20Books/Scrolls%20and%20Books_21_ver.png?fileID=2800000&guid=069f08a386f91ea40a4aafd585891673&type=3#Scrolls and Books_21_ver");
+    width: 48px;
+    height: 48px;
+    max-height: 48px;
+    min-height: 48px;
+    max-width: 48px;
+    margin-left: 10px;
+}
+
+.mail-entry-labels {
+    flex-grow: 1;
+    min-height: auto;
+    min-width: auto;
+    align-self: auto;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.mail-entry-sender {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    font-size: 15px;
+}
+
+.mail-entry-subject {
+    flex-direction: row-reverse;
+    align-items: auto;
+    justify-content: flex-start;
+    align-self: auto;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+}
+
+.mail-list {
+    min-height: 250px;
+    height: 370px;
+    margin-top: 4px;
+    margin-right: 4px;
+    margin-left: 4px;
+    margin-bottom: 4px;
+}
+
+.mail-list .unity-list-view__item {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.mail-list .unity-list-view__item:hover:enabled {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.mail-inbox {
+    flex-grow: 1;
+    height: 350px;
+    display: flex;
+}
+
+.mail-footer {
+    flex-grow: 1;
+    align-items: center;
+    height: -1px;
+    align-self: stretch;
+    justify-content: center;
+}
+
+.currency-inputs {
+    flex-grow: 1;
+    flex-direction: row;
+    align-items: center;
+}
+
+.currency-inputs-icon {
+    flex-grow: 1;
+    height: 22px;
+    max-height: 22px;
+    min-height: 22px;
+    width: 22px;
+    max-width: 22px;
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/bronze.png?fileID=2800000&guid=af66f84532318654cb6b7c5769ada361&type=3#bronze");
+}
+
+.currency-inputs--input2 {
+    width: 40px;
+}
+
+.currency-inputs--input1 {
+    flex-shrink: 1;
+    width: 80px;
+}
+
+.mail-compose {
+    flex-grow: 1;
+    display: flex;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.mail-compose-recipient {
+    opacity: 1;
+    -unity-text-align: upper-left;
+}
+
+.mail-compose-recipient .UITextField__placeholder {
+    -unity-text-align: upper-left;
+}
+
+.mail-compose-recipient .unity-text-field__input {
+    -unity-text-align: upper-left;
+    --unity-selection-color: var(--color-atavismTextDark);
+}
+
+.mail-compose-subject .UITextField__placeholder {
+    -unity-text-align: upper-left;
+}
+
+.mail-compose-subject .unity-text-field__input {
+    -unity-text-align: upper-left;
+    --unity-selection-color: var(--color-atavismTextDark);
+}
+
+.mail-compose-subject {
+    -unity-text-align: upper-left;
+}
+
+.mail-compose-message {
+    flex-basis: 1px;
+    align-items: stretch;
+    justify-content: space-around;
+    align-self: stretch;
+    width: auto;
+    min-height: 31%;
+    height: 170.41px;
+    max-height: 170.41px;
+}
+
+.mail-compose-message .unity-text-field__input {
+    -unity-text-align: upper-left;
+    --unity-selection-color: var(--color-atavismTextDark);
+}
+
+.mail-compose-items {
+    flex-grow: 1;
+    flex-direction: row;
+    justify-content: space-around;
+    align-self: center;
+    height: 60px;
+    min-height: 60px;
+    max-height: 60px;
+    align-items: center;
+}
+
+.mail-compose-toggles {
+    flex-grow: 1;
+    flex-direction: row;
+    align-items: flex-start;
+    height: 45px;
+    max-height: 45px;
+    min-height: 45px;
+}
+
+.mail-read-window {
+    width: 440px;
+    height: 540px;
+}
+
+.mail-read-buttons {
+    flex-grow: 1;
+    height: 50px;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+}
+
+.mail-read-currency-row {
+    flex-grow: 1;
+    margin-right: 17px;
+}
+
+.mail-read-slots-row {
+    flex-grow: 1;
+    flex-direction: row;
+    height: 130px;
+    margin-top: 3px;
+}
+
+.mail-read-message-row {
+    flex-grow: 1;
+    flex-direction: row;
+    height: 160px;
+    max-height: 160px;
+    min-height: 30px;
+}
+
+.mail-read-message-label {
+    -unity-text-align: upper-right;
+    width: 90px;
+}
+
+.mail-read-message-text {
+    height: 160px;
+    width: 270px;
+    max-height: 160px;
+    min-height: 160px;
+    white-space: normal;
+}
+
+.mail-read-slots-label {
+    -unity-text-align: upper-right;
+    width: 120px;
+}
+
+.mail-read-slots-container {
+    flex-grow: 1;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.mail-read-subject-label {
+    -unity-text-align: upper-right;
+    width: 90px;
+}
+
+.mail-read-subject-text {
+}
+
+.mail-read-subject-row {
+    flex-grow: 1;
+    flex-direction: row;
+    height: 30px;
+    max-height: 30px;
+    min-height: 30px;
+    align-items: center;
+}
+
+.mail-read-sender-row {
+    flex-grow: 1;
+    flex-direction: row;
+    height: 30px;
+    max-height: 30px;
+    min-height: 30px;
+    align-items: center;
+}
+
+.mail-read-sender-label {
+    -unity-text-align: upper-right;
+    width: 90px;
+}
+
+.mail-read-sender-text {
+}
+
+.mail-read-panel {
+    flex-grow: 1;
+    height: 350px;
+}
+
+.social-tab-button {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/tab_active.png?fileID=2800000&guid=1b225c8385d3d804e920d4630c6903f2&type=3#tab_active");
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0);
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
+    border-radius: 0;
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-top: -8px;
+    margin-bottom: -11px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 10px;
+    padding-bottom: 14px;
+    font-size: 16px;
+    -unity-text-align: middle-center;
+    flex-shrink: 0;
+    color: rgb(158, 154, 147);
+    width: 137px;
+    -unity-font-style: bold;
+}
+
+.social-tab-button:hover {
+    border-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/tab_active.png?fileID=2800000&guid=1b225c8385d3d804e920d4630c6903f2&type=3#tab_active");
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0.65);
+}
+
+.social-tab-button__selected {
+    border-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/tab_active.png?fileID=2800000&guid=1b225c8385d3d804e920d4630c6903f2&type=3#tab_active");
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+}
+
+.social-menu {
+    display: flex;
+    height: 61px;
+    flex-direction: row;
+    justify-content: space-around;
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/menu_bg.png?fileID=2800000&guid=439c2fa62227dee4aa0641f2b809a943&type=3#menu_bg");
+    max-height: 61px;
+}
+
+.building-list-entry {
+    flex-grow: 1;
+    flex-direction: row;
+    min-height: 60px;
+    max-height: 60px;
+    height: 60px;
+}
+
+.building-list-entry-slot {
+    flex-grow: 1;
+    width: 60px;
+    height: 60px;
+    max-height: 60px;
+    min-height: 60px;
+    max-width: 60px;
+    min-width: 60px;
+    display: flex;
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/Inventory/invenory_slot.png?fileID=2800000&guid=598da58c652569946a5db5644295ac6b&type=3#invenory_slot");
+}
+
+.building-list-entry-icon {
+    background-color: rgb(42, 40, 39);
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    margin-top: 7px;
+    margin-right: 7px;
+    margin-bottom: 7px;
+    margin-left: 7px;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Icons/atavism_avatar06.png?fileID=2800000&guid=540b8a04699fdbc4c9a26110777e705d&type=3#atavism_avatar06");
+}
+
+.building-list-entry-right-panel {
+    flex-grow: 1;
+}
+
+.building-list-entry-top {
+    flex-grow: 1;
+    height: 20px;
+    max-height: 20px;
+    min-height: 20px;
+    align-items: center;
+    flex-direction: row;
+}
+
+.building-list-entry-name {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    width: 190px;
+}
+
+.building-list-entry-category {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+}
+
+.building-list-entry-requirements {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    white-space: normal;
+}
+
+.building-limits-entry {
+    flex-grow: 1;
+    flex-direction: row;
+    width: 165px;
+    height: 20px;
+    max-height: 20px;
+    min-height: 20px;
+    max-width: 170px;
+    align-items: center;
+}
+
+.building-limits-entry-value {
+    margin-top: 0;
+    margin-right: 2px;
+    margin-bottom: 0;
+    margin-left: 2px;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    width: 50px;
+    font-size: 12px;
+}
+
+.building-limits-entry-name {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    width: 114px;
+}
+
+.building-limits-grid {
+    flex-grow: 1;
+    padding-right: 4px;
+    padding-left: 4px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.building-limits-panel {
+    flex-grow: 1;
+    position: absolute;
+    width: 370px;
+    height: 170px;
+    right: -375px;
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/window_bg99.png?fileID=2800000&guid=eacf47a0fa20c984a996e8870552147f&type=3#window_bg99");
+}
+
+.building-permission-entry {
+    flex-grow: 1;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 20px;
+    max-height: 20px;
+    align-items: center;
+}
+
+.building-permission-entry-text {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    width: auto;
+    flex-shrink: 1;
+    flex-grow: 1;
+}
+
+.building-permission-entry-button {
+    width: 20px;
+    max-height: 20px;
+    min-height: 20px;
+    max-width: 20px;
+}
+
+.builder-circle-icon-selected {
+    -unity-background-image-tint-color: var(--color-atavism-builderCircleIconSelectedTint);
+}
+
+.builder-circle-name {
+    -unity-text-align: middle-center;
+    font-size: 24px;
+    position: absolute;
+    top: 139px;
+    left: 0;
+    right: 0;
+    color: var(--color-atavism-builderCircleName);
+}
+
+.builder-circle-description {
+    position: absolute;
+    top: 195px;
+    left: 0;
+    font-size: 16px;
+    color: var(--color-atavism-builderCircleDescription);
+    -unity-text-align: middle-center;
+    right: 0;
+}
+
+.builder-circle-icon {
+    flex-grow: 1;
+    width: 100px;
+    height: 100px;
+    max-height: 100px;
+    min-height: 100px;
+    min-width: 100px;
+    max-width: 100px;
+    position: absolute;
+    top: 31px;
+    left: 106px;
+}
+
+.builder-circle-inner {
+    flex-grow: 1;
+    left: 0;
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("project://database/Assets/Dragonsan/Easy%20Build%20System%20for%20Atavism/Features/Add-ons/Circular%20Menu/Textures/Circle%20Fill.png?fileID=2800000&guid=7c541a19c4548a04d98e939541333579&type=3#Circle Fill");
+    display: flex;
+    width: 310px;
+    height: 310px;
+    max-height: 310px;
+    min-height: 310px;
+    min-width: 310px;
+    max-width: 310px;
+    -unity-background-image-tint-color: var(--color-atavism-builderCircleInner);
+    overflow: visible;
+}
+
+.builder-circle__show {
+    transition-property: scale, opacity;
+    transition-timing-function: linear, linear;
+    transition-duration: 0.2s, 0.2s;
+    scale: 1 1;
+    opacity: 1;
+}
+
+.builder-circle__hide {
+    transition-duration: 0.2s, 0.2s;
+    transition-property: scale, opacity;
+    transition-timing-function: linear, linear;
+    scale: 0 0;
+    opacity: 0;
+}
+
+.builder-circle__button-click {
+    scale: 1.5 1.5;
+    transition-duration: 0.1s;
+    transition-timing-function: linear;
+}
+
+.builder-circle-selection {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    background-image: url("project://database/Assets/Dragonsan/Easy%20Build%20System%20for%20Atavism/Features/Add-ons/Circular%20Menu/Textures/Circle%20Border.png?fileID=2800000&guid=830ec2456a2d5d748ae4deefcab8e643&type=3#Circle Border");
+    -unity-background-image-tint-color: var(--color-atavism-builderCircleSelectionBacground);
+    overflow: hidden;
+    rotate: 0;
+}
+
+.builder-circle-selection .UIFillerElement__radial {
+    -unity-background-image-tint-color: var(--color-atavism-builderCircleCone);
+}
+
+.builder-circle-background {
+    flex-grow: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("project://database/Assets/Dragonsan/Easy%20Build%20System%20for%20Atavism/Features/Add-ons/Circular%20Menu/Textures/Circle%20Border.png?fileID=2800000&guid=830ec2456a2d5d748ae4deefcab8e643&type=3#Circle Border");
+    -unity-background-image-tint-color: var(--color-atavism-builderCircleBacground);
+    display: flex;
+}
+
+.builder-circle-category {
+    flex-grow: 1;
+    position: absolute;
+    display: flex;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.menu-button {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-right: 3px;
+    padding-left: 3px;
+    margin-top: 1px;
+    margin-right: 2px;
+    margin-bottom: 1px;
+    margin-left: 2px;
+}
+
+.menu-button:hover:enabled {
+    background-color: var(--color-atavismDefault);
+}
+
+.soctial-list-entry {
+    flex-grow: 1;
+    height: 20px;
+    max-height: 20px;
+    min-height: 20px;
+    flex-direction: row;
+    align-items: center;
+}
+
+.soctial-list-entry-name {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    width: 175px;
+    -unity-text-align: middle-left;
+}
+
+.soctial-list-entry-level {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    display: none;
+}
+
+.soctial-list-entry-status {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    width: 80px;
+    -unity-text-align: middle-center;
+}
+
+.gear-UIProgressBar__container {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.gear-UIProgressBar__background {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/Actionbar/xp_bar.png?fileID=2800000&guid=99ff8acd8594aea4b824f1c0cddd4829&type=3#xp_bar");
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0);
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    height: 100%;
+    width: 100%;
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+    -unity-slice-left: 6;
+    -unity-slice-top: 6;
+    -unity-slice-right: 6;
+    -unity-slice-bottom: 6;
+}
+
+.gear-UIProgressBar__progressBar {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/Actionbar/xp_bar_yellow.png?fileID=2800000&guid=a2c9344140a1cee4989af8a0591a12b6&type=3#xp_bar_yellow");
+    height: 5px;
+    justify-content: flex-end;
+    align-items: center;
+    -unity-background-scale-mode: stretch-to-fill;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-top: 6px;
+    margin-right: 6px;
+    margin-bottom: 6px;
+    margin-left: 6px;
+}
+
+.gear-UIProgressBar-title__container {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.gear-UIProgressBar__title {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    color: var(--color-atavismTextDefault);
+    font-size: 10px;
+    position: relative;
+    top: -7px;
+    height: 17px;
+}
+
+.vip-UIProgressBar__container {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.vip-UIProgressBar__background {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/Actionbar/xp_bar.png?fileID=2800000&guid=99ff8acd8594aea4b824f1c0cddd4829&type=3#xp_bar");
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0);
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    height: 100%;
+    width: 100%;
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+    -unity-slice-left: 6;
+    -unity-slice-top: 6;
+    -unity-slice-right: 6;
+    -unity-slice-bottom: 6;
+}
+
+.vip-UIProgressBar__progressBar {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/Actionbar/xp_bar_color.png?fileID=2800000&guid=3c2a6d5266a02dc498a9ace199d943e5&type=3#xp_bar_color");
+    height: 5px;
+    justify-content: flex-end;
+    align-items: center;
+    -unity-background-scale-mode: stretch-to-fill;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-top: 6px;
+    margin-right: 6px;
+    margin-bottom: 6px;
+    margin-left: 6px;
+}
+
+.vip-UIProgressBar-title__container {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.vip-UIProgressBar__title {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    color: var(--color-atavismTextDefault);
+    font-size: 10px;
+    position: relative;
+    top: 2px;
+    height: 17px;
+}
+
+.vip-prev-button {
+    background-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    top: 85px;
+    left: 240px;
+    height: 145px;
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/stat_prev3.psd?fileID=2800000&guid=28eefc7d1b1852a4db2c131a52ee89ed&type=3#stat_prev3");
+    width: 15px;
+    max-width: 15px;
+    min-width: 15px;
+    max-height: 145px;
+    min-height: 145px;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    -unity-background-image-tint-color: rgb(158, 154, 147);
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+}
+
+.vip-prev-button:hover:enabled {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/stat_prev3_over.psd?fileID=2800000&guid=088fa2df86dbfb44095efb1eeed4b3d7&type=3#stat_prev3_over");
+    background-color: rgba(0, 0, 0, 0);
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+}
+
+.vip-next-button {
+    position: absolute;
+    top: 85px;
+    left: 480px;
+    height: 145px;
+    max-height: 145px;
+    min-height: 145px;
+    width: 15px;
+    max-width: 15px;
+    min-width: 15px;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/stat_next3.psd?fileID=2800000&guid=87aa28b22fde65c478bf229f3d82af62&type=3#stat_next3");
+    background-color: rgba(0, 0, 0, 0);
+    -unity-background-image-tint-color: rgb(158, 154, 147);
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+}
+
+.vip-next-button:hover:enabled {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/stat_next3_over.psd?fileID=2800000&guid=bc7f7e932b8e55e4e8aa8f990015634a&type=3#stat_next3_over");
+    background-color: rgba(0, 0, 0, 0);
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+}
+
+.vip-entry-name {
+    width: 240px;
+}
+
+.vip-entry-bonus-a {
+    width: 110px;
+    margin-right: 6px;
+    margin-left: 11px;
+    -unity-text-align: upper-center;
+}
+
+.vip-entry-bonus-b {
+    width: 110px;
+    -unity-text-align: upper-center;
+}
+
+.vip-entry {
+    flex-grow: 1;
+    flex-direction: row;
+}
+
+.vip-grid {
+    flex-grow: 1;
+}
+
+.vip-scroller {
+    height: 262px;
+}
+
+.vip-header {
+    flex-grow: 1;
+    flex-direction: row;
+    height: 30px;
+    max-height: 30px;
+    min-height: 30px;
+}
+
+.vip-header-name {
+    width: 241px;
+}
+
+.vip-header-a {
+    width: 117px;
+    -unity-text-align: upper-center;
+}
+
+.vip-header-b {
+    -unity-text-align: upper-center;
+    width: 115px;
+}
+
+.vip-info {
+    flex-grow: 1;
+    height: 44px;
+    width: auto;
+    max-height: 44px;
+    min-height: 44px;
+}
+
+.vip-info-top {
+    flex-grow: 1;
+    flex-direction: row;
+    height: 25px;
+    max-height: 25px;
+    min-height: 25px;
+    justify-content: space-between;
+}
+
+.vip-info-top-name {
+    margin-top: 0;
+    margin-right: 3px;
+    margin-bottom: 0;
+    margin-left: 3px;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    font-size: 19px;
+    width: 314px;
+}
+
+.vip-info-top-time {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    font-size: 19px;
+}
+
+.vip-info-progress {
+    justify-content: center;
+}
+
+.vip-window {
+    width: 500px;
+    height: 400px;
+}
+
+.vip-expired {
+    color: rgb(255, 0, 0);
+}
+
+.trade-item-slot {
+    flex-grow: 1;
+    height: 60px;
+    max-height: 60px;
+    min-height: 60px;
+    min-width: 60px;
+    max-width: 60px;
+    width: 60px;
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/Inventory/invenory_slot.png?fileID=2800000&guid=598da58c652569946a5db5644295ac6b&type=3#invenory_slot");
+    align-items: center;
+    justify-content: center;
+}
+
+.trade-item-name {
+}
+
+.trade-item-container {
+    flex-grow: 1;
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/OldUI/Hud/trade/frames_active/object_frame.png?fileID=2800000&guid=82d29c40f08109448a0d32e476893447&type=3#object_frame");
+    height: 60px;
+    max-height: 60px;
+    min-height: 60px;
+    flex-direction: row;
+    -unity-background-image-tint-color: rgb(200, 169, 141);
+    align-items: center;
+}
+
+.trade-ItemDisplay__frame {
+    width: 60px;
+    height: 60%;
+    flex-shrink: 0;
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/Inventory/inventory_slot_white.png?fileID=2800000&guid=21869511978121e4f9b77068f1f99499&type=3#inventory_slot_white");
+    max-height: 60px;
+    min-height: 60px;
+    max-width: 60px;
+    min-width: 60px;
+    padding-top: 8px;
+    padding-right: 8px;
+    padding-bottom: 8px;
+    padding-left: 8px;
+    -unity-background-image-tint-color: rgb(64, 58, 55);
+}
+
+.trade-ItemDisplay__icon {
+    width: 100%;
+    height: 100%;
+    -unity-background-scale-mode: scale-and-crop;
+    position: relative;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+}
+
+.trade-ItemDisplay__title {
+    flex-grow: 1;
+    -unity-text-align: middle-left;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: var(--color-atavismTextHighlighted);
+    position: absolute;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.trade-ItemDisplay__count {
+    flex-grow: 1;
+    -unity-text-align: middle-right;
+    padding-left: 0;
+    padding-right: 0;
+    color: var(--color-atavismTextHighlighted);
+    position: absolute;
+    padding-top: 0;
+    padding-bottom: 0;
+    flex-direction: column;
+}
+
+.screen-center {
+    -unity-font-definition: url("project://database/Assets/Dragonsan/Atavism%20(UI%20Toolkit)/UI/Fonts/Cambria%20SDF.asset?fileID=11400000&guid=171debed56e16fd4daf65623c92ecac2&type=2#Cambria SDF");
+    -unity-font: url("project://database/Assets/Dragonsan/AtavismObjects/Fonts/Cambria.ttf?fileID=12800000&guid=36ef3a2444bc15847bd874b9b0c98ae6&type=3#Cambria");
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.queue-panel {
+    width: 550px;
+    height: 290px;
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/window_bg99.png?fileID=2800000&guid=eacf47a0fa20c984a996e8870552147f&type=3#window_bg99");
+    translate: 0 0;
+    -unity-slice-left: 3;
+    -unity-slice-top: 3;
+    -unity-slice-right: 3;
+    -unity-slice-bottom: 3;
+    align-items: stretch;
+    align-self: auto;
+    justify-content: flex-end;
+}
+
+.queue-panel-message {
+    height: 100px;
+    -unity-text-align: middle-center;
+}
+
+.queue-panel-count {
+    font-size: 20px;
+}
+
+.queue-panel-space {
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    height: 44px;
+}
+
+.queue-panel-buttons {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: auto;
+    align-self: auto;
+    bottom: 3px;
+}
+
+.queue-panel-button {
+}
+
+.action-slot-hotkey {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/Actionbar/actionbar_slot_info.png?fileID=2800000&guid=cc2c48f7a3f25fe44b836e1947f1dff5&type=3#actionbar_slot_info");
+    -unity-background-scale-mode: scale-to-fit;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    align-self: center;
+    bottom: -17px;
+    overflow: visible;
+    color: rgb(158, 154, 147);
+    position: absolute;
+    -unity-text-align: middle-center;
+}
+
+.action-slot-icon {
+    flex-grow: 1;
+    flex-direction: column-reverse;
+    position: absolute;
+    background-image: none;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.action-slot-slot {
+    width: 70px;
+    height: 70px;
+    flex-direction: column;
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/Actionbar/actionbar_slot.png?fileID=2800000&guid=a94b9017dc9d19a478ee996535a1e3db&type=3#actionbar_slot");
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+    overflow: visible;
+    align-items: center;
+    justify-content: center;
+    max-height: 70px;
+    min-height: 70px;
+    min-width: 70px;
+    max-width: 70px;
+}
+
+.action-slot-holder {
+    width: 70px;
+    height: 70px;
+    max-height: 70px;
+    min-height: 70px;
+    min-width: 70px;
+    margin-right: 0;
+    margin-left: 0;
+    padding-right: -55px;
+    padding-left: -31px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.action-bar-grid {
+    height: 446px;
+    width: 630px;
+    margin-left: 1px;
+    margin-right: 1px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    flex-direction: row;
+    justify-content: space-around;
+    align-self: stretch;
+}
+
+.action-bar-bottom {
+    flex-grow: 1;
+    align-items: stretch;
+    justify-content: space-around;
+    align-self: auto;
+    flex-direction: column-reverse;
+    bottom: 80px;
+    height: 60px;
+    max-height: 60px;
+    min-height: 60px;
+    position: absolute;
+}
+
+.menu-element-selected {
+    color: var(--color-atavismTextLight);
+}
+
+.graphic-row {
+    flex-direction: row;
+}
+
+.settings-main-menu {
+    display: flex;
+    height: 61px;
+    flex-direction: row;
+    justify-content: space-around;
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/menu_bg.png?fileID=2800000&guid=439c2fa62227dee4aa0641f2b809a943&type=3#menu_bg");
+    max-height: 61px;
+}
+
+.settings-main-tab-button {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/tab_active.png?fileID=2800000&guid=1b225c8385d3d804e920d4630c6903f2&type=3#tab_active");
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0);
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
+    border-radius: 0;
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-top: -8px;
+    margin-bottom: -11px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 10px;
+    padding-bottom: 14px;
+    font-size: 16px;
+    -unity-text-align: middle-center;
+    flex-shrink: 0;
+    color: rgb(158, 154, 147);
+    width: 122px;
+    -unity-font-style: bold;
+}
+
+.settings-main-tab-button:hover {
+    border-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/tab_active.png?fileID=2800000&guid=1b225c8385d3d804e920d4630c6903f2&type=3#tab_active");
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0.65);
+}
+
+.settings-main-tab-button__selected {
+    border-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/tab_active.png?fileID=2800000&guid=1b225c8385d3d804e920d4630c6903f2&type=3#tab_active");
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+}
+
+.settings-control-row {
+    flex-grow: 1;
+    flex-direction: row;
+    width: auto;
+    justify-content: space-between;
+    height: 25px;
+    max-height: 25px;
+    min-height: 25px;
+    align-items: center;
+}
+
+.settings-control-button {
+    width: 200px;
+}
+
+.settings-control-label {
+    -unity-text-align: middle-left;
+}
+
+.settings-control-sub {
+    flex-grow: 1;
+    flex-direction: row-reverse;
+}
+
+.game-menu-button {
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(223, 205, 177);
+    font-size: 32px;
+    -unity-text-align: middle-center;
+    -unity-font-style: bold;
+    -unity-font-definition: url("project://database/Assets/Dragonsan/Atavism%20(UI%20Toolkit)/UI/Fonts/Cambria%20SDF.asset?fileID=11400000&guid=171debed56e16fd4daf65623c92ecac2&type=2#Cambria SDF");
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+}
+
+.game-menu-button:hover:enabled {
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(180, 144, 86);
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+}
+
+.screen-full {
+    flex-grow: 1;
+}
+
+.game-menu-background {
+    flex-grow: 1;
+}
+
+.game-menu__background {
+    flex-grow: 1;
+    width: 400px;
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/menu_bg_2.png?fileID=2800000&guid=c87996a1c298352409c515855f711eeb&type=3#menu_bg_2");
+    flex-direction: row-reverse;
+}
+
+.game-menu__button-list {
+    flex-grow: 0;
+}
+
+.lag-label {
+    flex-grow: 1;
+    flex-shrink: 0;
+    -unity-text-align: upper-right;
+    font-size: 25px;
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 105px;
+}
+
+.lag-high {
+    color: red;
+}
+
+.lag-low {
+    color: green;
+}
+
+.lag-medium {
+    color: orange;
+}
+
+.Casting-UIProgressBar__container {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.Casting-UIProgressBar__background {
+    background-image: none;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0);
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    height: 100%;
+    width: 100%;
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+    -unity-slice-left: 6;
+    -unity-slice-top: 6;
+    -unity-slice-right: 6;
+    -unity-slice-bottom: 6;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.Casting-UIProgressBar__progressBar {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/OldUI/Hud/boss_frame/red_bar/red_bar.png?fileID=2800000&guid=f0180442404db4f45b77fe71186e385c&type=3#red_bar");
+    height: 12px;
+    justify-content: flex-end;
+    align-items: center;
+    -unity-background-scale-mode: stretch-to-fill;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-top: 4px;
+    margin-right: 0;
+    margin-bottom: 4px;
+    margin-left: 0;
+}
+
+.Casting-UIProgressBar-title__container {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.Casting-UIProgressBar__title {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.menu-bar-button {
+    flex-direction: column;
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Icons/atavism_avatar06.png?fileID=2800000&guid=540b8a04699fdbc4c9a26110777e705d&type=3#atavism_avatar06");
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    flex-shrink: 0;
+    background-color: rgba(0, 0, 0, 0);
+    align-items: stretch;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    justify-content: space-around;
+    max-width: none;
+    max-height: none;
+    min-width: auto;
+    min-height: auto;
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    overflow: visible;
+}
+
+.menu-bar-button:hover:enabled {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.menu-bar-holder {
+    flex-grow: 0;
+    display: flex;
+    margin-left: 1px;
+    margin-right: 1px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    align-self: center;
+    height: 30px;
+    width: 30px;
+    max-height: 30px;
+    min-height: 30px;
+    min-width: 30px;
+    max-width: 30px;
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/Inventory/invenory_slot_v2.png?fileID=2800000&guid=f480ff160d7214e4b82bf113864e5569&type=3#invenory_slot_v2");
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    padding-top: 2px;
+    padding-right: 2px;
+    padding-bottom: 2px;
+    padding-left: 2px;
+    background-color: var(--color-atavismDefault);
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+}
+
+.claim-entry-tax-info-label {
+    margin-top: 0;
+    margin-right: 4px;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    bottom: auto;
+    right: auto;
+    -unity-font-style: bold;
+    -unity-text-align: upper-center;
+}
+
+.claim-entry-tax-info {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    white-space: normal;
+    width: auto;
+    flex-shrink: initial;
+    flex-grow: initial;
+}
+
+.claim-entry-tax-paid {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    flex-grow: initial;
+    flex-shrink: initial;
+}
+
+.claim-entry-tax-paid-label {
+    bottom: auto;
+    right: auto;
+    margin-top: 0;
+    margin-right: 4px;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    -unity-font-style: bold;
+}
+
+.claim-entry-name {
+    font-size: 14px;
+    -unity-font-style: bold;
+    width: 206px;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    white-space: normal;
+    right: auto;
+    bottom: auto;
+    -unity-text-align: middle-left;
+}
+
+.claim-entry-tax-button {
+    margin-top: 4px;
+    margin-right: 4px;
+    margin-bottom: 4px;
+    margin-left: 4px;
+    height: 30px;
+    bottom: auto;
+    width: 136px;
+    right: auto;
+}
+
+.claim-entry {
+    flex-grow: 1;
+    height: 90px;
+    max-height: 90px;
+    min-height: 90px;
+    min-width: auto;
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/arena%20list_hover.png?fileID=2800000&guid=b285134d30db8634eb7d0a006189ee95&type=3#arena list_hover");
+}
+
+.claim-entry-row1 {
+    flex-grow: 1;
+    flex-direction: row;
+    height: 33px;
+    max-height: 33px;
+    min-height: 33px;
+    align-items: center;
+}
+
+.claim-entry-row2 {
+    flex-grow: 1;
+    height: 15px;
+    max-height: 15px;
+    min-height: 15px;
+    flex-direction: row;
+}
+
+.claim-entry-row3 {
+    flex-grow: 1;
+    flex-direction: row;
+}
+
+.admin-panel-input {
+    height: 20px;
+}
+
+.Ranking {
+}
+
+.Ranking TreeView Toggle {
+    display: none;
+}
+
+.Ranking .unity-tree-view {
+}
+
+.Ranking .unity-tree-view__item {
+}
+
+.Ranking .unity-tree-view__item:hover {
+    background-color: rgba(65, 64, 57, 0.6);
+    color: var(--color-atavismTextLight);
+}
+
+.Ranking .unity-tree-view__item-toggle {
+}
+
+.Ranking .unity-tree-view__item-indents {
+}
+
+.Ranking .unity-tree-view__item-indent {
+}
+
+.Ranking .unity-tree-view__item-content {
+}
+
+.Ranking .unity-disabled {
+}
+
+.Ranking .unity-collection-view__item--selected {
+    color: var(--color-atavismTextLight);
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.resource-skill-low {
+    color: rgb(255, 0, 0);
+}
+
+.resource-low {
+    color: rgb(255, 0, 0);
+}
+
+.resource-error {
+    color: rgb(255, 0, 0);
+}
+
+.achievement-active-title {
+    color: rgb(6, 255, 0);
+}
+
+.xp-UIProgressBar__container {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    height: 19px;
+}
+
+.xp-UIProgressBar__background {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/Actionbar/xp_bar.png?fileID=2800000&guid=99ff8acd8594aea4b824f1c0cddd4829&type=3#xp_bar");
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0);
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    height: 100%;
+    width: 100%;
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+    -unity-slice-left: 6;
+    -unity-slice-top: 7;
+    -unity-slice-right: 6;
+    -unity-slice-bottom: 7;
+}
+
+.xp-UIProgressBar__progressBar {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/Actionbar/xp_bar_color.png?fileID=2800000&guid=3c2a6d5266a02dc498a9ace199d943e5&type=3#xp_bar_color");
+    height: 7px;
+    justify-content: flex-end;
+    align-items: center;
+    -unity-background-scale-mode: stretch-to-fill;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-top: 6px;
+    margin-right: 6px;
+    margin-bottom: 6px;
+    margin-left: 6px;
+}
+
+.xp-UIProgressBar-title__container {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    align-self: auto;
+}
+
+.xp-UIProgressBar__title {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    -unity-text-align: middle-center;
+    align-items: center;
+    justify-content: center;
+    text-overflow: clip;
+    color: rgb(149, 146, 113);
+    font-size: 11px;
+}
+
+.timer-UIProgressBar__container {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    height: 19px;
+}
+
+.timer-UIProgressBar__background {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/Actionbar/xp_bar.png?fileID=2800000&guid=99ff8acd8594aea4b824f1c0cddd4829&type=3#xp_bar");
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0);
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    height: 100%;
+    width: 100%;
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+    -unity-slice-left: 6;
+    -unity-slice-top: 7;
+    -unity-slice-right: 6;
+    -unity-slice-bottom: 7;
+}
+
+.timer-UIProgressBar__progressBar {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/Actionbar/xp_bar_yellow.png?fileID=2800000&guid=a2c9344140a1cee4989af8a0591a12b6&type=3#xp_bar_yellow");
+    height: 7px;
+    justify-content: flex-end;
+    align-items: center;
+    -unity-background-scale-mode: stretch-to-fill;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-top: 6px;
+    margin-right: 6px;
+    margin-bottom: 6px;
+    margin-left: 6px;
+}
+
+.timer-UIProgressBar-title__container {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    align-self: auto;
+}
+
+.timer-UIProgressBar__title {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    -unity-text-align: middle-center;
+    align-items: center;
+    justify-content: center;
+    text-overflow: clip;
+    color: rgb(149, 146, 113);
+    font-size: 11px;
+}
+
+.auction-error-message {
+    color: rgb(255, 0, 0);
+    -unity-text-align: middle-left;
+    margin-left: 7px;
+}
+
+.unity-base-field--no-label {
+}
+
+.admin-weather-input2 {
+    width: 40px;
+    max-width: 40px;
+    min-width: 40px;
+    margin-top: 0;
+    margin-right: 2px;
+    margin-bottom: 0;
+    margin-left: 2px;
+}
+
+.admin-weather-input1 {
+    width: 55px;
+    max-width: 55px;
+    min-width: 55px;
+}
+
+.UIFillerElement__radial {
+}
+
+.builder-circle__button-icon {
+    flex-grow: 1;
+    width: 50px;
+    height: 50px;
+    max-height: 50px;
+    min-height: 50px;
+    min-width: 50px;
+    max-width: 50px;
+}
+
+.menu-bar-hotkey {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/Actionbar/actionbar_slot_info.png?fileID=2800000&guid=cc2c48f7a3f25fe44b836e1947f1dff5&type=3#actionbar_slot_info");
+    -unity-background-scale-mode: scale-to-fit;
+    display: none;
+}
+
+.selected-button {
+    color: var(--color-atavismTextLight);
+}
+
+.floating-panel-name-enemy {
+    color: rgb(255, 0, 0);
+}
+
+.floating-panel-name-friendly {
+    color: rgb(0, 255, 0);
+}
+
+.floating-panel-name-neutral {
+    color: rgb(255, 255, 0);
+}
+
+.floating-panel-damage-crush-self {
+    color: rgb(255, 253, 255);
+    font-size: 40px;
+}
+
+.floating-panel-damage-crush-critic-self {
+    color: rgb(255, 55, 0);
+    font-size: 50px;
+}
+
+.floating-panel-damage-crush {
+    color: rgb(255, 0, 224);
+    font-size: 20px;
+    -unity-font-style: bold;
+}
+
+.floating-panel-damage-crush-critic {
+    color: rgb(164, 0, 0);
+    font-size: 50px;
+    -unity-font-style: bold;
+}
+
+.floating-panel-damage-magical-self {
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+}
+
+.floating-panel-damage-magical-critic-self {
+    color: rgb(255, 55, 0);
+    font-size: 50px;
+}
+
+.floating-panel-damage-magical {
+    color: rgb(255, 0, 224);
+    font-size: 20px;
+    -unity-font-style: bold;
+}
+
+.floating-panel-damage-magical-critic {
+    color: rgb(164, 0, 0);
+    font-size: 50px;
+    -unity-font-style: bold;
+}
+
+.floating-panel-damage-pierce-self {
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+}
+
+.floating-panel-damage-pierce-critic-self {
+    color: rgb(255, 0, 0);
+    font-size: 50px;
+}
+
+.floating-panel-damage-pierce {
+    color: rgb(255, 0, 224);
+    font-size: 20px;
+    -unity-font-style: bold;
+}
+
+.floating-panel-damage-pierce-critic {
+    color: rgb(164, 0, 0);
+    font-size: 50px;
+    -unity-font-style: bold;
+}
+
+.floating-panel-damage-slash-self {
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+}
+
+.floating-panel-damage-slash-critic-self {
+    color: rgb(164, 0, 0);
+    font-size: 50px;
+}
+
+.floating-panel-damage-slash {
+    color: rgb(255, 0, 224);
+    font-size: 20px;
+    -unity-font-style: bold;
+}
+
+.floating-panel-damage-slash-critic {
+    color: rgb(164, 0, 0);
+    font-size: 50px;
+    -unity-font-style: bold;
+}
+
+.floating-panel-heal-crush-self {
+    color: rgb(143, 250, 171);
+    font-size: 40px;
+}
+
+.floating-panel-heal-crush-critic-self {
+    color: rgb(56, 243, 0);
+    font-size: 50px;
+}
+
+.floating-panel-heal-crush {
+    color: rgb(255, 253, 0);
+    font-size: 20px;
+    -unity-font-style: bold;
+}
+
+.floating-panel-heal-crush-critic {
+    color: rgb(56, 253, 15);
+    font-size: 50px;
+    -unity-font-style: bold;
+}
+
+.floating-panel-heal-magical-self {
+    color: rgb(143, 250, 171);
+    font-size: 40px;
+}
+
+.floating-panel-heal-magical-critic-self {
+    color: rgb(56, 243, 0);
+    font-size: 50px;
+}
+
+.floating-panel-heal-magical {
+    color: rgb(255, 253, 0);
+    font-size: 20px;
+}
+
+.floating-panel-heal-magical-critic {
+    color: rgb(255, 253, 255);
+    font-size: 50px;
+    -unity-font-style: bold;
+}
+
+.floating-panel-heal-pierce-self {
+    color: rgb(143, 250, 171);
+    font-size: 40px;
+    -unity-font-style: bold;
+}
+
+.floating-panel-heal-pierce-critic-self {
+    color: rgb(56, 243, 0);
+    font-size: 50px;
+}
+
+.floating-panel-heal-pierce {
+    color: rgb(255, 253, 0);
+    font-size: 20px;
+    -unity-font-style: bold;
+}
+
+.floating-panel-heal-pierce-critic {
+    color: rgb(255, 253, 255);
+    font-size: 50px;
+    -unity-font-style: bold;
+}
+
+.floating-panel-heal-slash-self {
+    color: rgb(143, 250, 171);
+    font-size: 40px;
+}
+
+.floating-panel-heal-slash-critic-self {
+    color: rgb(56, 243, 0);
+    font-size: 50px;
+}
+
+.floating-panel-heal-slash {
+    color: rgb(255, 253, 0);
+    font-size: 20px;
+    -unity-font-style: bold;
+}
+
+.floating-panel-heal-slash-critic {
+    color: rgb(255, 253, 255);
+    font-size: 50px;
+    -unity-font-style: bold;
+}
+
+.floating-panel-heal--self {
+    color: rgb(143, 250, 171);
+    font-size: 40px;
+}
+
+.floating-panel-heal--critic-self {
+    color: rgb(56, 243, 0);
+    font-size: 50px;
+}
+
+.floating-panel-heal- {
+    color: rgb(255, 253, 0);
+    font-size: 20px;
+}
+
+.floating-panel-heal--critic {
+    color: rgb(255, 253, 255);
+    font-size: 50px;
+    -unity-font-style: bold;
+}
+
+.floating-panel-exp {
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+}
+
+.floating-panel-buff-gain {
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+}
+
+.floating-panel-buff-gain-target {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+.floating-panel-debuff-gain {
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+}
+
+.floating-panel-debuff-gain-target {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+.floating-panel-target-level-high {
+    color: rgb(164, 0, 0);
+}
+
+.floating-panel-target-level-low {
+    color: rgb(74, 123, 74);
+}
+
+.ground-item {
+    flex-grow: 1;
+    position: absolute;
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/ItemLabelBG_TransparentBorders.png?fileID=2800000&guid=a57eec71c0cd1a6438ad5a297eb820e6&type=3#ItemLabelBG_TransparentBorders");
+    -unity-background-image-tint-color: rgb(62, 58, 57);
+    -unity-background-scale-mode: scale-and-crop;
+}
+
+.ground-item:hover:enabled {
+    -unity-background-image-tint-color: rgba(200, 102, 17, 0.9);
+}
+
+.pet-command-profile {
+    flex-grow: 1;
+    height: 48px;
+    width: 48px;
+    border-color: rgba(255, 255, 255, 1);
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    max-width: 48px;
+    margin-top: 1px;
+    margin-right: 1px;
+    margin-bottom: 1px;
+    margin-left: 1px;
+    border-left-color: rgba(255 255, 255, 1);
+    border-right-color: rgba(255, 255, 255, 1);
+    border-top-color: rgba(255, 255, 255, 1);
+    border-bottom-color: rgba(255, 255, 255, 1);
+}
+
+.pet-command-profile-info {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    -unity-text-align: upper-right;
+    color: rgb(255, 255, 255);
+    left: 37px;
+}

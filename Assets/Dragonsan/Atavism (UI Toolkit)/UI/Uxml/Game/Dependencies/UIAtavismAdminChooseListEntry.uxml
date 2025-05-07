@@ -1,0 +1,15 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Atavism%20(UI%20Toolkit)/UI/Style%20Sheets/AdminPanelStyleSheet.uss?fileID=7433441132597879392&amp;guid=422d8368a3e2c904ba39e7cf842c862a&amp;type=3#AdminPanelStyleSheet" />
+    <ui:VisualElement name="choose-item" class="choose-item" style="flex-direction: row; height: 65px; -unity-font: url(&apos;project://database/Assets/Dragonsan/AtavismObjects/Fonts/Cambria.ttf?fileID=12800000&amp;guid=36ef3a2444bc15847bd874b9b0c98ae6&amp;type=3#Cambria&apos;); -unity-font-definition: url(&apos;project://database/Assets/Atavism%20(UI%20Toolkit)/UI/Fonts/Cambria%20SDF.asset?fileID=11400000&amp;guid=171debed56e16fd4daf65623c92ecac2&amp;type=2#Cambria SDF&apos;); border-top-width: 3px; border-right-width: 3px; border-bottom-width: 3px; border-left-width: 3px; background-image: url(&apos;project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/arena_list_select.png?fileID=21300000&amp;guid=a0e3220a1c8eb3d4391ab578e094392c&amp;type=3#arena_list_select&apos;); flex-shrink: 1;">
+        <ui:VisualElement name="choose-slot-panel" class="choose-slot-panel" style="align-self: auto; justify-content: flex-start;">
+            <ui:VisualElement name="choose-quality-icon" class="choose-quality-icon">
+                <ui:VisualElement name="choose-item-icon" class="choose-item-icon">
+                    <ui:Label display-tooltip-when-elided="true" name="count-label" style="flex-direction: column;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="right-panel" style="width: auto; flex-grow: 1; left: 9px;">
+            <ui:Label text="Name" display-tooltip-when-elided="true" name="choose-item-name" class="Text-Light" style="flex-grow: 1; flex-shrink: 1;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

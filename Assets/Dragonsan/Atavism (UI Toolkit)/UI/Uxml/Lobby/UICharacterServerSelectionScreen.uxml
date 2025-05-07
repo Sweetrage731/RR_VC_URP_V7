@@ -1,0 +1,24 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="Screen" picking-mode="Ignore" style="flex-direction: row; flex-grow: 1;">
+        <ui:VisualElement name="panel-left" class="server-list-left-panel" />
+        <ui:VisualElement name="Window" style="flex-grow: 1; align-items: center; justify-content: center; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0;">
+            <ui:VisualElement name="panel-middle" class="server-list-middle-panel">
+                <ui:IMGUIContainer name="server-list-panel" class="server-list-panel">
+                    <ui:Label text="SERVERS" display-tooltip-when-elided="true" name="server-list-label" class="Text-Light server-list-title" />
+                    <ui:VisualElement name="header" class="server-list-header">
+                        <ui:Label text="Server Name" display-tooltip-when-elided="true" name="servername-label" class="Text-Gray server-list-header-name" />
+                        <ui:Label text="Population" display-tooltip-when-elided="true" name="serverpopulation-label" class="Text-Gray server-list-header-population" />
+                        <ui:Label text="Players in Queue" display-tooltip-when-elided="true" name="servertype-label" class="Text-Gray server-list-header-queue" />
+                        <ui:Label text="Load" display-tooltip-when-elided="true" name="serverload-label" class="Text-Gray server-list-header-load" />
+                    </ui:VisualElement>
+                    <ui:ListView name="server-list" class="server-list" />
+                    <ui:VisualElement name="buttons" class="server-list-buttons" style="justify-content: flex-start; align-self: center;">
+                        <ui:Button text="Cancel" display-tooltip-when-elided="true" name="cancel-button" class="Button-XS Text-Gray" />
+                        <ui:Button text="Connect" display-tooltip-when-elided="true" name="connect-button" class="Button-XS Text-Gray" />
+                    </ui:VisualElement>
+                </ui:IMGUIContainer>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="panel-right" class="server-list-right-panel" />
+    </ui:VisualElement>
+</ui:UXML>

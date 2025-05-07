@@ -1,0 +1,45 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:Template name="panel_AtavismWindow" src="project://database/Assets/Dragonsan/Atavism%20(UI%20Toolkit)/UI/Library/panel_AtavismWindow.uxml?fileID=9197481963319205126&amp;guid=f96775ae845b40f4b90c8a7cdb68c513&amp;type=3#panel_AtavismWindow" />
+    <ui:Template name="UIAtavismSlotItem" src="project://database/Assets/Dragonsan/Atavism%20(UI%20Toolkit)/UI/Screens/Game/Dependencies/UIAtavismSlotItem.uxml?fileID=9197481963319205126&amp;guid=380df901e5768bb44a5d94b2c8ce020a&amp;type=3#UIAtavismSlotItem" />
+    <ui:Template name="UIAtavismCurrencyInputsPanel" src="project://database/Assets/Dragonsan/Atavism%20(UI%20Toolkit)/UI/Screens/Game/Dependencies/UIAtavismCurrencyInputsPanel.uxml?fileID=9197481963319205126&amp;guid=276077959f7bfc24ba51b5a4b4863244&amp;type=3#UIAtavismCurrencyInputsPanel" />
+    <ui:VisualElement name="Screen" picking-mode="Ignore" style="flex-grow: 1;">
+        <ui:Instance template="panel_AtavismWindow" name="MailWindow" style="width: 381px; height: 512px;">
+            <AttributeOverrides element-name="Window-title" text="MAILBOX" />
+            <ui:VisualElement name="inner-panel" picking-mode="Ignore" style="flex-grow: 1; height: auto; margin-top: 63px;">
+                <ui:VisualElement name="inbox" class="mail-inbox" style="display: none;">
+                    <ui:ListView virtualization-method="DynamicHeight" name="mail-list" class="mail-list" />
+                    <ui:VisualElement name="spacer" class="spacer-img" />
+                    <ui:VisualElement name="footer" class="mail-footer">
+                        <ui:Button text="NEW MESSAGE" parse-escape-sequences="true" display-tooltip-when-elided="true" name="new-message-button" class="Button-Light-Overlay Button-XL-2" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="compose" class="mail-compose">
+                    <Atavism.UI.UITextField is-delayed="false" auto-correction="false" name="recipient" Placeholder="Player name" class="mail-compose-recipient" style="overflow: visible; -unity-text-align: upper-left;" />
+                    <Atavism.UI.UITextField name="subject" Placeholder="Enter subject" class="mail-compose-subject" style="-unity-text-align: upper-left;" />
+                    <Atavism.UI.UITextField multiline="true" name="message" Placeholder="Message" Remove-Unity-Class-Styles="false" auto-correction="false" class="mail-compose-message" style="-unity-text-align: upper-left; min-height: 144px; max-height: none; height: auto; flex-grow: 1; align-items: stretch; align-self: auto; flex-direction: column; width: 353px;" />
+                    <ui:VisualElement name="items" class="mail-compose-items">
+                        <ui:Instance template="UIAtavismSlotItem" name="item-1" />
+                        <ui:Instance template="UIAtavismSlotItem" name="item-2" />
+                        <ui:Instance template="UIAtavismSlotItem" name="item-3" />
+                        <ui:Instance template="UIAtavismSlotItem" name="item-4" />
+                        <ui:Instance template="UIAtavismSlotItem" name="item-5" />
+                    </ui:VisualElement>
+                    <ui:Label tabindex="-1" text="The amount of currency to be sent:" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Label" class="Text-Gray" />
+                    <ui:VisualElement style="flex-grow: 1; flex-direction: row-reverse;">
+                        <ui:Instance template="UIAtavismCurrencyInputsPanel" name="input-currency" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="spacer-img" style="flex-grow: 1;" />
+                    <ui:VisualElement class="mail-compose-toggles">
+                        <ui:Toggle label="Send money" name="money" class="Toggle-Default" />
+                        <ui:Toggle label="C.O.D" name="COD" class="Toggle-Default" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="spacer-img" style="flex-grow: 1;" />
+                    <ui:VisualElement name="buttons" style="flex-grow: 1; flex-direction: row; height: 70px; min-height: 70px; max-height: 70px; justify-content: space-around; align-self: stretch; align-items: center;">
+                        <ui:Button text="SEND" parse-escape-sequences="true" display-tooltip-when-elided="true" name="send-button" class="Button-XM Button-Light-Overlay" />
+                        <ui:Button text="CANCEL" parse-escape-sequences="true" display-tooltip-when-elided="true" name="cancel-button" class="Button-XM Button-Light-Overlay" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:Instance>
+    </ui:VisualElement>
+</ui:UXML>

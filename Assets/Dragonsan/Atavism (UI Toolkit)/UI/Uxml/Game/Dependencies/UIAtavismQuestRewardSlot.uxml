@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <Style src="project://database/Assets/Dragonsan/Atavism%20(UI%20Toolkit)/UI/Style%20Sheets/NpcDialoge.uss?fileID=7433441132597879392&amp;guid=f82c93cc24095894fbbb892e2268baad&amp;type=3#NpcDialoge" />
+    <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="quest-reward-slot" class="quest-reward-slot">
+        <ui:VisualElement name="slot-image" picking-mode="Ignore" class="slot-image" style="display: flex;">
+            <ui:VisualElement name="slot-item-image" picking-mode="Ignore" class="slot-item-image">
+                <ui:Label tabindex="-1" text="9999999" parse-escape-sequences="true" display-tooltip-when-elided="true" name="slot-item-count" picking-mode="Ignore" class="Text-Default slot-item-count" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:Label tabindex="-1" text="Item Name" parse-escape-sequences="true" display-tooltip-when-elided="true" name="reward-item-name" picking-mode="Ignore" class="Text-Gray reward-item-name" />
+    </ui:Button>
+</ui:UXML>

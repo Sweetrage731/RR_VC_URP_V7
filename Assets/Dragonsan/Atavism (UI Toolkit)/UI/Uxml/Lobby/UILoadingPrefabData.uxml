@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="Screen" picking-mode="Ignore" style="flex-grow: 1;">
+        <ui:VisualElement name="background" class="prefab-panel-background">
+            <Atavism.UI.UIProgressBar Container-Class="prefab-UIProgressBar__container" Background-Class="prefab-UIProgressBar__background" Progress-Bar-Class="prefab-UIProgressBar__progressBar" Title-Container-Class="prefab-UIProgressBar-title__container" Title-Class="prefab-UIProgressBar__title" Show-Label="false" Value="100" name="slider" class="prefab-panel-slider" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

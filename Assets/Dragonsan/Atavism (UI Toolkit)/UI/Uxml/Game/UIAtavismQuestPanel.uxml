@@ -1,0 +1,48 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:Template name="panel_AtavismWindow" src="project://database/Assets/Dragonsan/Atavism%20(UI%20Toolkit)/UI/Library/panel_AtavismWindow.uxml?fileID=9197481963319205126&amp;guid=f96775ae845b40f4b90c8a7cdb68c513&amp;type=3#panel_AtavismWindow" />
+    <Style src="project://database/Assets/Dragonsan/Atavism%20(UI%20Toolkit)/UI/Style%20Sheets/NpcDialoge.uss?fileID=7433441132597879392&amp;guid=f82c93cc24095894fbbb892e2268baad&amp;type=3#NpcDialoge" />
+    <ui:VisualElement name="Screen" picking-mode="Ignore" style="flex-grow: 1;">
+        <ui:Instance template="panel_AtavismWindow" name="QuestsWindow" class="quests-window">
+            <AttributeOverrides element-name="Window-title" text="QUESTS" />
+            <ui:VisualElement name="inner-panel" class="inner-panel">
+                <Atavism.UI.UIButtonToggleGroup item-Class-Name="quest-tab-button" selected-item-Class-Name="quest-tab-button__selected" Default-Item-Index="0" Items="ACTIVE,HISTORICAL" focusable="false" Background-Color-Normal="#00000000" Can-Deselect="false" name="menu" class="quests-menu" />
+                <ui:VisualElement name="list-panel" class="quests-list-panel">
+                    <ui:ListView name="list" virtualization-method="DynamicHeight" />
+                </ui:VisualElement>
+                <ui:Instance template="panel_AtavismWindow" name="quest-preview" class="quests-detale">
+                    <AttributeOverrides element-name="Window-title" text="QUEST DETAILS" />
+                    <ui:VisualElement name="inner-panels" class="inner-panel">
+                        <ui:VisualElement name="quest-offer-panel" class="quest-offer-panel">
+                            <ui:ScrollView scroll-deceleration-rate="0,135" elasticity="0,1" name="quest-offer-scroll-view" usage-hints="-1" mode="Vertical" mouse-wheel-scroll-size="18" focusable="false" horizontal-scroller-visibility="Hidden" vertical-scroller-visibility="AlwaysVisible" class="quest-offer-scroll-view">
+                                <ui:VisualElement name="offer-view-list" class="offer-view-list">
+                                    <ui:Label tabindex="-1" text="Title" parse-escape-sequences="true" display-tooltip-when-elided="true" name="quest-offer-title" class="quest-offer-title" />
+                                    <ui:Label tabindex="-1" text="Decriptiion" parse-escape-sequences="true" display-tooltip-when-elided="true" name="quest-offer-description" class="Text-Dark quest-offer-description" style="white-space: normal; flex-grow: 1;" />
+                                    <ui:Label tabindex="-1" text="Objectives" parse-escape-sequences="true" display-tooltip-when-elided="true" name="quest-offer-objective-title" class="Text-Light quest-offer-objective-title" style="-unity-text-align: middle-left; font-size: 15px;" />
+                                    <ui:Label tabindex="-1" text="Objectives text" parse-escape-sequences="true" display-tooltip-when-elided="true" name="quest-offer-objective-text" class="Text-Dark quest-offer-objective-text" />
+                                    <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="quest-offer-objective-1" class="Text-Dark quests-objectives-label" />
+                                    <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="quest-offer-objective-2" class="Text-Dark quests-objectives-label" />
+                                    <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="quest-offer-objective-3" class="Text-Dark quests-objectives-label" />
+                                    <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="quest-offer-objective-4" class="Text-Dark quests-objectives-label" />
+                                    <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="quest-offer-objective-5" class="Text-Dark quests-objectives-label" />
+                                    <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="quest-offer-objective-6" class="Text-Dark quests-objectives-label" />
+                                    <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="quest-offer-objective-7" class="Text-Dark quests-objectives-label" />
+                                    <ui:Label tabindex="-1" text="Rewards" parse-escape-sequences="true" display-tooltip-when-elided="true" name="quest-offer-reward-title" class="quest-offer-reward-title" />
+                                    <ui:VisualElement name="quest-offer-reward-list" class="quest-offer-reward-list" />
+                                    <ui:VisualElement name="quest-offer-currency-list" class="quest-offer-currency-list" />
+                                    <ui:Label tabindex="-1" text="Choose Rewards" parse-escape-sequences="true" display-tooltip-when-elided="true" name="quest-offer-choose-reward-title" class="quest-offer-choose-reward-title" />
+                                    <ui:VisualElement name="quest-offer-choose-reward-list" class="quest-offer-choose-reward-list" />
+                                    <ui:Label tabindex="-1" text="Reputation" parse-escape-sequences="true" display-tooltip-when-elided="true" name="quest-offer-reputation-title" class="quest-offer-reward-title" />
+                                    <ui:VisualElement name="quest-offer-reputation-list" class="quest-offer-reputation-list" />
+                                </ui:VisualElement>
+                            </ui:ScrollView>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="spacer" class="spacer-img" />
+                        <ui:VisualElement name="button-panel" class="quests-button-panel">
+                            <ui:Button text="ABANDON" parse-escape-sequences="true" display-tooltip-when-elided="true" name="abandon-button" class="Button-Light-Overlay Button-XM" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:Instance>
+            </ui:VisualElement>
+        </ui:Instance>
+    </ui:VisualElement>
+</ui:UXML>

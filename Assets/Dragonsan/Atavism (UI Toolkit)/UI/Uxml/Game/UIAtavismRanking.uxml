@@ -1,0 +1,21 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:Template name="panel_AtavismWindow" src="project://database/Assets/Dragonsan/Atavism%20(UI%20Toolkit)/UI/Library/panel_AtavismWindow.uxml?fileID=9197481963319205126&amp;guid=f96775ae845b40f4b90c8a7cdb68c513&amp;type=3#panel_AtavismWindow" />
+    <ui:VisualElement name="Screen" picking-mode="Ignore" style="flex-grow: 1;">
+        <ui:Instance template="panel_AtavismWindow" name="RankingWindow" class="Ranking" style="width: 615px; height: 495px;">
+            <AttributeOverrides element-name="Window-title" text="RANKINGS" />
+            <ui:VisualElement name="inner-panel" style="flex-grow: 1; height: auto; margin-top: 63px; flex-direction: row;">
+                <ui:VisualElement name="left-panel" style="flex-grow: 1; width: 200px; max-width: 200px; min-width: 177px; padding-top: 3px; padding-right: 3px; padding-bottom: 3px; padding-left: 3px;">
+                    <ui:TreeView name="menu" virtualization-method="DynamicHeight" auto-expand="false" class="Text-Gray" />
+                </ui:VisualElement>
+                <ui:VisualElement class="spacer-vertical-img" style="flex-grow: 1;" />
+                <ui:VisualElement name="right-panel" style="flex-grow: 1; min-width: auto; padding-top: 3px; padding-right: 3px; padding-bottom: 3px; padding-left: 3px;">
+                    <ui:VisualElement name="Header" style="flex-grow: 1; min-width: auto; height: 20px; flex-direction: row;">
+                        <ui:Label tabindex="-1" text="Player" parse-escape-sequences="true" display-tooltip-when-elided="true" name="player" class="Text-Title" style="width: 246px; -unity-text-align: middle-left;" />
+                        <ui:Label tabindex="-1" text="Score" parse-escape-sequences="true" display-tooltip-when-elided="true" name="score" class="Text-Title" />
+                    </ui:VisualElement>
+                    <ui:ListView name="list-grid" virtualization-method="DynamicHeight" style="max-width: 100%; max-height: 4000%; width: 100%; height: 100%;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:Instance>
+    </ui:VisualElement>
+</ui:UXML>

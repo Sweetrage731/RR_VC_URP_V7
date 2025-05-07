@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <ui:VisualElement name="partner-item" class="trade-item-container">
+        <Atavism.UI.Game.UIAtavismItemDisplay picking-mode="Ignore" Class-Style="trade-ItemDisplay" Show-Count="false" Show-Title="false" show-Tooltip="false" name="item" />
+        <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="name" class="Text-Gray trade-item-name" />
+    </ui:VisualElement>
+</ui:UXML>

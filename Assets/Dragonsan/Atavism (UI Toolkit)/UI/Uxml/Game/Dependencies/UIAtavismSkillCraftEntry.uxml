@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <ui:VisualElement name="container" class="skill-craft-container">
+        <ui:Label tabindex="-1" text="Name" parse-escape-sequences="true" display-tooltip-when-elided="true" name="name" class="Text-Gray skill-craft-name" />
+        <Atavism.UI.UIProgressBar name="progress" Container-Class="skill-UIProgressBar__container" Background-Class="skill-UIProgressBar__background" Progress-Bar-Class="skill-UIProgressBar__progressBar" Title-Container-Class="skill-UIProgressBar-title__container" Title-Class="skill-UIProgressBar__title" class="skill-craft-progress" />
+    </ui:VisualElement>
+</ui:UXML>

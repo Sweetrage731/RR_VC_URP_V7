@@ -1,0 +1,13 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="Screen" picking-mode="Ignore" style="height: auto; width: auto; align-items: center; justify-content: space-around; -unity-font: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/Fonts/Cambria.ttf?fileID=12800000&amp;guid=36ef3a2444bc15847bd874b9b0c98ae6&amp;type=3#Cambria&quot;); -unity-font-definition: url(&quot;project://database/Assets/Dragonsan/Atavism%20(UI%20Toolkit)/UI/Fonts/Cambria%20SDF.asset?fileID=11400000&amp;guid=171debed56e16fd4daf65623c92ecac2&amp;type=2#Cambria SDF&quot;); flex-direction: column; bottom: auto; top: 96%; right: auto;">
+        <ui:VisualElement name="Window" style="flex-direction: column-reverse;">
+            <ui:VisualElement name="screen-top" />
+            <ui:VisualElement name="Window-draggable-trigger" style="width: 100%; height: 5px;" />
+            <ui:VisualElement name="screen-bottom" style="bottom: 0; align-self: center; flex-direction: row;">
+                <ui:VisualElement name="toolbar" style="height: 33px; width: auto; margin-left: 1px; margin-right: 1px; margin-top: 1px; margin-bottom: 1px; padding-left: 3px; padding-right: 3px; padding-top: 3px; padding-bottom: 3px; flex-direction: row; justify-content: center; align-items: center; align-self: center; bottom: 114px;">
+                    <Atavism.UI.UIProgressBar Container-Class="xp-UIProgressBar__container" Background-Class="xp-UIProgressBar__background" Progress-Bar-Class="xp-UIProgressBar__progressBar" Title-Container-Class="xp-UIProgressBar-title__container" Title-Class="xp-UIProgressBar__title" Value="50" name="progressBar" style="width: 600px; height: auto;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

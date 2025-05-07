@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <ui:VisualElement name="MailListEntryPreFab" class="mail-entry-background">
+        <ui:VisualElement picking-mode="Ignore" name="selected" class="mail-entry-selected" />
+        <ui:VisualElement name="VisualElement" class="mail-entry-icon" />
+        <ui:VisualElement class="mail-entry-labels">
+            <ui:Label tabindex="-1" text="Sender" parse-escape-sequences="true" display-tooltip-when-elided="true" name="sender" class="Text-Light mail-entry-sender" />
+            <ui:Label tabindex="-1" text="Subject" parse-escape-sequences="true" display-tooltip-when-elided="true" name="subject" class="Text-Gray mail-entry-subject" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

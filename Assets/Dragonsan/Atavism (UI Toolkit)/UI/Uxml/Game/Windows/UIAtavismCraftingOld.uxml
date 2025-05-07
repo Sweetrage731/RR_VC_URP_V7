@@ -1,0 +1,44 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:Template name="panel_AtavismWindow" src="project://database/Assets/Atavism%20(UI%20Toolkit)/UI/Library/panel_AtavismWindow.uxml?fileID=9197481963319205126&amp;guid=f96775ae845b40f4b90c8a7cdb68c513&amp;type=3#panel_AtavismWindow" />
+    <ui:Template name="UIAtavismSlotItem 1" src="project://database/Assets/Atavism%20(UI%20Toolkit)/UI/Screens/Game/Dependencies/UIAtavismSlotItem%201.uxml?fileID=9197481963319205126&amp;guid=91f585ddcd6061441a6e3188ccc65411&amp;type=3#UIAtavismSlotItem 1" />
+    <ui:VisualElement name="Screen" picking-mode="Ignore" style="flex-grow: 1;">
+        <ui:Instance template="panel_AtavismWindow" name="CraftingWindow" style="width: 393px; height: 498px;">
+            <AttributeOverrides element-name="Window-title" text="CRAFTING" />
+            <ui:VisualElement name="inner-panel" class="inner-panel">
+                <ui:VisualElement style="flex-grow: 1; height: 240px;">
+                    <ui:VisualElement style="flex-grow: 1; align-self: center; align-items: stretch; justify-content: space-around;">
+                        <ui:VisualElement name="require-items-grid" style="flex-grow: 1; flex-direction: row; align-self: center; flex-wrap: wrap; width: 242px; margin-top: 9px;">
+                            <ui:Instance template="UIAtavismSlotItem 1" name="slot-item-1" />
+                            <ui:Instance template="UIAtavismSlotItem 1" name="slot-item-2" />
+                            <ui:Instance template="UIAtavismSlotItem 1" name="slot-item-3" />
+                            <ui:Instance template="UIAtavismSlotItem 1" name="slot-item-4" />
+                            <ui:Instance template="UIAtavismSlotItem 1" name="slot-item-5" />
+                            <ui:Instance template="UIAtavismSlotItem 1" name="slot-item-6" />
+                            <ui:Instance template="UIAtavismSlotItem 1" name="slot-item-7" />
+                            <ui:Instance template="UIAtavismSlotItem 1" name="slot-item-8" />
+                            <ui:Instance template="UIAtavismSlotItem 1" name="slot-item-9" />
+                            <ui:Instance template="UIAtavismSlotItem 1" name="slot-item-10" />
+                            <ui:Instance template="UIAtavismSlotItem 1" name="slot-item-11" />
+                            <ui:Instance template="UIAtavismSlotItem 1" name="slot-item-12" />
+                            <ui:Instance template="UIAtavismSlotItem 1" name="slot-item-13" />
+                            <ui:Instance template="UIAtavismSlotItem 1" name="slot-item-14" />
+                            <ui:Instance template="UIAtavismSlotItem 1" name="slot-item-15" />
+                            <ui:Instance template="UIAtavismSlotItem 1" name="slot-item-16" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="spacer" class="spacer-img" style="flex-grow: 1;" />
+                <ui:VisualElement name="result-grid" style="flex-grow: 1; height: 60px; flex-direction: row; align-self: center; align-items: center;">
+                    <ui:Instance template="UIAtavismSlotItem 1" name="result-slot-1" />
+                    <ui:Instance template="UIAtavismSlotItem 1" name="result-slot-2" />
+                    <ui:Instance template="UIAtavismSlotItem 1" name="result-slot-3" />
+                    <ui:Instance template="UIAtavismSlotItem 1" name="result-slot-4" />
+                </ui:VisualElement>
+                <ui:VisualElement name="spacer" class="spacer-img" style="flex-grow: 1;" />
+                <ui:VisualElement style="flex-grow: 1; align-self: center; height: 70px; max-height: 70px; min-height: 70px; align-items: center; justify-content: center;">
+                    <ui:Button text="CRAFT" parse-escape-sequences="true" display-tooltip-when-elided="true" name="craft-button" class="Button-XM Button-Light-Overlay" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:Instance>
+    </ui:VisualElement>
+</ui:UXML>

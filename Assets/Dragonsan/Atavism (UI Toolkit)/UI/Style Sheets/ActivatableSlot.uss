@@ -1,0 +1,198 @@
+.activatableContainer {
+    width: 45px;
+    height: 45px;
+    margin: 1px;
+    border-left-color: rgb(48, 48, 48);
+    border-right-color: rgb(48, 48, 48);
+    border-top-color: rgb(48, 48, 48);
+    border-bottom-color: rgb(48, 48, 48);
+    background-color: rgb(9, 19, 21);
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.activatableContainer-action-bar {
+    width: 54px;
+    height: 54px;
+    margin: 1px;
+    border-left-color: rgb(48, 48, 48);
+    border-right-color: rgb(48, 48, 48);
+    border-top-color: rgb(48, 48, 48);
+    border-bottom-color: rgb(48, 48, 48);
+    background-color: rgb(9, 19, 21);
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.activatableIcon {
+    padding: 1px;
+    flex-shrink: 0;
+    flex-grow: 1;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.activatableContainer-backgorund {
+    width: auto;
+    height: auto;
+    background-image: none;
+    position: absolute;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    left: 7px;
+    top: 7px;
+    right: 7px;
+    bottom: 7px;
+    background-color: rgba(0, 0, 0, 0.08);
+}
+
+.activatableContainer-icon-holder {
+    position: absolute;
+    height: 100%;
+    width: auto;
+    top: auto;
+    left: auto;
+    align-items: center;
+    justify-content: center;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.activatableContainer-quality {
+    width: 100%;
+    height: 100%;
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/OldUI/Hud/inventory/items/healing_potion/frame.png?fileID=2800000&guid=b098138c553277f4fab7acd229bcd7b8&type=3#frame");
+    position: absolute;
+    left: auto;
+    top: auto;
+    align-items: center;
+    justify-content: center;
+    -unity-background-scale-mode: stretch-to-fill;
+    flex-grow: 1;
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+    -unity-slice-left: 0;
+    -unity-slice-top: 0;
+    -unity-slice-right: 0;
+    -unity-slice-bottom: 0;
+    -unity-slice-scale: 1px;
+}
+
+.activatableContainer-count {
+    position: relative;
+    top: auto;
+    left: auto;
+    bottom: 0;
+    width: 100%;
+    -unity-text-align: middle-right;
+    margin-top: 0;
+    margin-right: 8px;
+    margin-bottom: 2px;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+}
+
+.activatableContainer-button {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    left: auto;
+    top: auto;
+    position: absolute;
+    background-color: rgba(88, 88, 88, 0);
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.activatableContainer-cont-holder {
+    width: 100%;
+    height: 100%;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    bottom: auto;
+}
+
+.activatableContainer-cooldown {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: auto;
+    top: auto;
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.activatableContainer-item {
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/OldUI/Hud/inventory/items/healing_potion/frame.png?fileID=2800000&guid=b098138c553277f4fab7acd229bcd7b8&type=3#frame");
+    visibility: visible;
+    -unity-background-image-tint-color: rgb(72, 67, 61);
+}
+
+.item-icon-link {
+    background-color: rgba(120, 120, 120, 0.24);
+}

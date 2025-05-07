@@ -1,0 +1,8 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:VisualElement class="achievement-slot">
+        <ui:Label name="Name" />
+        <ui:Label name="Status" />
+        <ui:Slider name="progress" />
+        <ui:Toggle name="check" />
+    </ui:VisualElement>
+</ui:UXML>

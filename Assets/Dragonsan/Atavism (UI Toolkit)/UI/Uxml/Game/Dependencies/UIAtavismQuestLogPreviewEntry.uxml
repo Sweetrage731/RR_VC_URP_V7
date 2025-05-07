@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:VisualElement name="quest-preview-container" style="flex-shrink: initial; position: relative;">
+        <ui:Label tabindex="-1" text="Quest Title" parse-escape-sequences="true" display-tooltip-when-elided="true" name="quest-preview-title-text" class="quest-preview-title-text" />
+        <ui:Label tabindex="-1" text="Quest Objective that is really long and will take up more space than is allowed. What will happen then? I do not know? " parse-escape-sequences="true" display-tooltip-when-elided="true" name="quest-preview-objectives-text" enable-rich-text="true" class="quest-preview-objectives-text Text-Gray" style="flex-wrap: nowrap; white-space: normal;" />
+        <ui:VisualElement name="quest-preview-objectives" class="quest-preview-objectives" style="flex-grow: 1;" />
+    </ui:VisualElement>
+</ui:UXML>

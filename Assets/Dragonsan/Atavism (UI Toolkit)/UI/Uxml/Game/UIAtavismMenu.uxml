@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <ui:VisualElement name="UIAtavismSocialPanelRoot">
+        <!-- Title Bar (Assuming it's a simple button) -->
+        <ui:Button name="TitleBar" text="Social Panel" clickEvent="Toggle" />
+
+        <!-- Social Member Entry Prefab Placeholder -->
+        <ui:VisualElement name="SocialMemberEntryPlaceholder" />
+
+        <!-- Buttons -->
+        <ui:Button name="WhisperButton" text="Whisper" clickEvent="WhisperOptionClicked" />
+        <ui:Button name="GroupButton" text="Group" clickEvent="InviteGroupOptionClicked" />
+        <ui:Button name="GuildButton" text="Guild" clickEvent="InviteGuildOptionClicked" />
+        <ui:Button name="PrivateInstanceButton" text="Private Instance" clickEvent="InvitePrivateInstance" />
+
+        <!-- Member Popup Placeholder -->
+        <ui:VisualElement name="MemberPopupPlaceholder" />
+
+        <!-- ... (Other UI elements based on the MonoBehaviour) -->
+    </ui:VisualElement>
+</ui:UXML>

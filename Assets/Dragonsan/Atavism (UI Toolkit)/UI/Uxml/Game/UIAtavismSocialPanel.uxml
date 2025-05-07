@@ -1,0 +1,63 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:Template name="panel_AtavismWindow" src="project://database/Assets/Dragonsan/Atavism%20(UI%20Toolkit)/UI/Library/panel_AtavismWindow.uxml?fileID=9197481963319205126&amp;guid=f96775ae845b40f4b90c8a7cdb68c513&amp;type=3#panel_AtavismWindow" />
+    <ui:Template name="panel_AtavismMiniWindow" src="project://database/Assets/Dragonsan/Atavism%20(UI%20Toolkit)/UI/Library/panel_AtavismMiniWindow.uxml?fileID=9197481963319205126&amp;guid=de69270a5738f814a838250e0a2a12fa&amp;type=3#panel_AtavismMiniWindow" />
+    <ui:VisualElement name="Screen" picking-mode="Ignore" style="flex-grow: 1;">
+        <ui:Instance template="panel_AtavismWindow" name="SocialWindow" style="width: 300px; height: 500px;">
+            <AttributeOverrides element-name="Window-title" text="SOCIAL" />
+            <ui:VisualElement name="inner-panel" class="inner-panel" style="flex-grow: 1; height: auto;">
+                <Atavism.UI.UIButtonToggleGroup Items="FRIEND LIST,BLOCK LIST" item-Class-Name="social-tab-button" selected-item-Class-Name="social-tab-button__selected" Default-Item-Index="0" name="menu" class="social-menu" style="min-height: 0;" />
+                <ui:VisualElement name="friend-panel" style="flex-grow: 1; height: 350px; margin-right: 4px; margin-left: 4px; display: none;">
+                    <ui:VisualElement name="header" style="flex-grow: 1; flex-direction: row; height: 20px; max-height: 20px; min-height: 20px; background-image: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/arena_score_team_header%201.png?fileID=2800000&amp;guid=81c8ed3be6f87ff4ab4ef58e3be2f251&amp;type=3#arena_score_team_header 1&quot;); align-items: center;">
+                        <ui:Label tabindex="-1" text="Name" parse-escape-sequences="true" display-tooltip-when-elided="true" name="name" class="Text-Gray" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; width: 205px;" />
+                        <ui:Label tabindex="-1" text="Level" parse-escape-sequences="true" display-tooltip-when-elided="true" name="level" class="Text-Gray" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; width: 205px; display: none;" />
+                        <ui:Label tabindex="-1" text="Status" parse-escape-sequences="true" display-tooltip-when-elided="true" name="status" class="Text-Gray" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;" />
+                    </ui:VisualElement>
+                    <ui:ListView name="friend-list" selection-type="Single" virtualization-method="DynamicHeight" style="flex-grow: 1;" />
+                    <ui:VisualElement style="flex-grow: 1; height: 40px; max-height: 40px; min-height: 40px; flex-direction: row; align-items: center; justify-content: center;">
+                        <ui:Button text="ADD TO FRIEND LIST" parse-escape-sequences="true" display-tooltip-when-elided="true" name="add-friend-button" class="Button-XS Button-Light-Overlay" style="width: 150px;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="block-panel" style="flex-grow: 1; height: 350px; margin-right: 4px; margin-left: 4px; display: none;">
+                    <ui:VisualElement name="header" style="flex-grow: 1; flex-direction: row; height: 20px; max-height: 20px; min-height: 20px; background-image: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/arena_score_team_header%201.png?fileID=2800000&amp;guid=81c8ed3be6f87ff4ab4ef58e3be2f251&amp;type=3#arena_score_team_header 1&quot;); align-items: center;">
+                        <ui:Label tabindex="-1" text="Name" parse-escape-sequences="true" display-tooltip-when-elided="true" name="name" class="Text-Gray" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; width: 205px;" />
+                        <ui:Label tabindex="-1" text="Level" parse-escape-sequences="true" display-tooltip-when-elided="true" name="level" class="Text-Gray" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; width: 205px; display: none;" />
+                        <ui:Label tabindex="-1" text="Status" parse-escape-sequences="true" display-tooltip-when-elided="true" name="status" class="Text-Gray" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;" />
+                    </ui:VisualElement>
+                    <ui:ListView name="block-list" selection-type="Single" virtualization-method="DynamicHeight" style="flex-grow: 1;" />
+                    <ui:VisualElement style="flex-grow: 1; height: 40px; max-height: 40px; min-height: 40px; flex-direction: row; align-items: center; justify-content: center;">
+                        <ui:Button text="ADD TO BLOCK LIST" parse-escape-sequences="true" display-tooltip-when-elided="true" name="add-block-button" class="Button-XS Button-Light-Overlay" style="width: 150px;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="menu-popup" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/window_bg4.png?fileID=2800000&amp;guid=f8aa55e6d03762c42a37bbc5fb5e455f&amp;type=3#window_bg4&quot;); position: absolute; display: none;">
+                <ui:Button text="Whisper" parse-escape-sequences="true" display-tooltip-when-elided="true" name="whisper-button" class="Text-Gray menu-button" />
+                <ui:Button text="Invite to Group" parse-escape-sequences="true" display-tooltip-when-elided="true" name="group-button" class="Text-Gray menu-button" />
+                <ui:Button text="Invite to guild" parse-escape-sequences="true" display-tooltip-when-elided="true" name="guild-button" class="Text-Gray menu-button" />
+                <ui:Button text="Invite to Private Instance" parse-escape-sequences="true" display-tooltip-when-elided="true" name="priv-button" class="Text-Gray menu-button" />
+                <ui:Button text="Delete" parse-escape-sequences="true" display-tooltip-when-elided="true" name="delete-button" class="Text-Gray menu-button" />
+            </ui:VisualElement>
+        </ui:Instance>
+        <ui:Instance template="panel_AtavismMiniWindow" name="add-friend-panel" style="width: 200px; height: 120px; position: absolute; top: 209px; left: 50px; display: flex;">
+            <AttributeOverrides element-name="Window-title" text="ADD FRIEND" />
+            <ui:VisualElement name="inner-panel" style="flex-grow: 1; margin-top: 33px; position: relative;">
+                <ui:VisualElement style="flex-grow: 1; height: 24px; align-items: stretch; justify-content: center;">
+                    <Atavism.UI.UITextField name="player-name" Placeholder="Player Name" />
+                </ui:VisualElement>
+                <ui:VisualElement style="flex-grow: 1; flex-direction: row; align-items: center; justify-content: center;">
+                    <ui:Button text="ADD" parse-escape-sequences="true" display-tooltip-when-elided="true" name="add-friend-button" class="Button-XS Button-Light-Overlay" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:Instance>
+        <ui:Instance template="panel_AtavismMiniWindow" name="add-block-panel" style="width: 200px; height: 120px; position: absolute; top: 209px; left: 50px; display: none;">
+            <AttributeOverrides element-name="Window-title" text="ADD TO BLOCK LIST" />
+            <ui:VisualElement name="inner-panel" style="flex-grow: 1; margin-top: 33px; position: relative;">
+                <ui:VisualElement style="flex-grow: 1; height: 24px; align-items: stretch; justify-content: center;">
+                    <Atavism.UI.UITextField name="player-name" Placeholder="Player Name" />
+                </ui:VisualElement>
+                <ui:VisualElement style="flex-grow: 1; flex-direction: row; align-items: center; justify-content: center;">
+                    <ui:Button text="ADD" parse-escape-sequences="true" display-tooltip-when-elided="true" name="add-block-button" class="Button-XS Button-Light-Overlay" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:Instance>
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,239 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:Template name="panel_AtavismWindow" src="project://database/Assets/Dragonsan/Atavism%20(UI%20Toolkit)/UI/Library/panel_AtavismWindow.uxml?fileID=9197481963319205126&amp;guid=f96775ae845b40f4b90c8a7cdb68c513&amp;type=3#panel_AtavismWindow" />
+    <ui:VisualElement name="Screen" picking-mode="Ignore" style="flex-grow: 1;">
+        <ui:Instance template="panel_AtavismWindow" name="SpawnerWindow" style="width: 380px; height: 725px;">
+            <AttributeOverrides element-name="Window-title" text="SPAWNER" />
+            <ui:VisualElement name="inner-panel" class="inner-panel">
+                <ui:VisualElement name="start-panel" style="flex-grow: 1; height: 350px; display: none;">
+                    <ui:Label tabindex="-1" text="Spawner Menu" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" />
+                    <ui:VisualElement style="flex-grow: 1; flex-direction: row; height: 30px; align-items: stretch; justify-content: space-around;">
+                        <ui:Button text="SPAWN NEW MOB" parse-escape-sequences="true" display-tooltip-when-elided="true" name="spawn-new-button" class="Button-XL Text-Light" style="font-size: 14px; width: 150px;" />
+                        <ui:Button text="SELECT SPAWN" parse-escape-sequences="true" display-tooltip-when-elided="true" name="select-spawn-button" class="Button-XL Text-Light" style="font-size: 14px; width: 150px;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="spawner-panel" style="flex-grow: 1; height: 50px; display: flex;">
+                    <ui:VisualElement name="template1" class="spawner-row" style="display: flex;">
+                        <ui:Label tabindex="-1" text="Template:" parse-escape-sequences="true" display-tooltip-when-elided="true" name="template1-label" class="Text-Gray spawner-template-label" />
+                        <ui:Label tabindex="-1" text="Name" parse-escape-sequences="true" display-tooltip-when-elided="true" name="template1-name" class="Text-Gray spawner-template-name" />
+                        <ui:Button text="CHANGE" parse-escape-sequences="true" display-tooltip-when-elided="true" name="template1-button" class="Button-XVS Button-XS Text-Gray" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="template2" class="spawner-row">
+                        <ui:Label tabindex="-1" text="Template2:" parse-escape-sequences="true" display-tooltip-when-elided="true" name="template2-label" class="Text-Gray spawner-template-label" />
+                        <ui:Label tabindex="-1" text="Name" parse-escape-sequences="true" display-tooltip-when-elided="true" name="template2-name" class="Text-Gray spawner-template-name" />
+                        <ui:Button text="CHANGE" parse-escape-sequences="true" display-tooltip-when-elided="true" name="template2-button" class="Button-XVS Button-XS Text-Gray" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="template3" class="spawner-row">
+                        <ui:Label tabindex="-1" text="Template3:" parse-escape-sequences="true" display-tooltip-when-elided="true" name="template3-label" class="Text-Gray spawner-template-label" />
+                        <ui:Label tabindex="-1" text="Name" parse-escape-sequences="true" display-tooltip-when-elided="true" name="template3-name" class="Text-Gray spawner-template-name" />
+                        <ui:Button text="CHANGE" parse-escape-sequences="true" display-tooltip-when-elided="true" name="template3-button" class="Button-XVS Button-XS Text-Gray" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="template4" class="spawner-row">
+                        <ui:Label tabindex="-1" text="Template4:" parse-escape-sequences="true" display-tooltip-when-elided="true" name="template4-label" class="Text-Gray spawner-template-label" />
+                        <ui:Label tabindex="-1" text="Name" parse-escape-sequences="true" display-tooltip-when-elided="true" name="template4-name" class="Text-Gray spawner-template-name" />
+                        <ui:Button text="CHANGE" parse-escape-sequences="true" display-tooltip-when-elided="true" name="template4-button" class="Button-XVS Button-XS Text-Gray" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="template5" class="spawner-row">
+                        <ui:Label tabindex="-1" text="Template5:" parse-escape-sequences="true" display-tooltip-when-elided="true" name="template5-label" class="Text-Gray spawner-template-label" />
+                        <ui:Label tabindex="-1" text="Name" parse-escape-sequences="true" display-tooltip-when-elided="true" name="template5-name" class="Text-Gray spawner-template-name" />
+                        <ui:Button text="CHANGE" parse-escape-sequences="true" display-tooltip-when-elided="true" name="template5-button" class="Button-XVS Button-XS Text-Gray" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="spawner-row30">
+                        <ui:Label tabindex="-1" text="Despawn Time (s):" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" style="width: 130px;" />
+                        <Atavism.UI.UITextField name="despawn-time" keyboard-type="NumbersAndPunctuation" Onlu-Numbers="true" Only-Numbers="true" class="UITextField-100" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="spawner-row30">
+                        <ui:Label tabindex="-1" text="Respawn Time (s):" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" style="width: 130px;" />
+                        <Atavism.UI.UITextField name="respawn-time-min" keyboard-type="NumbersAndPunctuation" Onlu-Numbers="true" Only-Numbers="true" class="UITextField-100" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="spawner-row30">
+                        <ui:Label tabindex="-1" text="Respawn Time Max(s):" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" style="width: 130px;" />
+                        <Atavism.UI.UITextField name="respawn-time-max" keyboard-type="NumbersAndPunctuation" Onlu-Numbers="true" Only-Numbers="true" class="UITextField-100" />
+                    </ui:VisualElement>
+                    <ui:Label tabindex="-1" text="Spawn between Hours:" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" />
+                    <ui:VisualElement class="spawner-row30">
+                        <ui:Label tabindex="-1" text="Start Time:" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" style="width: 130px;" />
+                        <Atavism.UI.UITextField name="start-time" keyboard-type="NumbersAndPunctuation" Onlu-Numbers="true" Only-Numbers="true" class="UITextField-100" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="spawner-row30">
+                        <ui:Label tabindex="-1" text="End Time:" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" style="width: 130px;" />
+                        <Atavism.UI.UITextField name="end-time" keyboard-type="NumbersAndPunctuation" Onlu-Numbers="true" Only-Numbers="true" class="UITextField-100" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="alt-template1" class="spawner-row">
+                        <ui:Label tabindex="-1" text="AlternativeTemplate:" parse-escape-sequences="true" display-tooltip-when-elided="true" name="alt-template1-label" class="Text-Gray spawner-alt-template-label" />
+                        <ui:Label tabindex="-1" text="Name" parse-escape-sequences="true" display-tooltip-when-elided="true" name="alt-template1-name" class="Text-Gray spawner-alt-template-name" />
+                        <ui:Button text="CHANGE" parse-escape-sequences="true" display-tooltip-when-elided="true" name="alt-template1-button" class="Button-XVS Button-XS Text-Gray" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="alt-template2" class="spawner-row">
+                        <ui:Label tabindex="-1" text="AlternativeTemplate2:" parse-escape-sequences="true" display-tooltip-when-elided="true" name="alt-template2-label" class="Text-Gray spawner-alt-template-label" />
+                        <ui:Label tabindex="-1" text="Name" parse-escape-sequences="true" display-tooltip-when-elided="true" name="alt-template2-name" class="Text-Gray spawner-alt-template-name" />
+                        <ui:Button text="CHANGE" parse-escape-sequences="true" display-tooltip-when-elided="true" name="alt-template2-button" class="Button-XVS Button-XS Text-Gray" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="alt-template3" class="spawner-row">
+                        <ui:Label tabindex="-1" text="AlternativeTemplate3:" parse-escape-sequences="true" display-tooltip-when-elided="true" name="alt-template3-label" class="Text-Gray spawner-alt-template-label" />
+                        <ui:Label tabindex="-1" text="Name" parse-escape-sequences="true" display-tooltip-when-elided="true" name="alt-template3-name" class="Text-Gray spawner-alt-template-name" />
+                        <ui:Button text="CHANGE" parse-escape-sequences="true" display-tooltip-when-elided="true" name="alt-template3-button" class="Button-XVS Button-XS Text-Gray" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="alt-template4" class="spawner-row">
+                        <ui:Label tabindex="-1" text="AlternativeTemplate4:" parse-escape-sequences="true" display-tooltip-when-elided="true" name="alt-template4-label" class="Text-Gray spawner-alt-template-label" />
+                        <ui:Label tabindex="-1" text="Name" parse-escape-sequences="true" display-tooltip-when-elided="true" name="alt-template4-name" class="Text-Gray spawner-alt-template-name" />
+                        <ui:Button text="CHANGE" parse-escape-sequences="true" display-tooltip-when-elided="true" name="alt-template4-button" class="Button-XVS Button-XS Text-Gray" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="alt-template5" class="spawner-row">
+                        <ui:Label tabindex="-1" text="AlternativeTemplate5:" parse-escape-sequences="true" display-tooltip-when-elided="true" name="alt-template5-label" class="Text-Gray spawner-alt-template-label" />
+                        <ui:Label tabindex="-1" text="Name" parse-escape-sequences="true" display-tooltip-when-elided="true" name="alt-template5-name" class="Text-Gray spawner-alt-template-name" />
+                        <ui:Button text="CHANGE" parse-escape-sequences="true" display-tooltip-when-elided="true" name="alt-template5-button" class="Button-XVS Button-XS Text-Gray" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="spawner-row30">
+                        <ui:Label tabindex="-1" text="Roam Radius:" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" style="width: 130px;" />
+                        <Atavism.UI.UITextField name="roam-radius" keyboard-type="NumbersAndPunctuation" Onlu-Numbers="true" Only-Numbers="true" class="UITextField-100" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="spawner-row30">
+                        <ui:Label tabindex="-1" text="Roam Delay Min:" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" style="width: 130px;" />
+                        <Atavism.UI.UITextField name="roam-delay-min" keyboard-type="NumbersAndPunctuation" Onlu-Numbers="true" Only-Numbers="true" class="UITextField-100" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="spawner-row30">
+                        <ui:Label tabindex="-1" text="Roam Delay Max:" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" style="width: 130px;" />
+                        <Atavism.UI.UITextField name="roam-delay-max" keyboard-type="NumbersAndPunctuation" Onlu-Numbers="true" Only-Numbers="true" class="UITextField-100" />
+                    </ui:VisualElement>
+                    <ui:Toggle label="Roll Delay On Spawn/Each Roam " name="roam-roll-time-each-time" value="true" class="Text-Gray Toggle-right Toggle-Default" style="height: 20px; max-height: 20px; min-height: 20px;" />
+                    <ui:VisualElement name="patrol-path" class="spawner-row">
+                        <ui:Label tabindex="-1" text="Patrol path:" parse-escape-sequences="true" display-tooltip-when-elided="true" name="patrol-path-label" class="Text-Gray" style="margin-top: 0; margin-bottom: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; width: 66px;" />
+                        <ui:Label tabindex="-1" text="Name" parse-escape-sequences="true" display-tooltip-when-elided="true" name="patrol-path-name" class="Text-Gray spawner-alt-template-name" style="width: 127px;" />
+                        <ui:Button text="PATROL PATH" parse-escape-sequences="true" display-tooltip-when-elided="true" name="patrol-path-button" class="Button-XVS Button-XS Text-Gray" style="width: 92px;" />
+                        <ui:Button text="CLEAR" parse-escape-sequences="true" display-tooltip-when-elided="true" name="clear-path-button" class="Button-XVS Button-XS Text-Gray" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="merchant" class="spawner-row">
+                        <ui:Label tabindex="-1" text="Merchant Table:" parse-escape-sequences="true" display-tooltip-when-elided="true" name="merchant-table-label" class="Text-Gray" style="margin-top: 0; margin-bottom: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;" />
+                        <ui:Label tabindex="-1" text="Name" parse-escape-sequences="true" display-tooltip-when-elided="true" name="merchant-table-name" class="Text-Gray spawner-alt-template-name" style="width: 132px;" />
+                        <ui:Button text="SELECT" parse-escape-sequences="true" display-tooltip-when-elided="true" name="merchant-table-button" class="Button-XVS Button-XS Text-Gray" />
+                        <ui:Button text="CLEAR" parse-escape-sequences="true" display-tooltip-when-elided="true" name="merchant-table-clear-button" class="Button-XVS Button-XS Text-Gray" />
+                    </ui:VisualElement>
+                    <ui:Toggle label="Offers Bank" name="bank-toggle" value="true" class="Text-Gray Toggle-right Toggle-Default" style="height: 20px; max-height: 20px; min-height: 20px;" />
+                    <ui:VisualElement style="flex-grow: 1; height: 20px; max-height: 20px; min-height: 20px; flex-direction: row; justify-content: space-around; margin-top: 1px; margin-bottom: 1px; align-items: center;">
+                        <ui:Button text="START QUESTS" parse-escape-sequences="true" display-tooltip-when-elided="true" name="start-quests-button" class="Button-XS Text-Gray" style="width: 100px;" />
+                        <ui:Button text="END QUESTS" parse-escape-sequences="true" display-tooltip-when-elided="true" name="end-quests-button" class="Button-XS Text-Gray" style="width: 100px;" />
+                        <ui:Button text="DIALOGUES" parse-escape-sequences="true" display-tooltip-when-elided="true" name="dialogue-button" class="Button-XS Text-Gray" style="width: 100px;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement style="flex-grow: 1; height: 20px; max-height: 20px; min-height: 20px; justify-content: center; align-items: stretch; margin-top: 1px; margin-bottom: 1px; flex-direction: row;">
+                        <ui:Button text="EDIT POSITION" parse-escape-sequences="true" display-tooltip-when-elided="true" name="spawner-edit-position-button" class="Button-XS Text-Gray" style="justify-content: space-around; width: 100px;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement style="flex-grow: 1; height: 40px; max-height: 40px; min-height: 40px; flex-direction: row; justify-content: space-around; margin-top: 1px; margin-bottom: 1px; align-items: center;">
+                        <ui:Button text="SPAWN" parse-escape-sequences="true" display-tooltip-when-elided="true" name="spawner-spawn-button" class="Button-XS Text-Gray" style="width: 100px;" />
+                        <ui:Button text="SAVE" parse-escape-sequences="true" display-tooltip-when-elided="true" name="spawner-save-button" class="Button-XS Text-Gray" style="width: 100px;" />
+                        <ui:Button text="DELETE" parse-escape-sequences="true" display-tooltip-when-elided="true" name="spawner-delete-button" class="Button-XS Text-Gray" style="width: 100px;" />
+                        <ui:Button text="BACK" parse-escape-sequences="true" display-tooltip-when-elided="true" name="spawner-back-button" class="Button-XS Text-Gray" style="width: 100px;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="mob-panel" style="flex-grow: 1; justify-content: flex-start; align-items: stretch; display: none;">
+                    <ui:VisualElement style="flex-grow: 1; flex-direction: row; display: flex; height: 30px; max-height: 30px; min-height: 30px; align-self: auto; align-items: center;">
+                        <ui:Label tabindex="-1" text="Select Template:" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" style="margin-top: 0; margin-bottom: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; width: 152px;" />
+                        <Atavism.UI.UITextField name="mob-template-search" class="UITextField-150" />
+                    </ui:VisualElement>
+                    <ui:ListView name="mob-list" virtualization-method="DynamicHeight" style="min-height: auto; max-height: none; height: 600px;" />
+                    <ui:VisualElement style="flex-grow: 1; flex-direction: row-reverse; height: 40px; max-height: 40px; min-height: 40px; align-items: center; justify-content: flex-start;">
+                        <ui:Button text="BACK" parse-escape-sequences="true" display-tooltip-when-elided="true" name="mob-back-button" class="Button-XS Text-Gray" style="width: 100px; margin-right: 12px;" />
+                        <ui:Button text="CLEAR" parse-escape-sequences="true" display-tooltip-when-elided="true" name="mob-clear-button" class="Button-XS Text-Gray" style="width: 100px; display: flex; margin-right: 22px;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="select-path-panel" style="flex-grow: 1; justify-content: flex-start; align-items: stretch; display: none;">
+                    <ui:VisualElement style="flex-grow: 1; flex-direction: row; display: flex; height: 20px; max-height: 20px; min-height: 20px; align-self: auto;">
+                        <ui:Label tabindex="-1" text="Select Patrol Path:" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" style="margin-top: 0; margin-bottom: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; width: 152px;" />
+                    </ui:VisualElement>
+                    <ui:ListView name="path-list" virtualization-method="DynamicHeight" style="min-height: auto; max-height: none; height: 600px;" />
+                    <ui:VisualElement style="flex-grow: 1; flex-direction: row-reverse; height: 40px; max-height: 40px; min-height: 40px; align-items: center; justify-content: flex-start;">
+                        <ui:Button text="BACK" parse-escape-sequences="true" display-tooltip-when-elided="true" name="path-back-button" class="Button-XS Text-Gray" style="width: 100px; margin-right: 12px;" />
+                        <ui:Button text="CLEAR" parse-escape-sequences="true" display-tooltip-when-elided="true" name="path-clear-button" class="Button-XS Text-Gray" style="width: 100px; display: flex; margin-right: 22px;" />
+                        <ui:Button text="CREATE" parse-escape-sequences="true" display-tooltip-when-elided="true" name="path-create-button" class="Button-XS Text-Gray" style="width: 100px; display: flex; margin-right: 22px;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="start-quest-panel" style="flex-grow: 1; display: none;">
+                    <ui:Label tabindex="-1" text="Selected Quests:" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" />
+                    <ui:ListView name="selected-start-quest-list" virtualization-method="DynamicHeight" style="height: 257px;" />
+                    <ui:Label tabindex="-1" text="Avalible Quests:" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" />
+                    <ui:ListView name="start-quest-list" virtualization-method="DynamicHeight" style="height: 306px;" />
+                    <ui:VisualElement style="flex-grow: 1; height: 40px; max-height: 40px; min-height: 40px; flex-direction: row; justify-content: flex-end; align-items: center;">
+                        <ui:Button text="BACK" parse-escape-sequences="true" display-tooltip-when-elided="true" name="start-quests-back-button" class="Button-XS Text-Gray" style="margin-right: 12px; width: 100px;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="end-quest-panel" style="flex-grow: 1; display: none;">
+                    <ui:Label tabindex="-1" text="Selected Quests:" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" />
+                    <ui:ListView name="selected-end-quest-list" virtualization-method="DynamicHeight" style="height: 257px;" />
+                    <ui:Label tabindex="-1" text="Avalible Quests:" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" />
+                    <ui:ListView name="end-quest-list" virtualization-method="DynamicHeight" style="height: 306px;" />
+                    <ui:VisualElement style="flex-grow: 1; height: 40px; max-height: 40px; min-height: 40px; flex-direction: row; justify-content: flex-end; align-items: center;">
+                        <ui:Button text="BACK" parse-escape-sequences="true" display-tooltip-when-elided="true" name="end-quests-back-button" class="Button-XS Text-Gray" style="margin-right: 12px; width: 100px;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="dialogue-panel" style="flex-grow: 1; display: none;">
+                    <ui:Label tabindex="-1" text="Selected Dialogues:" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" />
+                    <ui:ListView name="selected-dialogue-list" virtualization-method="DynamicHeight" style="height: 257px;" />
+                    <ui:Label tabindex="-1" text="Avalible Dialogues:" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" />
+                    <ui:ListView name="dialogue-list" virtualization-method="DynamicHeight" style="height: 306px;" />
+                    <ui:VisualElement style="flex-grow: 1; height: 40px; max-height: 40px; min-height: 40px; flex-direction: row; justify-content: flex-end; align-items: center;">
+                        <ui:Button text="BACK" parse-escape-sequences="true" display-tooltip-when-elided="true" name="dialogue-back-button" class="Button-XS Text-Gray" style="margin-right: 12px; width: 100px;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="select-spawner-panel" style="flex-grow: 1; display: none;">
+                    <ui:Label tabindex="-1" text="Click on the spawn you wish to edit" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" />
+                </ui:VisualElement>
+                <ui:VisualElement name="merchant-table-panel" style="flex-grow: 1; justify-content: flex-start; align-items: stretch; display: none;">
+                    <ui:VisualElement style="flex-grow: 1; flex-direction: row; display: flex; height: 20px; max-height: 20px; min-height: 20px; align-self: auto;">
+                        <ui:Label tabindex="-1" text="Select Merchant Table:" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" style="margin-top: 0; margin-bottom: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; width: 152px;" />
+                    </ui:VisualElement>
+                    <ui:ListView name="merchant-table-list" virtualization-method="DynamicHeight" style="min-height: auto; max-height: none; height: 600px;" />
+                    <ui:VisualElement style="flex-grow: 1; flex-direction: row-reverse; height: 40px; max-height: 40px; min-height: 40px; align-items: center; justify-content: flex-start;">
+                        <ui:Button text="BACK" parse-escape-sequences="true" display-tooltip-when-elided="true" name="merchant-table-back-button" class="Button-XS Text-Gray" style="width: 100px; margin-right: 12px;" />
+                        <ui:Button text="CLEAR" parse-escape-sequences="true" display-tooltip-when-elided="true" name="merchant-table-clear-button" class="Button-XS Text-Gray" style="width: 100px; display: flex; margin-right: 22px;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="create-path-panel" style="flex-grow: 1; display: none;">
+                    <ui:Label tabindex="-1" text="Create Patrol Path:" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" />
+                    <ui:VisualElement class="spawner-row spawner-row30" style="flex-grow: 1; flex-direction: row;">
+                        <ui:Label tabindex="-1" text="Name:" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" />
+                        <Atavism.UI.UITextField Placeholder="Enter text..." name="path-name-input" class="UITextField-100" style="width: 100px;" />
+                    </ui:VisualElement>
+                    <ui:ListView name="path-points-list" virtualization-method="DynamicHeight" style="height: 271px;" />
+                    <ui:VisualElement class="spawner-row spawner-row30" style="flex-grow: 1; flex-direction: row;">
+                        <ui:Label tabindex="-1" text="Linger Time:" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" />
+                        <Atavism.UI.UITextField name="path-linger-time" keyboard-type="NumberPad" class="UITextField-100" />
+                    </ui:VisualElement>
+                    <ui:Toggle label="Travel Reverse" name="path-travel-reverse" class="Toggle-right Toggle-Default" />
+                    <ui:VisualElement class="spawner-row" style="flex-grow: 1; align-self: center;">
+                        <ui:Button text="ADD POINT ON PLAYER" parse-escape-sequences="true" display-tooltip-when-elided="true" name="path-add-point-button" class="Button-XS Text-Gray" style="width: 150px;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement style="flex-grow: 1; height: 131px; max-height: 228px; min-height: 131px;" />
+                    <ui:VisualElement style="flex-grow: 1; height: 40px; max-height: 40px; min-height: 40px; flex-direction: row-reverse; align-items: center;">
+                        <ui:Button text="BACK" parse-escape-sequences="true" display-tooltip-when-elided="true" name="create-path-back-button" class="Button-XS Text-Gray" style="margin-right: 12px;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="edit-position-panel" style="flex-grow: 1; display: none;">
+                    <ui:Label tabindex="-1" text="Position:" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" />
+                    <ui:VisualElement class="spawner-row30" style="flex-grow: 1; flex-direction: row;">
+                        <ui:Label tabindex="-1" text="X:" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" style="width: 35px; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;" />
+                        <Atavism.UI.UITextField Placeholder="X" name="position-x" keyboard-type="DecimalPad" Only-Numbers="true" class="UITextField-100" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="spawner-row30" style="flex-grow: 1; flex-direction: row;">
+                        <ui:Label tabindex="-1" text="Y:" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" style="width: 35px; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;" />
+                        <Atavism.UI.UITextField Placeholder="Y" name="position-y" keyboard-type="DecimalPad" Only-Numbers="true" class="UITextField-100" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="spawner-row30" style="flex-grow: 1; flex-direction: row;">
+                        <ui:Label tabindex="-1" text="Z:" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" style="width: 35px; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;" />
+                        <Atavism.UI.UITextField Placeholder="Z" name="position-z" keyboard-type="DecimalPad" Only-Numbers="true" class="UITextField-100" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="spawner-row" style="flex-grow: 1; justify-content: center;">
+                        <ui:Button text="MOVE TO PLAYER" parse-escape-sequences="true" display-tooltip-when-elided="true" name="player-position-button" class="Button-XS Text-Gray" style="width: 128px;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement style="flex-grow: 1;" />
+                    <ui:VisualElement style="flex-grow: 1; height: 40px; max-height: 40px; min-height: 40px; flex-direction: row-reverse; align-items: center;">
+                        <ui:Button text="BACK" parse-escape-sequences="true" display-tooltip-when-elided="true" name="position-back-button" class="Button-XS Text-Gray" style="margin-right: 12px;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="external-buttons" style="flex-grow: 1; position: absolute; right: -132px; top: -35px;">
+                    <ui:Button text="MARKERS" parse-escape-sequences="true" display-tooltip-when-elided="true" name="markers-button" class="Button-XM Text-Light Button-Transparent" />
+                    <ui:Button text="ROAM" parse-escape-sequences="true" display-tooltip-when-elided="true" name="roam-button" class="Button-XM Text-Light Button-Transparent" />
+                    <ui:Button text="AGGRO" parse-escape-sequences="true" display-tooltip-when-elided="true" name="aggro-button" class="Button-XM Text-Light Button-Transparent" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:Instance>
+    </ui:VisualElement>
+</ui:UXML>

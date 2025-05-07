@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <ui:VisualElement class="building-permission-entry">
+        <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="text" class="Text-Gray building-permission-entry-text" />
+        <ui:Button text="-" parse-escape-sequences="true" display-tooltip-when-elided="true" name="button" class="Button-XS Button-Light-Overlay building-permission-entry-button" />
+    </ui:VisualElement>
+</ui:UXML>

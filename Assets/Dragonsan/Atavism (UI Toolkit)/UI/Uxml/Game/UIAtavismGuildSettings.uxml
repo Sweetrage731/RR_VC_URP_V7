@@ -1,0 +1,76 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="panel_AtavismWindow" src="project://database/Assets/Atavism%20(UI%20Toolkit)/UI/Library/panel_AtavismWindow.uxml?fileID=9197481963319205126&amp;guid=f96775ae845b40f4b90c8a7cdb68c513&amp;type=3#panel_AtavismWindow" />
+    <ui:Template name="UIAtavismGuildRankElement" src="project://database/Assets/Atavism%20(UI%20Toolkit)/UI/Screens/Game/Dependencies/UIAtavismGuildRankElement.uxml?fileID=9197481963319205126&amp;guid=4eb36df34ea7bd8498ea26be37b62554&amp;type=3#UIAtavismGuildRankElement" />
+    <ui:Instance template="panel_AtavismWindow" name="guild-settings-panel" style="width: 429px; height: 651px;">
+        <AttributeOverrides element-name="Window-title" text="GUILD SETTINGS" />
+        <ui:VisualElement name="inner-panel" style="margin-top: 66px; margin-right: 5px; margin-left: 4px; height: 581px;">
+            <ui:VisualElement name="choose-settings" style="flex-grow: 1; flex-direction: row; justify-content: space-between; height: 30px; max-height: 30px; min-height: 25px; align-items: center;">
+                <ui:Label tabindex="-1" text="Settings Panel:" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" />
+                <Atavism.UI.UIDropdown name="settings-type" Generate-Popup="true" Popup-Options="Rank Settings,Rank Permissions" style="width: 200px; height: 23px;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="rank-permissions-panel" style="flex-grow: 1; height: 484px; min-height: 470px; display: flex;">
+                <ui:VisualElement style="flex-grow: 1; height: 25px; flex-direction: row; justify-content: space-between; margin-top: 2px; margin-bottom: 2px; max-height: 25px; min-height: 25px; align-self: stretch; align-items: stretch;">
+                    <ui:Label tabindex="-1" text="Rank to modify:" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" />
+                    <Atavism.UI.UIDropdown name="rank-list-dropdown" style="width: 200px;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="permitions" style="flex-grow: 1; display: flex;">
+                    <ui:VisualElement name="guild-chat" class="guild-permission-group">
+                        <ui:Label tabindex="-1" text="Guild Chat:" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" style="height: 22px;" />
+                        <ui:VisualElement style="flex-grow: 0; flex-direction: row; flex-shrink: 0; height: 43px;">
+                            <ui:Toggle label="Guild Chat Talk" name="guild-chat-talk" value="false" class="Toggle-Default" />
+                            <ui:Toggle label="Guild Chat Listen" name="guild-chat-listen" value="false" class="Toggle-Default" style="display: none; visibility: visible;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="guild-roster" class="guild-permission-group" style="flex-grow: 1;">
+                        <ui:Label tabindex="-1" text="Guild Roster:" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" style="height: 22px;" />
+                        <ui:VisualElement style="flex-grow: 0; flex-direction: row; flex-shrink: 0; height: 45px;">
+                            <ui:Toggle label="Invite Member" name="guild-invite-member" class="Toggle-Default" />
+                            <ui:Toggle label="Remove Member" name="guild-remove-member" class="Toggle-Default" />
+                        </ui:VisualElement>
+                        <ui:VisualElement style="flex-grow: 0; flex-direction: row; flex-shrink: 0; height: 45px;">
+                            <ui:Toggle label="Promote" name="guild-promote" value="false" class="Toggle-Default" />
+                            <ui:Toggle label="Degrade" name="guild-degrade" class="Toggle-Default" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="guild-info" class="guild-permission-group" style="flex-grow: 1;">
+                        <ui:Label tabindex="-1" text="Guild Info:" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" style="height: 22px;" />
+                        <ui:VisualElement style="flex-grow: 0; flex-direction: row; flex-shrink: 0; height: 43px;">
+                            <ui:Toggle label="Set MOTD" name="set-motd" value="false" focusable="true" class="Toggle-Default" />
+                            <ui:Toggle label="Level Up" name="level-up" class="Toggle-Default" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="guild-claim" class="guild-permission-group" style="flex-grow: 1;">
+                        <ui:Label tabindex="-1" text="Guild Claim:" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" style="height: 22px;" />
+                        <ui:VisualElement style="flex-grow: 0; flex-direction: row; flex-shrink: 0; height: 43px;">
+                            <ui:Toggle label="Interaction" name="claim-interaction" class="Toggle-Default" />
+                            <ui:VisualElement style="flex-grow: 1;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement style="flex-grow: 0; flex-direction: row; flex-shrink: 0; height: 43px;">
+                            <ui:Toggle label="Add Objects" name="claim-add-objects" class="Toggle-Default" />
+                            <ui:Toggle label="Edit Objects" name="claim-edit-objects" class="Toggle-Default" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="guild-warehouse" class="guild-permission-group" style="flex-grow: 1;">
+                        <ui:Label tabindex="-1" text="Guild Warehouse:" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" style="height: 22px;" />
+                        <ui:VisualElement style="flex-grow: 0; flex-direction: row; flex-shrink: 0; height: 43px;">
+                            <ui:Toggle label="Add" name="warehouse-add" class="Toggle-Default" />
+                            <ui:Toggle label="Get" name="warehouse-get" class="Toggle-Default" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="rank-list-panel" style="flex-grow: 1; height: 484px; min-height: 470px; display: flex;">
+                <ui:ScrollView mouse-wheel-scroll-size="18" >
+                    <ui:VisualElement name="rank-list" style="flex-grow: 1;">
+                        <ui:Instance template="UIAtavismGuildRankElement" name="UIAtavismGuildRankElement" />
+                    </ui:VisualElement>
+                </ui:ScrollView>
+            </ui:VisualElement>
+            <ui:VisualElement name="button-panel" style="flex-grow: 1; height: 75px; max-height: 75px; min-height: 75px; flex-direction: row-reverse;">
+                <ui:Button text="DISBAND GUILD" parse-escape-sequences="true" display-tooltip-when-elided="true" name="disband-guild-button" class="Button-XL Text-Light" style="font-size: 14px; bottom: 0;" />
+                <ui:Button text="EDIT MOTD" parse-escape-sequences="true" display-tooltip-when-elided="true" name="edit-motd-button" class="Button-XL Text-Light" style="font-size: 14px; bottom: 0;" />
+                <ui:Button text="ADD RANK" parse-escape-sequences="true" display-tooltip-when-elided="true" name="add-rank-button" class="Button-XL Text-Light" style="font-size: 14px; bottom: 0;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:Instance>
+</ui:UXML>

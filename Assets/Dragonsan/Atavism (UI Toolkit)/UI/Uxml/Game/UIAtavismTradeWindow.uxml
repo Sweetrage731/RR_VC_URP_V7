@@ -1,0 +1,58 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:Template name="panel_AtavismWindow" src="project://database/Assets/Atavism%20(UI%20Toolkit)/UI/Library/panel_AtavismWindow.uxml?fileID=9197481963319205126&amp;guid=f96775ae845b40f4b90c8a7cdb68c513&amp;type=3#panel_AtavismWindow" />
+    <ui:Template name="UIAtavismTradeItem" src="project://database/Assets/Atavism%20(UI%20Toolkit)/UI/Screens/Game/Dependencies/UIAtavismTradeItem.uxml?fileID=9197481963319205126&amp;guid=2aa5cae0aa25d1d47b33059fef25f394&amp;type=3#UIAtavismTradeItem" />
+    <ui:Template name="UIAtavismCurrencyInputsPanel" src="project://database/Assets/Atavism%20(UI%20Toolkit)/UI/Screens/Game/Dependencies/UIAtavismCurrencyInputsPanel.uxml?fileID=9197481963319205126&amp;guid=276077959f7bfc24ba51b5a4b4863244&amp;type=3#UIAtavismCurrencyInputsPanel" />
+    <ui:Template name="UIAtavismCurrencyPanel" src="project://database/Assets/Atavism%20(UI%20Toolkit)/UI/Screens/Game/Dependencies/UIAtavismCurrencyPanel.uxml?fileID=9197481963319205126&amp;guid=92cceebc890f7f84987b5bae2ddcaf64&amp;type=3#UIAtavismCurrencyPanel" />
+    <ui:Template name="UIAtavismTradePartnerItem" src="project://database/Assets/Atavism%20(UI%20Toolkit)/UI/Screens/Game/Dependencies/UIAtavismTradePartnerItem.uxml?fileID=9197481963319205126&amp;guid=3673869b77664104c8233b906d55ddb2&amp;type=3#UIAtavismTradePartnerItem" />
+    <ui:VisualElement name="Screen" picking-mode="Ignore" style="flex-grow: 1;">
+        <ui:Instance template="panel_AtavismWindow" name="TradeWindow" style="width: 435px; height: 499px;">
+            <AttributeOverrides element-name="Window-title" text="TRADE" />
+            <ui:VisualElement name="inner-panel" class="inner-panel">
+                <ui:VisualElement style="flex-grow: 1; height: 350px;">
+                    <ui:VisualElement style="flex-grow: 1; flex-direction: row; height: 30px; max-height: 30px; min-height: 0;">
+                        <ui:Label tabindex="-1" text="My Name" parse-escape-sequences="true" display-tooltip-when-elided="true" name="my-name" class="Text-Light" style="width: 50%; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;" />
+                        <ui:Label tabindex="-1" text="Partner Name" parse-escape-sequences="true" display-tooltip-when-elided="true" name="partner-name" class="Text-Light" style="width: 50%; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement style="flex-grow: 1; flex-direction: row; height: 300px; max-height: 300px; min-height: 300px;">
+                        <ui:VisualElement style="flex-grow: 1; width: 50%;">
+                            <ui:Instance template="UIAtavismTradeItem" name="my-item-1" />
+                            <ui:Instance template="UIAtavismTradeItem" name="my-item-2" />
+                            <ui:Instance template="UIAtavismTradeItem" name="my-item-3" />
+                            <ui:Instance template="UIAtavismTradeItem" name="my-item-4" />
+                            <ui:Instance template="UIAtavismTradeItem" name="my-item-5" />
+                        </ui:VisualElement>
+                        <ui:VisualElement style="flex-grow: 1; width: 50%;">
+                            <ui:Instance template="UIAtavismTradePartnerItem" name="partner-item-1" />
+                            <ui:Instance template="UIAtavismTradePartnerItem" name="partner-item-2" />
+                            <ui:Instance template="UIAtavismTradePartnerItem" name="partner-item-3" />
+                            <ui:Instance template="UIAtavismTradePartnerItem" name="partner-item-4" />
+                            <ui:Instance template="UIAtavismTradePartnerItem" name="partner-item-5" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement class="spacer-img" style="flex-grow: 1;" />
+                    <ui:VisualElement name="currency" style="flex-grow: 1; flex-direction: row;">
+                        <ui:VisualElement style="flex-grow: 1; width: 50%;">
+                            <ui:Instance template="UIAtavismCurrencyInputsPanel" name="currency-input" />
+                        </ui:VisualElement>
+                        <ui:VisualElement style="flex-grow: 1; width: 50%;">
+                            <ui:Instance template="UIAtavismCurrencyPanel" name="currency" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="status" style="flex-grow: 1; flex-direction: row; height: 20px; max-height: 20px; min-height: 20px;">
+                        <ui:VisualElement style="flex-grow: 1; width: 50%;">
+                            <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="my-status" class="Text-Light" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; -unity-text-align: middle-left;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement style="flex-grow: 1; width: 50%;">
+                            <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="partner-status" class="Text-Light" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; -unity-text-align: middle-left;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement class="spacer-img" style="flex-grow: 1;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="buttons" style="flex-grow: 1; height: 40px; flex-direction: row; justify-content: space-around; align-items: center; max-height: 40px; min-height: 40px;">
+                    <ui:Button text="TRADE" parse-escape-sequences="true" display-tooltip-when-elided="true" name="trade-button" class="Button-XS Button-Light-Overlay" />
+                    <ui:Button text="CANCEL" parse-escape-sequences="true" display-tooltip-when-elided="true" name="cancel-button" class="Button-XS Button-Light-Overlay" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:Instance>
+    </ui:VisualElement>
+</ui:UXML>

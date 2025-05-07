@@ -1,0 +1,17 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Dragonsan/Atavism%20(UI%20Toolkit)/UI/Style%20Sheets/ChatStyleSheet.uss?fileID=7433441132597879392&amp;guid=1cf45214c42625146a8071c1efdc4dcf&amp;type=3#ChatStyleSheet" />
+    <ui:VisualElement name="Screen" picking-mode="Ignore" style="-unity-font: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/Fonts/Cambria.ttf?fileID=12800000&amp;guid=36ef3a2444bc15847bd874b9b0c98ae6&amp;type=3#Cambria&quot;); -unity-font-definition: url(&quot;project://database/Assets/Dragonsan/Atavism%20(UI%20Toolkit)/UI/Fonts/Cambria%20SDF.asset?fileID=11400000&amp;guid=171debed56e16fd4daf65623c92ecac2&amp;type=2#Cambria SDF&quot;); align-items: flex-start; justify-content: flex-end; flex-direction: column-reverse; flex-grow: 1;">
+        <ui:VisualElement name="Window" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); position: absolute; bottom: 0; left: 0; width: 570px; height: 240px;">
+            <ui:VisualElement name="frame" picking-mode="Ignore" style="background-image: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/Chat/chat_bg_v87_v2.png?fileID=2800000&amp;guid=a01bbeec3abf5904b80346dbc355cdb2&amp;type=3#chat_bg_v87_v2&quot;); justify-content: space-between; -unity-slice-top: 20; position: relative; flex-grow: 1;">
+                <Atavism.UI.UIButtonToggleGroupPanel name="group-panel" Header-Button-Height="46" item-Class-Name="UI-BTGP__chat-buttons" Default-Item-Index="0" Items="Chat,Group,Guild,Events,Combat" picking-mode="Ignore" style="height: auto; width: 100%; display: flex; flex-grow: 1;" />
+                <ui:VisualElement style="height: 40px; width: 100%; flex-direction: row; justify-content: flex-start; align-items: center; padding-left: 2px; padding-right: 2px; padding-bottom: 2px; max-height: 40px; min-height: 40px;">
+                    <ui:Button text="?" display-tooltip-when-elided="true" name="help-Button" class="Button-XS Button-Dark-Overlay chat-help-button" />
+                    <ui:VisualElement style="flex-grow: 1; height: 100%;">
+                        <Atavism.UI.UITextField name="chat-TextField" Placeholder-Class-Style="chat__placeholder" Placeholder="Say" Label-Class-Style="chat-text-input" is-delayed="false" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; color: rgb(255, 255, 255); font-size: 16px; -unity-font-style: normal; flex-grow: 0; justify-content: flex-start; visibility: visible; height: 100%; width: 100%;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="resize" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/Chat/rog.png?fileID=2800000&amp;guid=df5e71e288680e7479b30728609f153c&amp;type=3#rog&quot;); position: absolute; width: 16px; height: 16px; top: 6px; right: 0;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

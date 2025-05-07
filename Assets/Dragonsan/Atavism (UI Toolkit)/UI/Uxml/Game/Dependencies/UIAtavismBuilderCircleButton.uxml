@@ -1,0 +1,5 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:VisualElement name="button" style="flex-grow: 1; width: 120px; height: 120px; max-height: 120px; max-width: 120px; min-width: 120px; justify-content: center; align-items: center; position: absolute;">
+        <ui:VisualElement name="icon" class="builder-circle__button-icon" style="transition-property: all; transition-duration: 0.2s; transition-timing-function: linear; transition-delay: 0s;" />
+    </ui:VisualElement>
+</ui:UXML>

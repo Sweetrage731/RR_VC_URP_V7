@@ -1,0 +1,5 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="Screen" picking-mode="Ignore" class="screen-full">
+        <ui:Label text="9000 ms" display-tooltip-when-elided="true" name="lag" picking-mode="Ignore" class="lag-label" />
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,168 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="panel_AtavismWindow" src="project://database/Assets/Dragonsan/Atavism%20(UI%20Toolkit)/UI/Library/panel_AtavismWindow.uxml?fileID=9197481963319205126&amp;guid=f96775ae845b40f4b90c8a7cdb68c513&amp;type=3#panel_AtavismWindow" />
+    <ui:Template name="UIAtavismSlotItem 1" src="project://database/Assets/Dragonsan/Atavism%20(UI%20Toolkit)/UI/Uxml/Game/Dependencies/UIAtavismSlotItemDisplay.uxml?fileID=9197481963319205126&amp;guid=91f585ddcd6061441a6e3188ccc65411&amp;type=3#UIAtavismSlotItemDisplay" />
+    <ui:Template name="UIAtavismCurrencyInputsPanel" src="project://database/Assets/Dragonsan/Atavism%20(UI%20Toolkit)/UI/Uxml/Game/Dependencies/UIAtavismCurrencyInputsPanel.uxml?fileID=9197481963319205126&amp;guid=276077959f7bfc24ba51b5a4b4863244&amp;type=3#UIAtavismCurrencyInputsPanel" />
+    <ui:Template name="UIAtavismCurrencyPanel" src="project://database/Assets/Dragonsan/Atavism%20(UI%20Toolkit)/UI/Uxml/Game/Dependencies/UIAtavismCurrencyPanel.uxml?fileID=9197481963319205126&amp;guid=92cceebc890f7f84987b5bae2ddcaf64&amp;type=3#UIAtavismCurrencyPanel" />
+    <Style src="project://database/Assets/Dragonsan/Atavism%20(UI%20Toolkit)/UI/Style%20Sheets/AuctionStyleSheet.uss?fileID=7433441132597879392&amp;guid=8d5ec166b1bbfaf4ca3221a486dd848f&amp;type=3#AuctionStyleSheet" />
+    <ui:VisualElement name="Screen" picking-mode="Ignore">
+        <ui:Instance template="panel_AtavismWindow" name="AuctionWindow" class="auction-window">
+            <AttributeOverrides element-name="Window-title" text="AUCTIONS" />
+            <ui:VisualElement name="inner-panel" class="inner-panel">
+                <ui:VisualElement name="tabs" style="flex-grow: 1; height: 71px; max-height: 71px; min-height: 71px; width: 100%; flex-direction: row;">
+                    <Atavism.UI.UIButtonToggleGroup Items="BUY ITEMS,SELL ITEMS,MY TRANSACTIONS" Can-Deselect="false" item-Class-Name="auction-tab-button" Default-Item-Index="0" name="auction-top-menu" selected-item-Class-Name="auction-tab-button__selected" class="Text-Gray" style="flex-direction: row;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="auction-buy-panel" style="flex-grow: 1; display: flex;">
+                    <ui:VisualElement name="options" style="flex-grow: 1; height: 85px; max-height: 85px; min-height: 85px; display: flex;">
+                        <ui:VisualElement style="flex-grow: 1; flex-direction: row; height: 30%; max-height: 30px; min-height: 30px;">
+                            <ui:Label tabindex="-1" text="Class" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" style="margin-left: 14px;" />
+                            <Atavism.UI.UIDropdown name="auction-search-class" Generate-Popup="true" Popup-Options="Any,Warrior,Rouge,Mage" style="width: 143px;" />
+                            <ui:Label tabindex="-1" text="Race" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" style="margin-left: 14px;" />
+                            <Atavism.UI.UIDropdown name="auction-search-race" Generate-Popup="true" Popup-Options="Any,Human,Orc" style="width: 137px;" />
+                            <ui:Label tabindex="-1" text="Level" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" style="width: auto; -unity-text-align: upper-right; margin-left: 14px;" />
+                            <Atavism.UI.UITextField value="1" name="auction-search-level-min" style="width: 50px;" />
+                            <ui:Label tabindex="-1" text="-" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" style="-unity-text-align: middle-center; -unity-font-style: bold;" />
+                            <Atavism.UI.UITextField value="99" name="auction-search-level-max" style="width: 50px;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="quality" style="flex-grow: 1; height: 30%; flex-direction: row; max-height: 30px; min-height: 30px; margin-top: 5px;">
+                            <ui:Toggle label="Poor" name="toggle-item-quality" value="true" class="Toggle-Default Toggle-Auction" />
+                            <ui:Toggle label="Common" name="toggle-item-quality" value="true" class="Toggle-Default Toggle-Auction" style="height: 25px; max-height: 25px; min-height: 25px;" />
+                            <ui:Toggle label="Uncommon" name="toggle-item-quality" value="true" class="Toggle-Default Toggle-Auction" style="height: 25px; max-height: 25px; min-height: 25px;" />
+                            <ui:Toggle label="Rare" name="toggle-item-quality" value="true" class="Toggle-Default Toggle-Auction" style="height: 25px; max-height: 25px; min-height: 25px;" />
+                            <ui:Toggle label="Epic" name="toggle-item-quality" value="true" class="Toggle-Default Toggle-Auction" style="height: 25px; max-height: 25px; min-height: 25px;" />
+                            <ui:Toggle label="Legendary" name="toggle-item-quality" value="true" class="Toggle-Default Toggle-Auction" style="height: 25px; max-height: 25px; min-height: 25px;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement style="flex-grow: 1; flex-direction: row; margin-top: 3px; margin-right: 3px; margin-bottom: 3px; margin-left: 3px;">
+                        <ui:VisualElement name="left-panel" style="flex-grow: 1; width: 211px; max-width: 211px; min-width: 211px;">
+                            <Atavism.UI.UITextField Placeholder="Search" />
+                            <ui:VisualElement style="flex-grow: 1;">
+                                <ui:TreeView name="auction-buy-left-menu-grid" class="Text-Gray Auction" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/spacer_vertical.png?fileID=2800000&amp;guid=66f23171ac7a0ab4391b1b0df32a3045&amp;type=3#spacer_vertical&quot;); width: 2px; max-width: 2px;" />
+                        <ui:VisualElement name="right-panel" style="flex-grow: 1;">
+                            <ui:VisualElement name="items-list-header" style="flex-grow: 1; height: 20px; max-height: 20px; min-height: 20px; flex-direction: row; background-image: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/arena_score_team_header%201.png?fileID=2800000&amp;guid=81c8ed3be6f87ff4ab4ef58e3be2f251&amp;type=3#arena_score_team_header 1&quot;);">
+                                <ui:VisualElement name="VisualElement" style="flex-grow: 1; flex-direction: row; align-items: flex-start; align-self: center; width: 30px;">
+                                    <ui:Label tabindex="-1" text="Count" parse-escape-sequences="true" display-tooltip-when-elided="true" name="buy-count-header" class="Text-Gray" style="width: auto; max-width: none; -unity-text-align: middle-left; flex-shrink: 1; flex-grow: 0;" />
+                                    <ui:VisualElement name="buy-count-header-icon" style="flex-grow: 1; height: 15px; max-height: 15px; min-height: 15px; min-width: 15px; max-width: 15px;" />
+                                </ui:VisualElement>
+                                <ui:VisualElement style="flex-grow: 1; flex-direction: row; width: 418px;">
+                                    <ui:Label tabindex="-1" text="Item" parse-escape-sequences="true" display-tooltip-when-elided="true" name="buy-name-header" class="Text-Gray" style="width: auto; max-width: none; min-width: auto; -unity-text-align: middle-left;" />
+                                    <ui:VisualElement name="buy-name-header-icon" style="flex-grow: 1; height: 15px; max-height: 15px; min-height: 15px; min-width: 15px; max-width: 15px;" />
+                                </ui:VisualElement>
+                                <ui:VisualElement style="flex-grow: 1; flex-direction: row; width: 119px; align-items: auto;">
+                                    <ui:Label tabindex="-1" text="Price" parse-escape-sequences="true" display-tooltip-when-elided="true" name="buy-price-header" class="Text-Gray" style="-unity-text-align: middle-left;" />
+                                    <ui:VisualElement name="buy-price-header-icon" style="flex-grow: 1; width: 15px; height: 15px; max-height: 15px; min-height: 15px; min-width: 15px; max-width: 15px;" />
+                                </ui:VisualElement>
+                            </ui:VisualElement>
+                            <ui:VisualElement style="flex-grow: 1;">
+                                <ui:ListView name="auction-buy-grid" virtualization-method="DynamicHeight" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:Label tabindex="-1" parse-escape-sequences="true" display-tooltip-when-elided="true" name="error-message" class="auction-error-message" />
+                </ui:VisualElement>
+                <ui:VisualElement name="auction-inventory-panel" style="flex-grow: 1; display: none;">
+                    <ui:VisualElement name="right-panel" style="flex-grow: 1;">
+                        <ui:VisualElement name="items-list-header" style="flex-grow: 1; height: 20px; max-height: 20px; min-height: 20px; flex-direction: row; background-image: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/arena_score_team_header%201.png?fileID=2800000&amp;guid=81c8ed3be6f87ff4ab4ef58e3be2f251&amp;type=3#arena_score_team_header 1&quot;);">
+                            <ui:Label tabindex="-1" text="Count" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" style="width: 80px; max-width: 50px; -unity-text-align: middle-left; margin-left: 6px;" />
+                            <ui:Label tabindex="-1" text="Item" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" style="width: 670px; max-width: 670px; min-width: 670px; -unity-text-align: middle-left;" />
+                            <ui:Label tabindex="-1" text="Price" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" style="-unity-text-align: middle-left;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement style="flex-grow: 1;">
+                            <ui:ListView name="inventory-item-list" virtualization-method="DynamicHeight" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="auction-transaction-panel" style="flex-grow: 1; display: none;">
+                    <ui:VisualElement style="flex-grow: 1; flex-direction: row;">
+                        <ui:VisualElement name="left-panel" style="flex-grow: 1; width: 211px; max-width: 211px; min-width: 211px; align-self: stretch; justify-content: flex-start; align-items: center;">
+                            <Atavism.UI.UIButtonToggleGroup Items="Buying,Selling,Bought,Sold,Expired" Default-Item-Index="0" name="auction-transaction-menu-button" item-Class-Name="auction-menu-button" selected-item-Class-Name="auction-menu-button__selected" class="Text-Gray" style="flex-direction: column; justify-content: flex-start; align-self: stretch; display: flex; visibility: visible; overflow: visible; background-color: rgba(0, 0, 0, 0);" />
+                            <ui:VisualElement style="flex-grow: 1; height: 359px;" />
+                            <ui:VisualElement style="flex-grow: 1; align-self: center; height: 70px;">
+                                <ui:Button text="Take All" parse-escape-sequences="true" display-tooltip-when-elided="true" name="take-all-button" class="Button-XL Button-Light-Overlay" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/spacer_vertical.png?fileID=2800000&amp;guid=66f23171ac7a0ab4391b1b0df32a3045&amp;type=3#spacer_vertical&quot;); width: 2px; max-width: 2px;" />
+                        <ui:VisualElement name="right-panel" style="flex-grow: 1;">
+                            <ui:VisualElement name="items-list-heder" style="flex-grow: 1; height: 20px; max-height: 20px; min-height: 20px; flex-direction: row; background-image: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/arena_score_team_header%201.png?fileID=2800000&amp;guid=81c8ed3be6f87ff4ab4ef58e3be2f251&amp;type=3#arena_score_team_header 1&quot;);">
+                                <ui:Label tabindex="-1" text="Count" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" style="width: 50px; max-width: 50px; -unity-text-align: middle-left;" />
+                                <ui:Label tabindex="-1" text="Item" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" style="width: 450px; max-width: 450px; min-width: 450px; -unity-text-align: middle-left;" />
+                                <ui:Label tabindex="-1" text="Price" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" style="-unity-text-align: middle-left;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement style="flex-grow: 1;">
+                                <ui:ListView name="auction-transaction-list" virtualization-method="DynamicHeight" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:Instance>
+        <ui:Instance template="panel_AtavismWindow" name="auction-sub-window" class="auction-sub-window" style="display: none;">
+            <AttributeOverrides element-name="Window-title" display-tooltip-when-elided="true" />
+            <ui:VisualElement name="inner-panel" class="inner-panel">
+                <ui:VisualElement class="auction-sub-top">
+                    <ui:VisualElement name="item" class="auction-sub-top-item-panel">
+                        <ui:VisualElement class="auction-sub-top-item-sub-panel">
+                            <ui:Instance template="UIAtavismSlotItem 1" name="item-slot" />
+                            <ui:Label tabindex="-1" text="Item Name" parse-escape-sequences="true" display-tooltip-when-elided="true" name="item-name" class="Text-Title" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="quantity" class="auction-sub-top-quantity-panel">
+                        <ui:Label tabindex="-1" text="Quantity:" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray auction-sub-top-quantity-label" />
+                        <Atavism.UI.UITextField value="9999" is-delayed="false" hide-mobile-input="true" name="quantity-text-field" class="auction-sub-top-quantity-input" />
+                        <ui:SliderInt high-value="100" direction="Horizontal" name="quantity-slider" tabindex="0" class="auction-sub-top-quantity-slider UISlider" style="display: flex; width: 292px;" />
+                        <ui:Label tabindex="-1" text="1/1" parse-escape-sequences="true" display-tooltip-when-elided="true" name="quantity-label" class="Text-Gray" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="price" class="auction-sub-top-price-panel">
+                        <ui:Label tabindex="-1" text="Price:" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray auction-sub-top-price-label" />
+                        <ui:VisualElement name="VisualElement" class="auction-sub-top-price-input-panel">
+                            <ui:Instance template="UIAtavismCurrencyInputsPanel" name="sell-currency-input" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="commission" style="flex-grow: 1; flex-direction: row; height: 30px; max-height: 30px; min-height: 30px; min-width: auto;">
+                        <ui:Label tabindex="-1" text="Commission:" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" style="width: 160px; -unity-text-align: middle-right;" />
+                        <ui:VisualElement style="flex-grow: 1; align-items: flex-start;">
+                            <ui:VisualElement style="flex-grow: 1; width: 292px;">
+                                <ui:Instance template="UIAtavismCurrencyPanel" name="currency-panel" style="min-width: auto; min-height: auto;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement style="flex-grow: 1;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="total" style="flex-grow: 1; flex-direction: row; height: 30px; max-height: 30px; min-height: 30px;">
+                        <ui:Label tabindex="-1" text="Total Price:" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" style="width: 160px; -unity-text-align: middle-right;" />
+                        <ui:VisualElement style="flex-grow: 1; align-items: flex-start;">
+                            <ui:VisualElement style="flex-grow: 1; width: 292px;">
+                                <ui:Instance template="UIAtavismCurrencyPanel" name="currency-panel" />
+                            </ui:VisualElement>
+                            <ui:VisualElement style="flex-grow: 1;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="buttons" style="flex-grow: 1; flex-direction: row; align-items: center; align-self: center; justify-content: space-around; width: 50%;">
+                        <ui:Button text="CANCEL" parse-escape-sequences="true" display-tooltip-when-elided="true" name="cancel-button" class="Button-Light-Overlay Button-XL" />
+                        <ui:Button text="SELL" parse-escape-sequences="true" display-tooltip-when-elided="true" name="confirm-button" class="Button-Light-Overlay Button-XL" style="white-space: normal;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="separator" class="spacer-img" />
+                <ui:VisualElement class="auction-sub-bottom-panel">
+                    <ui:VisualElement name="left" class="auction-sub-bottom-sub-panel">
+                        <ui:Label tabindex="-1" text="Current Buyers" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray auction-sub-bottom-sub-title" />
+                        <ui:VisualElement name="header" class="auction-sub-bottom-sub-header">
+                            <ui:Label tabindex="-1" text="Quantity" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" style="width: 60%; -unity-text-align: middle-left; height: 20px; max-height: 20px;" />
+                            <ui:Label tabindex="-1" text="Price" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" style="-unity-text-align: middle-left; width: 40%;" />
+                        </ui:VisualElement>
+                        <ui:ListView name="buyers-list" virtualization-method="DynamicHeight" selection-type="None" class="auction-sub-bottom-sub-list" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="right" class="auction-sub-bottom-sub-panel">
+                        <ui:Label tabindex="-1" text="Current Sellers" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray auction-sub-bottom-sub-title" />
+                        <ui:VisualElement name="header" class="auction-sub-bottom-sub-header">
+                            <ui:Label tabindex="-1" text="Quantity" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" style="width: 60%; -unity-text-align: middle-left;" />
+                            <ui:Label tabindex="-1" text="Price" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" style="-unity-text-align: middle-left; width: 40%;" />
+                        </ui:VisualElement>
+                        <ui:ListView name="sellers-list" virtualization-method="DynamicHeight" selection-type="None" class="auction-sub-bottom-sub-list" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:Instance>
+    </ui:VisualElement>
+</ui:UXML>

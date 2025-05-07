@@ -1,0 +1,8 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:VisualElement name="slot-button-holder" class="action-slot-holder">
+        <ui:VisualElement name="slot" style="flex-grow: 1; width: 70px; height: 70px; background-image: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/Actionbar/actionbar_slot.png?fileID=2800000&amp;guid=a94b9017dc9d19a478ee996535a1e3db&amp;type=3#actionbar_slot&quot;); align-items: center; justify-content: center;">
+            <ui:VisualElement name="slot-icon" class="action-slot-icon" />
+            <ui:Label text="1" display-tooltip-when-elided="true" name="slot-hotkey" class="action-slot-hotkey" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,25 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <Style src="project://database/Assets/Atavism%20(UI%20Toolkit)/UI/Style%20Sheets/SettingsStyleSheet.uss?fileID=7433441132597879392&amp;guid=b02cad98bff4d5e4e877d2b0189415e0&amp;type=3#SettingsStyleSheet" />
+    <ui:VisualElement name="UIAtavismGeneralSettingsRoot">
+        <ui:Label tabindex="-1" text="Rotation Speed" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" />
+        <ui:Slider name="sensitivity-mouse-slider" value="0" high-value="0.4" low-value="0.01" page-size="0.01" class="UISlider" style="display: flex; width: auto;" />
+        <ui:Label tabindex="-1" text="Zoom Delay" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" />
+        <ui:Slider name="sensitivity-wheel-mouse-slider" value="0" high-value="-0.1" low-value="-1" page-size="0.01" class="UISlider" style="display: flex; width: auto;" />
+        <ui:VisualElement class="graphic-row" style="flex-grow: 1;">
+            <ui:Toggle name="free-camera-toggle" label="Free Camera" class="Toggle-Default" />
+        </ui:VisualElement>
+        <ui:VisualElement class="graphic-row" style="flex-grow: 1;">
+            <ui:Toggle name="show-title-toggle" label="Show Title" class="Toggle-Default" />
+        </ui:VisualElement>
+        <ui:VisualElement class="graphic-row" style="flex-grow: 1;">
+            <ui:Toggle name="invert-mouse-toggle" label="Invert Mouse" class="Toggle-Default" />
+        </ui:VisualElement>
+        <ui:Image name="PolishFlagImage" />
+        <ui:Image name="EnglishFlagImage" />
+        <ui:Label tabindex="-1" text="Auto Loot Settings" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Light" style="-unity-text-align: upper-left;" />
+        <ui:VisualElement style="flex-grow: 1; flex-direction: row; width: auto; justify-content: space-between;">
+            <ui:Label tabindex="-1" text="Minimal Item Quality" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" />
+            <Atavism.UI.UIDropdown name="item-quality" Generate-Popup="true" style="width: 172px;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

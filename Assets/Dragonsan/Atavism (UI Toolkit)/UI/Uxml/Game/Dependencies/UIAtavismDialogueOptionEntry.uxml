@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <Style src="project://database/Assets/Atavism%20(UI%20Toolkit)/UI/Style%20Sheets/NpcDialoge.uss?fileID=7433441132597879392&amp;guid=f82c93cc24095894fbbb892e2268baad&amp;type=3#NpcDialoge" />
+    <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="dialogue-option-container" class="dialogue-option-container">
+        <ui:VisualElement name="dialogue-option-image" class="dialogue-option-image" />
+        <ui:Label tabindex="-1" text="Dialogue Option " parse-escape-sequences="true" display-tooltip-when-elided="true" name="dialogue-option-text" class="Text-Default dialogue-option-text" />
+        <ui:VisualElement name="dialogue-option-item-image" class="dialogue-option-item-image" />
+        <ui:VisualElement name="dialogue-option-currency-image" class="dialogue-option-currency-image" />
+    </ui:Button>
+</ui:UXML>

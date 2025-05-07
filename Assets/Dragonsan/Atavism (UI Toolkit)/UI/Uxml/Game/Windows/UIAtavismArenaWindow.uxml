@@ -1,0 +1,42 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:Template name="panel_AtavismWindow" src="project://database/Assets/Dragonsan/Atavism%20(UI%20Toolkit)/UI/Library/panel_AtavismWindow.uxml?fileID=9197481963319205126&amp;guid=f96775ae845b40f4b90c8a7cdb68c513&amp;type=3#panel_AtavismWindow" />
+    <Style src="project://database/Assets/Dragonsan/Atavism%20(UI%20Toolkit)/UI/Style%20Sheets/ArenaStyleSheet.uss?fileID=7433441132597879392&amp;guid=3dc4e5111a0e0184db10da45d8236afc&amp;type=3#ArenaStyleSheet" />
+    <ui:VisualElement name="Screen" picking-mode="Ignore" style="flex-grow: 1;">
+        <ui:Instance template="panel_AtavismWindow" name="ArenaWindow" style="width: 390px; height: 533px;">
+            <AttributeOverrides element-name="Window-title" text="ARENA" />
+            <ui:VisualElement name="inner-panel" class="inner-panel">
+                <ui:VisualElement name="list-header" class="arena-list-header">
+                    <ui:Label tabindex="-1" text="Level" parse-escape-sequences="true" display-tooltip-when-elided="true" name="level" class="Text-Light arena-list-header__level" />
+                    <ui:Label tabindex="-1" text="Name" parse-escape-sequences="true" display-tooltip-when-elided="true" name="name" class="Text-Light arena-list-header__name" />
+                    <ui:Label tabindex="-1" text="Time" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Time" class="Text-Light arena-list-header__time" />
+                    <ui:Label tabindex="-1" text="Queue" parse-escape-sequences="true" display-tooltip-when-elided="true" name="queue" class="Text-Light arena-list-header__queue" />
+                </ui:VisualElement>
+                <ui:ListView name="arena-list-grid" virtualization-method="DynamicHeight" class="arena-list" style="flex-shrink: 0;" />
+                <ui:VisualElement name="info-panel" style="visibility: visible;">
+                    <ui:VisualElement style="flex-grow: 1; flex-direction: row; height: 25px; max-height: 25px; min-height: 25px;">
+                        <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="info-arena-name-label" class="Text-Gray" />
+                        <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="info-arena-name" class="Text-Gray" />
+                    </ui:VisualElement>
+                    <ui:VisualElement style="flex-grow: 1; flex-direction: row; height: 25px; max-height: 25px; min-height: 25px; align-items: stretch;">
+                        <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="info-arena-type-label" class="Text-Gray" />
+                        <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="info-arena-type" class="Text-Gray" />
+                    </ui:VisualElement>
+                    <ui:VisualElement style="flex-grow: 1; flex-direction: row; height: 25px; max-height: 25px; min-height: 25px;">
+                        <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="info-time-label" class="Text-Gray" />
+                        <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="info-time" class="Text-Gray" />
+                    </ui:VisualElement>
+                    <ui:VisualElement style="flex-grow: 1; flex-direction: row; height: 25px; max-height: 25px; min-height: 25px;">
+                        <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="info-level-label" class="Text-Gray" />
+                        <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="info-level" class="Text-Gray" />
+                    </ui:VisualElement>
+                    <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="info-description" class="Text-Gray" style="flex-wrap: wrap; align-self: stretch; -unity-text-align: upper-left; white-space: normal;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="buttons" class="arena-buttons" style="visibility: visible;">
+                    <ui:Button text="JOIN SOLO" parse-escape-sequences="true" display-tooltip-when-elided="true" name="join-solo" class="Button-XM Button-Light-Overlay" style="height: 60px; width: 160px; white-space: nowrap;" />
+                    <ui:Button text="JOIN GROUP" parse-escape-sequences="true" display-tooltip-when-elided="true" name="join-group" class="Button-Light-Overlay Button-XM" style="width: 160px; white-space: normal; height: 60px; -unity-text-align: middle-center; flex-direction: column; flex-wrap: nowrap;" />
+                    <ui:Button text="LEAVE" parse-escape-sequences="true" display-tooltip-when-elided="true" name="leave" class="Button-XM Button-Light-Overlay" style="white-space: normal; flex-direction: row; height: 60px; width: 160px; display: none;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:Instance>
+    </ui:VisualElement>
+</ui:UXML>

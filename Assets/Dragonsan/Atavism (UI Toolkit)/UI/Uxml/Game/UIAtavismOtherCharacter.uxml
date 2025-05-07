@@ -1,0 +1,87 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="panel_AtavismWindow" src="project://database/Assets/Dragonsan/Atavism%20(UI%20Toolkit)/UI/Library/panel_AtavismWindow.uxml?fileID=9197481963319205126&amp;guid=f96775ae845b40f4b90c8a7cdb68c513&amp;type=3#panel_AtavismWindow" />
+    <ui:Template name="UIAtavismCharacterStatElement" src="project://database/Assets/Dragonsan/Atavism%20(UI%20Toolkit)/UI/Screens/Game/Dependencies/UIAtavismCharacterStatElement.uxml?fileID=9197481963319205126&amp;guid=85bda5fe679311545809354aea81b576&amp;type=3#UIAtavismCharacterStatElement" />
+    <Style src="project://database/Assets/Dragonsan/Atavism%20(UI%20Toolkit)/UI/Style%20Sheets/CharacterProfileManager.uss?fileID=7433441132597879392&amp;guid=bbc9f9f0a8857d544814bcdbcc53a154&amp;type=3#CharacterProfileManager" />
+    <ui:VisualElement name="Screen" picking-mode="Ignore" class="screen-full Screen">
+        <ui:Instance template="panel_AtavismWindow" name="CharacterWindow" style="width: 450px; height: 600px;">
+            <AttributeOverrides element-name="Window-title" text="OTHER CHARACTER" />
+            <ui:VisualElement name="inner-panel" class="inner-panel">
+                <ui:VisualElement name="holder-character-panel" style="height: 100%; width: 100%; -unity-font: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/Fonts/Cambria.ttf?fileID=12800000&amp;guid=36ef3a2444bc15847bd874b9b0c98ae6&amp;type=3#Cambria&quot;); -unity-font-definition: url(&quot;project://database/Assets/Dragonsan/Atavism%20(UI%20Toolkit)/UI/Fonts/Cambria%20SDF.asset?fileID=11400000&amp;guid=171debed56e16fd4daf65623c92ecac2&amp;type=2#Cambria SDF&quot;); background-image: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/window_bg99.png?fileID=2800000&amp;guid=eacf47a0fa20c984a996e8870552147f&amp;type=3#window_bg99&quot;); margin-left: 1px; margin-right: 1px; margin-top: 1px; margin-bottom: 1px; padding-left: 1px; padding-right: 1px; padding-top: 1px; padding-bottom: 1px; display: flex;">
+                    <ui:VisualElement name="holder-body" style="height: 100%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; justify-content: flex-start; align-items: stretch; flex-grow: 0;">
+                        <ui:VisualElement name="holder-slots" style="height: 341px; flex-direction: column; margin-left: 1px; margin-right: 1px; margin-top: 1px; margin-bottom: 1px; padding-left: 1px; padding-right: 1px; padding-top: 1px; padding-bottom: 1px; width: auto; justify-content: flex-start; align-items: stretch;">
+                            <ui:VisualElement name="holder-slots-upper" style="height: auto; width: auto; flex-direction: row; justify-content: space-between; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; align-items: stretch; background-color: rgb(22, 22, 22);">
+                                <ui:VisualElement name="holder-slots-left" style="height: auto; width: 50px; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; align-items: center; justify-content: flex-end; flex-grow: 0;">
+                                    <Atavism.UI.Game.UIAtavismItemDisplay picking-mode="Ignore" Show-Title="false" Show-Count="false" name="equip-slot-Head" class="equip-slot equip-slot-head__itemDisplay" />
+                                    <Atavism.UI.Game.UIAtavismItemDisplay picking-mode="Ignore" Show-Title="false" Show-Count="false" name="equip-slot-Shoulder" class="equip-slot equip-slot-shoulder__itemDisplay" />
+                                    <Atavism.UI.Game.UIAtavismItemDisplay picking-mode="Ignore" Show-Title="false" Show-Count="false" name="equip-slot-Chest" class="equip-slot equip-slot-chest__itemDisplay" />
+                                    <Atavism.UI.Game.UIAtavismItemDisplay picking-mode="Ignore" Show-Title="false" Show-Count="false" name="equip-slot-Hands" class="equip-slot  equip-slot-hands__itemDisplay" />
+                                    <Atavism.UI.Game.UIAtavismItemDisplay picking-mode="Ignore" Show-Title="false" Show-Count="false" name="equip-slot-Legs" class="equip-slot equip-slot-legs__itemDisplay" />
+                                    <Atavism.UI.Game.UIAtavismItemDisplay picking-mode="Ignore" Show-Title="false" Show-Count="false" name="equip-slot-Feet" class="equip-slot equip-slot-feet__itemDisplay" />
+                                </ui:VisualElement>
+                                <ui:VisualElement name="holder-player-picture" style="height: 280px; width: 195px; margin-left: 1px; margin-right: 1px; margin-top: 1px; margin-bottom: 1px; padding-left: 3px; padding-right: 3px; padding-top: 3px; padding-bottom: 3px; border-top-left-radius: 3px; border-bottom-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px;">
+                                    <ui:VisualElement name="other-player-picture" style="height: 100%; width: 100%; background-image: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/UI%20Components/OtherCharacter.renderTexture?fileID=8400000&amp;guid=96f7e49d36620e34fa071863c05522f2&amp;type=2#OtherCharacter&quot;); padding-left: 3px; padding-right: 3px; padding-top: 3px; padding-bottom: 3px; margin-left: 1px; margin-right: 1px; margin-top: 1px; margin-bottom: 1px; background-color: rgb(22, 22, 22); display: flex;" />
+                                </ui:VisualElement>
+                                <ui:VisualElement name="holder-slots-right" style="height: auto; width: 50px; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; flex-direction: column; align-items: flex-end; justify-content: flex-end;">
+                                    <ui:VisualElement name="holder-slots-upper" style="justify-content: space-around; align-items: flex-end;">
+                                        <Atavism.UI.Game.UIAtavismItemDisplay picking-mode="Ignore" Show-Title="false" Show-Count="false" name="equip-slot-Fashion" class="equip-slot equip-slot-fashion__itemDisplay" />
+                                        <Atavism.UI.Game.UIAtavismItemDisplay picking-mode="Ignore" Show-Title="false" Show-Count="false" name="equip-slot-space" class="equip-slot" style="visibility: hidden;" />
+                                        <Atavism.UI.Game.UIAtavismItemDisplay picking-mode="Ignore" Show-Title="false" Show-Count="false" name="equip-slot-space" class="equip-slot" style="visibility: hidden;" />
+                                        <Atavism.UI.Game.UIAtavismItemDisplay picking-mode="Ignore" Show-Title="false" Show-Count="false" name="equip-slot-Neck" class="equip-slot equip-slot-neck__itemDisplay" />
+                                    </ui:VisualElement>
+                                    <ui:VisualElement name="holder-slots-mid" style="flex-direction: row-reverse; justify-content: flex-start; align-items: stretch; top: auto;">
+                                        <ui:VisualElement style="flex-direction: column; align-items: flex-end;">
+                                            <ui:VisualElement style="flex-direction: row; justify-content: flex-end; align-items: stretch; left: auto; right: auto;">
+                                                <Atavism.UI.Game.UIAtavismItemDisplay picking-mode="Ignore" Show-Title="false" Show-Count="false" name="equip-slot-Main-Earring" class="equip-slot equip-slot-earring__itemDisplay" />
+                                                <Atavism.UI.Game.UIAtavismItemDisplay picking-mode="Ignore" Show-Title="false" Show-Count="false" name="equip-slot-Off-Earring" class="equip-slot equip-slot-earring__itemDisplay" />
+                                            </ui:VisualElement>
+                                            <ui:VisualElement style="flex-direction: row; justify-content: flex-end; right: auto;">
+                                                <Atavism.UI.Game.UIAtavismItemDisplay picking-mode="Ignore" Show-Title="false" Show-Count="false" name="equip-slot-Main-Ring" class="equip-slot equip-slot-ring__itemDisplay" />
+                                                <Atavism.UI.Game.UIAtavismItemDisplay picking-mode="Ignore" Show-Title="false" Show-Count="false" name="equip-slot-Off-Ring" class="equip-slot equip-slot-ring__itemDisplay" />
+                                            </ui:VisualElement>
+                                        </ui:VisualElement>
+                                    </ui:VisualElement>
+                                </ui:VisualElement>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="holder-slots-lower" style="top: 10px;">
+                                <ui:VisualElement style="flex-direction: row; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; justify-content: center; align-items: center; height: 100%; width: 100%;">
+                                    <Atavism.UI.Game.UIAtavismItemDisplay picking-mode="Ignore" Show-Title="false" Show-Count="false" name="equip-slot-Main-Hand" class="equip-slot equip-slot-weapon__itemDisplay" />
+                                    <Atavism.UI.Game.UIAtavismItemDisplay picking-mode="Ignore" Show-Title="false" Show-Count="false" name="equip-slot-Off-Hand" class="equip-slot equip-slot-weapon2__itemDisplay" />
+                                    <Atavism.UI.Game.UIAtavismItemDisplay picking-mode="Ignore" Show-Title="false" Show-Count="false" name="equip-slot-Ammo" class="equip-slot equip-slot-ammo__itemDisplay" />
+                                </ui:VisualElement>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="holder-stats" style="height: 154px; margin-left: 1px; margin-right: 1px; margin-top: 5px; margin-bottom: 1px; padding-left: 1px; padding-right: 1px; padding-top: 1px; padding-bottom: 1px; width: auto; justify-content: space-between; align-items: stretch;">
+                            <ui:VisualElement name="stats-pad" style="margin-left: 1px; margin-right: 1px; margin-top: 1px; margin-bottom: 1px; padding-left: 3px; padding-right: 3px; padding-top: 3px; padding-bottom: 3px; height: 54px;">
+                                <ui:VisualElement name="frame-holder" style="height: 38px; max-height: 38px; min-height: 38px; visibility: visible; display: flex; overflow: visible;">
+                                    <ui:VisualElement class="spacer-img" style="flex-grow: 1;" />
+                                    <ui:VisualElement name="holder-header" style="height: 38px; flex-direction: row; justify-content: space-between; align-items: center; background-image: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/character_stats_heder_bg2.png?fileID=2800000&amp;guid=a3051c1df07ad72498bf1a8323f892b7&amp;type=3#character_stats_heder_bg2&quot;); width: auto; -unity-background-image-tint-color: rgb(200, 169, 141); max-height: 38px; min-height: 38px; -unity-background-scale-mode: stretch-to-fill; background-color: rgba(0, 0, 0, 0);">
+                                        <ui:Button display-tooltip-when-elided="true" name="prev-button" class="character-stat-button" style="background-image: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/stat_prev2.png?fileID=2800000&amp;guid=8f04d2805c2c5844baa7157d854c32ab&amp;type=3#stat_prev2&quot;);" />
+                                        <ui:Label text="STATISTICS" display-tooltip-when-elided="true" name="label-tatistics" style="font-size: 20px; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; -unity-text-align: middle-left; color: rgb(181, 170, 155);" />
+                                        <ui:Button display-tooltip-when-elided="true" name="next-button" class="character-stat-button" style="background-image: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/stat_next2.png?fileID=2800000&amp;guid=3401cb42489619c49b0b7d73680e435b&amp;type=3#stat_next2&quot;); background-color: rgba(42, 40, 39, 0); border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0;" />
+                                    </ui:VisualElement>
+                                    <ui:VisualElement class="spacer-img" style="flex-grow: 1;" />
+                                </ui:VisualElement>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="statistics-panel-holder" style="width: auto; height: 100%; margin-left: 1px; margin-right: 1px; margin-top: 8px; margin-bottom: 1px; padding-left: 3px; padding-right: 3px; padding-top: 3px; padding-bottom: 3px; align-items: center; justify-content: center;">
+                                <ui:VisualElement name="stat-grid" style="flex-direction: row; align-items: flex-start; justify-content: space-around; display: flex; position: relative; width: 100%; top: auto; height: 100%; left: auto; flex-wrap: wrap;">
+                                    <ui:Instance template="UIAtavismCharacterStatElement" name="UIAtavismCharacterStatElement" />
+                                    <ui:Instance template="UIAtavismCharacterStatElement" name="UIAtavismCharacterStatElement" />
+                                    <ui:Instance template="UIAtavismCharacterStatElement" name="UIAtavismCharacterStatElement" />
+                                    <ui:Instance template="UIAtavismCharacterStatElement" name="UIAtavismCharacterStatElement" />
+                                    <ui:Instance template="UIAtavismCharacterStatElement" name="UIAtavismCharacterStatElement" />
+                                    <ui:Instance template="UIAtavismCharacterStatElement" name="UIAtavismCharacterStatElement" />
+                                    <ui:Instance template="UIAtavismCharacterStatElement" name="UIAtavismCharacterStatElement" />
+                                    <ui:Instance template="UIAtavismCharacterStatElement" name="UIAtavismCharacterStatElement" />
+                                    <ui:Instance template="UIAtavismCharacterStatElement" name="UIAtavismCharacterStatElement" />
+                                    <ui:Instance template="UIAtavismCharacterStatElement" name="UIAtavismCharacterStatElement" />
+                                    <ui:Instance template="UIAtavismCharacterStatElement" name="UIAtavismCharacterStatElement" />
+                                    <ui:Instance template="UIAtavismCharacterStatElement" name="UIAtavismCharacterStatElement" />
+                                </ui:VisualElement>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:Instance>
+    </ui:VisualElement>
+</ui:UXML>

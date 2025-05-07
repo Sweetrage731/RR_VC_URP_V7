@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/Dragonsan/Atavism%20(UI%20Toolkit)/UI/Style%20Sheets/GroundItemsStyleSheet.uss?fileID=7433441132597879392&amp;guid=f79b541653d2d494ea169a4807a056ce&amp;type=3#GroundItemsStyleSheet" />
+    <ui:VisualElement name="background" class="ground-item" style="align-self: flex-start; align-items: center; justify-content: center;">
+        <ui:Label tabindex="-1" text="Item Name" parse-escape-sequences="true" display-tooltip-when-elided="true" name="label" picking-mode="Ignore" style="flex-shrink: 1; flex-grow: 1; position: relative; font-size: 36px; color: rgb(255, 255, 255); -unity-text-align: middle-left; flex-basis: auto;" />
+    </ui:VisualElement>
+</ui:UXML>

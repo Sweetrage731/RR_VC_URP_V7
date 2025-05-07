@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:Template name="UIAtavismSlotItem 1" src="project://database/Assets/Atavism%20(UI%20Toolkit)/UI/Screens/Game/Dependencies/UIAtavismSlotItem%201.uxml?fileID=9197481963319205126&amp;guid=91f585ddcd6061441a6e3188ccc65411&amp;type=3#UIAtavismSlotItem 1" />
+    <ui:Template name="UIAtavismCurrencyPanel" src="project://database/Assets/Atavism%20(UI%20Toolkit)/UI/Screens/Game/Dependencies/UIAtavismCurrencyPanel.uxml?fileID=9197481963319205126&amp;guid=92cceebc890f7f84987b5bae2ddcaf64&amp;type=3#UIAtavismCurrencyPanel" />
+    <ui:VisualElement name="UIAtavismAuctionItem" style="flex-grow: 1; flex-direction: row; height: 64px; max-height: 64px; align-self: auto; align-items: center;">
+        <ui:Instance template="UIAtavismSlotItem 1" name="UIAtavismSlotItem 1" />
+        <ui:Label tabindex="-1" text="TestItem" parse-escape-sequences="true" display-tooltip-when-elided="true" name="item-name" class="Text-Gray" style="width: 400px; flex-wrap: wrap;" />
+        <ui:VisualElement name="currency" style="flex-grow: 1; flex-direction: row-reverse;">
+            <ui:Instance template="UIAtavismCurrencyPanel" name="UIAtavismCurrencyPanel" style="flex-direction: row-reverse;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

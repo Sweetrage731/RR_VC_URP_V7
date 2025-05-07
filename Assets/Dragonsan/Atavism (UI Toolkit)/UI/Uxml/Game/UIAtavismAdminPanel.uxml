@@ -1,0 +1,182 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="panel_AtavismWindow" src="project://database/Assets/Dragonsan/Atavism%20(UI%20Toolkit)/UI/Library/panel_AtavismWindow.uxml?fileID=9197481963319205126&amp;guid=f96775ae845b40f4b90c8a7cdb68c513&amp;type=3#panel_AtavismWindow" />
+    <ui:Template name="panel_AtavismMiniWindow" src="project://database/Assets/Dragonsan/Atavism%20(UI%20Toolkit)/UI/Library/panel_AtavismMiniWindow.uxml?fileID=9197481963319205126&amp;guid=de69270a5738f814a838250e0a2a12fa&amp;type=3#panel_AtavismMiniWindow" />
+    <Style src="project://database/Assets/Dragonsan/Atavism%20(UI%20Toolkit)/UI/Style%20Sheets/AdminPanelStyleSheet.uss?fileID=7433441132597879392&amp;guid=422d8368a3e2c904ba39e7cf842c862a&amp;type=3#AdminPanelStyleSheet" />
+    <ui:VisualElement name="Screen" picking-mode="Ignore" style="width: auto; height: auto;">
+        <ui:Instance template="panel_AtavismWindow" name="AdminWindow" style="width: 350px; height: 450px; position: relative; display: flex;">
+            <AttributeOverrides element-name="Window-title" text="ADMIN PANEL" />
+            <ui:VisualElement name="Container" class="inner-panel">
+                <ui:VisualElement name="Column-1" style="flex-direction: row; width: 100%; flex-grow: 0; margin-left: 1px; margin-right: 1px; margin-top: 1px; margin-bottom: 1px; padding-left: 3px; padding-right: 3px; padding-top: 3px; padding-bottom: 3px; justify-content: space-between; align-items: center;">
+                    <ui:VisualElement name="left" style="flex-grow: 1; width: 33%;">
+                        <ui:Label text="GM Status:" display-tooltip-when-elided="true" name="gmStatus-label1" class="Text-Gray" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0;" />
+                        <ui:Label text="Instance:" display-tooltip-when-elided="true" name="instance-label1" class="Text-Gray" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0;" />
+                        <ui:Label text="Position:" display-tooltip-when-elided="true" name="position-label1" class="Text-Gray" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="center" style="flex-grow: 1; width: 34%;">
+                        <ui:Label text="value" display-tooltip-when-elided="true" name="GMStatus-label" class="Text-Dark" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0;" />
+                        <ui:Label text="value" display-tooltip-when-elided="true" name="Instance-label" class="Text-Dark" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;" />
+                        <ui:Label text="value" display-tooltip-when-elided="true" name="Position-label" class="Text-Dark" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="right" style="flex-grow: 1; width: 33%; align-items: center; -unity-text-align: upper-right;">
+                        <ui:Button text="TOGGLE" display-tooltip-when-elided="true" name="GMStatus-button" class="Button-XS Button-Light-Overlay" style="-unity-font-style: normal; -unity-text-align: middle-center; align-self: flex-end; right: 6px;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="Column-2" style="width: 100%; flex-direction: row; margin-top: 5px; flex-grow: 0; padding-left: 3px; padding-right: 3px; padding-top: 3px; padding-bottom: 10px; margin-left: 1px; margin-right: 1px; margin-bottom: 5px; align-items: flex-start; justify-content: center;">
+                    <ui:VisualElement name="left" style="width: 50%;">
+                        <ui:Button text="TELEPORT OPTIONS" display-tooltip-when-elided="true" name="TeleportOptions-button" class="Button-XS Button-Light-Overlay" style="width: auto; height: 20px;" />
+                        <ui:Button text="GAIN COMMANDS" display-tooltip-when-elided="true" name="GainCommands-button" class="Button-XS Button-Light-Overlay" style="width: auto;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="right" style="width: 50%;">
+                        <ui:Button text="MOB SPAWNER" display-tooltip-when-elided="true" name="MobSpawner-button" class="Button-XS Button-Light-Overlay" style="width: auto;" />
+                        <ui:Button text="WEATHER" display-tooltip-when-elided="true" name="Weather-button" class="Button-XS Button-Light-Overlay" style="width: auto;" />
+                        <ui:Button text="SERVER COMMAND" display-tooltip-when-elided="true" name="ServerCommand-button" class="Button-XS Button-Light-Overlay" style="width: auto;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="Column-3" style="width: 100%; flex-direction: row; margin-top: 10px; padding-left: 3px; padding-right: 3px; padding-top: 3px; padding-bottom: 3px; margin-left: 1px; margin-right: 1px; margin-bottom: 1px; align-items: center; justify-content: center; height: 330px; display: flex;">
+                    <ui:VisualElement name="Teleport-panel" focusable="true" style="width: 100%; height: 100%; flex-direction: column; display: none; visibility: visible;">
+                        <ui:Label text="TELEPORT OPTIONS" display-tooltip-when-elided="true" name="title" class="Text-Light" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; -unity-text-align: upper-center; width: 100%; -unity-font-style: bold;" />
+                        <ui:VisualElement name="layout" style="flex-direction: row;">
+                            <ui:VisualElement name="left" style="width: 131px;">
+                                <ui:Label text="Teleport To Player:" display-tooltip-when-elided="true" name="teleport-label" class="Text-Gray" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 0; margin-right: 0; margin-top: 2px; margin-bottom: 2px; height: 20px; -unity-text-align: middle-left;" />
+                                <ui:Label text="Summon Player:" display-tooltip-when-elided="true" name="summon-label" class="Text-Gray" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 0; margin-right: 0; margin-top: 2px; margin-bottom: 2px; height: 20px; -unity-text-align: middle-left;" />
+                                <ui:Label text="Change instance:" display-tooltip-when-elided="true" name="instance-label" class="Text-Gray" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 0; margin-right: 0; margin-top: 2px; margin-bottom: 2px; height: 20px; -unity-text-align: middle-left;" />
+                                <ui:Label text="Go To Position:" display-tooltip-when-elided="true" name="position-label" class="Text-Gray" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 0; margin-right: 0; margin-top: 2px; margin-bottom: 2px; height: 20px; -unity-text-align: middle-left;" />
+                                <ui:Label text="Go To Location:" display-tooltip-when-elided="true" name="location-label" class="Text-Gray" style="padding-left: 0; padding-right: 0; padding-top: 1px; padding-bottom: 1px; margin-left: 0; margin-right: 0; margin-top: 2px; margin-bottom: 2px; height: 20px; -unity-text-align: middle-left;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="middle" style="width: 50%;">
+                                <Atavism.UI.UITextField Placeholder="Player name" name="Teleport-field" Placeholder-Class-Style="UITextField__placeholder" Label-Class-Style="UITextField__label" class="Text-Title admin-panel-input" style="height: 20px; margin-top: 2px; margin-bottom: 2px;" />
+                                <Atavism.UI.UITextField Placeholder="Player name" name="Summon-field" Label-Class-Style="UITextField__label" Placeholder-Class-Style="UITextField__placeholder" Remove-Unity-Class-Styles="false" class="Text-Title admin-panel-input" style="height: 20px; margin-top: 2px; margin-bottom: 2px; flex-direction: row-reverse;" />
+                                <Atavism.UI.UITextField Placeholder="Instance" name="Instance-field" Label-Class-Style="UITextField__label" Placeholder-Class-Style="UITextField__placeholder" Remove-Unity-Class-Styles="false" class="Text-Title admin-panel-input" style="height: 20px; margin-top: 2px; margin-bottom: 2px;" />
+                                <ui:VisualElement style="height: 20px; flex-direction: row; padding-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 8px;">
+                                    <Atavism.UI.UITextField Placeholder="X" name="GoToPositionX-field" Label-Class-Style="UITextField__label" Placeholder-Class-Style="UITextField__placeholder" Remove-Unity-Class-Styles="false" class="Text-Title admin-panel-input" style="height: 20px; font-size: 11px; -unity-font-style: bold-and-italic; margin-top: 2px; margin-bottom: 2px; width: 33%; flex-shrink: 1;" />
+                                    <Atavism.UI.UITextField Placeholder="Y" name="GoToPositionY-field" Label-Class-Style="UITextField__label" Placeholder-Class-Style="UITextField__placeholder" Remove-Unity-Class-Styles="false" class="Text-Title admin-panel-input" style="height: 20px; font-size: 11px; -unity-font-style: bold-and-italic; margin-top: 2px; margin-bottom: 2px; width: 33%; flex-shrink: 1;" />
+                                    <Atavism.UI.UITextField Placeholder="Z" name="GoToPositionZ-field" Label-Class-Style="UITextField__label" Placeholder-Class-Style="UITextField__placeholder" Remove-Unity-Class-Styles="false" class="Text-Title admin-panel-input" style="height: 20px; font-size: 11px; -unity-font-style: bold-and-italic; margin-top: 2px; margin-bottom: 2px; width: 33%; flex-shrink: 1;" />
+                                </ui:VisualElement>
+                                <Atavism.UI.UIDropdown name="Location-dropdown" Generate-Popup="true" style="height: 20px; flex-grow: 0; margin-left: 4px; margin-right: 4px; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; width: 159px;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="right" style="flex-grow: 1;">
+                                <ui:Button text="GO" display-tooltip-when-elided="true" name="Button-teleport-player" class="Button-XVS Button-Light-Overlay" style="height: 20px;" />
+                                <ui:Button text="GO" display-tooltip-when-elided="true" name="Button-summon-player" class="Button-XVS Button-Light-Overlay" style="height: 20px;" />
+                                <ui:Button text="GO" display-tooltip-when-elided="true" name="Button-change-instance" class="Button-XVS Button-Light-Overlay" style="height: 20px;" />
+                                <ui:Button text="GO" display-tooltip-when-elided="true" name="Button-goto-position" class="Button-XVS Button-Light-Overlay" style="height: 20px;" />
+                                <ui:Button text="GO" display-tooltip-when-elided="true" name="Button-goto-location" class="Button-XVS Button-Light-Overlay" style="height: 20px;" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="GainCommands-panel" focusable="true" style="width: 100%; height: 100%; flex-direction: column; display: flex; opacity: 1; visibility: visible;">
+                        <ui:Label text="GAIN COMMANDS" display-tooltip-when-elided="true" name="title" class="Text-Light" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; -unity-text-align: upper-center; width: 100%; -unity-font-style: bold;" />
+                        <ui:VisualElement name="layout" style="flex-direction: column; justify-content: space-between; align-items: stretch; height: 100%;">
+                            <ui:VisualElement name="layout" style="flex-direction: row; justify-content: space-between; align-items: center; width: 100%; height: 12%;">
+                                <ui:Label text="Gain Experience:" display-tooltip-when-elided="true" name="experience-label" class="Text-Gray" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 0; margin-right: 0; margin-top: 2px; margin-bottom: 2px; height: 20px; -unity-text-align: middle-left; left: 0;" />
+                                <Atavism.UI.UITextField name="Text-Experience" Placeholder-Class-Style="UITextField__placeholder" Placeholder="value" keyboard-type="NumberPad" Only-Numbers="true" class="admin-panel-input" style="width: 160px; height: 20px;" />
+                                <ui:Button text="GO" display-tooltip-when-elided="true" name="Button-Experience" enable-rich-text="false" class="Button-XS Button-Light-Overlay" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="layout" style="flex-direction: row; justify-content: space-between; left: 0; align-items: center; width: 100%; height: 12%;">
+                                <ui:Label text="Get Item:" display-tooltip-when-elided="true" name="label-item" class="Text-Gray" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 0; margin-right: 0; margin-top: 2px; margin-bottom: 2px; height: 20px; -unity-text-align: middle-left; width: 80px;" />
+                                <ui:Button text="SELECT" display-tooltip-when-elided="true" name="button-item-select" focusable="false" class="Button-XS Button-Light-Overlay" />
+                                <Atavism.UI.UITextField name="field-item" Placeholder-Class-Style="UITextField__placeholder" value="1" Only-Numbers="true" class="admin-panel-input UITextField-100" style="height: 20px;" />
+                                <ui:Button text="GO" display-tooltip-when-elided="true" name="button-item" focusable="false" class="Button-XS Button-Light-Overlay" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="layout" style="flex-direction: row; justify-content: space-between; align-items: center; width: 100%; height: 12%;">
+                                <ui:Label text="Get Currency:" display-tooltip-when-elided="true" name="label-currency" class="Text-Gray" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 0; margin-right: 0; margin-top: 2px; margin-bottom: 2px; height: 20px; -unity-text-align: middle-left; width: 80px;" />
+                                <ui:Button text="SELECT" display-tooltip-when-elided="true" name="button-currency-select" focusable="false" class="Button-XS Button-Light-Overlay" />
+                                <Atavism.UI.UITextField name="field-currency" Placeholder-Class-Style="UITextField__placeholder" value="1" keyboard-type="NumberPad" Only-Numbers="true" class="admin-panel-input UITextField-100" />
+                                <ui:Button text="GO" display-tooltip-when-elided="true" name="button-currency" focusable="false" class="Button-XS Button-Light-Overlay" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="layout" style="flex-direction: row; justify-content: space-between; align-items: center; width: 100%; height: 12%;">
+                                <ui:Label text="Get Skill:" display-tooltip-when-elided="true" name="label-skill" class="Text-Gray" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 0; margin-right: 0; margin-top: 2px; margin-bottom: 2px; height: 20px; -unity-text-align: middle-left; width: 80px;" />
+                                <ui:Button text="SELECT" display-tooltip-when-elided="true" name="button-skill-select" focusable="false" class="Button-XS Button-Light-Overlay" />
+                                <Atavism.UI.UITextField name="field-skill" value="1" keyboard-type="NumberPad" Only-Numbers="true" class="admin-panel-input UITextField-100" />
+                                <ui:Button text="GO" display-tooltip-when-elided="true" name="button-skill" focusable="false" class="Button-XS Button-Light-Overlay" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="layout" style="flex-direction: row; justify-content: space-between; align-items: center; width: 100%; height: 12%;">
+                                <ui:Label text="Count Icon AutoLoad:" display-tooltip-when-elided="true" name="label-counticon" class="Text-Gray" style="margin-right: 0; margin-left: 0; margin-top: 2px; padding-top: 1px; padding-right: 0; padding-bottom: 1px; padding-left: 0;" />
+                                <Atavism.UI.UITextField name="number-icon" value="10" keyboard-type="NumberPad" Only-Numbers="true" class="admin-panel-input" style="width: 200px;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="layout" style="flex-direction: row; justify-content: space-between; align-items: center; width: 100%; height: 12%;">
+                                <ui:Label text="Item Icons Loaded:" display-tooltip-when-elided="true" name="itemIconsLoaded" class="Text-Gray" style="padding-left: 0; padding-right: 0; padding-top: 1px; padding-bottom: 1px; margin-left: 0; margin-right: 0; margin-top: 2px; margin-bottom: 2px; height: 20px; -unity-text-align: middle-left; width: 120px;" />
+                                <ui:Label text="10000" display-tooltip-when-elided="true" name="item-icon-loaded" class="Text-Gray" style="width: 110px; align-self: auto; -unity-text-align: upper-center;" />
+                                <ui:Button text="LOAD" display-tooltip-when-elided="true" name="button-load-icon-item" focusable="false" class="Button-XS Button-Light-Overlay" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="layout" style="flex-direction: row; justify-content: space-between; align-items: center; width: 100%; height: 12.5%;">
+                                <ui:Label text="Skill Icons Loaded:" display-tooltip-when-elided="true" name="skillIconsLoaded" class="Text-Gray" style="padding-left: 0; padding-right: 0; padding-top: 1px; padding-bottom: 1px; margin-left: 0; margin-right: 0; margin-top: 2px; margin-bottom: 2px; height: 20px; -unity-text-align: middle-left; width: 120px;" />
+                                <ui:Label text="10000" display-tooltip-when-elided="true" name="skill-icon-loaded" class="Text-Gray" style="width: 110px; -unity-text-align: upper-center; white-space: normal;" />
+                                <ui:Button text="LOAD" display-tooltip-when-elided="true" name="button-load-icon-skill" focusable="false" class="Button-XS Text-Light Button-Light-Overlay" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="layout" style="flex-direction: row; justify-content: space-between; align-items: center; width: 100%; height: 12.5%;">
+                                <ui:Label text="Currency Icons Loaded:" display-tooltip-when-elided="true" name="currencyIconsLoaded" class="Text-Gray" style="padding-left: 0; padding-right: 0; padding-top: 1px; padding-bottom: 1px; margin-left: 0; margin-right: 0; margin-top: 2px; margin-bottom: 2px; height: 20px; -unity-text-align: middle-left; width: 120px;" />
+                                <ui:Label text="10000" display-tooltip-when-elided="true" name="currency-icon-loaded" class="Text-Gray" style="width: 110px; -unity-text-align: upper-center;" />
+                                <ui:Button text="LOAD" display-tooltip-when-elided="true" name="button-load-icon-currency" focusable="false" class="Button-XS Text-Light Button-Light-Overlay" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="Weather-panel" focusable="true" style="width: 100%; height: 100%; display: none;">
+                        <ui:Label text="Weather Commands" display-tooltip-when-elided="true" name="Label-WeatherCommands" class="Text-Gray" style="-unity-font-style: bold;" />
+                        <ui:VisualElement name="layout">
+                            <ui:VisualElement name="layout" style="flex-direction: row; justify-content: space-around; align-items: center;">
+                                <ui:Label text="Time:" display-tooltip-when-elided="true" name="TimeLabel" class="Text-Gray" style="-unity-text-align: upper-center;" />
+                                <Atavism.UI.UITextField name="time-year-text" Placeholder="YYYY" class="Text-Title admin-weather-input2 admin-weather-input1" />
+                                <ui:Label text=":" display-tooltip-when-elided="true" name="Label-Colon" style="-unity-text-align: upper-center; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0;" />
+                                <Atavism.UI.UITextField name="time-month-text" Placeholder="MM" max-length="2" class="Text-Title admin-weather-input2" />
+                                <ui:Label text=":" display-tooltip-when-elided="true" name="Label-Colon" style="-unity-text-align: upper-center; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;" />
+                                <Atavism.UI.UITextField name="time-day-text" Placeholder="DD" max-length="2" class="Text-Title admin-weather-input2" />
+                                <ui:Label display-tooltip-when-elided="true" name="Label-Colon" style="-unity-text-align: upper-center; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;" />
+                                <Atavism.UI.UITextField name="time-hour-text" Placeholder="HH" max-length="2" class="Text-Title admin-weather-input2" />
+                                <ui:Label text=":" display-tooltip-when-elided="true" name="Label-Colon" style="-unity-text-align: upper-center; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;" />
+                                <Atavism.UI.UITextField name="time-minute-text" Placeholder="MM" max-length="2" class="Text-Title admin-weather-input2" />
+                                <ui:Button text="SET" display-tooltip-when-elided="true" name="button-timeset" class="Button-XVS Button-Light-Overlay" style="width: 30px;" />
+                                <ui:Button text="GET" display-tooltip-when-elided="true" name="button-timeget" class="Button-XVS Button-Light-Overlay" style="width: 30px;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="layout" style="flex-direction: row; justify-content: space-between; align-items: center;">
+                                <ui:Label text="Weather Profile:" display-tooltip-when-elided="true" name="Label-WeatherProfile" class="Text-Gray" />
+                                <ui:Button text="PROFILE" display-tooltip-when-elided="true" name="button-weather-profile" class="Button-XVS Button-Light-Overlay" style="width: 129px;" />
+                                <ui:Button text="SET" display-tooltip-when-elided="true" name="button-weather-profile-set" class="Button-XVS Button-Light-Overlay" style="width: 30px;" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="ServerCommands-panel" focusable="true" style="display: none; width: 100%; height: 100%;">
+                        <ui:Label text="Server Commands" display-tooltip-when-elided="true" name="ServerCommandsLabel" class="Text-Gray" style="font-size: 15px; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; -unity-font-style: bold;" />
+                        <ui:VisualElement name="layout" style="flex-direction: column; height: auto; justify-content: center; align-items: stretch; margin-left: 1px; margin-right: 1px; margin-top: 1px; margin-bottom: 1px; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;">
+                            <ui:VisualElement name="layout" style="margin-left: 1px; margin-right: 1px; margin-top: 1px; margin-bottom: 1px; padding-left: 1px; padding-right: 1px; padding-top: 1px; padding-bottom: 1px; flex-grow: 0; height: 90px;">
+                                <ui:VisualElement style="flex-grow: 1; height: 20px; max-height: 20px; flex-direction: row; min-height: 20px; justify-content: space-between;">
+                                    <ui:Label tabindex="-1" text="Profile:" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" style="width: 94px; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; -unity-text-align: middle-left;" />
+                                    <Atavism.UI.UIDropdown name="profile-dropdown" style="width: 156px;" />
+                                </ui:VisualElement>
+                                <ui:Label text="Message Text:" display-tooltip-when-elided="true" name="Label-MessageInput" class="Text-Gray" style="font-size: 12px; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; height: 20px; max-height: 20px; min-height: 20px; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; -unity-text-align: middle-left;" />
+                                <Atavism.UI.UITextField multiline="true" name="text-message-input" style="flex-wrap: wrap; height: 43px; font-size: 11px; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; white-space: normal;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="layout" style="flex-direction: row; justify-content: space-between; margin-left: 1px; margin-right: 1px; margin-top: 1px; margin-bottom: 1px; padding-left: 1px; padding-right: 1px; padding-top: 1px; padding-bottom: 1px; height: 25px;">
+                                <ui:Label tabindex="-1" text="Countdown time:" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" style="-unity-text-align: middle-left;" />
+                                <Atavism.UI.UITextField Placeholder="sdasdasd" name="countdown-time" style="width: 160px; margin-top: 0; margin-bottom: 0; margin-right: 0; margin-left: 0;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="layout" style="flex-direction: row; justify-content: space-between; margin-left: 1px; margin-right: 1px; margin-top: 1px; margin-bottom: 1px; padding-left: 1px; padding-right: 1px; padding-top: 1px; padding-bottom: 1px; display: flex; height: 25px;">
+                                <ui:Label tabindex="-1" text="Schedule after:" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" />
+                                <Atavism.UI.UITextField Placeholder="eg. 60;30;20;5;1;1;1;1" name="schedule-field" style="width: 160px; margin-right: 0; margin-left: 0; margin-top: 0; margin-bottom: 0;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="layout" style="flex-direction: row; justify-content: flex-start; align-items: center; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;">
+                                <ui:Toggle label="Closer Server and kick Players" value="false" name="close-server-toggle" class="Text-Gray Toggle-right Toggle-Default" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 3px; padding-right: 3px; padding-top: 3px; padding-bottom: 3px;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="layout" style="align-items: center; margin-left: 1px; margin-right: 1px; margin-top: 1px; margin-bottom: 1px; padding-left: 1px; padding-right: 1px; padding-top: 1px; padding-bottom: 1px; height: 49px;">
+                                <ui:Button text="SEND" display-tooltip-when-elided="true" name="send-shutdown-button" focusable="false" class="Button-XS Button-Light-Overlay" style="align-items: stretch; justify-content: flex-start; width: 25%; padding-left: 3px; padding-right: 3px; padding-top: 3px; padding-bottom: 3px; margin-left: 0; margin-right: 0; margin-top: 1px; margin-bottom: 0;" />
+                                <ui:Button text="RELOAD DEFINITIONS FROM DATABASE" display-tooltip-when-elided="true" name="reload-button" focusable="false" class="Button-XS Button-Light-Overlay" style="padding-left: 3px; padding-right: 3px; padding-top: 3px; padding-bottom: 3px; margin-left: 0; margin-right: 0; margin-top: 2px; margin-bottom: 0; width: 244px;" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="reloading-panel" style="flex-grow: 1; position: absolute; height: 93px; width: 337px; background-image: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/msg_bg.png?fileID=2800000&amp;guid=80808ed110c58ca48a6773ea879d9cb4&amp;type=3#msg_bg&quot;); justify-content: center; align-items: center; align-self: stretch; left: -3px; display: none;">
+                            <ui:Label tabindex="-1" text="Reloading data ..." parse-escape-sequences="true" display-tooltip-when-elided="true" />
+                            <Atavism.UI.UIProgressBar Container-Class="AdminPanel-UIProgressBar__container" Background-Class="AdminPanel-UIProgressBar__background" Progress-Bar-Class="AdminPanel-UIProgressBar__progressBar" Title-Container-Class="AdminPanel-UIProgressBar-title__container" Title-Class="AdminPanel-UIProgressBar__title" Show-Label="false" Value="81" name="reloading-progress" style="width: 90%; height: 20px;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:Instance template="panel_AtavismMiniWindow" name="Choose-panel" style="height: 260px; width: 283px; position: absolute; top: 91px; left: 33px; display: none;">
+                <AttributeOverrides element-name="Window-title" text="CHOOSE" />
+                <ui:VisualElement name="inner-panel" class="inner-panel" style="flex-grow: 1; align-self: center; display: flex; margin-top: 35px;">
+                    <Atavism.UI.UITextField Placeholder="Enter text ..." name="choose-search-field" style="width: 267px; align-self: center;" />
+                    <ui:VisualElement style="flex-grow: 1;">
+                        <ui:ListView name="choose-list-view" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:Instance>
+        </ui:Instance>
+    </ui:VisualElement>
+</ui:UXML>

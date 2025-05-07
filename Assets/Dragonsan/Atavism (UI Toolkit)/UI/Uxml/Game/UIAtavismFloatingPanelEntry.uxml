@@ -1,0 +1,8 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="container" style="flex-grow: 1; align-items: center; justify-content: flex-start; height: 40px; position: absolute;">
+        <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="combat" style="width: 100px; -unity-text-align: middle-center;" />
+        <ui:VisualElement name="chat-panel" style="flex-grow: 1; position: absolute; background-image: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/Textures/OldUI/Hud/tooltip2w_bg3v.png?fileID=2800000&amp;guid=b99b3b1d73d65cc4b96544143f3752f8&amp;type=3#tooltip2w_bg3v&quot;); -unity-background-image-tint-color: rgba(255, 255, 255, 0.39); top: -52px; left: 544px; display: none;">
+            <ui:Label tabindex="-1" parse-escape-sequences="true" display-tooltip-when-elided="true" name="chat" style="color: rgb(255, 255, 255); -unity-text-align: middle-center;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

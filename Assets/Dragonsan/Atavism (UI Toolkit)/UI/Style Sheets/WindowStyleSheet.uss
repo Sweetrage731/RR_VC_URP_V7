@@ -1,0 +1,46 @@
+.Screen {
+    flex-grow: 0;
+    height: 620px;
+    width: 420px;
+    -unity-font: url('project://database/Assets/Dragonsan/AtavismObjects/Fonts/Cambria.ttf?fileID=12800000&guid=36ef3a2444bc15847bd874b9b0c98ae6&type=3#Cambria');
+    color: rgb(210, 210, 210);
+    font-size: 11px;
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+}
+
+.screen-top {
+    position: relative;
+    height: 63px;
+    width: auto;
+    background-image: none; 
+    margin-left: 0; 
+    margin-right: 0; 
+    margin-top: 0; 
+    margin-bottom: 0;
+}
+
+.secondary-holder {
+    background-image: url('/Assets/Dragonsan/AtavismObjects/Textures/NewUi/header_g.png');
+    padding-bottom: 7px;
+    height: 100%;
+    width: 401px;
+}
+
+.header-inventory {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url('project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/header_h.png?fileID=2800000&amp;guid=4f20a9aef3aaffe4b8066d3bb668fc92&amp;type=3#header_h');
+    height: 100%;
+}
+
+.Window-title {
+    left: 35%;
+    font-size: 25px;
+}
+
+.Window-close-button {
+    background-image: url('project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/close.png?fileID=2800000&amp;guid=61d1026b0fa637a4c918604ad0e0f5c6&amp;type=3#close');
+    height: 25px;
+    width: 25px;
+}

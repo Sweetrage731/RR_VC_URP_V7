@@ -1,0 +1,16 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:VisualElement name="claim-panel-entry" class="claim-entry" style="min-height: 40px; height: auto;">
+        <ui:VisualElement name="name-row" class="claim-entry-row1">
+            <ui:Label tabindex="-1" text="Claim Name " parse-escape-sequences="true" display-tooltip-when-elided="true" name="claim-name" class="Text-Light claim-entry-name" />
+            <ui:Button text="PAY (10 days)" parse-escape-sequences="true" display-tooltip-when-elided="true" name="pay-button" class="Button-XM Text-Light claim-entry-tax-button" />
+        </ui:VisualElement>
+        <ui:VisualElement name="tax-paid-row" class="claim-entry-row2" style="display: none;">
+            <ui:Label tabindex="-1" text="Tax Paid:" parse-escape-sequences="true" display-tooltip-when-elided="true" name="tax-paid-label" class="Text-Light claim-entry-tax-paid-label" />
+            <ui:Label tabindex="-1" text="1000 days 10h 10m" parse-escape-sequences="true" display-tooltip-when-elided="true" name="tax-paid" class="Text-Gray claim-entry-tax-paid" />
+        </ui:VisualElement>
+        <ui:VisualElement name="tax-info-row" class="claim-entry-row3" style="flex-shrink: 0;">
+            <ui:Label tabindex="-1" text="Tax:" parse-escape-sequences="true" display-tooltip-when-elided="true" name="tax-info-label" class="Text-Light claim-entry-tax-info-label" style="flex-shrink: 1; flex-grow: 0;" />
+            <ui:Label tabindex="-1" text="1000 gold 100 silver 100 bronze per 10 days 10 h. Can be pay 10 days 1h 1m before tax expire" parse-escape-sequences="true" display-tooltip-when-elided="true" name="tax-info" class="Text-Gray claim-entry-tax-info" style="white-space: normal; flex-shrink: 1; flex-grow: 1;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

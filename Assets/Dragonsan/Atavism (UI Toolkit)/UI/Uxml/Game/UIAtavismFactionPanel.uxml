@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:Template name="UIAtavismFactionListEntry" src="project://database/Assets/Dragonsan/Atavism%20(UI%20Toolkit)/UI/Screens/Game/Dependencies/UIAtavismFactionListEntry.uxml?fileID=9197481963319205126&amp;guid=122aab5686fc15043ab524fcb127febb&amp;type=3#UIAtavismFactionListEntry" />
+    <ui:VisualElement name="faction-panel-container" style="background-image: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/window_bg99.png?fileID=2800000&amp;guid=eacf47a0fa20c984a996e8870552147f&amp;type=3#window_bg99&quot;); position: absolute; right: 438px; top: 12px; width: 246px; flex-grow: 1; flex-shrink: 0;">
+        <ui:Label tabindex="-1" text="Faction Stance Monitor" parse-escape-sequences="true" display-tooltip-when-elided="true" name="faction-title" class="Text-Light" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; bottom: 0;" />
+        <ui:VisualElement name="faction-list" style="flex-grow: 1;">
+            <ui:Instance template="UIAtavismFactionListEntry" name="UIAtavismFactionListEntry" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

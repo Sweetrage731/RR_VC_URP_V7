@@ -1,0 +1,51 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:Template name="UIAtavismSlotItem 1" src="project://database/Assets/Dragonsan/Atavism%20(UI%20Toolkit)/UI/Uxml/Game/Dependencies/UIAtavismSlotItemDisplay.uxml?fileID=9197481963319205126&amp;guid=91f585ddcd6061441a6e3188ccc65411&amp;type=3#UIAtavismSlotItemDisplay" />
+    <ui:VisualElement name="tooltipContainer" style="flex-grow: 1; display: flex; visibility: visible; position: absolute; flex-direction: row;">
+        <ui:VisualElement name="MainTooltip" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/window_bg99.png?fileID=2800000&amp;guid=eacf47a0fa20c984a996e8870552147f&amp;type=3#window_bg99&quot;); -unity-slice-left: 4; -unity-slice-top: 4; -unity-slice-right: 4; -unity-slice-bottom: 4; width: 450px; height: auto; max-height: 500px; min-height: 50px; position: relative;">
+            <ui:VisualElement name="AnchorTL" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/Textures/Tooltip/anchor1.png?fileID=2800000&amp;guid=b65c2cef01fab994e94b7b5d26cac318&amp;type=3#anchor1&quot;); position: absolute; left: -2px; top: -2px; width: 32px; height: 32px; max-height: 32px; min-height: 32px; min-width: 32px;" />
+            <ui:VisualElement name="AnchorBL" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/Textures/Tooltip/anchor2.png?fileID=2800000&amp;guid=125619a35126cfc47b170d5f47c90d54&amp;type=3#anchor2&quot;); height: 32px; max-height: 32px; min-height: 32px; width: 32px; max-width: 32px; min-width: 32px; position: absolute; left: -2px; bottom: -2px;" />
+            <ui:VisualElement name="AnchorBR" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/Textures/Tooltip/anchor3.png?fileID=2800000&amp;guid=be4a2dfc72eb0294b81f48e55e28a108&amp;type=3#anchor3&quot;); position: absolute; bottom: -2px; right: -2px; height: 32px; max-height: 32px; min-height: 32px; width: 32px; max-width: 32px;" />
+            <ui:VisualElement name="AnchorTR" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/Textures/Tooltip/anchor4.png?fileID=2800000&amp;guid=5db480dd04f06c7489451512cb5231fe&amp;type=3#anchor4&quot;); top: -2px; right: -2px; position: absolute; height: 32px; max-height: 32px; min-height: 32px; width: 32px; max-width: 32px; min-width: 32px;" />
+            <ui:VisualElement style="flex-grow: 1; padding-top: 3px; padding-right: 3px; padding-bottom: 3px; padding-left: 3px;">
+                <ui:VisualElement style="flex-grow: 1; height: 54px; max-height: 54px; min-height: 54px; flex-direction: row;">
+                    <ui:Instance template="UIAtavismSlotItem 1" name="IconPanel" />
+                    <ui:VisualElement style="flex-grow: 1;">
+                        <ui:Label tabindex="-1" text="Title" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Title" class="Text-Default" style="color: rgb(0, 128, 255);" />
+                        <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Type" class="Text-Gray" style="-unity-text-align: lower-left; font-size: 12px;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:Label tabindex="-1" text="Weight" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Weight" class="Text-Gray" style="display: flex;" />
+                <ui:VisualElement name="attributesContainer" style="flex-grow: 1; width: 100%; margin-left: 2px; margin-right: 2px;" />
+                <ui:Label tabindex="-1" text="Description" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Description" class="Text-Gray" style="font-size: 11px; flex-wrap: nowrap; white-space: normal; flex-grow: 1; min-height: 23px; width: 100%;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="AdditionalTooltip" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/window_bg99.png?fileID=2800000&amp;guid=eacf47a0fa20c984a996e8870552147f&amp;type=3#window_bg99&quot;); -unity-slice-left: 4; -unity-slice-top: 4; -unity-slice-right: 4; -unity-slice-bottom: 4; width: 450px; height: auto; max-height: 500px; min-height: 50px; position: relative; padding-top: 3px; padding-right: 3px; padding-bottom: 3px; padding-left: 3px;">
+            <ui:VisualElement style="flex-grow: 1;">
+                <ui:VisualElement style="flex-grow: 1; height: 54px; max-height: 54px; min-height: 54px; flex-direction: row;">
+                    <ui:Instance template="UIAtavismSlotItem 1" name="IconPanel" />
+                    <ui:VisualElement style="flex-grow: 1;">
+                        <ui:Label tabindex="-1" text="Title" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Title" class="Text-Default" style="color: rgb(0, 128, 255);" />
+                        <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Type" class="Text-Gray" style="-unity-text-align: lower-left; font-size: 12px;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:Label tabindex="-1" text="Weight" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Weight" class="Text-Gray" style="display: flex;" />
+                <ui:VisualElement name="attributesContainer" style="flex-grow: 1; width: 100%; align-items: stretch; margin-right: 2px; margin-left: 2px;" />
+                <ui:Label tabindex="-1" text="Description" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Description" class="Text-Gray" style="font-size: 11px; flex-wrap: nowrap; white-space: normal; flex-grow: 1; min-height: 23px; width: 100%;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="AdditionalTooltip2" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/window_bg99.png?fileID=2800000&amp;guid=eacf47a0fa20c984a996e8870552147f&amp;type=3#window_bg99&quot;); -unity-slice-left: 4; -unity-slice-top: 4; -unity-slice-right: 4; -unity-slice-bottom: 4; width: 450px; height: auto; max-height: 500px; min-height: 50px; position: relative; padding-top: 3px; padding-right: 3px; padding-bottom: 3px; padding-left: 3px;">
+            <ui:VisualElement style="flex-grow: 1;">
+                <ui:VisualElement style="flex-grow: 1; height: 54px; max-height: 54px; min-height: 54px; flex-direction: row;">
+                    <ui:Instance template="UIAtavismSlotItem 1" name="IconPanel" />
+                    <ui:VisualElement style="flex-grow: 1;">
+                        <ui:Label tabindex="-1" text="Title" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Title" class="Text-Default" style="color: rgb(0, 128, 255);" />
+                        <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Type" class="Text-Gray" style="-unity-text-align: lower-left; font-size: 12px;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:Label tabindex="-1" text="Weight" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Weight" class="Text-Gray" style="display: flex;" />
+                <ui:VisualElement name="attributesContainer" style="flex-grow: 1; width: 100%; align-items: stretch; margin-right: 2px; margin-left: 2px;" />
+                <ui:Label tabindex="-1" text="Description" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Description" class="Text-Gray" style="font-size: 11px; flex-wrap: nowrap; white-space: normal; flex-grow: 1; min-height: 23px; width: 100%;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,27 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:Template name="panel_AtavismWindow" src="project://database/Assets/Atavism%20(UI%20Toolkit)/UI/Library/panel_AtavismWindow.uxml?fileID=9197481963319205126&amp;guid=f96775ae845b40f4b90c8a7cdb68c513&amp;type=3#panel_AtavismWindow" />
+    <ui:VisualElement name="Screen" picking-mode="Ignore" style="flex-grow: 1;">
+        <ui:Instance template="panel_AtavismWindow" name="VipWindow" class="vip-window">
+            <AttributeOverrides element-name="Window-title" text="VIP" />
+            <ui:VisualElement name="inner-panel" class="Text-Gray inner-panel">
+                <ui:VisualElement class="vip-info">
+                    <ui:VisualElement class="vip-info-top">
+                        <ui:Label tabindex="-1" text="Bonus Name" parse-escape-sequences="true" display-tooltip-when-elided="true" name="vip-name" class="Text-Gray vip-info-top-name" />
+                        <ui:Label tabindex="-1" text="Remaind 30 days" parse-escape-sequences="true" display-tooltip-when-elided="true" name="vip-time" class="vip-info-top-time" />
+                    </ui:VisualElement>
+                    <Atavism.UI.UIProgressBar name="progress" Value="148" Show-Label="true" Container-Class="vip-UIProgressBar__container" Background-Class="vip-UIProgressBar__background" Progress-Bar-Class="vip-UIProgressBar__progressBar" Title-Container-Class="vip-UIProgressBar-title__container" Title-Class="vip-UIProgressBar__title" class="vip-info-progress" />
+                </ui:VisualElement>
+                <ui:VisualElement name="header" class="vip-header">
+                    <ui:Label tabindex="-1" text="Bonus" parse-escape-sequences="true" display-tooltip-when-elided="true" name="bonus" class="Text-Gray vip-header-name" />
+                    <ui:Label tabindex="-1" text="VIP A" parse-escape-sequences="true" display-tooltip-when-elided="true" name="vip-title-a" class="Text-Gray vip-header-a" />
+                    <ui:Label tabindex="-1" text="VIP B" parse-escape-sequences="true" display-tooltip-when-elided="true" name="vip-title-b" class="Text-Gray vip-header-b" />
+                </ui:VisualElement>
+                <ui:ScrollView  mouse-wheel-scroll-size="18" scroll-deceleration-rate="0,135" elasticity="0,1" class="vip-scroller">
+                    <ui:VisualElement name="vip-grid" class="vip-grid" />
+                </ui:ScrollView>
+                <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="prev-button" class="vip-prev-button" />
+                <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="next-button" class="vip-next-button" />
+            </ui:VisualElement>
+        </ui:Instance>
+    </ui:VisualElement>
+</ui:UXML>

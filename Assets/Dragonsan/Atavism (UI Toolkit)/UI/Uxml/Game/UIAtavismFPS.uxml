@@ -1,0 +1,12 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="Screen" picking-mode="Ignore" style="-unity-font: url(&apos;project://database/Assets/Dragonsan/AtavismObjects/Fonts/Cambria.ttf?fileID=12800000&amp;guid=36ef3a2444bc15847bd874b9b0c98ae6&amp;type=3#Cambria&apos;); -unity-font-definition: url(&apos;project://database/Assets/Atavism%20(UI%20Toolkit)/UI/Fonts/Cambria%20SDF.asset?fileID=11400000&amp;guid=171debed56e16fd4daf65623c92ecac2&amp;type=2#Cambria SDF&apos;); color: rgb(255, 255, 255);">
+        <ui:VisualElement name="Window">
+            <ui:VisualElement name="screen-top" style="position: relative;" />
+            <ui:VisualElement name="fps-holder" style="flex-direction: row-reverse; align-items: center; justify-content: center;">
+                <ui:Label text="FPS" display-tooltip-when-elided="true" name="fpsname-label" style="font-size: 25px;" />
+                <ui:Label text="9000" display-tooltip-when-elided="true" name="fps-label" style="flex-grow: 1; flex-shrink: 0; -unity-text-align: upper-right; font-size: 25px;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="Window-draggable-trigger" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); position: absolute; width: 100%; height: 100%;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

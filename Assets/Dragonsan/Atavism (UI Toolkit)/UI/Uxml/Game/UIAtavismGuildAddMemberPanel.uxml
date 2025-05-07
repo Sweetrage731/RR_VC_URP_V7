@@ -1,0 +1,14 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="panel_AtavismMiniWindow" src="project://database/Assets/Dragonsan/Atavism%20(UI%20Toolkit)/UI/Library/panel_AtavismMiniWindow.uxml?fileID=9197481963319205126&amp;guid=de69270a5738f814a838250e0a2a12fa&amp;type=3#panel_AtavismMiniWindow" />
+    <ui:VisualElement name="Screen" picking-mode="Ignore" style="flex-grow: 1;">
+        <ui:Instance template="panel_AtavismMiniWindow" name="guild-add-member-panel" style="height: 120px; width: 240px;">
+            <AttributeOverrides element-name="Window-title" text="ADD GUILD MEMBER" />
+            <ui:VisualElement name="inner-panel" style="margin-top: 33px; margin-right: 5px; margin-left: 4px; height: 581px; align-items: center;">
+                <Atavism.UI.UITextField name="guild-name-input" Placeholder="Player Name" style="margin-top: 8px; margin-bottom: 13px; width: 200px;" />
+                <ui:VisualElement name="button-panel" style="flex-grow: 1; height: 75px; max-height: 75px; min-height: 75px; flex-direction: row-reverse; align-self: center;">
+                    <ui:Button text="SEND INVATE" parse-escape-sequences="true" display-tooltip-when-elided="true" name="create-button" class="Text-Light Button-XS" style="width: 120px;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:Instance>
+    </ui:VisualElement>
+</ui:UXML>

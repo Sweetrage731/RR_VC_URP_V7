@@ -1,0 +1,25 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:Template name="panel_AtavismWindow" src="project://database/Assets/Atavism%20(UI%20Toolkit)/UI/Library/panel_AtavismWindow.uxml?fileID=9197481963319205126&amp;guid=f96775ae845b40f4b90c8a7cdb68c513&amp;type=3#panel_AtavismWindow" />
+    <ui:Template name="UIAtavismCurrencyPanel" src="project://database/Assets/Atavism%20(UI%20Toolkit)/UI/Screens/Game/Dependencies/UIAtavismCurrencyPanel.uxml?fileID=9197481963319205126&amp;guid=92cceebc890f7f84987b5bae2ddcaf64&amp;type=3#UIAtavismCurrencyPanel" />
+    <ui:VisualElement name="Screen" picking-mode="Ignore" style="flex-grow: 1;">
+        <ui:Instance template="panel_AtavismWindow" name="RepairWindow" class="repair-window">
+            <AttributeOverrides element-name="Window-title" text="REPAIR" />
+            <ui:VisualElement name="inner-panel" class="inner-panel">
+                <ui:VisualElement name="VisualElement" class="repair-slot-panel">
+                    <ui:ScrollView  mouse-wheel-scroll-size="18" scroll-deceleration-rate="0,135" elasticity="0,1" class="repair-slot-scrollview">
+                        <ui:VisualElement name="items" class="repair-slots" />
+                    </ui:ScrollView>
+                </ui:VisualElement>
+                <ui:VisualElement class="spacer-img" />
+                <ui:VisualElement name="VisualElement" class="repair-currency-panel">
+                    <ui:Instance template="UIAtavismCurrencyPanel" name="currency" />
+                </ui:VisualElement>
+                <ui:VisualElement class="spacer-img" />
+                <ui:VisualElement name="buttons" class="repair-button-panel">
+                    <ui:Button text="REPAIR ALL" parse-escape-sequences="true" display-tooltip-when-elided="true" name="repair-all-button" class="Button-XS Text-Light repair-button" />
+                    <ui:Button text="REPAIR" parse-escape-sequences="true" display-tooltip-when-elided="true" name="repair-button" class="Button-XS Text-Light repair-button" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:Instance>
+    </ui:VisualElement>
+</ui:UXML>

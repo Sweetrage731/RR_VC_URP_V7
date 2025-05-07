@@ -1,0 +1,51 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:Template name="panel_AtavismWindow" src="project://database/Assets/Atavism%20(UI%20Toolkit)/UI/Library/panel_AtavismWindow.uxml?fileID=9197481963319205126&amp;guid=f96775ae845b40f4b90c8a7cdb68c513&amp;type=3#panel_AtavismWindow" />
+    <ui:Template name="UIAtavismSlotItem 1" src="project://database/Assets/Atavism%20(UI%20Toolkit)/UI/Screens/Game/Dependencies/UIAtavismSlotItem%201.uxml?fileID=9197481963319205126&amp;guid=91f585ddcd6061441a6e3188ccc65411&amp;type=3#UIAtavismSlotItem 1" />
+    <ui:Template name="UIAtavismCurrencyPanel" src="project://database/Assets/Atavism%20(UI%20Toolkit)/UI/Screens/Game/Dependencies/UIAtavismCurrencyPanel.uxml?fileID=9197481963319205126&amp;guid=92cceebc890f7f84987b5bae2ddcaf64&amp;type=3#UIAtavismCurrencyPanel" />
+    <ui:VisualElement name="Screen" picking-mode="Ignore" style="flex-grow: 1;">
+        <ui:Instance template="panel_AtavismWindow" name="ReadMailWindow" class="mail-read-window">
+            <AttributeOverrides element-name="Window-title" text="READ MAIL" />
+            <ui:VisualElement name="inner-panel" class="inner-panel">
+                <ui:VisualElement class="mail-read-panel">
+                    <ui:VisualElement class="mail-read-sender-row">
+                        <ui:Label tabindex="-1" text="From:" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Label" class="Text-Dark mail-read-sender-label" />
+                        <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="sender" class="Text-Dark Text-Gray mail-read-sender-text" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="mail-read-subject-row">
+                        <ui:Label tabindex="-1" text="Subject:" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Label" class="Text-Dark mail-read-subject-label" />
+                        <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="subject" class="Text-Dark Text-Gray mail-read-subject-text" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="mail-read-message-row">
+                        <ui:Label tabindex="-1" text="Text:" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Label" class="Text-Dark mail-read-message-label" />
+                        <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="message" class="Text-Dark Text-Gray mail-read-message-text" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="slots" class="mail-read-slots-row">
+                        <ui:Label tabindex="-1" text="Attachments:" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Label" class="Text-Dark mail-read-slots-label" />
+                        <ui:VisualElement class="mail-read-slots-container">
+                            <ui:Instance template="UIAtavismSlotItem 1" name="item-1" />
+                            <ui:Instance template="UIAtavismSlotItem 1" name="item-2" />
+                            <ui:Instance template="UIAtavismSlotItem 1" name="item-3" />
+                            <ui:Instance template="UIAtavismSlotItem 1" name="item-4" />
+                            <ui:Instance template="UIAtavismSlotItem 1" name="item-5" />
+                            <ui:Instance template="UIAtavismSlotItem 1" name="item-6" />
+                            <ui:Instance template="UIAtavismSlotItem 1" name="item-7" />
+                            <ui:Instance template="UIAtavismSlotItem 1" name="item-8" />
+                            <ui:Instance template="UIAtavismSlotItem 1" name="item-9" />
+                            <ui:Instance template="UIAtavismSlotItem 1" name="item-10" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement class="spacer-img" />
+                    <ui:VisualElement class="mail-read-currency-row">
+                        <ui:Instance template="UIAtavismCurrencyPanel" name="currency" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="spacer-img" style="flex-grow: 1;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="buttons" class="mail-read-buttons">
+                    <ui:Button text="REPLAY" parse-escape-sequences="true" display-tooltip-when-elided="true" name="replay-button" class="Button-XM Button-XL Button-Light-Overlay" />
+                    <ui:Button text="DELETE" parse-escape-sequences="true" display-tooltip-when-elided="true" name="delete-button" class="Button-XL Button-Light-Overlay" />
+                    <ui:Button text="TAKE" parse-escape-sequences="true" display-tooltip-when-elided="true" name="take-button" class="Button-XL Button-Light-Overlay" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:Instance>
+    </ui:VisualElement>
+</ui:UXML>

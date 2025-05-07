@@ -1,0 +1,59 @@
+.auction-count-list-entry {
+    flex-grow: 1;
+    background-color: rgba(0, 0, 0, 0);
+    flex-direction: row;
+    align-self: auto;
+    align-items: center;
+    height: 30px;
+    max-height: 30px;
+    min-height: 30px;
+    justify-content: flex-start;
+}
+
+.auction-count-list-entry-mark-backgroud {
+    flex-grow: 0;
+    width: 22px;
+    height: 22px;
+    max-height: 22px;
+    min-height: 22px;
+    min-width: 22px;
+    max-width: 22px;
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/OldUI/checbox.png?fileID=2800000&guid=88aeef57330bc4a41b3323dc644418cf&type=3#checbox");
+    flex-shrink: 0;
+}
+
+.auction-count-list-entry-count {
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    -unity-text-align: middle-left;
+    flex-grow: 1;
+}
+
+.auction-count-list-entry-currency {
+    align-self: flex-end;
+}
+
+.auction-count-list-entry-mark {
+    flex-grow: 1;
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/checkbox_mark.png?fileID=2800000&guid=4aa9e7538ab063d418e2cda27bfb3186&type=3#checkbox_mark");
+    margin-top: 3px;
+    margin-right: 3px;
+    margin-bottom: 3px;
+    margin-left: 3px;
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0);
+}
+
+.auction-count-list-entry-select {
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(82, 81, 81, 0.32);
+}
+
+.auction-count-list-entry-partial {
+    -unity-background-image-tint-color: rgba(176, 176, 176, 0.55);
+}
+
+.auction-count-list-entry-full {
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+}

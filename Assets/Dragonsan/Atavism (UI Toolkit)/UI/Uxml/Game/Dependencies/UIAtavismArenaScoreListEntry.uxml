@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:VisualElement name="VisualElement" style="flex-grow: 1; height: 32px; margin-top: 0; max-height: 32px; min-height: 32px; flex-direction: row; margin-left: 0; margin-right: 0; margin-bottom: 0; width: auto;">
+        <ui:Label tabindex="-1" text="Name" parse-escape-sequences="true" display-tooltip-when-elided="true" name="name" class="Text-Dark" style="width: 220px; margin-left: 4px;" />
+        <ui:Label tabindex="-1" text="321321" parse-escape-sequences="true" display-tooltip-when-elided="true" name="score" class="Text-Dark" style="width: 70px; -unity-text-align: upper-center;" />
+        <ui:Label tabindex="-1" text="999" parse-escape-sequences="true" display-tooltip-when-elided="true" name="kills" class="Text-Dark" style="width: 50px; -unity-text-align: upper-center;" />
+        <ui:Label tabindex="-1" text="123" parse-escape-sequences="true" display-tooltip-when-elided="true" name="deaths" class="Text-Dark" style="width: 70px; -unity-text-align: upper-center;" />
+        <ui:Label tabindex="-1" text="100 000 000 000" parse-escape-sequences="true" display-tooltip-when-elided="true" name="damage-taken" class="Text-Dark" style="width: 125px; -unity-text-align: upper-center;" />
+        <ui:Label tabindex="-1" text="100 000 000 000" parse-escape-sequences="true" display-tooltip-when-elided="true" name="damage-dealth" class="Text-Dark" style="-unity-text-align: upper-center; width: 125px;" />
+    </ui:VisualElement>
+</ui:UXML>

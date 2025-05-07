@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <Style src="project://database/Assets/Dragonsan/Atavism%20(UI%20Toolkit)/UI/Style%20Sheets/ArenaStyleSheet.uss?fileID=7433441132597879392&amp;guid=3dc4e5111a0e0184db10da45d8236afc&amp;type=3#ArenaStyleSheet" />
+    <ui:VisualElement name="UIAtavismArenaListEntry" class="arena-entry__background" style="align-self: auto;">
+        <ui:Label tabindex="-1" text="[1-10]" parse-escape-sequences="true" display-tooltip-when-elided="true" name="level" class="Text-Gray arena-entry__level" />
+        <ui:Label tabindex="-1" text="Name" parse-escape-sequences="true" display-tooltip-when-elided="true" name="name" class="Text-Gray arena-entry__name" />
+        <ui:Label tabindex="-1" text="10:30-12:00" parse-escape-sequences="true" display-tooltip-when-elided="true" name="time" class="Text-Gray arena-entry__time" />
+        <ui:VisualElement name="queue" class="arena-entry__queue" />
+    </ui:VisualElement>
+</ui:UXML>

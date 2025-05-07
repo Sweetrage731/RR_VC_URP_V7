@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:VisualElement name="AchievementListEntry" class="achievement-row">
+        <ui:Label tabindex="-1" text="Achievement" parse-escape-sequences="true" display-tooltip-when-elided="true" name="name" class="Text-Gray achievement-row-name" />
+        <Atavism.UI.UIProgressBar value="0" Container-Class="Achievement-UIProgressBar__container" Background-Class="Achievement-UIProgressBar__background" Progress-Bar-Class="Achievement-UIProgressBar__progressBar" Title-Container-Class="Achievement-UIProgressBar-title__container" Title-Class="Achievement-UIProgressBar__title" Value="130" name="progress" Show-Label="true" picking-mode="Ignore" title="0/0" />
+    </ui:VisualElement>
+</ui:UXML>

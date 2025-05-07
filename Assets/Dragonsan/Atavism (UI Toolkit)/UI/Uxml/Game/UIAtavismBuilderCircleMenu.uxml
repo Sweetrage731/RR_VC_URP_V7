@@ -1,0 +1,15 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:VisualElement name="Screen" picking-mode="Ignore" style="flex-grow: 1; align-items: center; justify-content: center;">
+        <ui:VisualElement name="References" style="flex-grow: 1; width: 500px; height: 500px; max-width: 100px; min-width: 500px; min-height: 500px; max-height: 500px; justify-content: center; align-items: center;">
+            <Atavism.UI.UIFillerElement value="0.3" name="Circular-Selection" fill-color="#0000003C" fill-direction="Clockwise" class="builder-circle-selection" />
+            <ui:VisualElement name="Circular-Inner" class="builder-circle-inner">
+                <ui:VisualElement name="Circular-Selection-Icon" class="builder-circle-icon" />
+                <ui:Label tabindex="-1" text="Name" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Circular-Selection-Name" class="builder-circle-name" />
+                <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Circular-Selection-Description" class="builder-circle-description" />
+            </ui:VisualElement>
+            <ui:VisualElement name="Circular-Background" class="builder-circle-background" />
+            <ui:VisualElement name="Main" class="builder-circle-category" />
+            <ui:VisualElement name="Build" class="builder-circle-category" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

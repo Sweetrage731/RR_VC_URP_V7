@@ -1,0 +1,14 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <ui:VisualElement name="building-list-entry" class="building-list-entry">
+        <ui:VisualElement name="slot" class="building-list-entry-slot">
+            <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="icon" class="building-list-entry-icon" />
+        </ui:VisualElement>
+        <ui:VisualElement class="building-list-entry-right-panel">
+            <ui:VisualElement class="building-list-entry-top">
+                <ui:Label tabindex="-1" text="Name" parse-escape-sequences="true" display-tooltip-when-elided="true" name="name" class="Text-Gray building-list-entry-name" />
+                <ui:Label tabindex="-1" text="Category" parse-escape-sequences="true" display-tooltip-when-elided="true" name="category" class="Text-Gray building-list-entry-category" />
+            </ui:VisualElement>
+            <ui:Label tabindex="-1" text="requirements&#10;" parse-escape-sequences="true" display-tooltip-when-elided="true" name="requirements" class="Text-Gray building-list-entry-requirements" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

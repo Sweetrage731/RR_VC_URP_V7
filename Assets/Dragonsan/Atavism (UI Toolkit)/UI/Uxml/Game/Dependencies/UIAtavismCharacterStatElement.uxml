@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:VisualElement name="stat-element" class="character-stat-row">
+        <ui:Label text="PHYSICAL DAMAGE" display-tooltip-when-elided="true" name="stat-label" class="character-stat-label Text-Gray" />
+        <ui:Label text="123123" display-tooltip-when-elided="true" name="stat-label-value" class="character-stat-value Text-Grey" />
+    </ui:VisualElement>
+</ui:UXML>

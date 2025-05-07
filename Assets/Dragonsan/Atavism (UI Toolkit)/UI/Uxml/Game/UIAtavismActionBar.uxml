@@ -1,0 +1,19 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="UIAtavismActionBarSlot" src="project://database/Assets/Atavism%20(UI%20Toolkit)/UI/Screens/Game/Dependencies/UIAtavismActionBarSlot.uxml?fileID=9197481963319205126&amp;guid=0bdfa305314c3ec45b16bd95d3f6bdbe&amp;type=3#UIAtavismActionBarSlot" />
+    <ui:VisualElement name="Screen" picking-mode="Ignore" style="-unity-font: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/Fonts/Cambria.ttf?fileID=12800000&amp;guid=36ef3a2444bc15847bd874b9b0c98ae6&amp;type=3#Cambria&quot;); -unity-font-definition: url(&quot;project://database/Assets/Atavism%20(UI%20Toolkit)/UI/Fonts/Cambria%20SDF.asset?fileID=11400000&amp;guid=171debed56e16fd4daf65623c92ecac2&amp;type=2#Cambria SDF&quot;); flex-direction: column-reverse; justify-content: flex-end; align-items: center; flex-grow: 1;">
+        <ui:VisualElement name="screen-bottom" class="action-bar-bottom">
+            <ui:VisualElement name="slot-grid" class="action-bar-grid">
+                <ui:Instance template="UIAtavismActionBarSlot" name="UIAtavismActionBarSlot" />
+                <ui:Instance template="UIAtavismActionBarSlot" name="UIAtavismActionBarSlot" />
+                <ui:Instance template="UIAtavismActionBarSlot" name="UIAtavismActionBarSlot" />
+                <ui:Instance template="UIAtavismActionBarSlot" name="UIAtavismActionBarSlot" />
+                <ui:Instance template="UIAtavismActionBarSlot" name="UIAtavismActionBarSlot" />
+                <ui:Instance template="UIAtavismActionBarSlot" name="UIAtavismActionBarSlot" />
+                <ui:Instance template="UIAtavismActionBarSlot" name="UIAtavismActionBarSlot" />
+                <ui:Instance template="UIAtavismActionBarSlot" name="UIAtavismActionBarSlot" />
+                <ui:Instance template="UIAtavismActionBarSlot" name="UIAtavismActionBarSlot" />
+                <ui:Instance template="UIAtavismActionBarSlot" name="UIAtavismActionBarSlot" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

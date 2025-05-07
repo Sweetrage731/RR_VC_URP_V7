@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="server-item" style="flex-direction: row; height: 20px; max-height: 20px; min-height: 20px;">
+        <ui:Button display-tooltip-when-elided="true" name="server-button" style="margin-top: 3px; margin-right: 3px; margin-bottom: 3px; margin-left: 3px; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; flex-grow: 1; flex-shrink: 1; flex-direction: row; background-color: rgba(0, 0, 0, 0); align-self: center; border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0;">
+            <ui:Label tabindex="-1" text="Server Name" parse-escape-sequences="true" display-tooltip-when-elided="true" name="server-name" class="Text-Gray" style="width: 200px; -unity-text-align: middle-left;" />
+            <ui:Label tabindex="-1" text="Population" parse-escape-sequences="true" display-tooltip-when-elided="true" name="server-population" class="Text-Gray" style="width: 72px;" />
+            <ui:Label tabindex="-1" text="Players in Queue" parse-escape-sequences="true" display-tooltip-when-elided="true" name="server-queue" class="Text-Gray" style="width: 100px;" />
+            <ui:Label tabindex="-1" text="Load" parse-escape-sequences="true" display-tooltip-when-elided="true" name="server-load" class="Text-Gray" style="height: 16px; max-height: 16px; min-height: 16px; margin-top: 0; margin-right: 3px; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; width: 55px; -unity-text-align: middle-right;" />
+            <ui:VisualElement name="server-load-image" style="flex-grow: 1; height: 16px; max-height: 16px; min-height: 16px; min-width: 16px; max-width: 16px; background-image: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/Textures/OldUI/Avatar/Avatar_Mask.png?fileID=2800000&amp;guid=2f17155b3fa507049a03e6529e960e94&amp;type=3#Avatar_Mask&quot;);" />
+        </ui:Button>
+    </ui:VisualElement>
+</ui:UXML>

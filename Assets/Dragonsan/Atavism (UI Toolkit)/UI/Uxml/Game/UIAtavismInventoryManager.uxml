@@ -1,0 +1,34 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="panel_AtavismWindow" src="project://database/Assets/Dragonsan/Atavism%20(UI%20Toolkit)/UI/Library/panel_AtavismWindow.uxml?fileID=9197481963319205126&amp;guid=f96775ae845b40f4b90c8a7cdb68c513&amp;type=3#panel_AtavismWindow" />
+    <ui:Template name="UIAtavismSlotItem" src="project://database/Assets/Dragonsan/Atavism%20(UI%20Toolkit)/UI/Uxml/Game/Dependencies/UIAtavismSlotItem.uxml?fileID=9197481963319205126&amp;guid=380df901e5768bb44a5d94b2c8ce020a&amp;type=3#UIAtavismSlotItem" />
+    <ui:Template name="UIAtavismCurrencyPanel" src="project://database/Assets/Dragonsan/Atavism%20(UI%20Toolkit)/UI/Uxml/Game/Dependencies/UIAtavismCurrencyPanel.uxml?fileID=9197481963319205126&amp;guid=92cceebc890f7f84987b5bae2ddcaf64&amp;type=3#UIAtavismCurrencyPanel" />
+    <Style src="project://database/Assets/Dragonsan/Atavism%20(UI%20Toolkit)/UI/Style%20Sheets/InventorySlot.uss?fileID=7433441132597879392&amp;guid=ce8d7331dd1bf764dab9b8aac22e6ffa&amp;type=3#InventorySlot" />
+    <ui:VisualElement name="Screen" picking-mode="Ignore">
+        <ui:Instance template="panel_AtavismWindow" name="InventoryWindow" class="inventory-window">
+            <AttributeOverrides element-name="Window-title" text="INVENTORY" />
+            <ui:VisualElement name="inner-panel" class="inner-panel">
+                <ui:VisualElement name="items" class="inventory-items-panel">
+                    <ui:VisualElement name="holder-bags" class="inventory-bags-panel" style="width: 55px; max-width: 55px; min-width: 55px;">
+                        <ui:VisualElement name="bags" class="inventory-bags">
+                            <ui:ScrollView mouse-wheel-scroll-size="18" style="display: none; visibility: hidden; overflow: hidden;">
+                                <ui:Instance template="UIAtavismSlotItem" name="UIAtavismSlotItem" />
+                            </ui:ScrollView>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement class="spacer-vertical-img" style="flex-grow: 1;" />
+                    <ui:VisualElement name="holder-bag-items" class="inventory-items" style="height: 370px;">
+                        <ui:ScrollView mouse-wheel-scroll-size="18" style="height: 370px;">
+                            <ui:VisualElement name="bag-items" class="inventory-items-slots" style="height: auto;" />
+                        </ui:ScrollView>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement class="spacer-img" style="flex-grow: 1;" />
+                <ui:VisualElement name="money" class="inventory-money-panel">
+                    <ui:VisualElement name="holder-money" class="inventory-holder-money">
+                        <ui:Instance template="UIAtavismCurrencyPanel" name="currency" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:Instance>
+    </ui:VisualElement>
+</ui:UXML>

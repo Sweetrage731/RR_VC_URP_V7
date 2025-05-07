@@ -1,0 +1,375 @@
+.Player-Bar__container {
+    height: 100%;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.Player-Bar__background {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/Avatar/avatar_hp_bg.png?fileID=21300000&guid=dec5af39051a0fa449c9db7dc009943c&type=3#avatar_hp_bg");
+    background-color: rgba(0, 0, 0, 0);
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.Player-Bar__progressBar {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/Avatar/avatar_hp_color.png?fileID=21300000&guid=db9654e4d08c8354193865fadeeb22a4&type=3#avatar_hp_color");
+    background-color: rgba(0, 0, 0, 0);
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    margin-left: 0;
+    margin-right: 4px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    padding-left: 0;
+}
+
+.Player-Bar-title__container {
+    width: 100%;
+    height: 100%;
+}
+
+.Player-Bar__title {
+    -unity-text-align: middle-left;
+    width: 100%;
+    margin-left: 60px;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 15px;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    color: rgb(243, 236, 217);
+    -unity-font-style: bold;
+    height: 100%;
+}
+
+.Player-Bar-mini__background {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/Avatar/avatar_waith_bg.png?fileID=21300000&guid=951296e422bb6b649ac8c8fd03b68ead&type=3#avatar_waith_bg");
+    background-color: rgba(0, 0, 0, 0);
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: -3px;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    justify-content: center;
+    align-items: stretch;
+    height: 100%;
+    -unity-background-scale-mode: stretch-to-fill;
+    flex-shrink: 0;
+}
+
+.Player-Bar-mini__progressBar {
+    margin-left: 0;
+    margin-right: 5px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/Avatar/avatar_waith_color.png?fileID=21300000&guid=915b0d3bb901ece4ca58cc2badbbd172&type=3#avatar_waith_color");
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.Player-Bar-mini__title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 8px;
+    -unity-text-align: middle-center;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    color: rgb(243, 236, 217);
+    height: 100%;
+    width: 100%;
+}
+
+.Target-Bar-title__container {
+    -unity-text-align: middle-center;
+    width: 100%;
+    height: 100%;
+    font-size: 15px;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    color: rgb(243, 236, 217);
+    -unity-font-style: bold;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.Portrait-popup-panel {
+}
+
+.Portrait-popup-panel-button {
+    color: rgb(237, 231, 221);
+    background-color: rgba(0, 0, 0, 0);
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    font-size: 14px;
+    max-height: 16px;
+}
+
+.Portrait-popup-panel-button:hover {
+    color: rgb(237, 231, 221);
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    background-color: rgb(51, 51, 51);
+}
+
+.Portrait-group-settings-button {
+}
+
+.Portrait-group-settings-button:hover {
+    -unity-background-image-tint-color: rgb(128, 128, 128);
+}
+
+.Portrait-effect-label {
+    color: rgb(255, 255, 255);
+}
+
+.Portrait-effect-icon {
+}
+
+.Portrait-effect-icon:hover:enabled {
+    transition-duration: 0.1s;
+    transition-delay: 0.1s;
+    opacity: 0.25;
+}
+
+.UIProgressBar-Level__container {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.UIProgressBar-Level__background {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/Actionbar/xp_bar.png?fileID=2800000&guid=99ff8acd8594aea4b824f1c0cddd4829&type=3#xp_bar");
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0);
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.UIProgressBar-Level__progressBar {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/Actionbar/xp_bar_yellow.png?fileID=2800000&guid=a2c9344140a1cee4989af8a0591a12b6&type=3#xp_bar_yellow");
+    height: 8px;
+    justify-content: flex-end;
+    align-items: center;
+    -unity-background-scale-mode: stretch-to-fill;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-left: 2px;
+    margin-top: 4px;
+}
+
+.UIProgressBar-Level-title__container {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.UIProgressBar-Level__title {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.Portrait-group-avatar-mask {
+    width: 86%;
+    height: 86%;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-top-left-radius: 111px;
+    border-top-right-radius: 111px;
+    border-bottom-right-radius: 111px;
+    border-bottom-left-radius: 111px;
+    overflow: hidden;
+    max-height: 86px;
+    max-width: 86px;
+}
+
+.Portrait-group-avatar {
+    width: 86%;
+    height: 86%;
+    background-image: resource('Portraits/Challenger');
+    -unity-background-scale-mode: scale-to-fit;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    max-height: 86px;
+    min-height: 86px;
+    max-width: 86px;
+    min-width: 86px;
+}
+
+.title-enemy {
+    color: rgb(255, 0, 0);
+}
+
+.title-friendly {
+    color: rgb(3, 192, 30);
+}
+
+.title-neutral {
+    color: rgb(255, 253, 0);
+}
+
+.target-light-enemy {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/target/boss_glow_red.png?fileID=2800000&guid=2558cde5068e8b544977f88224ab319a&type=3#boss_glow_red");
+}
+
+.target-light-friendly {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/target/bos_glow_green.png?fileID=2800000&guid=c044034c99732f649a7867ac84d93b69&type=3#bos_glow_green");
+}
+
+.target-light-neutral {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/target/boss_glow_yellow.png?fileID=2800000&guid=8cd8b00af669f174e8b95d0771906ba2&type=3#boss_glow_yellow");
+}
+
+.target-mob-type-0 {
+}
+
+.target-mob-type-1 {
+}
+
+.target-mob-type-2 {
+}
+
+.target-mob-type-3 {
+}
+
+.target-mob-type-4 {
+}
+
+.target-mob-type-5 {
+}
+
+.target-mob-type-6 {
+}
+
+.target-mob-type-7 {
+}

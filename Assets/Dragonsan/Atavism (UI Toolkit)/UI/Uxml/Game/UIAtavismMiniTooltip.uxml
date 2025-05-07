@@ -1,0 +1,8 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Atavism%20(UI%20Toolkit)/UI/Style%20Sheets/DeathPanelStyleSheet.uss?fileID=7433441132597879392&amp;guid=5c7190ba3dac4c24fa62524a6ad7b052&amp;type=3#DeathPanelStyleSheet" />
+    <ui:VisualElement name="Screen" picking-mode="Ignore" style="align-items: center; justify-content: center;">
+        <ui:VisualElement name="mini-tooltip-panel" class="mini-tooltip-panel">
+            <ui:Label text="message" display-tooltip-when-elided="true" name="message" class="Text-Light mini-tooltip-panel__message" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,5 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:VisualElement name="icon" class="pet-command-profile">
+        <ui:Label tabindex="-1" text="3" parse-escape-sequences="true" display-tooltip-when-elided="true" picking-mode="Ignore" name="info" class="pet-command-profile-info" />
+    </ui:VisualElement>
+</ui:UXML>

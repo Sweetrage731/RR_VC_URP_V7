@@ -1,0 +1,44 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:Template name="UIAtavismSettingsControlEntry" src="project://database/Assets/Dragonsan/Atavism%20(UI%20Toolkit)/UI/Screens/Game/Dependencies/UIAtavismSettingsControlEntry.uxml?fileID=9197481963319205126&amp;guid=e4e42caaa554c894884bffe8d47777e8&amp;type=3#UIAtavismSettingsControlEntry" />
+    <ui:VisualElement name="UIAtavismControllSettingsRoot">
+        <ui:VisualElement name="dodge-element" style="flex-grow: 1; flex-direction: row; width: auto; justify-content: space-between;">
+            <ui:Label tabindex="-1" text="Dodge Type" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" />
+            <Atavism.UI.UIDropdown name="dodge-type" Popup-Options="Double Tap,Single Button" Generate-Popup="true" style="width: 172px;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="controls-grid" style="flex-grow: 1;">
+            <ui:Instance template="UIAtavismSettingsControlEntry" name="UIAtavismSettingsControlEntry" />
+            <ui:Instance template="UIAtavismSettingsControlEntry" name="UIAtavismSettingsControlEntry" />
+            <ui:Instance template="UIAtavismSettingsControlEntry" name="UIAtavismSettingsControlEntry" />
+            <ui:Instance template="UIAtavismSettingsControlEntry" name="UIAtavismSettingsControlEntry" />
+            <ui:Instance template="UIAtavismSettingsControlEntry" name="UIAtavismSettingsControlEntry" />
+            <ui:Instance template="UIAtavismSettingsControlEntry" name="UIAtavismSettingsControlEntry" />
+            <ui:Instance template="UIAtavismSettingsControlEntry" name="UIAtavismSettingsControlEntry" />
+            <ui:Instance template="UIAtavismSettingsControlEntry" name="UIAtavismSettingsControlEntry" />
+            <ui:Instance template="UIAtavismSettingsControlEntry" name="UIAtavismSettingsControlEntry" />
+            <ui:Instance template="UIAtavismSettingsControlEntry" name="UIAtavismSettingsControlEntry" />
+            <ui:Instance template="UIAtavismSettingsControlEntry" name="UIAtavismSettingsControlEntry" />
+            <ui:Instance template="UIAtavismSettingsControlEntry" name="UIAtavismSettingsControlEntry" />
+        </ui:VisualElement>
+        <ui:Label tabindex="-1" text="Windows" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Light" style="font-size: 16px; -unity-text-align: upper-left;" />
+        <ui:VisualElement name="windows-grid" style="flex-grow: 1;">
+            <ui:Instance template="UIAtavismSettingsControlEntry" name="UIAtavismSettingsControlEntry" />
+            <ui:Instance template="UIAtavismSettingsControlEntry" name="UIAtavismSettingsControlEntry" />
+            <ui:Instance template="UIAtavismSettingsControlEntry" name="UIAtavismSettingsControlEntry" />
+            <ui:Instance template="UIAtavismSettingsControlEntry" name="UIAtavismSettingsControlEntry" />
+            <ui:Instance template="UIAtavismSettingsControlEntry" name="UIAtavismSettingsControlEntry" />
+            <ui:Instance template="UIAtavismSettingsControlEntry" name="UIAtavismSettingsControlEntry" />
+            <ui:Instance template="UIAtavismSettingsControlEntry" name="UIAtavismSettingsControlEntry" />
+            <ui:Instance template="UIAtavismSettingsControlEntry" name="UIAtavismSettingsControlEntry" />
+            <ui:Instance template="UIAtavismSettingsControlEntry" name="UIAtavismSettingsControlEntry" />
+            <ui:Instance template="UIAtavismSettingsControlEntry" name="UIAtavismSettingsControlEntry" />
+            <ui:Instance template="UIAtavismSettingsControlEntry" name="UIAtavismSettingsControlEntry" />
+            <ui:Instance template="UIAtavismSettingsControlEntry" name="UIAtavismSettingsControlEntry" />
+            <ui:Instance template="UIAtavismSettingsControlEntry" name="UIAtavismSettingsControlEntry" />
+            <ui:Instance template="UIAtavismSettingsControlEntry" name="UIAtavismSettingsControlEntry" />
+            <ui:Instance template="UIAtavismSettingsControlEntry" name="UIAtavismSettingsControlEntry" />
+        </ui:VisualElement>
+        <ui:VisualElement name="change-info-panel" style="flex-grow: 1; position: absolute; left: 0; top: 0; right: 0; bottom: 0; background-image: resource(&apos;AT_icon_background&apos;); background-color: rgba(0, 0, 0, 0); -unity-background-image-tint-color: rgba(0, 0, 0, 0.55); align-items: center; align-self: center; justify-content: center;">
+            <ui:Label tabindex="-1" text="Press Key" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Light" style="font-size: 30px; -unity-font-style: bold;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

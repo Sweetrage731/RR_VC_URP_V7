@@ -1,0 +1,241 @@
+.LoaderRoot {
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+}
+
+.Background {
+    flex-grow: 1;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    height: 100%;
+}
+
+.BackgroundImage {
+    flex-grow: 1;
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/Loading/Promotion_AtavismX_01.jpg?fileID=2800000&guid=2a3ef3810e814724c8af403d0402e64d&type=3#Promotion_AtavismX_01");
+}
+
+.TextAreaBackground {
+    flex-grow: 1;
+    position: absolute;
+    height: 227px;
+    width: 372px;
+    background-image: url("project://database/Assets/Dragonsan/Loading%20Screen%20for%20Atavism/Content/Art/UI/corner-dergre.psd?fileID=2800000&guid=77f49d0bba80de341bcd091eba782be4&type=3#corner-dergre");
+    -unity-background-image-tint-color: rgb(0, 0, 0);
+}
+
+.SceneNameText {
+    color: rgb(255, 255, 255);
+    height: 50px;
+    width: 363px;
+    font-size: 30px;
+    -unity-font: url("project://database/Assets/Dragonsan/Loading%20Screen%20for%20Atavism/Content/Art/Font/BebasNeue%20Bold.otf?fileID=12800000&guid=5e3904971157f3f4598cd6e068d8ff08&type=3#BebasNeue Bold");
+}
+
+.DescriptionText {
+    -unity-font: url("project://database/Assets/Dragonsan/Loading%20Screen%20for%20Atavism/Content/Art/Font/BebasNeue%20Book.otf?fileID=12800000&guid=67a528cd5e0a96d438848d7458ffcd26&type=3#BebasNeue Book");
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    height: 223px;
+    white-space: normal;
+}
+
+.Bottom {
+    flex-grow: 1;
+    position: absolute;
+    bottom: 0;
+    height: 69px;
+    width: 100%;
+}
+
+.TipsText {
+    bottom: 0;
+    position: absolute;
+    color: rgb(255, 255, 255);
+    width: 783px;
+}
+
+.LoadingCircleBackground {
+    flex-grow: 1;
+    position: absolute;
+    bottom: 40%;
+    height: 65px;
+    width: 65px;
+    background-image: url("project://database/Assets/Dragonsan/Loading%20Screen%20for%20Atavism/Content/Art/UI/circle.psd?fileID=2800000&guid=f8ef4a86f061e7f49ac3a6f33034334c&type=3#circle");
+    right: 27%;
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0.68);
+}
+
+.LoadingCircle {
+    flex-grow: 1;
+    background-image: url("project://database/Assets/Dragonsan/Loading%20Screen%20for%20Atavism/Content/Art/UI/circle2.psd?fileID=2800000&guid=216d3d3e544b61344a066167e679472b&type=3#circle2");
+    rotate: 23deg;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    -unity-background-image-tint-color: rgb(255, 0, 0);
+}
+
+.ContinueUI {
+    flex-grow: 1;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+
+.ContinueButton {
+    position: absolute;
+    top: 532px;
+    left: 449px;
+}
+
+.ContinueText {
+    position: absolute;
+    top: 50%;
+    left: auto;
+    color: rgb(255, 255, 255);
+    transform-origin: right;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    width: 100%;
+    -unity-text-align: middle-center;
+}
+
+.FadeImage {
+    flex-grow: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    opacity: 0;
+}
+
+.Flash {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    opacity: 0;
+    position: absolute;
+}
+
+.UIProgressBar__container {
+    margin-left: -5px;
+    margin-right: -5px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    display: none;
+}
+
+.UIProgressBar__background {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/Actionbar/xp_bar.png?fileID=2800000&guid=99ff8acd8594aea4b824f1c0cddd4829&type=3#xp_bar");
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0);
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    height: 100%;
+    width: 100%;
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+    -unity-slice-left: 6;
+    -unity-slice-top: 6;
+    -unity-slice-right: 6;
+    -unity-slice-bottom: 6;
+    margin-right: 0;
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-right: 0;
+    padding-left: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.UIProgressBar__progressBar {
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/Actionbar/xp_bar_color.png?fileID=2800000&guid=3c2a6d5266a02dc498a9ace199d943e5&type=3#xp_bar_color");
+    height: 5px;
+    justify-content: flex-end;
+    align-items: center;
+    -unity-background-scale-mode: stretch-to-fill;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-top: 6px;
+    margin-right: 6px;
+    margin-bottom: 6px;
+    margin-left: 6px;
+}
+
+.UIProgressBar-title__container {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.UIProgressBar__title {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    color: var(--color-atavismTextDefault);
+    font-size: 10px;
+    position: relative;
+    top: -7px;
+    height: 17px;
+}

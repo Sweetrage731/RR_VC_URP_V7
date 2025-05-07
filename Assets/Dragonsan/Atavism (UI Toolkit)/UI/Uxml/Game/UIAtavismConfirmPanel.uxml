@@ -1,0 +1,14 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Atavism%20(UI%20Toolkit)/UI/Style%20Sheets/DeathPanelStyleSheet.uss?fileID=7433441132597879392&amp;guid=5c7190ba3dac4c24fa62524a6ad7b052&amp;type=3#DeathPanelStyleSheet" />
+    <ui:VisualElement name="Screen" picking-mode="Ignore" style="align-items: center; justify-content: center; flex-grow: 1;">
+        <ui:VisualElement name="confirm-panel" class="confirm-panel">
+            <ui:Label text="message" display-tooltip-when-elided="true" name="message" class="Text-Light confirm-panel__message" />
+            <ui:VisualElement name="button-holder" class="confirm-panel__button-holder">
+                <ui:Button text="YES" display-tooltip-when-elided="true" name="button-yes" class="Button-XL Text-Light" />
+                <ui:Button text="CANCEL" display-tooltip-when-elided="true" name="button-cancel" class="Button-XL Text-Light">
+                    <ui:Label tabindex="-1" text="(120)" parse-escape-sequences="true" display-tooltip-when-elided="true" name="timer" class="button-timer" />
+                </ui:Button>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,20 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:VisualElement name="Screen" picking-mode="Ignore" class="screen-full">
+        <ui:VisualElement name="menu" class="game-menu-background">
+            <ui:VisualElement class="game-menu__background">
+                <ui:VisualElement style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/border3.png?fileID=2800000&amp;guid=5818295440842cd488837ea23ec8cb5f&amp;type=3#border3&quot;); width: 26px; max-width: 26px; min-width: 26px;">
+                    <ui:VisualElement picking-mode="Ignore" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/menu_bg_glow.png?fileID=2800000&amp;guid=000bdd8580798ef4fa60054be0a84b4b&amp;type=3#menu_bg_glow&quot;); width: 163px; right: 158px; -unity-background-image-tint-color: rgba(255, 255, 255, 0.23); display: none;" />
+                    <ui:VisualElement picking-mode="Ignore" style="flex-grow: 1; align-self: stretch; align-items: center; justify-content: center; position: absolute; height: 31px; width: 30px; top: 50%; left: -5px; background-image: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/autocut/UI_01__crystal.png?fileID=2800000&amp;guid=4f6de124f7761264b81662caec72d45e&amp;type=3#UI_01__crystal&quot;); transform-origin: bottom; translate: 0 -12px;" />
+                </ui:VisualElement>
+                <ui:VisualElement style="flex-grow: 1; display: flex; align-items: center; justify-content: center;">
+                    <ui:VisualElement class="game-menu__button-list">
+                        <ui:Button text="RESUME" parse-escape-sequences="true" display-tooltip-when-elided="true" name="resume-button" class="game-menu-button" />
+                        <ui:Button text="LOGOUT" parse-escape-sequences="true" display-tooltip-when-elided="true" name="logout-button" class="game-menu-button" />
+                        <ui:Button text="SETTINGS" parse-escape-sequences="true" display-tooltip-when-elided="true" name="settings-button" class="game-menu-button" />
+                        <ui:Button text="QUIT" parse-escape-sequences="true" display-tooltip-when-elided="true" name="quit-button" class="game-menu-button" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,88 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:VisualElement name="UIAtavismGraphicSettingsRoot">
+        <ui:VisualElement style="flex-grow: 1; flex-direction: row; width: auto; justify-content: space-between;">
+            <ui:Label tabindex="-1" text="Resolution" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" />
+            <Atavism.UI.UIDropdown name="Resolution" Generate-Popup="true" style="width: 172px;" />
+        </ui:VisualElement>
+        <ui:VisualElement class="graphic-row">
+            <ui:Toggle name="FullscreenToggle" label="Fullscreen" class="Toggle-Default" />
+        </ui:VisualElement>
+        <ui:VisualElement class="graphic-row" style="flex-grow: 1;">
+            <ui:Toggle name="FPSToggle" label="FPS" class="Toggle-Default" />
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 1; flex-direction: row; width: auto; justify-content: space-between;">
+            <ui:Label tabindex="-1" text="Graphic Quality" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" />
+            <Atavism.UI.UIDropdown name="GraphicQuality" Generate-Popup="true" style="width: 172px;" />
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 1; flex-direction: row; width: auto; justify-content: space-between;">
+            <ui:Label tabindex="-1" text="Shadows" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" />
+            <Atavism.UI.UIDropdown name="Shadows" Generate-Popup="true" style="width: 172px;" />
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 1; flex-direction: row; width: auto; justify-content: space-between;">
+            <ui:Label tabindex="-1" text="Shadows Distance" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" />
+            <Atavism.UI.UIDropdown name="ShadowsDistance" Generate-Popup="true" style="width: 172px;" />
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 1; flex-direction: row; width: auto; justify-content: space-between;">
+            <ui:Label tabindex="-1" text="Shadows resolutions" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" />
+            <Atavism.UI.UIDropdown name="ShadowsResolutions" Generate-Popup="true" style="width: 172px;" />
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 1; flex-direction: row; width: auto; justify-content: space-between;">
+            <ui:Label tabindex="-1" text="Particle Raycast Budget" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" />
+            <Atavism.UI.UIDropdown name="Badget" Generate-Popup="true" style="width: 172px;" />
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 1; flex-direction: row; width: auto; justify-content: space-between;">
+            <ui:Label tabindex="-1" text="Texture quality" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" />
+            <Atavism.UI.UIDropdown name="TextureQualityPopup" Generate-Popup="true" style="width: 172px;" />
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 1; flex-direction: row; width: auto; justify-content: space-between;">
+            <ui:Label tabindex="-1" text="LOD Objects" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" />
+            <Atavism.UI.UIDropdown name="LodObjects" Generate-Popup="true" style="width: 172px;" />
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 1; flex-direction: row; width: auto; justify-content: space-between;">
+            <ui:Label tabindex="-1" text="Antialiasing" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" />
+            <Atavism.UI.UIDropdown name="Antialiasing" Generate-Popup="true" style="width: 172px;" />
+        </ui:VisualElement>
+        <ui:VisualElement class="graphic-row" style="flex-grow: 1;" />
+        <ui:Slider name="AntialiasingSlider" value="0" high-value="8" low-value="0" page-size="1" />
+        <ui:Slider name="RenderDistanceSlider" value="0" high-value="5000" low-value="0" page-size="100" />
+        <ui:VisualElement class="graphic-row" style="flex-grow: 1;">
+            <ui:Toggle name="VSyncToggle" label="VSync" class="Toggle-Default" />
+        </ui:VisualElement>
+        <ui:VisualElement class="graphic-row" style="flex-grow: 1;">
+            <ui:Toggle name="PostProcessingToggle" label="Post Processing" class="Toggle-Default" />
+        </ui:VisualElement>
+        <ui:VisualElement class="graphic-row" style="flex-grow: 1;">
+            <ui:Toggle name="SoftParticlesToggle" label="Soft Particles" class="Toggle-Default" />
+        </ui:VisualElement>
+        <ui:VisualElement class="graphic-row" style="flex-grow: 1;">
+            <ui:Toggle name="AmbientOcclusionToggle" label="Ambient Occlusion" class="Toggle-Default" />
+        </ui:VisualElement>
+        <ui:VisualElement class="graphic-row" style="flex-grow: 1;">
+            <ui:Toggle name="DepthOfFieldToggle" label="Depth Of Field" class="Toggle-Default" />
+        </ui:VisualElement>
+        <ui:VisualElement class="graphic-row" style="flex-grow: 1;">
+            <ui:Toggle name="BloomToggle" label="Bloom" class="Toggle-Default" />
+        </ui:VisualElement>
+        <ui:VisualElement class="graphic-row" style="flex-grow: 1;">
+            <ui:Toggle name="VignetteToggle" label="Vignette" class="Toggle-Default" />
+        </ui:VisualElement>
+        <ui:VisualElement class="graphic-row" style="flex-grow: 1;">
+            <ui:Toggle name="ChromaticAberrationToggle" label="Chromatic Aberration" class="Toggle-Default" />
+        </ui:VisualElement>
+        <ui:VisualElement class="graphic-row" style="flex-grow: 1;">
+            <ui:Toggle name="MotionBlurToggle" label="Motion Blur" class="Toggle-Default" />
+        </ui:VisualElement>
+        <ui:VisualElement class="graphic-row" style="flex-grow: 1;">
+            <ui:Toggle name="AutoExposeToggle" label="Auto Expose" class="Toggle-Default" />
+        </ui:VisualElement>
+        <ui:VisualElement class="graphic-row" style="flex-grow: 1;">
+            <ui:Toggle name="ColorGradingToggle" label="Color Grading" class="Toggle-Default" />
+        </ui:VisualElement>
+        <ui:VisualElement class="graphic-row" style="flex-grow: 1;">
+            <ui:Toggle name="DitheringToggle" label="Dithering" class="Toggle-Default" />
+        </ui:VisualElement>
+        <ui:VisualElement class="graphic-row" style="flex-grow: 1;">
+            <ui:Toggle name="ScreenSpaceReflectionToggle" label="Screen Space Reflection" class="Toggle-Default" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

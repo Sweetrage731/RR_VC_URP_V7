@@ -1,0 +1,16 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:VisualElement name="UIMusicSettingsRoot">
+        <ui:Label tabindex="-1" text="Master volume" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" />
+        <ui:Slider name="MasterVolume" value="0.5" high-value="0" low-value="-60" page-size="0.1" class="UISlider" style="display: flex; width: auto;" />
+        <ui:Label tabindex="-1" text="Music volume" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" />
+        <ui:Slider name="MusicVolume" value="0.5" high-value="0" low-value="-60" page-size="0.1" class="UISlider" style="display: flex; width: auto;" />
+        <ui:Label tabindex="-1" text="SFX volume" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" />
+        <ui:Slider name="SFXVolume" value="0.5" high-value="0" low-value="-60" page-size="0.1" class="UISlider" style="display: flex; width: auto;" />
+        <ui:Label tabindex="-1" text="Interface sfx volume" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" />
+        <ui:Slider name="UIVolume" value="0.5" high-value="0" low-value="-60" page-size="0.1" class="UISlider" style="display: flex; width: auto;" />
+        <ui:Label tabindex="-1" text="Ambient volume" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" />
+        <ui:Slider name="AmbientVolume" value="0.5" high-value="0" low-value="-60" page-size="0.1" class="UISlider" style="display: flex; width: auto;" />
+        <ui:Label tabindex="-1" text="Footsteps volume" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" />
+        <ui:Slider name="FootstepsVolume" value="0.5" high-value="0" low-value="-60" page-size="0.1" class="UISlider" style="display: flex; width: auto;" />
+    </ui:VisualElement>
+</ui:UXML>

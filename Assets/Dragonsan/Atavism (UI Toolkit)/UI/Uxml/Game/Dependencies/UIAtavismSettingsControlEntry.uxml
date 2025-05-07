@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <ui:VisualElement class="settings-control-row">
+        <ui:Label tabindex="-1" text="Resolution" parse-escape-sequences="true" display-tooltip-when-elided="true" name="label" class="Text-Gray settings-control-label" />
+        <ui:VisualElement class="settings-control-sub">
+            <ui:Button text="alt" parse-escape-sequences="true" display-tooltip-when-elided="true" name="alt-button" class="Button-XS Button-Gray-Overlay settings-control-button" />
+            <ui:Button text="W" parse-escape-sequences="true" display-tooltip-when-elided="true" name="button" class="Button-XS Button-Gray-Overlay settings-control-button" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

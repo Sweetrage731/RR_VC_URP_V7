@@ -1,0 +1,25 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/Atavism%20(UI%20Toolkit)/UI/Style%20Sheets/SceneLoaderStaleSheet.uss?fileID=7433441132597879392&amp;guid=9c5aec59b9deac5449aa7eff45215d20&amp;type=3#SceneLoaderStaleSheet" />
+    <ui:VisualElement name="LoaderRoot" class="LoaderRoot">
+        <ui:VisualElement name="Background" class="Background">
+            <ui:VisualElement name="BackgroundImage" class="BackgroundImage" />
+        </ui:VisualElement>
+        <ui:VisualElement name="TextAreaBackground" class="TextAreaBackground">
+            <ui:Label tabindex="-1" text="SCENE NAME HERE" parse-escape-sequences="true" display-tooltip-when-elided="true" name="SceneNameText" class="SceneNameText" />
+            <ui:Label tabindex="-1" text="DESCRIPTION ABOUT SCENE HERE&#10;Cum gloriatur quaerendum comprehensam ei, ex vix vero quas dicant. Nam ne officiis consequat, eius ipsum quaerendum te per. Eos at error soleat nemore. Meis luptatum perfecto vim ad, erant clita ut est, eu mei propriae molestie repudiandae. Mel vide doming antiopam ne. Sed nobis imperdiet gubergren in, semper delenit posidonium mel ad." parse-escape-sequences="true" display-tooltip-when-elided="true" name="DescriptionText" class="DescriptionText" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Bottom" class="Bottom">
+            <ui:Label tabindex="-1" text="Cum gloriatur quaerendum comprehensam ei, ex vix vero quas dicant. Nam ne officiis consequat, eius " parse-escape-sequences="true" display-tooltip-when-elided="true" name="TipsText" class="TipsText" />
+            <ui:VisualElement name="LoadingCircleBackground" class="LoadingCircleBackground">
+                <ui:VisualElement name="LoadingCircle" class="LoadingCircle" />
+            </ui:VisualElement>
+            <Atavism.UI.UIProgressBar Value="102" name="BarSlider" Show-Label="false" style="width: 100%; position: absolute; display: flex; bottom: -5px; left: 0; right: 0;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="ContinueUI" class="ContinueUI">
+            <ui:Button text="CONTINUE" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ContinueButton" class="ContinueButton" />
+            <ui:Label tabindex="-1" text="CLICK TO CONTINUE" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ContinueText" class="ContinueText" />
+        </ui:VisualElement>
+        <ui:VisualElement name="FlashImage" class="Flash" />
+        <ui:VisualElement name="FadeImage" class="FadeImage" />
+    </ui:VisualElement>
+</ui:UXML>

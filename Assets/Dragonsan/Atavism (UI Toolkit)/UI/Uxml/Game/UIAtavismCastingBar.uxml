@@ -1,0 +1,21 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="Screen" picking-mode="Ignore" style="flex-grow: 1; flex-direction: column-reverse;">
+        <ui:VisualElement name="cast-progress" picking-mode="Ignore" style="flex-direction: row; align-items: center; justify-content: center; margin-bottom: 3px; position: relative; bottom: 145px;">
+            <ui:VisualElement name="icon-frame" picking-mode="Ignore" style="height: 43px; width: 43px;">
+                <ui:VisualElement name="icon-overlay" style="background-image: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/Textures/OldUI/Hud/cast_bar/elipse_frame_1.png?fileID=2800000&amp;guid=b4a35cb9d8cc1ac4eb6c08d37456903f&amp;type=3#elipse_frame_1&quot;); width: 100%; height: 100%; padding-left: 4px; padding-right: 4px; padding-top: 4px; padding-bottom: 4px;">
+                    <ui:VisualElement name="mask-icon" style="width: 100%; height: 100%; border-top-left-radius: 50%; border-bottom-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; overflow: hidden;">
+                        <ui:VisualElement name="icon" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); position: absolute; width: 100%; height: 100%; background-image: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/Textures/OldUI/Hud/MENU_CharacterPanel.png?fileID=2800000&amp;guid=ef5a496d6facd344c879515ea6406920&amp;type=3#MENU_CharacterPanel&quot;); margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="spellbar-holder" picking-mode="Ignore" style="height: 20px; width: 193px; align-items: stretch; justify-content: space-around; background-image: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/cast%20bar_bg.png?fileID=2800000&amp;guid=2b6aa102a906e0743a48fa90959af233&amp;type=3#cast bar_bg&quot;); align-self: center;">
+                <Atavism.UI.UIProgressBar name="castbar-progress" high-value="100" picking-mode="Ignore" Show-Label="false" Value="107" Container-Class="Casting-UIProgressBar__container" Background-Class="Casting-UIProgressBar__background" Progress-Bar-Class="Casting-UIProgressBar__progressBar" Title-Container-Class="Casting-UIProgressBar-title__container" Title-Class="Casting-UIProgressBar__title" value="72" style="height: 20px; max-height: 20px; min-height: 20px;">
+                    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); flex-direction: row; top: 3px; height: 14px; max-height: 14px; min-height: 14px; position: absolute;">
+                        <ui:Label display-tooltip-when-elided="true" name="spell-name" picking-mode="Ignore" class="Text-Light" style="width: 145px; display: flex; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; -unity-text-align: middle-left;" />
+                        <ui:Label text="245s" display-tooltip-when-elided="true" name="duration-label" class="Text-Light" style="width: 42px; -unity-text-align: middle-right; color: rgb(255, 255, 255); font-size: 13px; flex-grow: 1;" />
+                    </ui:VisualElement>
+                </Atavism.UI.UIProgressBar>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

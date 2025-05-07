@@ -1,0 +1,14 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Dragonsan/Atavism%20(UI%20Toolkit)/UI/Style%20Sheets/AnimationStyleSheet.uss?fileID=7433441132597879392&amp;guid=33834f33d76ea034982e520d138194d1&amp;type=3#AnimationStyleSheet" />
+    <ui:VisualElement name="Screen" picking-mode="Ignore" class="screen-center">
+        <ui:VisualElement name="queue-panel" class="queue-panel">
+            <ui:Label name="message" text="YOU ARE IN THE QUEUE" class="Text-Light queue-panel-message" />
+            <ui:Label tabindex="-1" text="11" parse-escape-sequences="true" display-tooltip-when-elided="true" name="count" class="Text-Light queue-panel-count" />
+            <ui:VisualElement name="space" class="queue-panel-space" />
+            <ui:VisualElement name="layout_buttons" class="queue-panel-buttons">
+                <ui:Button text="WORLD LIST" display-tooltip-when-elided="true" name="server-list-button" class="Button-XM Button-Dark-Overlay queue-panel-button" />
+            </ui:VisualElement>
+            <ui:VisualElement name="anim" style="flex-grow: 1; width: 40px; height: 40px; top: 126px; left: 253px; position: absolute; opacity: 1; transition-duration: 0.1s; transition-timing-function: linear;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

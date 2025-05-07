@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:VisualElement name="quest-reputation" class="quest-reputation">
+        <ui:Label tabindex="-1" text="Reputation" parse-escape-sequences="true" display-tooltip-when-elided="true" name="reputation-name" class="Text-Default reputation-name" />
+        <ui:Label tabindex="-1" text="1000000" parse-escape-sequences="true" display-tooltip-when-elided="true" name="reputation-value" class="Text-Default Text-Light reputation-value" />
+    </ui:VisualElement>
+</ui:UXML>

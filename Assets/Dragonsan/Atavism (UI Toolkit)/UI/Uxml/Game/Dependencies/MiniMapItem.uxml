@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:VisualElement name="Target" picking-mode="Ignore" style="flex-grow: 1; width: 15px; height: 15px; background-image: url(&quot;project://database/Assets/Dragonsan/UGUIMiniMap%20for%20Atavism/Content/Art/UI/Icons/Icon_Atlas.png?fileID=21300048&amp;guid=25f29d36ef82b194aa76043fbdca53c1&amp;type=3#Arrow_Player&quot;); position: absolute;">
+        <ui:VisualElement name="Circle-Area" picking-mode="Ignore" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Dragonsan/UGUIMiniMap%20for%20Atavism/Content/Art/UI/Icons/Circle-Area.psd?fileID=2800000&amp;guid=bc2a53e8123850c45b939839af095de9&amp;type=3#Circle-Area&quot;); width: 50px; height: 50px; position: absolute; top: -18px; left: -18px; align-items: center; align-self: auto;" />
+        <ui:Label tabindex="-1" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Text" picking-mode="Ignore" />
+    </ui:VisualElement>
+</ui:UXML>

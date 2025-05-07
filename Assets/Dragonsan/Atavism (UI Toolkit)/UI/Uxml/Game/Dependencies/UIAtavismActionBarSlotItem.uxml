@@ -1,0 +1,14 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="Screen" picking-mode="Ignore" style="flex-grow: 1; -unity-font: url(&apos;project://database/Assets/Dragonsan/AtavismObjects/Fonts/Cambria.ttf?fileID=12800000&amp;guid=36ef3a2444bc15847bd874b9b0c98ae6&amp;type=3#Cambria&apos;);">
+        <ui:VisualElement name="Window" style="flex-grow: 1; align-items: center; justify-content: center;">
+            <ui:VisualElement name="item-container" style="flex-grow: 1; position: absolute; width: 100%; height: 100%; align-items: center; justify-content: center; background-image: url(&apos;project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/Inventory/inventory_slot_white.png?fileID=2800000&amp;guid=21869511978121e4f9b77068f1f99499&amp;type=3#inventory_slot_white&apos;); -unity-background-scale-mode: scale-and-crop;">
+                <ui:VisualElement name="item-icon" style="align-items: center; justify-content: center; flex-grow: 0; width: 80%; height: 80%; background-image: url(&apos;project://database/Assets/Dragonsan/AtavismObjects/Scripts/UGUI/Util/Blank.png?fileID=2800000&amp;guid=e30b3ac4ede35634aa5485f12c802523&amp;type=3#Blank&apos;); position: absolute;" />
+                <ui:VisualElement name="item-hover-icon" style="position: absolute; width: 90%; height: 90%; background-image: url(&apos;project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/Actionbar/SlotAnim/ToggleIconBorder01.png?fileID=2800000&amp;guid=a6f58875d305d4c4e9893580fa08f556&amp;type=3#ToggleIconBorder01&apos;);" />
+                <ui:Label text="Label" display-tooltip-when-elided="true" name="item-label" style="position: relative; width: 80%; height: 30%; justify-content: flex-start; align-items: stretch; -unity-text-align: middle-center; font-size: 36px; bottom: auto; left: auto; top: 20%;" />
+                <ui:VisualElement name="item-cooldown" style="position: absolute; width: 80%; height: 80%; background-image: url(&apos;project://database/Assets/Dragonsan/AtavismObjects/Scripts/UGUI/Util/Blank.png?fileID=2800000&amp;guid=e30b3ac4ede35634aa5485f12c802523&amp;type=3#Blank&apos;); -unity-background-image-tint-color: rgba(0, 0, 0, 0.69);" />
+                <ui:Label text="999" display-tooltip-when-elided="true" name="item-cooldowntext" enable-rich-text="true" style="position: absolute; width: 80%; height: 80%; -unity-text-align: middle-center; font-size: 100px;" />
+                <ui:Button text="Button" display-tooltip-when-elided="true" name="item-button" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

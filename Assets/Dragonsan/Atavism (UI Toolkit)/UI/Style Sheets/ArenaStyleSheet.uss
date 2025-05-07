@@ -1,0 +1,177 @@
+.arena-entry-selected {
+    background-color: rgba(55, 55, 55, 0.32);
+}
+
+.arena-entry-require-failed {
+    color: rgb(255, 0, 0);
+}
+
+.arena-entry-hover {
+}
+
+.arena-entry__level {
+    width: 50px;
+    -unity-text-align: upper-center;
+    margin-left: 2px;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.arena-entry__name {
+    width: 190px;
+    margin-left: 2px;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.arena-entry__time {
+    width: 80px;
+    margin-left: 2px;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.arena-entry__queue {
+    flex-grow: 1;
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/OldUI/Hud/message_window/foot_bar/button_icon_AKCEPTUJ.png?fileID=2800000&guid=ebd39c771ab12ad49b6633c050bc2bb8&type=3#button_icon_AKCEPTUJ");
+    height: 20px;
+    width: 20px;
+    max-height: 20px;
+    min-height: 20px;
+    max-width: 20px;
+    min-width: 20px;
+    margin-left: 11px;
+}
+
+.arena-entry__background {
+    flex-grow: 1;
+    align-items: stretch;
+    position: relative;
+    left: 1px;
+    flex-direction: row;
+    align-self: stretch;
+    justify-content: space-around;
+    max-height: 23px;
+    min-height: 23px;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+}
+
+.arena-entry__background:hover {
+    flex-grow: 1;
+    align-items: stretch;
+    height: 23px;
+    position: relative;
+    left: 1px;
+    flex-direction: row;
+    align-self: stretch;
+    justify-content: space-around;
+    max-height: 23px;
+    min-height: 23px;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    background-color: rgba(55, 55, 55, 0.48);
+    max-width: 100%;
+}
+
+.arena-list {
+    height: 210px;
+    min-height: 210px;
+}
+
+.arena-list-header {
+    flex-grow: 1;
+    height: 22px;
+    flex-direction: row;
+    max-height: 22px;
+    min-height: 22px;
+    align-items: center;
+}
+
+.arena-list-header__level {
+    height: 20px;
+    width: 50px;
+    -unity-text-align: middle-center;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    max-height: 20px;
+    min-height: 20px;
+    margin-left: 0;
+}
+
+.arena-list-header__queue {
+    height: 20px;
+    width: 56px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-height: 20px;
+    min-height: 20px;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    -unity-text-align: middle-right;
+}
+
+.arena-list-header__time {
+    width: 70px;
+    height: 20px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-height: 20px;
+    min-height: 20px;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    -unity-text-align: middle-center;
+}
+
+.arena-list-header__name {
+    width: 190px;
+    height: 20px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-height: 20px;
+    min-height: 20px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    -unity-text-align: middle-left;
+}
+
+.arena-buttons {
+    flex-grow: 1;
+    visibility: visible;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    align-self: stretch;
+}

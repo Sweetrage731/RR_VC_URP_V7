@@ -1,0 +1,31 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:Template name="panel_AtavismWindow" src="project://database/Assets/Dragonsan/Atavism%20(UI%20Toolkit)/UI/Library/panel_AtavismWindow.uxml?fileID=9197481963319205126&amp;guid=f96775ae845b40f4b90c8a7cdb68c513&amp;type=3#panel_AtavismWindow" />
+    <ui:VisualElement name="Screen" picking-mode="Ignore" style="flex-grow: 1;">
+        <ui:Instance template="panel_AtavismWindow" name="SkillWindow" style="width: 312px; height: 400px;">
+            <AttributeOverrides element-name="Window-title" text="ABILITIES" />
+            <ui:VisualElement name="inner-panel" class="inner-panel" style="flex-grow: 1; height: auto; margin-top: 63px;">
+                <Atavism.UI.UIButtonToggleGroup item-Class-Name="skill-tab-button" selected-item-Class-Name="skill-tab-button__selected" name="menu" Items="SKILLS,CRAFT,GATHER" Default-Item-Index="0" class="skill-menu" />
+                <ui:VisualElement name="skill-tab" style="flex-grow: 1;">
+                    <ui:VisualElement name="skill-info" style="flex-grow: 1; height: 40px; flex-direction: column; max-height: 40px; min-height: 40px;">
+                        <ui:VisualElement name="info" style="flex-grow: 1; flex-direction: row; margin-right: 4px; margin-left: 4px;">
+                            <ui:Label tabindex="-1" text="Skill name" parse-escape-sequences="true" display-tooltip-when-elided="true" name="skill-name" class="Text-Gray" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; height: 19px; max-height: 19px; min-height: 19px; -unity-text-align: middle-left; width: 185px;" />
+                            <ui:VisualElement style="flex-grow: 1; flex-direction: row; height: 20px; max-height: 20px; min-height: 20px; align-items: center;">
+                                <ui:Label tabindex="-1" text="Level: " parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; -unity-text-align: middle-left;" />
+                                <ui:Label tabindex="-1" text="1000/1000" parse-escape-sequences="true" display-tooltip-when-elided="true" name="skill-level" class="Text-Gray" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; width: 68px; -unity-text-align: middle-left;" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <Atavism.UI.UIProgressBar Container-Class="skill-UIProgressBar__container" Background-Class="skill-UIProgressBar__background" Progress-Bar-Class="skill-UIProgressBar__progressBar" Title-Container-Class="skill-UIProgressBar-title__container" Title-Class="skill-UIProgressBar__title" Value="15" Show-Label="true" focusable="false" name="progress" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="VisualElement" style="flex-grow: 1; height: 86px; flex-direction: row; margin-bottom: 5px;">
+                        <ui:ListView name="skill-list" virtualization-method="DynamicHeight" selection-type="None" style="width: 40px; margin-left: 4px;" />
+                        <ui:VisualElement class="spacer-vertical-img" style="flex-grow: 1; width: 2px; max-width: 2px;" />
+                        <ui:ListView name="ability-list" virtualization-method="DynamicHeight" selection-type="None" style="width: 256px;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="other-tab" style="flex-grow: 1; display: none;">
+                    <ui:ListView name="crafting-list" virtualization-method="DynamicHeight" style="flex-grow: 1; display: flex;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:Instance>
+    </ui:VisualElement>
+</ui:UXML>

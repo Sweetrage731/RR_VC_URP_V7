@@ -1,0 +1,14 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:VisualElement name="currency-panel" class="currency-panel-container" style="flex-direction: row-reverse; align-items: center; align-self: flex-end;">
+        <ui:VisualElement name="currency-icon1" class="currency-panel-icon" style="flex-direction: row-reverse;" />
+        <ui:Label tabindex="-1" text="99" parse-escape-sequences="true" display-tooltip-when-elided="true" name="currency-value1" class="Text-Default currency-panel-value" />
+        <ui:VisualElement name="currency-icon2" class="currency-panel-icon" />
+        <ui:Label tabindex="-1" text="99" parse-escape-sequences="true" display-tooltip-when-elided="true" name="currency-value2" class="Text-Default currency-panel-value" />
+        <ui:VisualElement name="currency-icon3" class="currency-panel-icon" />
+        <ui:Label tabindex="-1" text="99" parse-escape-sequences="true" display-tooltip-when-elided="true" name="currency-value3" class="Text-Default currency-panel-value" />
+        <ui:VisualElement name="currency-icon4" class="currency-panel-icon" />
+        <ui:Label tabindex="-1" text="99" parse-escape-sequences="true" display-tooltip-when-elided="true" name="currency-value4" class="Text-Default currency-panel-value" />
+        <ui:VisualElement name="currency-icon5" class="currency-panel-icon" />
+        <ui:Label tabindex="-1" text="99" parse-escape-sequences="true" display-tooltip-when-elided="true" name="currency-value5" class="Text-Default currency-panel-value" />
+    </ui:VisualElement>
+</ui:UXML>

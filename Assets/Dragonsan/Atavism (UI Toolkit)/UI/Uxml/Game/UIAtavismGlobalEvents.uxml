@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:VisualElement name="Screen" picking-mode="Ignore" style="flex-grow: 1;">
+        <ui:VisualElement name="global-events-panel" class="global-events-panel" style="top: 150px;">
+            <ui:VisualElement name="grid" class="global-events-grid" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

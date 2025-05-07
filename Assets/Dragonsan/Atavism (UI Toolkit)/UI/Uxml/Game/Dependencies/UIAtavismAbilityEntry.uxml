@@ -1,0 +1,13 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:VisualElement name="ability" class="ability-entry">
+        <ui:VisualElement class="ability-entry-left">
+            <ui:VisualElement name="slot" class="ability-entry-slot" style="flex-grow: 1; margin-top: 7px; margin-right: 7px; margin-bottom: 7px; margin-left: 7px;">
+                <ui:VisualElement name="icon" class="ability-entry-slot-icon" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement class="ability-entry-labels">
+            <ui:Label tabindex="-1" text="Spell Name" parse-escape-sequences="true" display-tooltip-when-elided="true" name="name" picking-mode="Ignore" class="Text-Gray ability-entry-name" />
+            <ui:Label tabindex="-1" text="Description" parse-escape-sequences="true" display-tooltip-when-elided="true" name="description" picking-mode="Ignore" class="Text-Dark ability-entry-description" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,48 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:Template name="UIAtavismGeneralSettings" src="project://database/Assets/Dragonsan/Atavism%20(UI%20Toolkit)/UI/Uxml/Game/UIAtavismGeneralSettings.uxml?fileID=9197481963319205126&amp;guid=f3a58ca9a4866eb43aa7bceb9759510d&amp;type=3#UIAtavismGeneralSettings" />
+    <ui:Template name="UIMusicSettings" src="project://database/Assets/Dragonsan/Atavism%20(UI%20Toolkit)/UI/Uxml/Game/UIMusicSettings.uxml?fileID=9197481963319205126&amp;guid=e489bd21dd3bb1248ad1a9e05b9718e2&amp;type=3#UIMusicSettings" />
+    <ui:Template name="UIAtavismGraphicSettings" src="project://database/Assets/Dragonsan/Atavism%20(UI%20Toolkit)/UI/Uxml/Game/UIAtavismGraphicSettings.uxml?fileID=9197481963319205126&amp;guid=afb7e10cb52208244b09999398fa20bf&amp;type=3#UIAtavismGraphicSettings" />
+    <ui:Template name="UIAtavismControllSettings" src="project://database/Assets/Dragonsan/Atavism%20(UI%20Toolkit)/UI/Uxml/Game/UIAtavismControllSettings.uxml?fileID=9197481963319205126&amp;guid=37d4b090d5328204ab6b5ea7bee5528f&amp;type=3#UIAtavismControllSettings" />
+    <ui:VisualElement name="Screen" picking-mode="Ignore" style="flex-grow: 1;">
+        <ui:VisualElement name="Settings" style="flex-grow: 1;">
+            <ui:VisualElement style="flex-grow: 1; width: 750px; background-image: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/menu_bg_2.png?fileID=2800000&amp;guid=c87996a1c298352409c515855f711eeb&amp;type=3#menu_bg_2&quot;); flex-direction: row-reverse;">
+                <ui:VisualElement style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/border3.png?fileID=2800000&amp;guid=5818295440842cd488837ea23ec8cb5f&amp;type=3#border3&quot;); width: 26px; max-width: 26px; min-width: 26px;">
+                    <ui:VisualElement picking-mode="Ignore" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/menu_bg_glow.png?fileID=2800000&amp;guid=000bdd8580798ef4fa60054be0a84b4b&amp;type=3#menu_bg_glow&quot;); width: 163px; right: 158px; display: none;" />
+                    <ui:VisualElement picking-mode="Ignore" style="flex-grow: 1; align-self: stretch; align-items: center; justify-content: center; position: absolute; height: 31px; width: 30px; top: 50%; left: -5px; background-image: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/autocut/UI_01__crystal.png?fileID=2800000&amp;guid=4f6de124f7761264b81662caec72d45e&amp;type=3#UI_01__crystal&quot;); transform-origin: bottom; translate: 0 -12px;" />
+                </ui:VisualElement>
+                <ui:VisualElement style="flex-grow: 1;">
+                    <ui:Label tabindex="-1" text="SETTINGS" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Light" style="font-size: 28px; -unity-text-align: upper-left; -unity-font: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/Fonts/Assassin$.ttf?fileID=12800000&amp;guid=505efa8c2cf85954780092e5eb269cc7&amp;type=3#Assassin$&quot;); margin-left: 35px; margin-top: 20px; margin-bottom: 20px;" />
+                    <ui:VisualElement name="menu" style="flex-grow: 1; flex-direction: row; justify-content: space-between; background-image: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/menu_bg.png?fileID=2800000&amp;guid=439c2fa62227dee4aa0641f2b809a943&amp;type=3#menu_bg&quot;); height: 61px; max-height: 61px; min-height: 61px; align-items: flex-end; align-self: auto;">
+                        <Atavism.UI.UIButtonToggleGroup item-Class-Name="settings-main-tab-button" selected-item-Class-Name="settings-main-tab-button__selected" Items="GENERAL,SOUNDS,GRAPHICS,CONTROLS" Default-Item-Index="0" name="tab-menu" class="settings-main-menu" />
+                        <ui:Button text="RETURN" parse-escape-sequences="true" display-tooltip-when-elided="true" name="return-button" class="Button-Light-Overlay Button-XL" style="-unity-font-style: bold; font-size: 16px;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="tabs" style="flex-grow: 1; height: auto; max-height: none; align-items: center;">
+                        <ui:VisualElement name="tab-general" style="flex-grow: 1; width: 95%; display: none;">
+                            <ui:Label tabindex="-1" text="General" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Title" class="Text-Light" style="font-size: 20px; -unity-text-align: middle-left; -unity-font-style: bold;" />
+                            <ui:ScrollView mouse-wheel-scroll-size="18" scroll-deceleration-rate="0,135" elasticity="0,1">
+                                <ui:Instance template="UIAtavismGeneralSettings" name="UIAtavismGeneralSettings" />
+                            </ui:ScrollView>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="tab-sounds" style="flex-grow: 1; width: 95%; display: none;">
+                            <ui:Label tabindex="-1" text="Sounds" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Title" class="Text-Light" style="font-size: 20px; -unity-text-align: middle-left; -unity-font-style: bold;" />
+                            <ui:ScrollView mouse-wheel-scroll-size="18" scroll-deceleration-rate="0,135" elasticity="0,1" style="display: none;" />
+                            <ui:Instance template="UIMusicSettings" name="UIMusicSettings" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="tab-graphic" style="flex-grow: 1; width: 95%; display: flex;">
+                            <ui:Label tabindex="-1" text="Display" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Title" class="Text-Light" style="font-size: 20px; -unity-text-align: middle-left; -unity-font-style: bold;" />
+                            <ui:ScrollView mouse-wheel-scroll-size="18" scroll-deceleration-rate="0,135" elasticity="0,1" style="flex-grow: 1; justify-content: space-around;">
+                                <ui:Instance template="UIAtavismGraphicSettings" name="UIAtavismGraphicSettings" />
+                            </ui:ScrollView>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="tab-control" style="flex-grow: 1; width: 95%; display: none;">
+                            <ui:Label tabindex="-1" text="Controls" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Title" class="Text-Light" style="font-size: 20px; -unity-text-align: middle-left; -unity-font-style: bold;" />
+                            <ui:ScrollView mouse-wheel-scroll-size="18" scroll-deceleration-rate="0,135" elasticity="0,1">
+                                <ui:Instance template="UIAtavismControllSettings" name="UIAtavismControllSettings" />
+                            </ui:ScrollView>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

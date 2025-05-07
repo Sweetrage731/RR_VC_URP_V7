@@ -1,0 +1,109 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="panel_AtavismWindow" src="project://database/Assets/Dragonsan/Atavism%20(UI%20Toolkit)/UI/Library/panel_AtavismWindow.uxml?fileID=9197481963319205126&amp;guid=f96775ae845b40f4b90c8a7cdb68c513&amp;type=3#panel_AtavismWindow" />
+    <ui:Template name="UIAtavismSlotItem 1" src="project://database/Assets/Dragonsan/Atavism%20(UI%20Toolkit)/UI/Uxml/Game/Dependencies/UIAtavismSlotItemDisplay.uxml?fileID=9197481963319205126&amp;guid=91f585ddcd6061441a6e3188ccc65411&amp;type=3#UIAtavismSlotItemDisplay" />
+    <ui:VisualElement name="Screen" picking-mode="Ignore">
+        <ui:Instance template="panel_AtavismWindow" name="crafting-book-panel" style="width: 900px; height: 750px;">
+            <AttributeOverrides element-name="Window-title" text="CRAFTING" />
+            <ui:VisualElement name="inner-panel" style="margin-top: 66px; margin-right: 5px; margin-left: 4px; height: 680px; flex-direction: row;">
+                <ui:VisualElement name="left-panel" style="flex-grow: 1; width: 426px; height: 680px;">
+                    <ui:VisualElement style="flex-grow: 1; flex-direction: row; height: 30px; max-height: 30px; min-height: 30px; align-self: stretch; align-items: center; justify-content: space-around;">
+                        <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="station-name" class="Text-Light" style="width: 250px; bottom: 0; -unity-text-align: middle-left;" />
+                        <Atavism.UI.UIDropdown name="skills-dropdown" Popup-Options=" " style="width: 160px;" />
+                    </ui:VisualElement>
+                    <Atavism.UI.UIProgressBar Container-Class="Guild-UIProgressBar__container" Background-Class="Guild-UIProgressBar__background" Progress-Bar-Class="Guild-UIProgressBar__progressBar" Title-Container-Class="Guild-UIProgressBar-title__container" Title-Class="Guild-UIProgressBar__title" Value="55" value="0" focusable="false" Show-Label="false" name="skill-level-bar" style="height: 18px;" />
+                    <ui:VisualElement name="top-bar" style="flex-grow: 1; flex-direction: row; height: 24px; max-height: 24px; min-height: 24px; background-image: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/arena_score_team_header%201.png?fileID=2800000&amp;guid=81c8ed3be6f87ff4ab4ef58e3be2f251&amp;type=3#arena_score_team_header 1&quot;);">
+                        <ui:Label tabindex="-1" text="Name" parse-escape-sequences="true" display-tooltip-when-elided="true" name="name-label" class="Text-Gray" style="width: 220px; margin-left: 62px; -unity-text-align: middle-left;" />
+                        <ui:Label tabindex="-1" text="Level" parse-escape-sequences="true" display-tooltip-when-elided="true" name="level-label" class="Text-Gray" style="width: 35px; -unity-text-align: middle-center;" />
+                        <ui:Label tabindex="-1" text="Status" parse-escape-sequences="true" display-tooltip-when-elided="true" name="status-label" class="Text-Gray" style="width: 91px; -unity-text-align: middle-center;" />
+                    </ui:VisualElement>
+                    <ui:ListView name="recipe-list" virtualization-method="DynamicHeight" style="height: 566px; min-height: 566px;" />
+                    <ui:VisualElement style="flex-grow: 1; height: 30px; max-height: 30px; min-height: 30px; flex-direction: row; justify-content: space-between;">
+                        <ui:Toggle label="Only available" name="toggle-only-available" class="Toggle-Default" style="height: 25px; max-height: 25px; min-height: 25px;" />
+                        <ui:Toggle label="Only from Backpack" name="toggle-only-backpack" class="Toggle-Default" style="height: 25px; max-height: 25px; min-height: 25px;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement style="flex-grow: 0; background-image: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/spacer_vertical.png?fileID=2800000&amp;guid=66f23171ac7a0ab4391b1b0df32a3045&amp;type=3#spacer_vertical&quot;); width: 2px;" />
+                <ui:VisualElement name="right-panel" style="flex-grow: 1; width: 426px; min-height: 677px;">
+                    <ui:VisualElement name="element-to-hide" style="flex-grow: 1; display: flex; visibility: visible;">
+                        <ui:Label tabindex="-1" text="Required Items" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" />
+                        <ui:VisualElement name="require-items-grid" style="flex-grow: 1; flex-direction: row; flex-wrap: wrap; height: 138px; max-height: 138px; min-height: 138px; align-self: auto; align-items: flex-start;">
+                            <ui:Instance template="UIAtavismSlotItem 1" name="UIAtavismSlotItem 1" />
+                            <ui:Instance template="UIAtavismSlotItem 1" name="UIAtavismSlotItem 1" style="height: 65px; max-height: 65px;" />
+                            <ui:Instance template="UIAtavismSlotItem 1" name="UIAtavismSlotItem 1" style="height: 65px; max-height: 65px;" />
+                            <ui:Instance template="UIAtavismSlotItem 1" name="UIAtavismSlotItem 1" style="height: 65px; max-height: 65px;" />
+                            <ui:Instance template="UIAtavismSlotItem 1" name="UIAtavismSlotItem 1" style="height: 65px; max-height: 65px;" />
+                            <ui:Instance template="UIAtavismSlotItem 1" name="UIAtavismSlotItem 1" style="height: 65px; max-height: 65px;" />
+                            <ui:Instance template="UIAtavismSlotItem 1" name="UIAtavismSlotItem 1" style="height: 65px; max-height: 65px;" />
+                            <ui:Instance template="UIAtavismSlotItem 1" name="UIAtavismSlotItem 1" style="height: 65px; max-height: 65px;" />
+                            <ui:Instance template="UIAtavismSlotItem 1" name="UIAtavismSlotItem 1" style="height: 65px; max-height: 65px;" />
+                            <ui:Instance template="UIAtavismSlotItem 1" name="UIAtavismSlotItem 1" style="height: 65px; max-height: 65px;" />
+                            <ui:Instance template="UIAtavismSlotItem 1" name="UIAtavismSlotItem 1" style="height: 65px; max-height: 65px;" />
+                            <ui:Instance template="UIAtavismSlotItem 1" name="UIAtavismSlotItem 1" style="height: 65px; max-height: 65px;" />
+                            <ui:Instance template="UIAtavismSlotItem 1" name="UIAtavismSlotItem 1" style="height: 65px; max-height: 65px;" />
+                            <ui:Instance template="UIAtavismSlotItem 1" name="UIAtavismSlotItem 1" style="height: 65px; max-height: 65px;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="scace" class="spacer-img" style="flex-grow: 1;" />
+                        <ui:Label tabindex="-1" text="Posible craft" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" />
+                        <ui:Label tabindex="-1" text="Chance" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" style="left: 20px;" />
+                        <ui:VisualElement style="flex-grow: 1; height: 70px; max-height: 70px; width: auto; flex-direction: row;">
+                            <ui:VisualElement style="flex-grow: 1; align-self: center; width: 50px;">
+                                <ui:Label tabindex="-1" text="Highest" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" style="left: 20px;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="highest-grid" style="flex-grow: 1; flex-direction: row;">
+                                <ui:Instance template="UIAtavismSlotItem 1" style="height: 65px; max-height: 65px;" />
+                                <ui:Instance template="UIAtavismSlotItem 1" style="height: 65px; max-height: 65px;" />
+                                <ui:Instance template="UIAtavismSlotItem 1" style="height: 65px; max-height: 65px;" />
+                                <ui:Instance template="UIAtavismSlotItem 1" style="height: 65px; max-height: 65px;" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement style="flex-grow: 1; height: 70px; max-height: 70px; width: auto; flex-direction: row;">
+                            <ui:VisualElement style="flex-grow: 1; align-self: center; width: 50px;">
+                                <ui:Label tabindex="-1" text="High" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" style="left: 20px;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="high-grid" style="flex-grow: 1; flex-direction: row;">
+                                <ui:Instance template="UIAtavismSlotItem 1" style="height: 65px; max-height: 65px;" />
+                                <ui:Instance template="UIAtavismSlotItem 1" style="height: 65px; max-height: 65px;" />
+                                <ui:Instance template="UIAtavismSlotItem 1" style="height: 65px; max-height: 65px;" />
+                                <ui:Instance template="UIAtavismSlotItem 1" style="height: 65px; max-height: 65px;" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement style="flex-grow: 1; height: 70px; max-height: 70px; width: auto; flex-direction: row;">
+                            <ui:VisualElement style="flex-grow: 1; align-self: center; width: 50px;">
+                                <ui:Label tabindex="-1" text="Low" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" style="left: 20px;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="low-grid" style="flex-grow: 1; flex-direction: row;">
+                                <ui:Instance template="UIAtavismSlotItem 1" style="height: 65px; max-height: 65px;" />
+                                <ui:Instance template="UIAtavismSlotItem 1" style="height: 65px; max-height: 65px;" />
+                                <ui:Instance template="UIAtavismSlotItem 1" style="height: 65px; max-height: 65px;" />
+                                <ui:Instance template="UIAtavismSlotItem 1" style="height: 65px; max-height: 65px;" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement style="flex-grow: 1; height: 70px; max-height: 70px; width: auto; flex-direction: row;">
+                            <ui:VisualElement style="flex-grow: 1; align-self: center; width: 50px;">
+                                <ui:Label tabindex="-1" text="Lowest" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" style="left: 20px;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="lowest-grid" style="flex-grow: 1; flex-direction: row;">
+                                <ui:Instance template="UIAtavismSlotItem 1" style="height: 65px; max-height: 65px;" />
+                                <ui:Instance template="UIAtavismSlotItem 1" style="height: 65px; max-height: 65px;" />
+                                <ui:Instance template="UIAtavismSlotItem 1" style="height: 65px; max-height: 65px;" />
+                                <ui:Instance template="UIAtavismSlotItem 1" style="height: 65px; max-height: 65px;" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="scace" class="spacer-img" style="flex-grow: 1; margin-top: 6px; margin-right: 6px; margin-bottom: 6px; margin-left: 6px;" />
+                    <ui:VisualElement style="flex-grow: 1; flex-direction: row; align-self: center; justify-content: center; align-items: center; height: 60px;">
+                        <ui:Button text="&lt;&lt;" parse-escape-sequences="true" display-tooltip-when-elided="true" name="min-button" class="Text-Light Button-XVS" style="justify-content: space-around; overflow: visible; bottom: 0; margin-top: 20px; margin-bottom: 20px;" />
+                        <ui:Button text="&lt;" parse-escape-sequences="true" display-tooltip-when-elided="true" name="decrease-button" class="Text-Light Button-XVS" style="bottom: 0; margin-top: 20px; margin-bottom: 20px;" />
+                        <Atavism.UI.UITextField value="1" name="crafting-count-textfield" style="width: 50px; height: 30px; margin-bottom: 2px;" />
+                        <ui:Button text="&gt;" parse-escape-sequences="true" display-tooltip-when-elided="true" name="increase-button" class="Text-Light Button-XVS" style="bottom: 0; margin-bottom: 20px; margin-top: 20px;" />
+                        <ui:Button text="&gt;&gt;" parse-escape-sequences="true" display-tooltip-when-elided="true" name="max-button" class="Text-Light Button-XVS" style="bottom: 0; margin-top: 20px; margin-bottom: 20px;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="scace" class="spacer-img" style="flex-grow: 1; margin-top: -3px; margin-right: -3px; margin-bottom: -3px; margin-left: -3px;" />
+                    <ui:VisualElement name="button-panel" style="flex-grow: 1; height: 100px; max-height: 100px; min-height: 75px; flex-direction: row-reverse; align-self: center; align-items: center;">
+                        <ui:Button text="CRAFT" parse-escape-sequences="true" display-tooltip-when-elided="true" name="craft-button" class="Button-XL Text-Light" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:Instance>
+    </ui:VisualElement>
+</ui:UXML>

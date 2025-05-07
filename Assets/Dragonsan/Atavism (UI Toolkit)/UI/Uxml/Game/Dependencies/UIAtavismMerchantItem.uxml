@@ -1,0 +1,17 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="UIAtavismCurrencyPanel" src="project://database/Assets/Atavism%20(UI%20Toolkit)/UI/Screens/Game/Dependencies/UIAtavismCurrencyPanel.uxml?fileID=9197481963319205126&amp;guid=92cceebc890f7f84987b5bae2ddcaf64&amp;type=3#UIAtavismCurrencyPanel" />
+    <ui:VisualElement name="merchant-item" class="merchant-item">
+        <ui:VisualElement name="left-panel" class="merchant-item-icon-bacground">
+            <ui:VisualElement name="quality-icon" class="merchant-item-quality-icon">
+                <ui:VisualElement name="item-icon" class="merchant-item-icon">
+                    <ui:Label display-tooltip-when-elided="true" name="count-label" class="merchant-item-count" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="right-panel" class="merchant-item-right-panel">
+            <ui:Label text="Item Name" display-tooltip-when-elided="true" name="item-name" class="merchant-item-name" />
+            <ui:Label tabindex="-1" text="Learned" parse-escape-sequences="true" display-tooltip-when-elided="true" name="thught" class="merchant-item-thught" />
+            <ui:Instance template="UIAtavismCurrencyPanel" name="currency" class="merchant-item-currency" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

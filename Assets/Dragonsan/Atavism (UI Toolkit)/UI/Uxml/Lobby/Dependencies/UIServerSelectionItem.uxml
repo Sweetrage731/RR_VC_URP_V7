@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="server-item" style="flex-direction: row;">
+        <ui:Button display-tooltip-when-elided="true" name="server-item" style="border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; border-top-left-radius: 0; border-bottom-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0; height: 40px; width: 100%; margin-left: 0; margin-right: 0; padding-left: 0; padding-right: 0; flex-direction: row;">
+            <ui:Label text="Name" display-tooltip-when-elided="true" name="server-name" style="left: 0; width: 33.3%;" />
+            <ui:Label text="Type" display-tooltip-when-elided="true" name="server-type" style="width: 33.3%;" />
+            <ui:Label text="Population" display-tooltip-when-elided="true" name="server-population" style="width: 33.3%;" />
+        </ui:Button>
+    </ui:VisualElement>
+</ui:UXML>

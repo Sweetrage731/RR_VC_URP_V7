@@ -1,0 +1,14 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:VisualElement name="currency-inputs" class="currency-inputs">
+        <Atavism.UI.UITextField value="99999" name="currency-input-1" keyboard-type="NumberPad" Only-Numbers="true" class="currency-inputs--input1" />
+        <ui:VisualElement name="currency-icon-1" class="currency-inputs-icon" />
+        <Atavism.UI.UITextField value="99" name="currency-input-2" keyboard-type="NumberPad" max-length="2" Only-Numbers="true" class="currency-inputs--input2" />
+        <ui:VisualElement name="currency-icon-2" class="currency-inputs-icon" />
+        <Atavism.UI.UITextField value="99" name="currency-input-3" keyboard-type="NumberPad" max-length="2" Only-Numbers="true" class="currency-inputs--input2" />
+        <ui:VisualElement name="currency-icon-3" class="currency-inputs-icon" />
+        <Atavism.UI.UITextField value="99" name="currency-input-4" keyboard-type="NumberPad" max-length="2" Only-Numbers="true" class="currency-inputs--input2" />
+        <ui:VisualElement name="currency-icon-4" class="currency-inputs-icon" />
+        <Atavism.UI.UITextField value="99" name="currency-input-5" keyboard-type="NumberPad" max-length="2" Only-Numbers="true" class="currency-inputs--input2" />
+        <ui:VisualElement name="currency-icon-5" class="currency-inputs-icon" />
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,53 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:Template name="UIPortraitEffectTemplateSmall" src="project://database/Assets/Dragonsan/Atavism%20(UI%20Toolkit)/UI/Uxml/Game/PortraitsScreen/UIPortraitEffectTemplateSmall.uxml?fileID=9197481963319205126&amp;guid=9dcbc2a40cb832f42bd70b85a1391bcb&amp;type=3#UIPortraitEffectTemplateSmall" />
+    <Style src="project://database/Assets/Dragonsan/Atavism%20(UI%20Toolkit)/UI/Style%20Sheets/AtavismPotraitStyleSheet.uss?fileID=7433441132597879392&amp;guid=2b5cbe622531b41499dc3cb4a045f7e1&amp;type=3#AtavismPotraitStyleSheet" />
+    <ui:VisualElement name="group-member-container" picking-mode="Ignore" style="height: 87px; flex-direction: column; justify-content: flex-start; flex-shrink: 0; flex-grow: 1; display: flex; margin-top: 0; margin-bottom: 25px;">
+        <ui:VisualElement name="top" picking-mode="Ignore" style="height: 100%; flex-direction: row-reverse; justify-content: flex-start; flex-shrink: 0; width: 360px;">
+            <ui:VisualElement name="right" style="width: 100%; height: 100%; padding-top: 0; padding-bottom: 0; justify-content: center; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0;">
+                <ui:VisualElement name="title-container" style="flex-shrink: 0; height: 14px; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;">
+                    <ui:Label text="Group Member Name" display-tooltip-when-elided="true" name="Title" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; color: rgb(243, 236, 217);" />
+                </ui:VisualElement>
+                <ui:VisualElement name="bars-container" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: -30px; margin-right: 0; margin-top: 0; margin-bottom: 0; width: 100%; flex-shrink: 0;">
+                    <Atavism.UI.Game.UIAtavismVitalityStatProgressBar focusable="true" name="Health" Value="50" high-value="100" title="khkh" Foreground-Color="#FF0000FF" Vitality-Stat-Name="health" Container-Class="Player-Bar__container" Background-Class="Player-Bar__background" Progress-Bar-Class="Player-Bar__progressBar" Title-Container-Class="Player-Bar-title__container" Title-Class="Player-Bar__title" style="height: 30px; width: 100%; margin-bottom: -8px;" />
+                    <Atavism.UI.Game.UIAtavismVitalityStatProgressBar focusable="true" name="Mana" Value="50" high-value="100" title="khkh" Foreground-Color="#6DC2FFFF" Vitality-Stat-Name="mana" Container-Class="Player-Bar__container" Background-Class="Player-Bar__background" Progress-Bar-Class="Player-Bar__progressBar" Title-Container-Class="Player-Bar-title__container" Title-Class="Player-Bar__title" style="height: 30px; width: 97%; margin-left: 0; margin-right: 0; margin-top: 1px; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="left" style="height: 100%; width: 143px; overflow: visible;">
+                <ui:VisualElement name="leader-icon" picking-mode="Ignore" style="flex-grow: 1; position: absolute; background-image: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/Avatar/avatar_group_lider.png?fileID=2800000&amp;guid=b086fdefef91ba44d9b48790293c6b06&amp;type=3#avatar_group_lider&quot;); width: 71px; height: 34px; top: -8px; left: 9px;" />
+                <ui:VisualElement name="icon-frame" picking-mode="Ignore" style="background-image: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/Avatar/avatar_bg.png?fileID=21300000&amp;guid=ee7aa16dd150f004eb5296dd0d5d791a&amp;type=3#avatar_bg&quot;); -unity-background-scale-mode: scale-and-crop; align-items: center; justify-content: center; width: 90px; height: 90px; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; overflow: hidden; max-width: 90px; max-height: 90px; min-width: 90px;">
+                    <ui:VisualElement name="Icon-mask" class="Portrait-group-avatar-mask" style="border-top-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; border-bottom-left-radius: 50%; width: 66px; height: 66px; max-width: 66px; min-width: 66px; min-height: 66px;">
+                        <ui:VisualElement name="Icon" class="Portrait-group-avatar" style="width: 87px;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="level-container" style="width: 0; height: 0; justify-content: center; align-items: flex-start;">
+                        <ui:VisualElement name="level-frame" style="align-items: center; justify-content: center; width: 32px; height: 32px; background-image: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/Avatar/avatar_level_bg.png?fileID=21300000&amp;guid=e7280fdc279f2a948882320751b70714&amp;type=3#avatar_level_bg&quot;); min-width: 32px; min-height: 32px;">
+                            <ui:Label text="99" display-tooltip-when-elided="true" name="Level" style="flex-grow: 1; flex-shrink: 1; width: 100%; height: 100%; font-size: 12px; -unity-text-align: middle-center; color: rgb(194, 180, 160); margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="bottom" picking-mode="Ignore" style="height: 28px; padding-left: 70px; margin-top: 8px;">
+            <ui:VisualElement name="Effects-container" picking-mode="Ignore" style="width: 100%; height: 100%; justify-content: flex-start; flex-direction: row;">
+                <ui:Instance template="UIPortraitEffectTemplateSmall" name="Effect-1" style="flex-shrink: 0;" />
+                <ui:Instance template="UIPortraitEffectTemplateSmall" name="Effect-2" style="flex-shrink: 0;" />
+                <ui:Instance template="UIPortraitEffectTemplateSmall" name="Effect-3" style="flex-shrink: 0;" />
+                <ui:Instance template="UIPortraitEffectTemplateSmall" name="Effect-4" style="flex-shrink: 0;" />
+                <ui:Instance template="UIPortraitEffectTemplateSmall" name="Effect-5" style="flex-shrink: 0;" />
+                <ui:Instance template="UIPortraitEffectTemplateSmall" name="Effect-6" style="flex-shrink: 0;" />
+                <ui:Instance template="UIPortraitEffectTemplateSmall" name="Effect-7" style="flex-shrink: 0;" />
+                <ui:Instance template="UIPortraitEffectTemplateSmall" name="Effect-8" style="flex-shrink: 0;" />
+                <ui:Instance template="UIPortraitEffectTemplateSmall" name="Effect-9" style="flex-shrink: 0;" />
+                <ui:Instance template="UIPortraitEffectTemplateSmall" name="Effect-10" style="flex-shrink: 0;" />
+                <ui:Instance template="UIPortraitEffectTemplateSmall" name="Effect-11" style="flex-shrink: 0;" />
+                <ui:Instance template="UIPortraitEffectTemplateSmall" name="Effect-12" style="flex-shrink: 0;" />
+                <ui:Instance template="UIPortraitEffectTemplateSmall" name="Effect-13" style="flex-shrink: 0;" />
+                <ui:Instance template="UIPortraitEffectTemplateSmall" name="Effect-14" style="flex-shrink: 0;" />
+                <ui:Instance template="UIPortraitEffectTemplateSmall" name="Effect-15" style="flex-shrink: 0;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="Popup-panel" class="Portrait-popup-panel" style="position: absolute; top: 0; left: 0; background-image: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/window_bg99.png?fileID=21300000&amp;guid=eacf47a0fa20c984a996e8870552147f&amp;type=3#window_bg99&quot;); flex-grow: 1; width: 200px; padding-left: 4px; padding-right: 4px; padding-top: 4px; padding-bottom: 6px; display: none;">
+            <ui:Button text="Promote to Leader" display-tooltip-when-elided="true" name="Promote" class="Portrait-popup-panel-button" />
+            <ui:Button text="Kick" display-tooltip-when-elided="true" name="Kick" class="Portrait-popup-panel-button" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

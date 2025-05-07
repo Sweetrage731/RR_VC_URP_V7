@@ -1,0 +1,14 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="loot-item" style="flex-direction: row; height: 60px; background-image: url(&apos;project://database/Assets/Dragonsan/AtavismObjects/Textures/OldUI/Hud/trade/frames_active/object_frame.png?fileID=2800000&amp;guid=82d29c40f08109448a0d32e476893447&amp;type=3#object_frame&apos;); -unity-font: url(&apos;project://database/Assets/Dragonsan/AtavismObjects/Fonts/Cambria.ttf?fileID=12800000&amp;guid=36ef3a2444bc15847bd874b9b0c98ae6&amp;type=3#Cambria&apos;); -unity-font-definition: url(&apos;project://database/Assets/Atavism%20(UI%20Toolkit)/UI/Fonts/Cambria%20SDF.asset?fileID=11400000&amp;guid=171debed56e16fd4daf65623c92ecac2&amp;type=2#Cambria SDF&apos;);">
+        <ui:VisualElement name="left-panel" style="width: auto;">
+            <ui:VisualElement name="quality-icon" style="background-image: url(&apos;project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/Inventory/invenory_slot.png?fileID=2800000&amp;guid=598da58c652569946a5db5644295ac6b&amp;type=3#invenory_slot&apos;); width: 60px; height: 60px;">
+                <ui:VisualElement name="item-icon" style="flex-grow: 1; border-left-width: 6px; border-right-width: 6px; border-top-width: 6px; border-bottom-width: 6px; -unity-text-align: upper-center; flex-direction: column-reverse;">
+                    <ui:Label display-tooltip-when-elided="true" name="count-label" style="flex-direction: column;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="right-panel" style="width: auto; flex-grow: 1;">
+            <ui:Label text="Name" display-tooltip-when-elided="true" name="item-name" style="flex-grow: 1; flex-shrink: 1;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

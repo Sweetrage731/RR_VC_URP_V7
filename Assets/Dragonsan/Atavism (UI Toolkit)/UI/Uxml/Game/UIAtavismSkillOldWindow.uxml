@@ -1,0 +1,38 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:Template name="panel_AtavismWindow" src="project://database/Assets/Dragonsan/Atavism%20(UI%20Toolkit)/UI/Library/panel_AtavismWindow.uxml?fileID=9197481963319205126&amp;guid=f96775ae845b40f4b90c8a7cdb68c513&amp;type=3#panel_AtavismWindow" />
+    <ui:VisualElement name="Screen" picking-mode="Ignore" style="flex-grow: 1;">
+        <ui:Instance template="panel_AtavismWindow" name="SkillWindow" style="width: 312px; height: 400px;">
+            <AttributeOverrides element-name="Window-title" text="SKILLS" />
+            <ui:VisualElement name="inner-panel" class="inner-panel" style="flex-grow: 1; height: auto; margin-top: 63px;">
+                <ui:VisualElement name="skill-info" style="flex-grow: 1; height: 60px; max-height: 60px; min-height: 60px; flex-direction: row;">
+                    <ui:VisualElement name="slot" style="flex-grow: 1; height: 60px; width: 60px; max-width: 60px; max-height: 60px; min-height: 60px; min-width: 60px; background-image: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/Inventory/invenory_slot.png?fileID=2800000&amp;guid=598da58c652569946a5db5644295ac6b&amp;type=3#invenory_slot&quot;);">
+                        <ui:VisualElement name="icon" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/Icons/atavism_avatar06.png?fileID=2800000&amp;guid=540b8a04699fdbc4c9a26110777e705d&amp;type=3#atavism_avatar06&quot;); margin-top: 7px; margin-right: 7px; margin-bottom: 7px; margin-left: 7px;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="info" style="flex-grow: 1; width: 170px;">
+                        <ui:Label tabindex="-1" text="Skill name" parse-escape-sequences="true" display-tooltip-when-elided="true" name="skill-name" class="Text-Gray" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; height: 19px; max-height: 19px; min-height: 19px; -unity-text-align: middle-left;" />
+                        <ui:VisualElement style="flex-grow: 1; flex-direction: row; height: 20px; max-height: 20px; min-height: 20px; align-items: center;">
+                            <ui:Label tabindex="-1" text="Level: " parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; -unity-text-align: middle-left;" />
+                            <ui:Label tabindex="-1" text="1000/1000" parse-escape-sequences="true" display-tooltip-when-elided="true" name="skill-level" class="Text-Gray" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; width: 68px; -unity-text-align: middle-left;" />
+                            <ui:Button text="+" parse-escape-sequences="true" display-tooltip-when-elided="true" name="levelup-button" class="Button-XS Button-Light-Overlay" style="width: 20px;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement style="flex-grow: 1; flex-direction: row; height: 19px; max-height: 19px; min-height: 19px; align-items: center;">
+                            <ui:Label tabindex="-1" text="Increase Cost: " parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;" />
+                            <ui:Label tabindex="-1" text="1" parse-escape-sequences="true" display-tooltip-when-elided="true" name="cost-text" class="Text-Gray" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement style="flex-grow: 1;">
+                        <ui:VisualElement style="flex-grow: 1; flex-direction: row; height: 20px; max-height: 20px;">
+                            <ui:Label tabindex="-1" text="Points:" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;" />
+                            <ui:Label tabindex="-1" text="100&#10;" parse-escape-sequences="true" display-tooltip-when-elided="true" name="points-text" class="Text-Gray" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement style="flex-grow: 1; height: 50px; flex-direction: row;">
+                    <ui:ListView name="ability-list" virtualization-method="DynamicHeight" style="width: 256px;" />
+                    <ui:VisualElement class="spacer-vertical-img" style="flex-grow: 1; width: 2px; max-width: 2px;" />
+                    <ui:ListView name="skill-list" virtualization-method="DynamicHeight" style="width: 40px; max-width: 40px; min-width: 40px;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:Instance>
+    </ui:VisualElement>
+</ui:UXML>

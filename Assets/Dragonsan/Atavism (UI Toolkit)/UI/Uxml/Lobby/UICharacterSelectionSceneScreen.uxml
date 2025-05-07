@@ -1,0 +1,100 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Dragonsan/Atavism%20(UI%20Toolkit)/UI/Style%20Sheets/CharacterSelectionSceneStyleSheet.uss?fileID=7433441132597879392&amp;guid=f63c82a9a80f6ce4281242bc61a79a0a&amp;type=3#CharacterSelectionSceneStyleSheet" />
+    <ui:VisualElement name="Screen" picking-mode="Ignore" style="flex-direction: row; flex-grow: 1; justify-content: space-around; -unity-font: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/Fonts/Cambria.ttf?fileID=12800000&amp;guid=36ef3a2444bc15847bd874b9b0c98ae6&amp;type=3#Cambria&quot;); -unity-font-definition: url(&quot;project://database/Assets/Dragonsan/Atavism%20(UI%20Toolkit)/UI/Fonts/Cambria%20SDF.asset?fileID=11400000&amp;guid=171debed56e16fd4daf65623c92ecac2&amp;type=2#Cambria SDF&quot;); align-items: flex-end;">
+        <ui:VisualElement name="panel-left" picking-mode="Ignore" style="width: 33%; align-items: flex-start; padding-left: 20px; padding-top: 100px; padding-right: 100px; padding-bottom: 0; justify-content: flex-start; height: 100%;">
+            <ui:VisualElement name="panel-CharacterSelection" style="height: 800px; width: 80%; background-image: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/Character%20Selection/char_sel_bg.png?fileID=2800000&amp;guid=6791bf5322c05b74f8de7e5d348ef73c&amp;type=3#char_sel_bg&quot;); justify-content: flex-start;">
+                <ui:VisualElement name="windowHeader" picking-mode="Ignore" style="align-items: stretch; -unity-text-align: upper-left; justify-content: space-between; -unity-background-image-tint-color: rgb(200, 169, 141); height: 60px; flex-shrink: 0;">
+                    <ui:VisualElement name="topline" picking-mode="Ignore" style="background-image: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/Character%20Selection/border%202.png?fileID=2800000&amp;guid=3273c1e659edaff4a8dcf3451ab21cb9&amp;type=3#border 2&quot;); overflow: hidden; visibility: visible; display: flex; flex-shrink: 0; align-items: center; flex-wrap: nowrap; flex-direction: row; flex-grow: 0; width: 100%; height: 9px; justify-content: center; translate: 0 -4px;">
+                        <ui:VisualElement name="light-effect" style="background-image: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/autocut/UI_01__crystal-003.png?fileID=2800000&amp;guid=fe578be5b401ed64f90f5266001d39d9&amp;type=3#UI_01__crystal-003&quot;); width: 23px; height: 23px;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="layout" picking-mode="Ignore" style="flex-direction: row; align-items: center; justify-content: center;">
+                        <ui:Label text="SERVER NAME" display-tooltip-when-elided="true" name="Window-title" class="atavismTextLight" style="background-color: rgba(255, 255, 255, 0); overflow: hidden; visibility: visible; width: 90%; -unity-text-align: upper-center; font-size: 22px;" />
+                        <ui:Button display-tooltip-when-elided="true" name="selectServerButton" style="overflow: hidden; visibility: visible; -unity-background-image-tint-color: rgb(237, 231, 221); width: 32px; height: 32px; background-color: rgba(255, 255, 255, 0); color: rgb(237, 231, 221); border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; background-image: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/Character%20Selection/sever_list_icon.png?fileID=2800000&amp;guid=bff1f7bbb338eb049bf8923f46dbe430&amp;type=3#sever_list_icon&quot;); translate: -5px 0; margin-left: 4px; margin-right: 4px; margin-top: 4px; margin-bottom: 4px; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="bottomline" picking-mode="Ignore" style="background-image: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/Character%20Selection/spacer_arrow2.png?fileID=2800000&amp;guid=3f8b179d4b89fb94db6dd1c380365846&amp;type=3#spacer_arrow2&quot;); width: 100%; height: 7px;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="content-characters" style="width: 100%; height: 90%; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px; display: flex;">
+                    <Atavism.UI.Game.UICharacterSelectionSlot name="item-character-1">
+                        <ui:VisualElement name="character-icon" style="width: 100px; height: 100px; background-image: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/Character%20Selection/char_example.png?fileID=2800000&amp;guid=e7924454c77ae2b49a02f541145faed5&amp;type=3#char_example&quot;);" />
+                        <ui:VisualElement name="layout" style="justify-content: flex-start; flex-grow: 1; align-items: stretch; margin-left: 2px;">
+                            <ui:Label text="Character Name" display-tooltip-when-elided="true" name="character-name" class="Text-Light character-name" />
+                            <ui:Label text="Class" display-tooltip-when-elided="true" name="character-class" class="Text-Dark" style="width: 100%; font-size: 18px;" />
+                            <ui:VisualElement name="layout" style="width: 100%; flex-direction: row; justify-content: space-between; margin-top: -4px; padding-top: 0;">
+                                <ui:Label text="Race" display-tooltip-when-elided="true" name="character-race" class="Text-Dark" style="font-size: 18px;" />
+                                <ui:Label text="Level 1" display-tooltip-when-elided="true" name="character-level" class="Text-Dark" style="font-size: 22px; padding-right: 20px; -unity-text-align: lower-left;" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                    </Atavism.UI.Game.UICharacterSelectionSlot>
+                    <Atavism.UI.Game.UICharacterSelectionSlot name="item-character-2">
+                        <ui:VisualElement name="character-icon" style="width: 100px; height: 100px; background-image: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/Character%20Selection/char_example.png?fileID=2800000&amp;guid=e7924454c77ae2b49a02f541145faed5&amp;type=3#char_example&quot;);" />
+                        <ui:VisualElement name="layout" style="justify-content: flex-start; flex-grow: 1; align-items: stretch; margin-left: 2px;">
+                            <ui:Label text="Character Name" display-tooltip-when-elided="true" name="character-name" class="Text-Light character-name" style="width: 100%; font-size: 20px;" />
+                            <ui:Label text="Class" display-tooltip-when-elided="true" name="character-class" class="Text-Dark" style="width: 100%; font-size: 18px;" />
+                            <ui:VisualElement name="layout" style="width: 100%; flex-direction: row; justify-content: space-between; margin-top: -4px; padding-top: 0;">
+                                <ui:Label text="Race" display-tooltip-when-elided="true" name="character-race" class="Text-Dark" style="font-size: 18px;" />
+                                <ui:Label text="Level 1" display-tooltip-when-elided="true" name="character-level" class="Text-Dark" style="font-size: 22px; padding-right: 20px; -unity-text-align: lower-left;" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                    </Atavism.UI.Game.UICharacterSelectionSlot>
+                    <Atavism.UI.Game.UICharacterSelectionSlot name="item-character-3">
+                        <ui:VisualElement name="character-icon" style="width: 100px; height: 100px; background-image: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/Character%20Selection/char_example.png?fileID=2800000&amp;guid=e7924454c77ae2b49a02f541145faed5&amp;type=3#char_example&quot;);" />
+                        <ui:VisualElement name="layout" style="justify-content: flex-start; flex-grow: 1; align-items: stretch; margin-left: 2px;">
+                            <ui:Label text="Character Name" display-tooltip-when-elided="true" name="character-name" class="Text-Light character-name" style="width: 100%; font-size: 20px;" />
+                            <ui:Label text="Class" display-tooltip-when-elided="true" name="character-class" class="Text-Dark" style="width: 100%; font-size: 18px;" />
+                            <ui:VisualElement name="layout" style="width: 100%; flex-direction: row; justify-content: space-between; margin-top: -4px; padding-top: 0;">
+                                <ui:Label text="Race" display-tooltip-when-elided="true" name="character-race" class="Text-Dark" style="font-size: 18px;" />
+                                <ui:Label text="Level 1" display-tooltip-when-elided="true" name="character-level" class="Text-Dark" style="font-size: 22px; padding-right: 20px; -unity-text-align: lower-left;" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                    </Atavism.UI.Game.UICharacterSelectionSlot>
+                    <Atavism.UI.Game.UICharacterSelectionSlot name="item-character-4">
+                        <ui:VisualElement name="character-icon" style="width: 100px; height: 100px; background-image: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/Character%20Selection/char_example.png?fileID=2800000&amp;guid=e7924454c77ae2b49a02f541145faed5&amp;type=3#char_example&quot;);" />
+                        <ui:VisualElement name="layout" style="justify-content: flex-start; flex-grow: 1; align-items: stretch; margin-left: 2px;">
+                            <ui:Label text="Character Name" display-tooltip-when-elided="true" name="character-name" class="Text-Light character-name" style="width: 100%; font-size: 20px;" />
+                            <ui:Label text="Class" display-tooltip-when-elided="true" name="character-class" class="Text-Dark" style="width: 100%; font-size: 18px;" />
+                            <ui:VisualElement name="layout" style="width: 100%; flex-direction: row; justify-content: space-between; margin-top: -4px; padding-top: 0;">
+                                <ui:Label text="Race" display-tooltip-when-elided="true" name="character-race" class="Text-Dark" style="font-size: 18px;" />
+                                <ui:Label text="Level 1" display-tooltip-when-elided="true" name="character-level" class="Text-Dark" style="font-size: 22px; padding-right: 20px; -unity-text-align: lower-left;" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                    </Atavism.UI.Game.UICharacterSelectionSlot>
+                    <Atavism.UI.Game.UICharacterSelectionSlot name="item-character-5">
+                        <ui:VisualElement name="character-icon" style="width: 100px; height: 100px; background-image: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/Character%20Selection/char_example.png?fileID=2800000&amp;guid=e7924454c77ae2b49a02f541145faed5&amp;type=3#char_example&quot;);" />
+                        <ui:VisualElement name="layout" style="justify-content: flex-start; flex-grow: 1; align-items: stretch; margin-left: 2px;">
+                            <ui:Label text="Character Name" display-tooltip-when-elided="true" name="character-name" class="Text-Light character-name" style="width: 100%; font-size: 20px;" />
+                            <ui:Label text="Class" display-tooltip-when-elided="true" name="character-class" class="Text-Dark" style="width: 100%; font-size: 18px;" />
+                            <ui:VisualElement name="layout" style="width: 100%; flex-direction: row; justify-content: space-between; margin-top: -4px; padding-top: 0;">
+                                <ui:Label text="Race" display-tooltip-when-elided="true" name="character-race" class="Text-Dark" style="font-size: 18px;" />
+                                <ui:Label text="Level 1" display-tooltip-when-elided="true" name="character-level" class="Text-Dark" style="font-size: 22px; padding-right: 20px; -unity-text-align: lower-left;" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                    </Atavism.UI.Game.UICharacterSelectionSlot>
+                    <Atavism.UI.Game.UICharacterSelectionSlot name="item-character-6">
+                        <ui:VisualElement name="character-icon" style="width: 100px; height: 100px; background-image: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/Character%20Selection/char_example.png?fileID=2800000&amp;guid=e7924454c77ae2b49a02f541145faed5&amp;type=3#char_example&quot;);" />
+                        <ui:VisualElement name="layout" style="justify-content: flex-start; flex-grow: 1; align-items: stretch; margin-left: 2px;">
+                            <ui:Label text="Character Name" display-tooltip-when-elided="true" name="character-name" class="Text-Light character-name" style="width: 100%; font-size: 20px;" />
+                            <ui:Label text="Class" display-tooltip-when-elided="true" name="character-class" class="Text-Dark" style="width: 100%; font-size: 18px;" />
+                            <ui:VisualElement name="layout" style="width: 100%; flex-direction: row; justify-content: space-between; margin-top: -4px; padding-top: 0;">
+                                <ui:Label text="Race" display-tooltip-when-elided="true" name="character-race" class="Text-Dark" style="font-size: 18px;" />
+                                <ui:Label text="Level 1" display-tooltip-when-elided="true" name="character-level" class="Text-Dark" style="font-size: 22px; padding-right: 20px; -unity-text-align: lower-left;" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                    </Atavism.UI.Game.UICharacterSelectionSlot>
+                </ui:VisualElement>
+                <ui:VisualElement name="layout-buttons" style="justify-content: space-around; align-items: center; flex-shrink: 0; height: 10%;">
+                    <ui:Button text="+ CREATE CHARACTER" display-tooltip-when-elided="true" name="createCharacterButton" class="Button-XM Button-Light-Overlay" style="width: 80%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; font-size: 22px;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="layout" style="align-items: flex-end; width: 80%;">
+                <ui:Button text="DELETE" display-tooltip-when-elided="true" name="deleteCharacterButton" class="Button-XM Button-Dark-Overlay" style="font-size: 16px; width: 160px;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="panel-center" picking-mode="Ignore" style="width: 34%; justify-content: flex-end; align-items: center; padding-bottom: 20px; height: 100%;">
+            <ui:Label text="Character Name" display-tooltip-when-elided="true" name="characterNameLabel" class="Text-Light" style="font-size: 30px; -unity-text-align: middle-center;" />
+            <ui:Button text="ENTER" display-tooltip-when-elided="true" name="worldEnterButton" class="Button-XL Button-Highlighted-Overlay" style="width: 180px; height: 60px; font-size: 22px;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="panel-right" picking-mode="Ignore" style="width: 33%; height: 100%; align-items: flex-end; justify-content: flex-end; padding-bottom: 20px;">
+            <ui:Button text="QUIT" display-tooltip-when-elided="true" name="quitButton" class="Button-XL Button-Dark-Overlay" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

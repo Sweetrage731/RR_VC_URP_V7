@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:Template name="UIAtavismCurrencyPanel" src="project://database/Assets/Dragonsan/Atavism%20(UI%20Toolkit)/UI/Screens/Game/Dependencies/UIAtavismCurrencyPanel.uxml?fileID=9197481963319205126&amp;guid=92cceebc890f7f84987b5bae2ddcaf64&amp;type=3#UIAtavismCurrencyPanel" />
+    <Style src="project://database/Assets/Dragonsan/Atavism%20(UI%20Toolkit)/UI/Style%20Sheets/AuctionStyleSheet.uss?fileID=7433441132597879392&amp;guid=8d5ec166b1bbfaf4ca3221a486dd848f&amp;type=3#AuctionStyleSheet" />
+    <ui:VisualElement name="background" class="auction-count-list-entry">
+        <ui:VisualElement class="auction-count-list-entry-mark-backgroud">
+            <ui:VisualElement name="checked-state" class="auction-count-list-entry-mark" style="display: flex;" />
+        </ui:VisualElement>
+        <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="total-count" class="Text-Gray auction-count-list-entry-count" />
+        <ui:Instance template="UIAtavismCurrencyPanel" name="currency" class="auction-count-list-entry-currency" />
+    </ui:VisualElement>
+</ui:UXML>

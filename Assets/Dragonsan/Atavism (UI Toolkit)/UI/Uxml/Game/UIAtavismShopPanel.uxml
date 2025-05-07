@@ -1,0 +1,58 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:Template name="panel_AtavismWindow" src="project://database/Assets/Dragonsan/Atavism%20(UI%20Toolkit)/UI/Library/panel_AtavismWindow.uxml?fileID=9197481963319205126&amp;guid=f96775ae845b40f4b90c8a7cdb68c513&amp;type=3#panel_AtavismWindow" />
+    <ui:Template name="UIAtavismShopItem" src="project://database/Assets/Dragonsan/Atavism%20(UI%20Toolkit)/UI/Screens/Game/Dependencies/UIAtavismShopItem.uxml?fileID=9197481963319205126&amp;guid=e0cbd000df2c5cf45b95e4a1b4b72371&amp;type=3#UIAtavismShopItem" />
+    <ui:Template name="UIAtavismCurrencyPanel" src="project://database/Assets/Dragonsan/Atavism%20(UI%20Toolkit)/UI/Screens/Game/Dependencies/UIAtavismCurrencyPanel.uxml?fileID=9197481963319205126&amp;guid=92cceebc890f7f84987b5bae2ddcaf64&amp;type=3#UIAtavismCurrencyPanel" />
+    <ui:VisualElement name="Screen" picking-mode="Ignore" style="flex-grow: 1; align-self: stretch; justify-content: flex-start; align-items: stretch;">
+        <ui:Instance template="panel_AtavismWindow" name="ShopWindow" class="merchant-window" style="height: 500px; width: 520px;">
+            <AttributeOverrides element-name="Window-title" text="SHOP" />
+            <ui:VisualElement name="inner-panel" class="inner-panel">
+                <ui:VisualElement name="menu-panel" style="flex-grow: 1; height: 65px; max-height: 65px; min-height: 65px;">
+                    <Atavism.UI.UIButtonToggleGroup item-Class-Name="quest-tab-button" selected-item-Class-Name="quest-tab-button__selected" Items="BUY,SELL" name="menu" Default-Item-Index="0" class="shop-menu" style="flex-direction: row;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="header" class="merchant-header">
+                    <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="prev-button" class="merchant-prev-button" style="overflow: visible;" />
+                    <ui:Label tabindex="-1" text="1" parse-escape-sequences="true" display-tooltip-when-elided="true" name="page-label" class="Text-Gray merchant-page-label" />
+                    <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="next-button" class="merchant-next-button" style="overflow: visible;" />
+                </ui:VisualElement>
+                <ui:ScrollView mouse-wheel-scroll-size="18" scroll-deceleration-rate="0,135" elasticity="0,1" class="merchant-item-list">
+                    <ui:VisualElement name="item-list" class="shop-items-list" style="align-items: flex-start; align-self: auto; flex-direction: row; height: 305px; min-height: 305px;">
+                        <ui:Instance template="UIAtavismShopItem" name="UIAtavismShopItem" />
+                        <ui:Instance template="UIAtavismShopItem" name="UIAtavismShopItem" />
+                        <ui:Instance template="UIAtavismShopItem" name="UIAtavismShopItem" />
+                        <ui:Instance template="UIAtavismShopItem" name="UIAtavismShopItem" />
+                        <ui:Instance template="UIAtavismShopItem" name="UIAtavismShopItem" />
+                        <ui:Instance template="UIAtavismShopItem" name="UIAtavismShopItem" />
+                        <ui:Instance template="UIAtavismShopItem" name="UIAtavismShopItem" />
+                        <ui:Instance template="UIAtavismShopItem" name="UIAtavismShopItem" />
+                        <ui:Instance template="UIAtavismShopItem" name="UIAtavismShopItem" />
+                        <ui:Instance template="UIAtavismShopItem" name="UIAtavismShopItem" />
+                    </ui:VisualElement>
+                </ui:ScrollView>
+                <ui:VisualElement class="spacer-img" />
+                <ui:VisualElement name="bottom" class="merchant-bottom">
+                    <ui:Instance template="UIAtavismCurrencyPanel" name="currency" class="merchant-currency" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="count-panel" class="merchant-count-panel" style="display: none;">
+                <ui:VisualElement class="merchant-count-panel-top">
+                    <ui:Label tabindex="-1" text="Name" parse-escape-sequences="true" display-tooltip-when-elided="true" name="item-name" class="Text-Light merchant-count-panel-item-name" />
+                    <ui:Label tabindex="-1" text="How many" parse-escape-sequences="true" display-tooltip-when-elided="true" name="How-many" class="Text-Gray merchant-count-panel-label-text" />
+                    <ui:VisualElement class="merchant-count-panel-input">
+                        <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="minus-button" class="merchant-count-panel-minus-button" />
+                        <Atavism.UI.UITextField value="1" name="item-count" class="Text-Light merchant-count-panel-item-count" />
+                        <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="plus-button" class="merchant-count-panel-plus-button" />
+                    </ui:VisualElement>
+                    <ui:Label tabindex="-1" text="for" parse-escape-sequences="true" display-tooltip-when-elided="true" name="for" class="Text-Gray merchant-count-panel-label-text" />
+                    <ui:VisualElement class="merchant-count-panel-currency-frame">
+                        <ui:Instance template="UIAtavismCurrencyPanel" name="currency-sum" class="merchant-count-panel-currency" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="space" class="spacer-img" />
+                <ui:VisualElement name="buttons" class="merchant-count-panel-buttons">
+                    <ui:Button text="PURCHASE" parse-escape-sequences="true" display-tooltip-when-elided="true" name="purchase-button" class="Button-XS Button-Light-Overlay merchant-count-panel-button" />
+                    <ui:Button text="CANCEL" parse-escape-sequences="true" display-tooltip-when-elided="true" name="cancel-button" class="Button-XS Button-Light-Overlay merchant-count-panel-button" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:Instance>
+    </ui:VisualElement>
+</ui:UXML>

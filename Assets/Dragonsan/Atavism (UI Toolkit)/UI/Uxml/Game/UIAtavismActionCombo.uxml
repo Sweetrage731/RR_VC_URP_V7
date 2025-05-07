@@ -1,0 +1,15 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="Screen" picking-mode="Ignore" style="-unity-font: url(&apos;project://database/Assets/Dragonsan/AtavismObjects/Fonts/Cambria.ttf?fileID=12800000&amp;guid=36ef3a2444bc15847bd874b9b0c98ae6&amp;type=3#Cambria&apos;); -unity-font-definition: url(&apos;project://database/Assets/Dragonsan/Atavism%20(UI%20Toolkit)/UI/Fonts/Cambria%20SDF.asset?fileID=11400000&amp;guid=171debed56e16fd4daf65623c92ecac2&amp;type=2#Cambria SDF&apos;); flex-direction: column-reverse; justify-content: flex-end; align-items: center; flex-grow: 1;">
+        <ui:VisualElement name="screen-bottom" class="action-bar-bottom" style="bottom: 182px;">
+            <ui:VisualElement class="action-bar-grid">
+                <ui:VisualElement name="UIAtavismActionBarSlot">
+                    <ui:VisualElement name="slot-button-holder" class="action-slot-holder">
+                        <ui:VisualElement name="slot" style="flex-grow: 1; width: 70px; height: 70px; background-image: url(&apos;project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/Actionbar/actionbar_slot.png?fileID=2800000&amp;guid=a94b9017dc9d19a478ee996535a1e3db&amp;type=3#actionbar_slot&apos;); align-items: center; justify-content: center;">
+                            <ui:VisualElement name="slot-icon" class="action-slot-icon" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

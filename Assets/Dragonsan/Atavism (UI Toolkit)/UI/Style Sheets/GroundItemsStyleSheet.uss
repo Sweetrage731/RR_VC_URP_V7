@@ -1,0 +1,23 @@
+.ground-item {
+    flex-grow: 1;
+    position: absolute;
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/ItemLabelBG_TransparentBorders.png?fileID=2800000&guid=a57eec71c0cd1a6438ad5a297eb820e6&type=3#ItemLabelBG_TransparentBorders");
+    -unity-background-image-tint-color: rgb(62, 58, 57);
+    -unity-background-scale-mode: scale-and-crop;
+}
+
+.ground-item-selected {
+    -unity-background-image-tint-color: rgba(200, 102, 17, 0.9);
+}
+
+.ground-item-selected:hover:enabled {
+    -unity-background-image-tint-color: rgba(200, 102, 17, 0.9);
+}
+
+.ground-item:hover:enabled {
+    flex-grow: 1;
+    position: absolute;
+    background-image: url("project://database/Assets/Dragonsan/AtavismObjects/Textures/NewUi/ItemLabelBG_TransparentBorders.png?fileID=2800000&guid=a57eec71c0cd1a6438ad5a297eb820e6&type=3#ItemLabelBG_TransparentBorders");
+    -unity-background-image-tint-color: rgb(62, 58, 57);
+    -unity-background-scale-mode: scale-and-crop;
+}

@@ -1,0 +1,159 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="Screen" picking-mode="Ignore" style="height: auto; width: auto; align-items: center; justify-content: space-around; -unity-font: url(&quot;project://database/Assets/Dragonsan/AtavismObjects/Fonts/Cambria.ttf?fileID=12800000&amp;guid=36ef3a2444bc15847bd874b9b0c98ae6&amp;type=3#Cambria&quot;); -unity-font-definition: url(&quot;project://database/Assets/Dragonsan/Atavism%20(UI%20Toolkit)/UI/Fonts/Cambria%20SDF.asset?fileID=11400000&amp;guid=171debed56e16fd4daf65623c92ecac2&amp;type=2#Cambria SDF&quot;); flex-direction: column; bottom: auto; top: 96%; right: auto;">
+        <ui:VisualElement name="Window" style="flex-direction: column-reverse; bottom: 10px;">
+            <ui:VisualElement name="screen-top" style="display: none;" />
+            <ui:VisualElement name="Window-draggable-trigger" style="width: 100%; height: 5px; display: none;" />
+            <ui:VisualElement name="screen-bottom" style="bottom: 0; align-self: center; flex-direction: row;">
+                <ui:VisualElement name="toolbar" style="height: 34px; width: auto; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; flex-direction: row; justify-content: flex-start; align-items: center; align-self: center;">
+                    <ui:VisualElement name="toolbar-button-holder-admin" tooltip="Admin" class="menu-bar-holder">
+                        <ui:Button display-tooltip-when-elided="true" name="toolbar-admin" tooltip="Admin" usage-hints="-1" class="menu-bar-button" style="position: absolute; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; overflow: visible; left: 2px; top: 2px; right: 2px; bottom: 2px;">
+                            <ui:VisualElement name="toolbar-button-image-admin" picking-mode="Ignore" style="flex-grow: 1; flex-direction: column-reverse; display: none;">
+                                <ui:Label text="1" display-tooltip-when-elided="true" name="toolbar-hotkey-admin" picking-mode="Ignore" class="menu-bar-hotkey" />
+                            </ui:VisualElement>
+                        </ui:Button>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="toolbar-button-holder-worldbuilder" tooltip="World Builder" class="menu-bar-holder">
+                        <ui:Button display-tooltip-when-elided="true" name="toolbar-worldbuilder" tooltip="World Builder" usage-hints="-1" class="menu-bar-button" style="position: absolute; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; overflow: visible; left: 2px; top: 2px; right: 2px; bottom: 2px;">
+                            <ui:VisualElement name="toolbar-button-image-worldbuilder" picking-mode="Ignore" style="flex-grow: 1; flex-direction: column-reverse;">
+                                <ui:Label text="1" display-tooltip-when-elided="true" name="toolbar-hotkey-worldbuilder" picking-mode="Ignore" class="menu-bar-hotkey" />
+                            </ui:VisualElement>
+                        </ui:Button>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="toolbar-button-holder-character" tooltip="Character" class="menu-bar-holder">
+                        <ui:Button display-tooltip-when-elided="true" name="toolbar-character" tooltip="Character" usage-hints="-1" class="menu-bar-button" style="position: absolute; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; overflow: visible; left: 2px; top: 2px; right: 2px; bottom: 2px;">
+                            <ui:VisualElement name="toolbar-button-image-character" picking-mode="Ignore" style="flex-grow: 1; flex-direction: column-reverse;">
+                                <ui:Label text="1" display-tooltip-when-elided="true" name="toolbar-hotkey-character" picking-mode="Ignore" class="menu-bar-hotkey" />
+                            </ui:VisualElement>
+                        </ui:Button>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="toolbar-button-holder-inventory" tooltip="Inventory" class="menu-bar-holder">
+                        <ui:Button display-tooltip-when-elided="true" name="toolbar-inventory" tooltip="Inventory" usage-hints="-1" class="menu-bar-button" style="position: absolute; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; overflow: visible; left: 2px; top: 2px; right: 2px; bottom: 2px;">
+                            <ui:VisualElement name="toolbar-button-image-inventory" picking-mode="Ignore" style="flex-grow: 1; flex-direction: column-reverse;">
+                                <ui:Label text="1" display-tooltip-when-elided="true" name="toolbar-hotkey-inventory" picking-mode="Ignore" class="menu-bar-hotkey" />
+                            </ui:VisualElement>
+                        </ui:Button>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="toolbar-button-holder-skills" tooltip="Skills" class="menu-bar-holder">
+                        <ui:Button display-tooltip-when-elided="true" name="toolbar-skills" tooltip="Skills" usage-hints="-1" class="menu-bar-button" style="position: absolute; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; overflow: visible; left: 2px; top: 2px; right: 2px; bottom: 2px;">
+                            <ui:VisualElement name="toolbar-button-image-skills" picking-mode="Ignore" style="flex-grow: 1; flex-direction: column-reverse;">
+                                <ui:Label text="1" display-tooltip-when-elided="true" name="toolbar-hotkey-skills" picking-mode="Ignore" class="menu-bar-hotkey" />
+                            </ui:VisualElement>
+                        </ui:Button>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="toolbar-button-holder-quests" tooltip="Quests" class="menu-bar-holder">
+                        <ui:Button display-tooltip-when-elided="true" name="toolbar-quests" tooltip="Quests" usage-hints="-1" class="menu-bar-button" style="position: absolute; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; overflow: visible; left: 2px; top: 2px; right: 2px; bottom: 2px;">
+                            <ui:VisualElement name="toolbar-button-image-quests" picking-mode="Ignore" style="flex-grow: 1; flex-direction: column-reverse;">
+                                <ui:Label text="1" display-tooltip-when-elided="true" name="toolbar-hotkey-quests" picking-mode="Ignore" class="menu-bar-hotkey" />
+                            </ui:VisualElement>
+                        </ui:Button>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="toolbar-button-holder-mailbox" tooltip="Mail" class="menu-bar-holder">
+                        <ui:Button display-tooltip-when-elided="true" name="toolbar-mailbox" tooltip="Mail" usage-hints="-1" class="menu-bar-button" style="position: absolute; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; overflow: visible; left: 2px; top: 2px; right: 2px; bottom: 2px;">
+                            <ui:VisualElement name="toolbar-button-image-mailbox" picking-mode="Ignore" style="flex-grow: 1; flex-direction: column-reverse;">
+                                <ui:Label text="1" display-tooltip-when-elided="true" name="toolbar-hotkey-mailbox" picking-mode="Ignore" class="menu-bar-hotkey" />
+                            </ui:VisualElement>
+                        </ui:Button>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="toolbar-button-holder-guild" tooltip="Guild" class="menu-bar-holder">
+                        <ui:Button display-tooltip-when-elided="true" name="toolbar-guild" tooltip="Guild" usage-hints="-1" class="menu-bar-button" style="position: absolute; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; overflow: visible; left: 2px; top: 2px; right: 2px; bottom: 2px;">
+                            <ui:VisualElement name="toolbar-button-image-guild" picking-mode="Ignore" style="flex-grow: 1; flex-direction: column-reverse;">
+                                <ui:Label text="1" display-tooltip-when-elided="true" name="toolbar-hotkey-guild" picking-mode="Ignore" class="menu-bar-hotkey" />
+                            </ui:VisualElement>
+                        </ui:Button>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="toolbar-button-holder-arena" tooltip="Arena" class="menu-bar-holder">
+                        <ui:Button display-tooltip-when-elided="true" name="toolbar-arena" tooltip="Arena" usage-hints="-1" class="menu-bar-button" style="position: absolute; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; overflow: visible; left: 2px; top: 2px; right: 2px; bottom: 2px;">
+                            <ui:VisualElement name="toolbar-button-image-arena" picking-mode="Ignore" style="flex-grow: 1; flex-direction: column-reverse;">
+                                <ui:Label text="1" display-tooltip-when-elided="true" name="toolbar-hotkey-arena" picking-mode="Ignore" class="menu-bar-hotkey" />
+                            </ui:VisualElement>
+                        </ui:Button>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="toolbar-button-holder-social" tooltip="Social" class="menu-bar-holder">
+                        <ui:Button display-tooltip-when-elided="true" name="toolbar-social" tooltip="Social" usage-hints="-1" class="menu-bar-button" style="position: absolute; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; overflow: visible; left: 2px; top: 2px; right: 2px; bottom: 2px;">
+                            <ui:VisualElement name="toolbar-button-image-social" picking-mode="Ignore" style="flex-grow: 1; flex-direction: column-reverse;">
+                                <ui:Label text="1" display-tooltip-when-elided="true" name="toolbar-hotkey-social" picking-mode="Ignore" class="menu-bar-hotkey" />
+                            </ui:VisualElement>
+                        </ui:Button>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="toolbar-button-holder-factions" tooltip="Faction" class="menu-bar-holder">
+                        <ui:Button display-tooltip-when-elided="true" name="toolbar-factions" tooltip="Faction" usage-hints="-1" class="menu-bar-button" style="position: absolute; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; overflow: visible; left: 2px; top: 2px; right: 2px; bottom: 2px;">
+                            <ui:VisualElement name="toolbar-button-image-factions" picking-mode="Ignore" style="flex-grow: 1; flex-direction: column-reverse;">
+                                <ui:Label text="1" display-tooltip-when-elided="true" name="toolbar-hotkey-factions" picking-mode="Ignore" class="menu-bar-hotkey" />
+                            </ui:VisualElement>
+                        </ui:Button>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="toolbar-button-holder-gearmodification" tooltip="Gear Modification" class="menu-bar-holder">
+                        <ui:Button display-tooltip-when-elided="true" name="toolbar-gearmodification" tooltip="Gear Modification" usage-hints="-1" class="menu-bar-button" style="position: absolute; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; overflow: visible; left: 2px; top: 2px; right: 2px; bottom: 2px;">
+                            <ui:VisualElement name="toolbar-button-image-gearmodification" picking-mode="Ignore" style="flex-grow: 1; flex-direction: column-reverse;">
+                                <ui:Label text="1" display-tooltip-when-elided="true" name="toolbar-hotkey-gearmodification" picking-mode="Ignore" class="menu-bar-hotkey" />
+                            </ui:VisualElement>
+                        </ui:Button>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="toolbar-button-holder-auctionhouse" tooltip="Auction House" class="menu-bar-holder">
+                        <ui:Button display-tooltip-when-elided="true" name="toolbar-auctionhouse" tooltip="Auction House" usage-hints="-1" class="menu-bar-button" style="position: absolute; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; overflow: visible; left: 2px; top: 2px; right: 2px; bottom: 2px;">
+                            <ui:VisualElement name="toolbar-button-image-auctionhouse" picking-mode="Ignore" style="flex-grow: 1; flex-direction: column-reverse;">
+                                <ui:Label text="1" display-tooltip-when-elided="true" name="toolbar-hotkey-auctionhouse" picking-mode="Ignore" class="menu-bar-hotkey" />
+                            </ui:VisualElement>
+                        </ui:Button>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="toolbar-button-holder-crafting" tooltip="Crafting" class="menu-bar-holder">
+                        <ui:Button display-tooltip-when-elided="true" name="toolbar-crafting" tooltip="Crafting" usage-hints="-1" class="menu-bar-button" style="position: absolute; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; overflow: visible; left: 2px; top: 2px; right: 2px; bottom: 2px;">
+                            <ui:VisualElement name="toolbar-button-image-crafting" picking-mode="Ignore" style="flex-grow: 1; flex-direction: column-reverse;">
+                                <ui:Label text="1" display-tooltip-when-elided="true" name="crafting" picking-mode="Ignore" class="menu-bar-hotkey" />
+                            </ui:VisualElement>
+                        </ui:Button>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="toolbar-button-holder-skillsv2" tooltip="Skills" class="menu-bar-holder">
+                        <ui:Button display-tooltip-when-elided="true" name="toolbar-skillsv2" tooltip="Skills" usage-hints="-1" class="menu-bar-button" style="position: absolute; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; overflow: visible; left: 2px; top: 2px; right: 2px; bottom: 2px;">
+                            <ui:VisualElement name="toolbar-button-image-skillsv2" picking-mode="Ignore" style="flex-grow: 1; flex-direction: column-reverse;">
+                                <ui:Label text="1" display-tooltip-when-elided="true" name="toolbar-hotkey-skillsv2" picking-mode="Ignore" class="menu-bar-hotkey" />
+                            </ui:VisualElement>
+                        </ui:Button>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="toolbar-button-holder-achievements" tooltip="Achievement" class="menu-bar-holder">
+                        <ui:Button display-tooltip-when-elided="true" name="toolbar-achievements" tooltip="Achievement" usage-hints="-1" class="menu-bar-button" style="position: absolute; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; overflow: visible; left: 2px; top: 2px; right: 2px; bottom: 2px;">
+                            <ui:VisualElement name="toolbar-button-image-achievements" picking-mode="Ignore" style="flex-grow: 1; flex-direction: column-reverse;">
+                                <ui:Label text="1" display-tooltip-when-elided="true" name="toolbar-hotkey-achievements" picking-mode="Ignore" class="menu-bar-hotkey" />
+                            </ui:VisualElement>
+                        </ui:Button>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="toolbar-button-holder-rankings" tooltip="Rankings" class="menu-bar-holder">
+                        <ui:Button display-tooltip-when-elided="true" name="toolbar-rankings" tooltip="Rankings" usage-hints="-1" class="menu-bar-button" style="position: absolute; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; overflow: visible; left: 2px; top: 2px; right: 2px; bottom: 2px;">
+                            <ui:VisualElement name="toolbar-button-image-rankings" picking-mode="Ignore" style="flex-grow: 1; flex-direction: column-reverse;">
+                                <ui:Label text="1" display-tooltip-when-elided="true" name="toolbar-hotkey-rankings" picking-mode="Ignore" class="menu-bar-hotkey" />
+                            </ui:VisualElement>
+                        </ui:Button>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="toolbar-button-holder-talent" tooltip="Talents" class="menu-bar-holder">
+                        <ui:Button display-tooltip-when-elided="true" name="toolbar-talent" tooltip="Talents" usage-hints="-1" class="menu-bar-button" style="position: absolute; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; overflow: visible; left: 2px; top: 2px; right: 2px; bottom: 2px;">
+                            <ui:VisualElement name="toolbar-button-image-talent" picking-mode="Ignore" style="flex-grow: 1; flex-direction: column-reverse;">
+                                <ui:Label text="1" display-tooltip-when-elided="true" name="toolbar-hotkey-talent" picking-mode="Ignore" class="menu-bar-hotkey" />
+                            </ui:VisualElement>
+                        </ui:Button>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="toolbar-button-holder-shoplist" tooltip="Shop List" class="menu-bar-holder">
+                        <ui:Button display-tooltip-when-elided="true" name="toolbar-shoplist" tooltip="Shop List" usage-hints="-1" class="menu-bar-button" style="position: absolute; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; overflow: visible; left: 2px; top: 2px; right: 2px; bottom: 2px;">
+                            <ui:VisualElement name="toolbar-button-image-shoplist" picking-mode="Ignore" style="flex-grow: 1; flex-direction: column-reverse;">
+                                <ui:Label text="1" display-tooltip-when-elided="true" name="toolbar-hotkey-shoplist" picking-mode="Ignore" class="menu-bar-hotkey" />
+                            </ui:VisualElement>
+                        </ui:Button>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="toolbar-button-holder-claimlist" tooltip="Claim List" class="menu-bar-holder">
+                        <ui:Button display-tooltip-when-elided="true" name="toolbar-claimlist" tooltip="Claim List" usage-hints="-1" class="menu-bar-button" style="position: absolute; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; overflow: visible; left: 2px; top: 2px; right: 2px; bottom: 2px;">
+                            <ui:VisualElement name="toolbar-button-image-claimlist" picking-mode="Ignore" style="flex-grow: 1; flex-direction: column-reverse;">
+                                <ui:Label text="1" display-tooltip-when-elided="true" name="toolbar-hotkey-claimlist" picking-mode="Ignore" class="menu-bar-hotkey" />
+                            </ui:VisualElement>
+                        </ui:Button>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="toolbar-button-holder-crafting-book" tooltip="Crafting" class="menu-bar-holder">
+                        <ui:Button display-tooltip-when-elided="true" name="toolbar-crafting-book" tooltip="Crafting" usage-hints="-1" class="menu-bar-button" style="position: absolute; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; overflow: visible; left: 2px; top: 2px; right: 2px; bottom: 2px;">
+                            <ui:VisualElement name="toolbar-button-image-crafting-book" picking-mode="Ignore" style="flex-grow: 1; flex-direction: column-reverse;">
+                                <ui:Label text="1" display-tooltip-when-elided="true" name="toolbar-hotkey-crafting-book" picking-mode="Ignore" class="menu-bar-hotkey" />
+                            </ui:VisualElement>
+                        </ui:Button>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,8 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:VisualElement name="Screen" picking-mode="Ignore" style="flex-grow: 1;">
+        <ui:VisualElement name="shop-list-panel-container" class="shop-list-panel" style="min-height: 22px; right: 184px;">
+            <ui:Label tabindex="-1" text="Shops" parse-escape-sequences="true" display-tooltip-when-elided="true" name="title" picking-mode="Ignore" class="Text-Light shop-list-title" style="height: 22px;" />
+            <ui:VisualElement name="shop-list" class="shop-list" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

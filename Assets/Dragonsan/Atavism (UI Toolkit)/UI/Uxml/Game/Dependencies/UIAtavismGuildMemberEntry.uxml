@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:VisualElement name="member-info" class="guild-member-info">
+        <ui:Label tabindex="-1" text="Character name" parse-escape-sequences="true" display-tooltip-when-elided="true" name="name" picking-mode="Ignore" class="Text-Gray guild-member-name" />
+        <ui:Label tabindex="-1" text="guild master" parse-escape-sequences="true" display-tooltip-when-elided="true" name="rank" picking-mode="Ignore" class="Text-Gray guild-member-rank" />
+        <ui:Label tabindex="-1" text="100" parse-escape-sequences="true" display-tooltip-when-elided="true" name="level" picking-mode="Ignore" class="Text-Gray guild-member-level" />
+        <ui:Label tabindex="-1" text="online" parse-escape-sequences="true" display-tooltip-when-elided="true" name="status" picking-mode="Ignore" class="Text-Gray guild-member-status" />
+        <ui:VisualElement picking-mode="Ignore" style="flex-grow: 1;" />
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,85 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:Template name="panel_AtavismWindow" src="project://database/Assets/Dragonsan/Atavism%20(UI%20Toolkit)/UI/Library/panel_AtavismWindow.uxml?fileID=9197481963319205126&amp;guid=f96775ae845b40f4b90c8a7cdb68c513&amp;type=3#panel_AtavismWindow" />
+    <ui:Template name="UIAtavismShopItem" src="project://database/Assets/Dragonsan/Atavism%20(UI%20Toolkit)/UI/Screens/Game/Dependencies/UIAtavismShopItem.uxml?fileID=9197481963319205126&amp;guid=e0cbd000df2c5cf45b95e4a1b4b72371&amp;type=3#UIAtavismShopItem" />
+    <ui:Template name="UIAtavismSlotItem 1" src="project://database/Assets/Dragonsan/Atavism%20(UI%20Toolkit)/UI/Screens/Game/Dependencies/UIAtavismSlotItem%201.uxml?fileID=9197481963319205126&amp;guid=91f585ddcd6061441a6e3188ccc65411&amp;type=3#UIAtavismSlotItem 1" />
+    <ui:Template name="UIAtavismCurrencyInputsPanel" src="project://database/Assets/Dragonsan/Atavism%20(UI%20Toolkit)/UI/Screens/Game/Dependencies/UIAtavismCurrencyInputsPanel.uxml?fileID=9197481963319205126&amp;guid=276077959f7bfc24ba51b5a4b4863244&amp;type=3#UIAtavismCurrencyInputsPanel" />
+    <ui:Template name="UIAtavismCurrencyPanel" src="project://database/Assets/Dragonsan/Atavism%20(UI%20Toolkit)/UI/Screens/Game/Dependencies/UIAtavismCurrencyPanel.uxml?fileID=9197481963319205126&amp;guid=92cceebc890f7f84987b5bae2ddcaf64&amp;type=3#UIAtavismCurrencyPanel" />
+    <ui:VisualElement name="Screen" picking-mode="Ignore" style="flex-grow: 1; align-self: stretch; justify-content: flex-start; align-items: stretch;">
+        <ui:Instance template="panel_AtavismWindow" name="ShopWindow" class="merchant-window" style="height: 570px; width: 520px;">
+            <AttributeOverrides element-name="Window-title" text="SHOP" />
+            <ui:VisualElement name="inner-panel" class="inner-panel" style="min-width: 100%;">
+                <ui:VisualElement name="menu-panel" style="flex-grow: 1; height: 65px; max-height: 65px; min-height: 65px;">
+                    <Atavism.UI.UIButtonToggleGroup item-Class-Name="shop-tab-button" selected-item-Class-Name="shop-tab-button__selected" Items="BUY,SELL" name="menu" Default-Item-Index="1" class="shop-menu" style="flex-direction: row;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="header" class="merchant-header" style="display: none;">
+                    <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="prev-button" class="merchant-prev-button" />
+                    <ui:Label tabindex="-1" text="1" parse-escape-sequences="true" display-tooltip-when-elided="true" name="page-label" class="Text-Gray merchant-page-label" />
+                    <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="next-button" class="merchant-next-button" />
+                </ui:VisualElement>
+                <ui:ScrollView mouse-wheel-scroll-size="18" scroll-deceleration-rate="0,135" elasticity="0,1" name="buy-panel" class="merchant-item-list" style="display: none;">
+                    <ui:VisualElement name="item-list" style="flex-wrap: wrap; flex-direction: row; align-items: stretch; align-self: stretch; justify-content: flex-start; display: flex; margin-left: 8px; height: 300px; min-height: auto;">
+                        <ui:Instance template="UIAtavismShopItem" name="UIAtavismShopItem" />
+                        <ui:Instance template="UIAtavismShopItem" name="UIAtavismShopItem" />
+                        <ui:Instance template="UIAtavismShopItem" name="UIAtavismShopItem" />
+                        <ui:Instance template="UIAtavismShopItem" name="UIAtavismShopItem" />
+                        <ui:Instance template="UIAtavismShopItem" name="UIAtavismShopItem" />
+                        <ui:Instance template="UIAtavismShopItem" name="UIAtavismShopItem" />
+                        <ui:Instance template="UIAtavismShopItem" name="UIAtavismShopItem" />
+                        <ui:Instance template="UIAtavismShopItem" name="UIAtavismShopItem" />
+                        <ui:Instance template="UIAtavismShopItem" name="UIAtavismShopItem" />
+                        <ui:Instance template="UIAtavismShopItem" name="UIAtavismShopItem" />
+                    </ui:VisualElement>
+                </ui:ScrollView>
+                <ui:ScrollView mouse-wheel-scroll-size="18" scroll-deceleration-rate="0,135" elasticity="0,1" name="sell-panel" class="merchant-item-list" style="display: flex;">
+                    <ui:VisualElement name="item-list" style="flex-wrap: wrap; flex-direction: row; align-items: stretch; align-self: stretch; justify-content: flex-start; flex-grow: 1; min-height: auto; height: 300px; margin-left: 8px;">
+                        <ui:Instance template="UIAtavismShopItem" name="UIAtavismShopItem" />
+                        <ui:Instance template="UIAtavismShopItem" name="UIAtavismShopItem" />
+                        <ui:Instance template="UIAtavismShopItem" name="UIAtavismShopItem" />
+                        <ui:Instance template="UIAtavismShopItem" name="UIAtavismShopItem" />
+                        <ui:Instance template="UIAtavismShopItem" name="UIAtavismShopItem" />
+                        <ui:Instance template="UIAtavismShopItem" name="UIAtavismShopItem" />
+                        <ui:Instance template="UIAtavismShopItem" name="UIAtavismShopItem" />
+                        <ui:Instance template="UIAtavismShopItem" name="UIAtavismShopItem" />
+                        <ui:Instance template="UIAtavismShopItem" name="UIAtavismShopItem" />
+                        <ui:Instance template="UIAtavismShopItem" name="UIAtavismShopItem" style="display: flex;" />
+                    </ui:VisualElement>
+                </ui:ScrollView>
+                <ui:VisualElement class="spacer-img" />
+                <Atavism.UI.UITextField Placeholder="Message" name="message" style="height: 55px;" />
+                <ui:VisualElement class="spacer-img" style="flex-grow: 1;" />
+                <ui:VisualElement name="bottom" style="flex-direction: row; justify-content: space-around; height: 75px; max-height: 75px; min-height: 75px; align-items: center;">
+                    <ui:Button text="CREATE" parse-escape-sequences="true" display-tooltip-when-elided="true" name="create-button" class="Button-Light-Overlay Button-XL" />
+                    <ui:Button text="CANCEL" parse-escape-sequences="true" display-tooltip-when-elided="true" name="cancel-button" class="Button-Light-Overlay Button-XL" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="price-panel" class="merchant-count-panel" style="display: flex; width: 470px; height: 300px; top: 174px; left: 13px;">
+                <ui:VisualElement class="merchant-count-panel-top">
+                    <ui:VisualElement style="flex-grow: 1; flex-direction: row; height: 60px; max-height: 60px; min-height: 60px; align-self: center; width: 359px; align-items: center;">
+                        <ui:Instance template="UIAtavismSlotItem 1" name="item-slot" />
+                        <ui:Label tabindex="-1" text="Name" parse-escape-sequences="true" display-tooltip-when-elided="true" name="item-name" class="Text-Light merchant-count-panel-item-name" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="quantity-panel" style="flex-grow: 1; align-self: flex-start; justify-content: flex-start; flex-direction: row; height: 30px; max-height: 30px; align-items: auto; margin-right: 2px;">
+                        <ui:Label tabindex="-1" text="Quantity:" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" style="position: relative; left: 0;" />
+                        <Atavism.UI.UITextField value="1" name="quantity-input" keyboard-type="NumberPad" style="width: 50px;" />
+                        <ui:SliderInt high-value="100" name="quantity-slider" class="UISlider" style="width: 286px; height: 20px; display: flex; position: relative; flex-direction: row;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="price-panel" class="auction-sub-top-price-panel">
+                        <ui:Label tabindex="-1" text="Price:" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" />
+                        <ui:VisualElement class="auction-sub-top-price-input-panel">
+                            <ui:Instance template="UIAtavismCurrencyInputsPanel" name="currency-input" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="total-price-panel" class="merchant-count-panel-currency-frame" style="flex-direction: row; width: 100%; justify-content: space-around;">
+                        <ui:Label tabindex="-1" text="Total Price:" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Gray" style="position: absolute; left: 0;" />
+                        <ui:Instance template="UIAtavismCurrencyPanel" name="currency-sum" class="merchant-count-panel-currency" style="position: absolute; right: 0;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="space" class="spacer-img" />
+                <ui:VisualElement name="buttons" class="merchant-count-panel-buttons">
+                    <ui:Button text="SAVE" parse-escape-sequences="true" display-tooltip-when-elided="true" name="save-button" class="Button-XS Button-Light-Overlay Button-XL" />
+                    <ui:Button text="CANCEL" parse-escape-sequences="true" display-tooltip-when-elided="true" name="cancel-button" class="Button-XS Button-Light-Overlay Button-XL" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:Instance>
+    </ui:VisualElement>
+</ui:UXML>
