@@ -12,11 +12,13 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
-  m_InvalidKeywords: []
+  m_InvalidKeywords:
+  - _MULTIPLYOPACITY_ON
+  - _USETRANSPARENCY_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 2998
   stringTagMap: {}
   disabledShaderPasses: []
   m_LockedProperties: 
@@ -28,10 +30,6 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _CausticsTexture:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -115,37 +113,15 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _WavesNormal:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _texcoord:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_Lightmaps:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_LightmapsInd:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_ShadowMasks:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _AlphaCutoff: 0.5
     - _BumpScale: 1
     - _CausticOffset: 100
-    - _CausticsDistance: 0.1
-    - _CausticsDistortion: 0.1
-    - _CausticsHeightOffset: 0
-    - _CausticsIntensity: 0.1
     - _CausticsOffset: 1
-    - _CausticsOpacity: 0.2
     - _CausticsScale: 1
     - _CausticsSpeed: 2
     - _ChromaticAberration: 0.1
@@ -164,20 +140,16 @@ Material:
     - _EdgeLength: 50
     - _EdgePower: 1
     - _EdgesFade: 0.01
-    - _EnvironmentReflections: 1
     - _Float2: 1000
     - _Float3: 0.744
     - _FoamContrast: 10
     - _FoamDepth: 0
     - _FoamDistance: 1.7
-    - _FoamDistance1: 0.07
     - _FoamFalloff: 0
-    - _FoamOpacity1: 0
     - _FoamPower: 0.103
     - _FoamScale: 3
     - _FoamSmoothness: 0
     - _FoamSpeed: 1
-    - _FoamTiling: 50
     - _GlobalNoiseScale: 5
     - _GlobalNoiseScale1: 1
     - _GlobalNoiseSpeed: 5
@@ -195,17 +167,10 @@ Material:
     - _NormalPower1: 1
     - _NormalScale: 1.5
     - _NormalSpeed: 1
-    - _NormalStrength: 0.4593325
     - _NormalTiling: 0.05
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _QueueControl: 0
-    - _QueueOffset: 0
-    - _ReceiveShadows: 1
-    - _Refraction1: 0.85
     - _RefractionPower: 5
-    - _ShallowWaterDistance: 0
-    - _Smoothness: 1
     - _SmoothnessPower: 1
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -217,20 +182,13 @@ Material:
     - _UseDistanceFade: 0
     - _UseTransparency: 1
     - _WaterDepth: 0
-    - _WaterEdgeDistance: 0
     - _WaterFalloff: 0
-    - _WaterMaxOpacity: 0.91
     - _WaterOpacity: 0
     - _WaterReflection: 0
     - _WaterScale: 0
-    - _WaterShallowOpacityDistance: 0
     - _WaterSmoothness: 0
     - _WaterSpecular: 0
     - _WaterSpeed: 0
-    - _Waves01Scale: 10
-    - _Waves01Speed: 0.54
-    - _Waves02Scale: 12
-    - _Waves02Speed: 0
     - _WavesHeight: 0.3
     - _WavesScale: 10
     - _WavesSpeed: 5
@@ -244,8 +202,6 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Color0: {r: 0, g: 0.5987654, b: 1, a: 0}
     - _Color1: {r: 1, g: 0.76618373, b: 0, a: 1}
-    - _ColorDeep: {r: 0.12130647, g: 0.34791896, b: 0.5471698, a: 0}
-    - _ColorShallow: {r: 0.5990566, g: 0.9091429, b: 1, a: 0}
     - _DepthColor: {r: 0, g: 0.40936998, b: 0.462264, a: 1}
     - _DepthColor1: {r: 0, g: 0.60118407, b: 0.6132076, a: 1}
     - _Direction: {r: 1, g: 0, b: -1, a: 0.2}
@@ -264,4 +220,3 @@ Material:
     - _WavesScaleOLD: {r: 1, g: 1, b: 0, a: 0}
     - _WavesScaleXY: {r: 0.1, g: 0.1, b: 0, a: 0}
   m_BuildTextureStacks: []
-  m_AllowLocking: 1
