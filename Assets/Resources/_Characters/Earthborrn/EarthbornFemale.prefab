@@ -1888,16 +1888,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3893679776617692787}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3277f9e3a33ce6b47830763a925ce259, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentTab: Color Selections
+  currentTab: Color Options
   toolbarTop: 99
   toolbarMiddle: 99
   toolbarBottom: 99
-  toolbarSubBottom: 2
+  toolbarSubBottom: 0
   gender: 1
   replacementObject: {fileID: 0}
   headReplacementObject: {fileID: 0}
@@ -1916,17 +1916,11 @@ MonoBehaviour:
   mouthMat: {fileID: 0}
   skinMaterialsToSync: []
   skinMaterialsSynced: []
-  hairMaterialsToSync:
-  - {fileID: 2100000, guid: 60829fa7c348b464297b6a4424dbc095, type: 2}
-  - {fileID: 2100000, guid: 2705f4bff99976543aee0f2e9c8d1b46, type: 2}
-  - {fileID: 2100000, guid: acbfd6f5b5832ab4fa13a73d50e3e155, type: 2}
+  hairMaterialsToSync: []
   hairMaterialsSynced: []
   bodyMatList: []
   headMatList: []
-  hairMatList:
-  - {fileID: 2100000, guid: 60829fa7c348b464297b6a4424dbc095, type: 2}
-  - {fileID: 2100000, guid: 2705f4bff99976543aee0f2e9c8d1b46, type: 2}
-  - {fileID: 2100000, guid: acbfd6f5b5832ab4fa13a73d50e3e155, type: 2}
+  hairMatList: []
   eyeMatList: []
   mouthMatList: []
   skinColors:
@@ -1996,7 +1990,7 @@ MonoBehaviour:
   directSetSkinColor: 0
   colorParamName: _Color_Skin
   useBeardColorForColor2: 0
-  enableMultipleCharacterColors: 0
+  enableMultipleCharacterColors: 1
   completelyDisableInstancedMaterials: 0
   atavismMobAppearance: {fileID: 0}
   allowDifferentHairColors: 0
