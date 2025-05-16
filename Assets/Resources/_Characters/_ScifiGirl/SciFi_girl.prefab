@@ -3737,11 +3737,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3277f9e3a33ce6b47830763a925ce259, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentTab: Color Selections
+  currentTab: Default Colors
   toolbarTop: 99
   toolbarMiddle: 99
   toolbarBottom: 99
-  toolbarSubBottom: 2
+  toolbarSubBottom: 1
   gender: 1
   replacementObject: {fileID: 0}
   headReplacementObject: {fileID: 0}
@@ -3753,18 +3753,6 @@ MonoBehaviour:
   feetReplacementObject: {fileID: 0}
   handsReplacementObject: {fileID: 0}
   modularModelSwapping: 0
-  modularBonedModelSwapping: 1
-  defaultTorso: {fileID: 7643004166145423356}
-  defaultHands: {fileID: 675165546342584045}
-  defaultFeet: {fileID: 8753280446879124852}
-  defaultLegs: {fileID: 0}
-  defaultEye: {fileID: 0}
-  defaultHips: {fileID: 0}
-  defaultHead: {fileID: 8998291543151953964}
-  defaultLowerLegs: {fileID: 946768460133468824}
-  defaultLowerArms: {fileID: 4395152623009340544}
-  defaultUpperArms: {fileID: 1776964718514081065}
-  defaultCharacterAge: 18
   bodyMat: {fileID: 2100000, guid: 348f7d370cfabe04d9a6b4352ddae4d3, type: 2}
   headMat: {fileID: 0}
   hairMat: {fileID: 2100000, guid: 78a7a9700a883dc4396dc42cf4b3d0b7, type: 2}
@@ -3840,24 +3828,7 @@ MonoBehaviour:
   directSetHairColor: 1
   directSetEyeColor: 1
   directSetSkinColor: 1
-  colorSkinParamName: _Color_Skin
-  colorStubbleParamName: _Color_Stubble
-  colorBodyArtParamName: _Color_BodyArt
-  colorColor2ParamName: _Color2
-  colorHairParamName: _Color_Hair
-  colorMouthParamName: _Color_Mouth
-  colorScarParamName: _Color_Scar
-  colorEyesParamName: _Color_Eyes
-  colorPrimaryParamName: _Color_Primary
-  colorSecondaryParamName: _Color_Secondary
-  colorTertiaryParamName: _Color_Tertiary
-  colorLeatherPrimaryParamName: _Color_Leather_Primary
-  colorLeatherSecondaryParamName: _Color_Leather_Secondary
-  colorLeatherTertiaryParamName: _Color_Leather_Tertiary
-  colorMetalPrimaryParamName: _Color_Metal_Primary
-  colorMetalDarkParamName: _Color_Metal_Dark
-  DiffuseColorName: _DiffuseColor
-  ColorName: _Color
+  colorParamName: _Color_Skin
   useBeardColorForColor2: 0
   enableMultipleCharacterColors: 0
   completelyDisableInstancedMaterials: 0
@@ -3896,8 +3867,6 @@ MonoBehaviour:
   hipModels: []
   lowerLegModels: []
   feetModels: []
-  blendshapePresetObjects: []
-  morphShapesManager: {fileID: 0}
   helmetModels: []
   hairModels:
   - {fileID: 7537132390970133769}
@@ -3949,7 +3918,7 @@ MonoBehaviour:
   handsColorPropertyName: HandsColor
   feetColorPropertyName: FeetColor
   faithPropertyName: FaithValue
-  modularBlendShapes: BlendshapesValue
+  infinityBlendShapes: BlendshapesValue
   blendshapePresetValue: BlendshapePresetValue
   hairDirectory: _Customizer_Male_Hair
   FhairDirectory: _Customizer_Female_Hair
@@ -3971,7 +3940,6 @@ MonoBehaviour:
   defaultEarName: 
   defaultTuskName: 
   defaultBeardName: 
-  defaultEyebrowName: 
   defaultHairName: 
   defaultCapeName: []
   defaultFemaleHeadName:
@@ -3996,10 +3964,10 @@ MonoBehaviour:
   defaultFaithName: 
   defaultSkinColor:
     serializedVersion: 2
-    rgba: 4289645823
+    rgba: 4294967295
   defaultHairColor:
     serializedVersion: 2
-    rgba: 4281155919
+    rgba: 4294967295
   defaultScarColor:
     serializedVersion: 2
     rgba: 4288131053
@@ -4011,7 +3979,7 @@ MonoBehaviour:
     rgba: 4294683661
   defaultEyeColor:
     serializedVersion: 2
-    rgba: 4290876474
+    rgba: 4294967295
   defaultMouthColor:
     serializedVersion: 2
     rgba: 4289645823
