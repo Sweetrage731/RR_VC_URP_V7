@@ -1257,7 +1257,6 @@ GameObject:
   m_Component:
   - component: {fileID: 791465310596672727}
   - component: {fileID: 4200927353707949740}
-  - component: {fileID: 6924317840176662691}
   - component: {fileID: 2836003922353152611}
   - component: {fileID: 4839237638314679321}
   - component: {fileID: 7261705508384591406}
@@ -1314,41 +1313,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &6924317840176662691
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2076889360307849535}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5394fe5534882fb4c958fc964135c1d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  characterData: {fileID: 0}
-  CharacterMaterial: {fileID: 2100000, guid: b356345c4d37f2b4686a652f9c3240c4, type: 2}
-  Gender: 0
-  ChestSize: 79.86136
-  FaceShape: 0
-  height: -0.069524825
-  headSize: 0.034962237
-  shoulderWidth: 0
-  LashLength: 0
-  BrowSize: 21.139734
-  EarTipLength: 59.895897
-  EyeSocketPosition: {x: 0, y: 0, z: 0}
-  EyeSocketRotation: 0
-  EyeSocketScale: {x: 1.1000702, y: 1.1200852, z: 1.1000714}
-  EyeUp: 70.46597
-  EyeDown: 0
-  EyeSquare: 0
-  NoseWidth: 49.326237
-  NoseUp: 90.43112
-  NoseDown: 0
-  NoseBridgeAngle: 0
-  MouthWide: 100
-  MouthThin: 0
 --- !u!143 &2836003922353152611
 CharacterController:
   m_ObjectHideFlags: 0
