@@ -34,7 +34,6 @@ GameObject:
   - component: {fileID: 114221975056224768}
   - component: {fileID: 114094585752455112}
   - component: {fileID: 114093922064952514}
-  - component: {fileID: 114985572084292582}
   - component: {fileID: 114040938030902896}
   - component: {fileID: 114082773814915722}
   - component: {fileID: 114569717196511004}
@@ -56,13 +55,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 100000}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1483.5659, y: 42.8547, z: 1501.9473}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &11400008
 MonoBehaviour:
@@ -124,8 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fac6b5b8a78a70478e9179d796f8841, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uguiAtavismAbilityPrefab: {fileID: 11431552, guid: 288e69beb5b8ed24ab77483cf65ebd59,
-    type: 3}
+  uguiAtavismAbilityPrefab: {fileID: 11431552, guid: 288e69beb5b8ed24ab77483cf65ebd59, type: 3}
   rangeStat: 
   rangeThresholds: []
   costStat: 
@@ -152,8 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb27df494c3d3fa47ad5597a807bde99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uguiAtavismItemPrefab: {fileID: 11431552, guid: 2e177b11b9105f6458b93f6c93e7e0a8,
-    type: 3}
+  uguiAtavismItemPrefab: {fileID: 11431552, guid: 2e177b11b9105f6458b93f6c93e7e0a8, type: 3}
   mainCurrencyGroup: 80
   sellFactor: 0.25
   sets: []
@@ -199,8 +196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0e5c46b55bcaf94ba6029a8438a5e7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lootParticle: {fileID: 1053580675530096, guid: 8b0130247b2928d4f9f27f6f4a822f82,
-    type: 3}
+  lootParticle: {fileID: 1053580675530096, guid: 8b0130247b2928d4f9f27f6f4a822f82, type: 3}
 --- !u!114 &11400018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,6 +210,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   repairRate: 0.5
+  npcMaxDistance: 5
 --- !u!114 &11400020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1005,9 +1002,12 @@ MonoBehaviour:
     - _name: Village
       _loc: {x: -170, y: 74, z: 154}
   _adminRestartSettings: []
+  UISlotInventoryItemUXML: {fileID: 0}
+  UISlotActionBarItemUXML: {fileID: 0}
+  UISlotBagItemUXML: {fileID: 0}
+  UIActivatableUXML: {fileID: 0}
   actionBarPrefab: {fileID: 11431552, guid: 288e69beb5b8ed24ab77483cf65ebd59, type: 3}
-  inventoryItemPrefab: {fileID: 11431552, guid: 2e177b11b9105f6458b93f6c93e7e0a8,
-    type: 3}
+  inventoryItemPrefab: {fileID: 11431552, guid: 2e177b11b9105f6458b93f6c93e7e0a8, type: 3}
   abilitySlotPrefab: {fileID: 11431552, guid: 288e69beb5b8ed24ab77483cf65ebd59, type: 3}
   effectQualityColor: {r: 1, g: 1, b: 1, a: 1}
   abilityQualityColor: {r: 1, g: 1, b: 1, a: 1}
@@ -1117,8 +1117,7 @@ MonoBehaviour:
         - {fileID: 21300016, guid: a0fc465d6cf04254a2938578735e2383, type: 3}
   masterMixer: {fileID: 24100000, guid: d00a6755fc46ff544933af2c7b9b6c34, type: 2}
   mixerFocus: {fileID: 24500003, guid: d00a6755fc46ff544933af2c7b9b6c34, type: 2}
-  mixerNoFocus: {fileID: 245605257824074404, guid: d00a6755fc46ff544933af2c7b9b6c34,
-    type: 2}
+  mixerNoFocus: {fileID: 245605257824074404, guid: d00a6755fc46ff544933af2c7b9b6c34, type: 2}
   _defaultQualitySettings:
   - name: FastTest
     pixelLightCount: 0
@@ -1212,31 +1211,26 @@ MonoBehaviour:
     particleRaycastBudget: 4096
   UMAGameObject: {fileID: 0}
   wardrobeGameObject: {fileID: 0}
-  sceneLoaderPrefab: {fileID: 1635871686471294, guid: 7fa7cf59c0dcd9c4f803e826ca547991,
-    type: 3}
+  sceneLoaderPrefab: {fileID: 1635871686471294, guid: 7fa7cf59c0dcd9c4f803e826ca547991, type: 3}
   minimapSettings:
     minimapItemPrefab: {fileID: 197840, guid: d2b865b356dc02b4dbf4382c0f272f02, type: 3}
+    minimapUiItemPrefab: {fileID: 0}
     minimapIcon: {fileID: 21300000, guid: eccb35bbc94c3184f89f38751cc51506, type: 3}
     minimapIconSize: 6
     minimapIconColor: {r: 1, g: 1, b: 1, a: 1}
-    minimapQuestConcludableIcon: {fileID: 21300000, guid: 9feb06224cb97ca40945b7b11d276699,
-      type: 3}
+    minimapQuestConcludableIcon: {fileID: 21300000, guid: 9feb06224cb97ca40945b7b11d276699, type: 3}
     minimapQuestConcludableIconSize: 30
     minimapQuestConcludableIconColor: {r: 1, g: 1, b: 0, a: 1}
-    minimapQuestProgressIcon: {fileID: 21300000, guid: 062e684c97db8af49941ebf9c3b7f14f,
-      type: 3}
+    minimapQuestProgressIcon: {fileID: 21300000, guid: 062e684c97db8af49941ebf9c3b7f14f, type: 3}
     minimapQuestProgressIconSize: 30
     minimapQuestProgressIconColor: {r: 1, g: 1, b: 0, a: 1}
-    minimapQuestAvailableIcon: {fileID: 21300000, guid: 639444d985b87f247996b52854042bfa,
-      type: 3}
+    minimapQuestAvailableIcon: {fileID: 21300000, guid: 639444d985b87f247996b52854042bfa, type: 3}
     minimapQuestAvailableIconSize: 30
     minimapQuestAvailableIconColor: {r: 1, g: 1, b: 0, a: 1}
-    minimapQuestMobArea: {fileID: 21300000, guid: bc2a53e8123850c45b939839af095de9,
-      type: 3}
+    minimapQuestMobArea: {fileID: 21300000, guid: bc2a53e8123850c45b939839af095de9, type: 3}
     minimapQuestMobAreaSize: 30
     minimapQuestMobAreaColor: {r: 1, g: 1, b: 1, a: 1}
-    minimapQuestTarget: {fileID: 21300074, guid: 25f29d36ef82b194aa76043fbdca53c1,
-      type: 3}
+    minimapQuestTarget: {fileID: 21300074, guid: 25f29d36ef82b194aa76043fbdca53c1, type: 3}
     minimapQuestTargetSize: 30
     minimapQuestTargetColor: {r: 1, g: 1, b: 1, a: 1}
     minimapShopIcon: {fileID: 21300000, guid: 68228d01e2f89c444bd1a717e04942f2, type: 3}
@@ -1248,8 +1242,7 @@ MonoBehaviour:
     minimapBossIcon: {fileID: 21300000, guid: 7df4d188306ffdf48bdadd53762f6086, type: 3}
     minimapBossIconSize: 30
     minimapBossIconColor: {r: 1, g: 1, b: 1, a: 1}
-  levelUpPrefab: {fileID: 1053580675530096, guid: 8b0130247b2928d4f9f27f6f4a822f82,
-    type: 3}
+  levelUpPrefab: {fileID: 1053580675530096, guid: 8b0130247b2928d4f9f27f6f4a822f82, type: 3}
   levelUpPrefabDuration: 4
   gameInstances:
   - MainWorld
@@ -1271,36 +1264,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c5d5d855ea50484ab197040309be432, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114985572084292582
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f81d8d07a6a0904ba6eedd8acd323b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_worldAPIActive: 1
-  m_playerObject: {fileID: 0}
-  m_latLon: {x: 0, y: 0, z: 0, w: 0}
-  m_sceneGroundCenter: {x: 0, y: 0, z: 0}
-  m_sceneCenter: {x: 0, y: 0, z: 0}
-  m_sceneSize: {x: 0, y: 0, z: 0}
-  m_seaData: {x: 0, y: 0, z: 0, w: 0}
-  m_windData: {x: 0, y: 0, z: 0, w: 0}
-  m_cloudData: {x: 0, y: 0, z: 0, w: 0}
-  m_fogData: {x: 0, y: 0, z: 0, w: 0}
-  m_rainData: {x: 0, y: 0, z: 0, w: 0}
-  m_haildata: {x: 0, y: 0, z: 0, w: 0}
-  m_snowData: {x: 0, y: 0, z: 0, w: 0}
-  m_thunderData: {x: 0, y: 0, z: 0, w: 0}
-  m_soundVolumes: {x: 1, y: 1, z: 1, w: 1}
-  m_seasonData: {x: 0, y: 0, z: 0, w: 0}
-  m_moonData: {x: 0, y: 0, z: 0, w: 0}
-  m_extensionList: []
 --- !u!114 &114040938030902896
 MonoBehaviour:
   m_ObjectHideFlags: 0
