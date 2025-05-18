@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using Atavism; // For UGUIInstanceExit and network calls
+using Atavism; // For Atavism network calls
 
 public enum CollectibleType { Coin, Key, Gem, Custom }
 
@@ -39,6 +39,10 @@ public class MinigameManager : MonoBehaviour
     public float autoExitDelay = 10f; // seconds
     private float exitCountdown = 0f;
     private bool exitCountdownActive = false;
+
+    [Header("Currency Settings")]
+    [Tooltip("The Atavism currencyID for your standard coin currency.")]
+    public int coinCurrencyID = 1; // Replace with your actual coin currency ID!
 
     // --- Private State ---
     int score = 0;
@@ -174,7 +178,7 @@ public class MinigameManager : MonoBehaviour
         exitCountdownActive = true;
         UpdateExitButtonText();
 
-        // (Optional) Send rewards to Atavism server, only once
+        // Send rewards to Atavism server, only once
         if (success && !rewardsSentToServer)
         {
             List<RewardEntry> grantedRewards = GetAllGrantedRewards();
@@ -238,23 +242,46 @@ public class MinigameManager : MonoBehaviour
 
     string FormatReward(RewardEntry reward)
     {
+        // If you want pretty names, look them up from your currency/item database!
         return reward.rewardType == RewardType.Item
             ? $"{reward.rewardAmount}x Item (ID {reward.rewardID})"
             : $"{reward.rewardAmount} Currency (ID {reward.rewardID})";
     }
 
-    // ----------- ATAVISM MMO HOOK (plug in your server integration here) -----------
+    // ----------- GIVE OUT THE REWARDS -----------
     void SendCompletionToServer(List<RewardEntry> rewards, bool completed)
     {
-        if (!completed)
+        if (!completed || rewards == null)
             return;
 
-        // Plug in your Atavism MMO message code here:
-        // Example: AtavismEventSystem.DispatchEvent("MINIGAME_REWARD", ...);
-        Debug.Log($"[Minigame] (FAKE SEND) Would send score {score}, coins {coins}, {rewards.Count} rewards to server here.");
+        foreach (var reward in rewards)
+        {
+            if (reward.rewardType == RewardType.Currency)
+            {
+                Dictionary<string, object> props = new Dictionary<string, object>();
+                props.Add("currencyID", reward.rewardID);
+                props.Add("amount", reward.rewardAmount);
+                NetworkAPI.SendExtensionMessage(ClientAPI.GetPlayerOid(), false, "currency.GAIN_CURRENCY", props);
+            }
+            else if (reward.rewardType == RewardType.Item)
+            {
+                Dictionary<string, object> itemProps = new Dictionary<string, object>();
+                itemProps.Add("itemID", reward.rewardID);
+                itemProps.Add("amount", reward.rewardAmount);
+                NetworkAPI.SendExtensionMessage(ClientAPI.GetPlayerOid(), false, "inventory.GAIN_ITEM", itemProps);
+            }
+        }
+        // Grant coins as a currency if you want
+        if (coins > 0)
+        {
+            Dictionary<string, object> props = new Dictionary<string, object>();
+            props.Add("currencyID", coinCurrencyID); // replace with your real coin currency ID!
+            props.Add("amount", coins);
+            NetworkAPI.SendExtensionMessage(ClientAPI.GetPlayerOid(), false, "currency.GAIN_CURRENCY", props);
+        }
     }
 
-    // ----------- EXIT INSTANCE: USES ATAVISM'S UGUIInstanceExit -----------
+    // ----------- EXIT INSTANCE: USES ATAVISM NETWORK CALL -----------
     public void ExitMinigame()
     {
         if (exitButton != null)
@@ -270,7 +297,7 @@ public class MinigameManager : MonoBehaviour
             if (atavismPlayer != null) atavismPlayer.gameObject.SetActive(true);
         }
 
-        // FORCIBLY SEND THE ATAVISM INSTANCE EXIT MESSAGE
+        // Forcibly send the Atavism instance exit message!
         Dictionary<string, object> props = new Dictionary<string, object>();
         NetworkAPI.SendExtensionMessage(ClientAPI.GetPlayerOid(), false, "ao.leaveInstance", props);
     }
