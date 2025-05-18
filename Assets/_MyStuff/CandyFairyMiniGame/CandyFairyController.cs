@@ -77,7 +77,6 @@ public class CandyFairyController : MonoBehaviour
     void Update()
     {
         if (groundCheck == null || cameraTransform == null || isDead) return;
-
         isGrounded = Physics.CheckSphere(groundCheck.position, groundRadius, groundLayer);
 
         if (jumpQueued && isGrounded)
@@ -91,6 +90,7 @@ public class CandyFairyController : MonoBehaviour
     {
         if (isDead) return;
 
+        // Get camera-relative movement direction
         Vector3 camForward = cameraTransform.forward;
         Vector3 camRight = cameraTransform.right;
         camForward.y = 0f;
@@ -102,19 +102,23 @@ public class CandyFairyController : MonoBehaviour
 
         if (moveDir.sqrMagnitude > 0.01f)
         {
+            // Rotate smoothly to face movement direction
             Quaternion targetRotation = Quaternion.LookRotation(moveDir);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.fixedDeltaTime);
         }
 
+        // Apply velocity
         Vector3 velocity = moveDir.normalized * moveSpeed;
         velocity.y = rb.linearVelocity.y;
         rb.linearVelocity = velocity;
 
+        // Adjust float physics
         if (!isGrounded && isFloating)
         {
             rb.AddForce(Vector3.down * (1 - floatGravityScale) * Physics.gravity.y, ForceMode.Acceleration);
         }
 
+        // Update animation
         if (animator != null)
         {
             float speed = new Vector2(rb.linearVelocity.x, rb.linearVelocity.z).magnitude;
