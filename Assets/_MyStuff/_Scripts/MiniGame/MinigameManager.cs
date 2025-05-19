@@ -2,31 +2,44 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using Atavism; // For Atavism network calls
-
-public enum CollectibleType { Coin, Key, Gem, Custom }
+using Atavism;  // Provides ClientAPI, NetworkAPI, OID, etc. for Atavism integration
 
 public class MinigameManager : MonoBehaviour
 {
     public static MinigameManager Instance { get; private set; }
 
+    // --- Gameplay Settings ---
     [Header("Gameplay Settings")]
+    [Tooltip("Time limit in seconds for the minigame (0 for no limit).")]
     public float timeLimit = 60f;
-    public GameObject playerOverridePrefab; // Optional: swap out player prefab for minigame
+    [Tooltip("Optional: override player prefab for the minigame. If set, spawns this prefab at the Respawn point and disables the regular player.")]
+    public GameObject playerOverridePrefab;
 
+    // --- Completion Logic ---
     [Header("Completion Logic")]
-    [Tooltip("Drag the specific collectible instance in the scene (e.g., the 'Crown') here. When collected, minigame ends!")]
-    public Collectible completionCollectibleInstance;
+    [Tooltip("If true, the minigame ends when a specific collectible (assigned below) is collected.")]
     public bool useCompletionCollectible = false;
+    [Tooltip("Assign the special collectible object that triggers completion when collected (e.g., a key or crown).")]
+    public Collectible completionCollectibleInstance;
 
+    // --- Guaranteed Completion Reward ---
     [Header("Guaranteed Completion Reward")]
+    [Tooltip("If true, grant a fixed reward upon successful completion (defined below).")]
     public bool grantCompletionReward = false;
+    [Tooltip("The reward given for completing the minigame (item or currency).")]
     public RewardEntry completionReward;
 
+    // --- Score Reward Tiers ---
     [Header("Score Reward Tiers")]
-    [Tooltip("Highest tier reached (by score) gives all rewards in that tier, plus the completion reward if enabled.")]
-    public List<ScoreRewardTier> rewardThresholds;
+    [Tooltip("Define score thresholds and their rewards. The highest threshold reached (<= player score) grants all its rewards.")]
+    public List<ScoreRewardTier> rewardThresholds = new List<ScoreRewardTier>();
 
+    // --- Optional Coin Reward ---
+    [Header("Coin Reward (Optional)")]
+    [Tooltip("If set to a valid Currency ID (>0), any coins collected in-game will be granted as this currency upon completion.")]
+    public int coinCurrencyID = 0;
+
+    // --- UI References ---
     [Header("UI References")]
     public TMP_Text scoreText;
     public TMP_Text coinsText;
@@ -35,274 +48,388 @@ public class MinigameManager : MonoBehaviour
     public TMP_Text summaryText;
     public Button exitButton;
 
+    // --- Exit Countdown ---
     [Header("Exit Countdown")]
-    public float autoExitDelay = 10f; // seconds
+    [Tooltip("Time in seconds before automatically exiting the instance after game completion.")]
+    public float autoExitDelay = 10f;
     private float exitCountdown = 0f;
     private bool exitCountdownActive = false;
 
-    [Header("Currency Settings")]
-    [Tooltip("The Atavism currencyID for your standard coin currency.")]
-    public int coinCurrencyID = 1; // Replace with your actual coin currency ID!
+    // --- Private State Tracking ---
+    private int score = 0;
+    private int coins = 0;
+    private float timeRemaining = 0f;
+    private bool gameActive = false;
+    private int collectiblesInScene = 0;
+    private int collectiblesCollected = 0;
+    private bool rewardsSentToServer = false;
 
-    // --- Private State ---
-    int score = 0;
-    int coins = 0;
-    float timeRemaining = 0f;
-    bool gameActive = false;
-    int collectiblesInScene = 0;
-    int collectiblesCollected = 0;
-    bool rewardsSentToServer = false;
-
-    CharacterController playerController;
-    MonoBehaviour movementScript;
-    GameObject playerOverrideInstance;
+    // Player control references
+    private CharacterController playerController;
+    private MonoBehaviour movementScript;
+    private GameObject playerOverrideInstance;
 
     void Awake()
     {
-        Instance = this;
+        Instance = this;  // Initialize singleton instance
     }
 
     void Start()
     {
+        // Initialize game state
         collectiblesInScene = FindObjectsOfType<Collectible>().Length;
         collectiblesCollected = 0;
         score = 0;
         coins = 0;
         timeRemaining = timeLimit;
         gameActive = true;
-        summaryPanel.SetActive(false);
         rewardsSentToServer = false;
+        summaryPanel.SetActive(false);
 
-        // (Optional) Override player prefab for minigame
+        // (Optional) Spawn a custom player prefab for the minigame 
         if (playerOverridePrefab != null)
         {
+            // Determine spawn position (use object tagged "Respawn" if exists, else origin)
             Vector3 spawnPos = Vector3.zero;
-            var spawnObj = GameObject.FindWithTag("Respawn");
+            GameObject spawnObj = GameObject.FindWithTag("Respawn");
             if (spawnObj != null)
                 spawnPos = spawnObj.transform.position;
+            // Instantiate the override player character
             playerOverrideInstance = Instantiate(playerOverridePrefab, spawnPos, Quaternion.identity);
-            playerOverrideInstance.tag = "Player";
-            var atavismPlayer = FindObjectOfType<CharacterController>();
-            if (atavismPlayer != null) atavismPlayer.gameObject.SetActive(false);
+            playerOverrideInstance.tag = "Player";  // Tag it as Player so collectibles detect it
+
+            // Disable the main Atavism player character (to hide it during the minigame)
+            CharacterController atavismPlayer = FindObjectOfType<CharacterController>();
+            if (atavismPlayer != null)
+                atavismPlayer.gameObject.SetActive(false);
         }
 
+        // Find the (active) player controller in the scene
         playerController = FindObjectOfType<CharacterController>();
-        UpdateUI();
+        // If there's a separate movement script on the player, it can be stored here (optional)
+        // movementScript = ... (assign if needed)
 
+        // Hook up the Exit button to allow manual early exit
         if (exitButton != null)
             exitButton.onClick.AddListener(ExitMinigame);
+
+        // Update the on-screen UI for initial values (score, coins, timer)
+        UpdateUI();
     }
 
     void Update()
     {
-        if (!gameActive)
+        if (gameActive)
         {
-            // Handle auto-exit countdown after summary is shown
+            // Countdown timer logic (if a time limit is set)
+            if (timeLimit > 0f)
+            {
+                timeRemaining -= Time.deltaTime;
+                if (timeRemaining < 0f)
+                    timeRemaining = 0f;
+                // Update timer display each frame
+                if (timerText != null)
+                    timerText.text = $"Time: {Mathf.CeilToInt(timeRemaining)}";
+                // If time is up, end the game with failure
+                if (timeRemaining <= 0f)
+                {
+                    EndGame(success: false);
+                }
+            }
+        }
+        else
+        {
+            // After game ends, handle automatic exit countdown
             if (exitCountdownActive)
             {
                 exitCountdown -= Time.unscaledDeltaTime;
                 UpdateExitButtonText();
-
                 if (exitCountdown <= 0f)
                 {
+                    // Time to auto-exit
                     exitCountdownActive = false;
                     ExitMinigame();
                 }
             }
-            return;
-        }
-
-        if (timeLimit > 0f)
-        {
-            timeRemaining -= Time.deltaTime;
-            if (timeRemaining < 0f) timeRemaining = 0f;
-            if (timerText != null)
-                timerText.text = $"Time: {Mathf.CeilToInt(timeRemaining)}";
-            if (timeRemaining <= 0f)
-            {
-                EndGame(false);
-            }
         }
     }
 
-    // ----------- MAIN ENTRY: CollectItem is called by Collectible when picked up -----------
+    /// <summary>
+    /// Called by a Collectible object when the player picks it up.
+    /// Increments score and coin counts, updates UI, and checks for completion conditions.
+    /// </summary>
     public void CollectItem(Collectible item)
     {
+        if (!gameActive) return;  // Ignore if game already ended (safety check)
+
+        // Increase score and coins based on the collectible's values
         score += item.points;
         coins += item.coins;
         collectiblesCollected++;
+        // Refresh score and coin display
         UpdateUI();
 
-        // Unique object-based completion (DRAG-AND-DROP INSPECTOR FIELD)
+        // Check if this item is the special completion collectible (if using one)
         if (useCompletionCollectible && completionCollectibleInstance != null && item == completionCollectibleInstance)
         {
-            EndGame(true);
+            // Collecting the special item ends the game successfully
+            EndGame(success: true);
             return;
         }
 
-        // Otherwise, win if all collectibles gathered
+        // If not using a specific completion item, check if all collectibles are gathered
         if (collectiblesCollected >= collectiblesInScene)
         {
-            EndGame(true);
+            // All items collected – end game with success
+            EndGame(success: true);
         }
     }
 
+    /// <summary>
+    /// Updates the UI text fields for score, coins, and time.
+    /// </summary>
     void UpdateUI()
     {
-        if (scoreText) scoreText.text = $"Score: {score}";
-        if (coinsText) coinsText.text = $"Coins: {coins}";
-        if (timerText && timeLimit > 0f) timerText.text = $"Time: {Mathf.CeilToInt(timeRemaining)}";
+        if (scoreText != null)
+            scoreText.text = $"Score: {score}";
+        if (coinsText != null)
+            coinsText.text = $"Coins: {coins}";
+        if (timerText != null && timeLimit > 0f)
+            timerText.text = $"Time: {Mathf.CeilToInt(timeRemaining)}";
     }
 
+    /// <summary>
+    /// Ends the minigame, showing results and processing rewards.
+    /// </summary>
+    /// <param name="success">True if the player completed the minigame successfully, false if failed/timed out.</param>
     void EndGame(bool success)
     {
-        if (!gameActive) return;
+        // Only allow EndGame once
+        if (!gameActive)
+            return;
         gameActive = false;
 
-        // Lock movement
+        // Disable player movement controls when game ends
         if (playerController != null)
             playerController.enabled = false;
         if (movementScript != null)
             movementScript.enabled = false;
 
-        // Show summary UI
+        // Show the summary/results UI
         summaryPanel.SetActive(true);
         summaryText.text = GenerateSummary(success);
 
-        // Unlock cursor for UI
+        // Unlock the mouse cursor for UI interaction
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
 
-        // Start exit countdown
+        // Start the exit countdown (auto-exit after delay)
         exitCountdown = autoExitDelay;
         exitCountdownActive = true;
-        UpdateExitButtonText();
+        UpdateExitButtonText();  // initialize button text with timer
 
-        // Send rewards to Atavism server, only once
+        // If the game was completed successfully, send rewards to server (only once)
         if (success && !rewardsSentToServer)
         {
             List<RewardEntry> grantedRewards = GetAllGrantedRewards();
-            SendCompletionToServer(grantedRewards, true);
+            SendCompletionToServer(grantedRewards, completed: true);
             rewardsSentToServer = true;
         }
     }
 
+    /// <summary>
+    /// Updates the exit button label to show remaining seconds (for auto-exit countdown).
+    /// </summary>
     void UpdateExitButtonText()
     {
         if (exitButton != null)
         {
-            int seconds = Mathf.CeilToInt(exitCountdown);
-            exitButton.GetComponentInChildren<TMP_Text>().text = $"Exit ({seconds})";
+            int secondsLeft = Mathf.CeilToInt(exitCountdown);
+            exitButton.GetComponentInChildren<TMP_Text>().text = $"Exit ({secondsLeft})";
         }
     }
 
+    /// <summary>
+    /// Generate the summary text displayed to the player at end of the game.
+    /// Includes outcome (win/lose), final score, coins, and rewards earned.
+    /// </summary>
     string GenerateSummary(bool success)
     {
         if (!success)
+        {
+            // Failure case – time ran out or otherwise not completed
             return $"<b>Time's Up!</b>\nScore: {score}\nCoins: {coins}\nNo rewards earned.";
-
-        var rewardMsg = GetRewardsSummaryText();
-        return $"<b>Minigame Complete!</b>\nScore: {score}\nCoins: {coins}\n{rewardMsg}";
+        }
+        else
+        {
+            // Success case – display earned rewards
+            string rewardText = GetRewardsSummaryText();
+            return $"<b>Minigame Complete!</b>\nScore: {score}\nCoins: {coins}\n{rewardText}";
+        }
     }
 
-    // ----------- REWARDS LOGIC -----------
+    // -------------------- Reward Determination --------------------
+
+    /// <summary>
+    /// Determines all rewards the player should receive for their performance.
+    /// Includes the completion reward (if enabled) and the rewards from the highest achieved score tier.
+    /// </summary>
     List<RewardEntry> GetAllGrantedRewards()
     {
         List<RewardEntry> allRewards = new List<RewardEntry>();
-        // Always give completion reward if enabled
-        if (grantCompletionReward && completionReward != null)
-            allRewards.Add(completionReward);
 
-        // Find highest tier for score
+        // If a guaranteed completion reward is configured, add it
+        if (grantCompletionReward && completionReward != null)
+        {
+            allRewards.Add(completionReward);
+        }
+
+        // Find the highest score tier that the player qualifies for
         ScoreRewardTier bestTier = null;
-        foreach (var tier in rewardThresholds)
+        foreach (ScoreRewardTier tier in rewardThresholds)
         {
             if (score >= tier.scoreThreshold)
             {
+                // This tier is achieved; check if it's the highest one achieved so far
                 if (bestTier == null || tier.scoreThreshold > bestTier.scoreThreshold)
+                {
                     bestTier = tier;
+                }
             }
         }
-        if (bestTier != null && bestTier.rewards != null && bestTier.rewards.Count > 0)
+        // If a tier was achieved, add all its rewards
+        if (bestTier != null && bestTier.rewards != null)
+        {
             allRewards.AddRange(bestTier.rewards);
+        }
 
         return allRewards;
     }
 
+    /// <summary>
+    /// Builds a human-readable rewards summary string for the summary UI.
+    /// Lists each reward (quantity and type).
+    /// </summary>
     string GetRewardsSummaryText()
     {
-        var rewards = GetAllGrantedRewards();
+        List<RewardEntry> rewards = GetAllGrantedRewards();
         if (rewards.Count == 0)
+        {
             return "No rewards earned.";
-        List<string> rewardDescs = new List<string>();
-        foreach (var reward in rewards)
-            rewardDescs.Add(FormatReward(reward));
-        return $"<b>Rewards:</b> " + string.Join(", ", rewardDescs);
+        }
+
+        List<string> rewardDescriptions = new List<string>();
+        foreach (RewardEntry reward in rewards)
+        {
+            rewardDescriptions.Add(FormatReward(reward));
+        }
+        // Join the descriptions with commas
+        return "<b>Rewards:</b> " + string.Join(", ", rewardDescriptions);
     }
 
+    /// <summary>
+    /// Formats a single RewardEntry into a string for display (e.g., "5x Item (ID 123)" or "10 Currency (ID 4)").
+    /// </summary>
     string FormatReward(RewardEntry reward)
     {
-        // If you want pretty names, look them up from your currency/item database!
-        return reward.rewardType == RewardType.Item
-            ? $"{reward.rewardAmount}x Item (ID {reward.rewardID})"
-            : $"{reward.rewardAmount} Currency (ID {reward.rewardID})";
+        if (reward.rewardType == RewardType.Item)
+        {
+            return $"{reward.rewardAmount}x Item (ID {reward.rewardID})";
+        }
+        else // Currency
+        {
+            return $"{reward.rewardAmount} Currency (ID {reward.rewardID})";
+        }
     }
 
-    // ----------- GIVE OUT THE REWARDS -----------
+    // -------------------- Atavism Server Communication --------------------
+
+    /// <summary>
+    /// Sends the completion results to the Atavism server, granting rewards and triggering instance exit.
+    /// </summary>
+    /// <param name="rewards">List of rewards to grant to the player (from completion reward and tier).</param>
+    /// <param name="completed">Whether the minigame was completed successfully. (If false, no rewards sent.)</param>
     void SendCompletionToServer(List<RewardEntry> rewards, bool completed)
     {
-        if (!completed || rewards == null)
+        if (!completed)
+        {
+            // If not successfully completed, we do not send any reward messages.
             return;
+        }
 
-        foreach (var reward in rewards)
+        // Get the player's OID for sending extension messages
+        long playerOid = ClientAPI.GetPlayerOid();
+
+        // (1) Grant coins collected as a currency, if configured
+        if (coinCurrencyID > 0 && coins > 0)
+        {
+            Dictionary<string, object> coinProps = new Dictionary<string, object>();
+            coinProps.Add("currencyID", coinCurrencyID);
+            coinProps.Add("amount", coins);
+            Debug.Log($"[Minigame] Sending currency.GAIN_CURRENCY: id={coinCurrencyID}, amount={coins}");
+            NetworkAPI.SendExtensionMessage(playerOid, false, "currency.GAIN_CURRENCY", coinProps);
+            Debug.Log($"[Minigame] Sent currency.GAIN_CURRENCY: id={coinCurrencyID}, amount={coins}");
+        }
+
+        // (2) Grant each reward from the list (could be items or currencies)
+        foreach (RewardEntry reward in rewards)
         {
             if (reward.rewardType == RewardType.Currency)
             {
-                Dictionary<string, object> props = new Dictionary<string, object>();
-                props.Add("currencyID", reward.rewardID);
-                props.Add("amount", reward.rewardAmount);
-                NetworkAPI.SendExtensionMessage(ClientAPI.GetPlayerOid(), false, "currency.GAIN_CURRENCY", props);
+                // Prepare and send currency reward message
+                Dictionary<string, object> curProps = new Dictionary<string, object>();
+                curProps.Add("currencyID", reward.rewardID);
+                curProps.Add("amount", reward.rewardAmount);
+                Debug.Log($"[Minigame] Sending currency.GAIN_CURRENCY: id={reward.rewardID}, amount={reward.rewardAmount}");
+                NetworkAPI.SendExtensionMessage(playerOid, false, "currency.GAIN_CURRENCY", curProps);
+                Debug.Log($"[Minigame] Sent currency.GAIN_CURRENCY: id={reward.rewardID}, amount={reward.rewardAmount}");
             }
             else if (reward.rewardType == RewardType.Item)
             {
+                // Prepare and send item reward message
                 Dictionary<string, object> itemProps = new Dictionary<string, object>();
-                itemProps.Add("itemID", reward.rewardID);
-                itemProps.Add("amount", reward.rewardAmount);
-                NetworkAPI.SendExtensionMessage(ClientAPI.GetPlayerOid(), false, "inventory.GAIN_ITEM", itemProps);
+                itemProps.Add("itemTemplateID", reward.rewardID);
+                itemProps.Add("count", reward.rewardAmount);
+                Debug.Log($"[Minigame] Sending inventory.GAIN_ITEM: id={reward.rewardID}, amount={reward.rewardAmount}");
+                NetworkAPI.SendExtensionMessage(playerOid, false, "inventory.GAIN_ITEM", itemProps);
+                Debug.Log($"[Minigame] Sent inventory.GAIN_ITEM: id={reward.rewardID}, amount={reward.rewardAmount}");
             }
         }
-        // Grant coins as a currency if you want
-        if (coins > 0)
-        {
-            Dictionary<string, object> props = new Dictionary<string, object>();
-            props.Add("currencyID", coinCurrencyID); // replace with your real coin currency ID!
-            props.Add("amount", coins);
-            NetworkAPI.SendExtensionMessage(ClientAPI.GetPlayerOid(), false, "currency.GAIN_CURRENCY", props);
-        }
+        // (All reward messages have been sent. The instance exit will be handled after the delay or when the exit button is pressed.)
     }
 
-    // ----------- EXIT INSTANCE: USES ATAVISM NETWORK CALL -----------
+    /// <summary>
+    /// Initiates leaving the instance (minigame), returning the player to the main world.
+    /// This sends the Atavism "ao.leaveInstance" message to trigger teleportation.
+    /// </summary>
     public void ExitMinigame()
     {
+        // If called via button, show immediate exit text (stop the countdown display)
         if (exitButton != null)
+        {
             exitButton.GetComponentInChildren<TMP_Text>().text = "Exit";
+        }
         exitCountdownActive = false;
 
         Debug.Log("[Minigame] Exiting minigame...");
 
+        // If a custom player prefab was used, destroy it and re-enable the original player
         if (playerOverrideInstance != null)
         {
             Destroy(playerOverrideInstance);
-            var atavismPlayer = FindObjectOfType<CharacterController>();
-            if (atavismPlayer != null) atavismPlayer.gameObject.SetActive(true);
+            CharacterController atavismPlayer = FindObjectOfType<CharacterController>();
+            if (atavismPlayer != null)
+                atavismPlayer.gameObject.SetActive(true);
         }
 
-        // Forcibly send the Atavism instance exit message!
+        // Send the Atavism extension message to leave the instance
         Dictionary<string, object> props = new Dictionary<string, object>();
         NetworkAPI.SendExtensionMessage(ClientAPI.GetPlayerOid(), false, "ao.leaveInstance", props);
+        // (The server will handle teleporting the player out of the instance)
     }
 
-    // ----------- REWARD DATA CLASSES -----------
+    // -------------------- Data Classes for Rewards --------------------
+
     [System.Serializable]
     public class ScoreRewardTier
     {
@@ -314,8 +441,10 @@ public class MinigameManager : MonoBehaviour
     public class RewardEntry
     {
         public RewardType rewardType;
-        public int rewardID = 0; // Atavism ItemTemplateID or CurrencyID
+        [Tooltip("For Item: Item Template ID. For Currency: Currency ID.")]
+        public int rewardID = 0;
         public int rewardAmount = 1;
     }
+
     public enum RewardType { Item, Currency }
 }

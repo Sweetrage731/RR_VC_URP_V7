@@ -5934,8 +5934,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_RenderShadows: 1
-  m_RequiresDepthTextureOption: 2
-  m_RequiresOpaqueTextureOption: 2
+  m_RequiresDepthTextureOption: 1
+  m_RequiresOpaqueTextureOption: 1
   m_CameraType: 0
   m_Cameras: []
   m_RendererIndex: -1
@@ -7739,7 +7739,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 6dc42323b33e2064385fad46cee9b6a1, type: 3}
       propertyPath: logLevel
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 6dc42323b33e2064385fad46cee9b6a1, type: 3}
       propertyPath: playerTag
