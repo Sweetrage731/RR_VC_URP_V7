@@ -1,8 +1,16 @@
 using UnityEngine;
 
+public enum CollectibleType
+{
+    Coin,
+    Gem,
+    Key,
+    Custom
+}
+
 public class Collectible : MonoBehaviour
 {
-    public CollectibleType type;
+    public CollectibleType type;   // Now this is valid!
     public int points = 0;
     public int coins = 0;
 
