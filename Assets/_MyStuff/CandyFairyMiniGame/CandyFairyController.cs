@@ -50,7 +50,7 @@ public class CandyFairyController : MonoBehaviour
             if (isGrounded)
             {
                 jumpQueued = true;
-                animator.SetTrigger("Jump");
+                // Moved animator.SetTrigger("Jump") to Update()
             }
         };
 
@@ -71,7 +71,6 @@ public class CandyFairyController : MonoBehaviour
 
         controls.CandyPlayer.Dash.performed += _ => Trigger("Dash");
 
-        // ✅ Updated: Call FireCandyCannon() directly and play Cast animation separately
         controls.CandyPlayer.Cast.performed += _ =>
         {
             FireCandyCannon();
@@ -96,6 +95,9 @@ public class CandyFairyController : MonoBehaviour
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             jumpQueued = false;
+
+            if (animator != null)
+                animator.SetTrigger("Jump"); // ✅ Play animation only when jump actually happens
         }
     }
 
