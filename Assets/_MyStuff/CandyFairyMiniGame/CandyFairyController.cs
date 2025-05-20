@@ -178,8 +178,18 @@ public class CandyFairyController : MonoBehaviour
     {
         if (candyCannon == null) return;
 
-        Vector3 spawnPosition = cannonSpawnPoint != null ? cannonSpawnPoint.position : transform.position + transform.forward * 0.5f;
+        Vector3 offset = transform.forward * 0.5f + Vector3.up * 0.75f;
+        Vector3 spawnPosition = (cannonSpawnPoint != null ? cannonSpawnPoint.position : transform.position) + offset;
+
         GameObject projectile = Instantiate(candyCannon, spawnPosition, transform.rotation);
+
+        // 🧠 This is the important new part:
+        Collider myCollider = GetComponent<Collider>();
+        Collider projectileCollider = projectile.GetComponent<Collider>();
+        if (myCollider != null && projectileCollider != null)
+        {
+            Physics.IgnoreCollision(myCollider, projectileCollider);
+        }
 
         Rigidbody rbProjectile = projectile.GetComponent<Rigidbody>();
         if (rbProjectile != null)
@@ -187,4 +197,5 @@ public class CandyFairyController : MonoBehaviour
             rbProjectile.linearVelocity = transform.forward * cannonSpeed;
         }
     }
+
 }
