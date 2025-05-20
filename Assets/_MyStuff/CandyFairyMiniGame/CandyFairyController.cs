@@ -19,6 +19,11 @@ public class CandyFairyController : MonoBehaviour
     [Header("Camera Reference")]
     public Transform cameraTransform;
 
+    [Header("Combat")]
+    public GameObject candyCannon; // Prefab
+    public float cannonSpeed = 15f;
+    public Transform cannonSpawnPoint;
+
     private Rigidbody rb;
     private CandyControls controls;
     private Animator animator;
@@ -45,7 +50,7 @@ public class CandyFairyController : MonoBehaviour
             if (isGrounded)
             {
                 jumpQueued = true;
-                animator.SetTrigger("Jump");
+                // Moved animator.SetTrigger("Jump") to Update()
             }
         };
 
@@ -65,7 +70,13 @@ public class CandyFairyController : MonoBehaviour
         };
 
         controls.CandyPlayer.Dash.performed += _ => Trigger("Dash");
-        controls.CandyPlayer.Cast.performed += _ => Trigger("Cast");
+
+        controls.CandyPlayer.Cast.performed += _ =>
+        {
+            FireCandyCannon();
+            Trigger("Cast");
+        };
+
         controls.CandyPlayer.Interact.performed += _ => Trigger("Interact");
         controls.CandyPlayer.Emote.performed += _ => Trigger("Emote");
         controls.CandyPlayer.Special.performed += _ => Trigger("Special");
@@ -77,12 +88,16 @@ public class CandyFairyController : MonoBehaviour
     void Update()
     {
         if (groundCheck == null || cameraTransform == null || isDead) return;
+
         isGrounded = Physics.CheckSphere(groundCheck.position, groundRadius, groundLayer);
 
         if (jumpQueued && isGrounded)
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             jumpQueued = false;
+
+            if (animator != null)
+                animator.SetTrigger("Jump"); // ✅ Play animation only when jump actually happens
         }
     }
 
@@ -90,7 +105,6 @@ public class CandyFairyController : MonoBehaviour
     {
         if (isDead) return;
 
-        // Get camera-relative movement direction
         Vector3 camForward = cameraTransform.forward;
         Vector3 camRight = cameraTransform.right;
         camForward.y = 0f;
@@ -102,23 +116,19 @@ public class CandyFairyController : MonoBehaviour
 
         if (moveDir.sqrMagnitude > 0.01f)
         {
-            // Rotate smoothly to face movement direction
             Quaternion targetRotation = Quaternion.LookRotation(moveDir);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.fixedDeltaTime);
         }
 
-        // Apply velocity
         Vector3 velocity = moveDir.normalized * moveSpeed;
         velocity.y = rb.linearVelocity.y;
         rb.linearVelocity = velocity;
 
-        // Adjust float physics
         if (!isGrounded && isFloating)
         {
             rb.AddForce(Vector3.down * (1 - floatGravityScale) * Physics.gravity.y, ForceMode.Acceleration);
         }
 
-        // Update animation
         if (animator != null)
         {
             float speed = new Vector2(rb.linearVelocity.x, rb.linearVelocity.z).magnitude;
@@ -156,5 +166,36 @@ public class CandyFairyController : MonoBehaviour
             Gizmos.color = Color.yellow;
             Gizmos.DrawWireSphere(groundCheck.position, groundRadius);
         }
+
+        if (cannonSpawnPoint != null)
+        {
+            Gizmos.color = Color.magenta;
+            Gizmos.DrawWireSphere(cannonSpawnPoint.position, 0.1f);
+        }
     }
+
+    private void FireCandyCannon()
+    {
+        if (candyCannon == null) return;
+
+        Vector3 offset = transform.forward * 0.5f + Vector3.up * 0.75f;
+        Vector3 spawnPosition = (cannonSpawnPoint != null ? cannonSpawnPoint.position : transform.position) + offset;
+
+        GameObject projectile = Instantiate(candyCannon, spawnPosition, transform.rotation);
+
+        // 🧠 This is the important new part:
+        Collider myCollider = GetComponent<Collider>();
+        Collider projectileCollider = projectile.GetComponent<Collider>();
+        if (myCollider != null && projectileCollider != null)
+        {
+            Physics.IgnoreCollision(myCollider, projectileCollider);
+        }
+
+        Rigidbody rbProjectile = projectile.GetComponent<Rigidbody>();
+        if (rbProjectile != null)
+        {
+            rbProjectile.linearVelocity = transform.forward * cannonSpeed;
+        }
+    }
+
 }
