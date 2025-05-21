@@ -206,42 +206,32 @@ namespace Atavism
 
         public void StartInteraction()
         {
+            Debug.Log($"[InteractiveObject] Player is trying to interact with object ID: {id}, type: {interactionType}");
+
             int level = 1;
             if (ClientAPI.GetPlayerObject().PropertyExists("level"))
                 level = (int)ClientAPI.GetPlayerObject().GetProperty("level");
+
+            Debug.Log($"[InteractiveObject] Player level: {level}, Min required: {minLevel}, Max allowed: {maxLevel}");
+
             if (interactionType.Equals("InstancePortal") && level > maxLevel)
             {
-                string[] args = new string[1];
-#if AT_I2LOC_PRESET
-            args[0] = I2.Loc.LocalizationManager.GetTranslation("You cannot permit enter to instance becouse you have level to heigh.");
-#else
-                args[0] = "You cannot permit enter to instance becouse you have level to heigh.";
-#endif
-                AtavismEventSystem.DispatchEvent("ERROR_MESSAGE", args);
+                Debug.LogWarning("[InteractiveObject] Player level too high for this portal.");
+                AtavismEventSystem.DispatchEvent("ERROR_MESSAGE", new string[] { "You cannot enter this instance because your level is too high." });
             }
             else if (interactionType.Equals("InstancePortal") && level < minLevel)
             {
-                string[] args = new string[1];
-#if AT_I2LOC_PRESET
-            args[0] = I2.Loc.LocalizationManager.GetTranslation("You cannot permit enter to instance becouse you have level to low.");
-#else
-                args[0] = "You cannot permit enter to instance becouse you have level to low.";
-#endif
-                AtavismEventSystem.DispatchEvent("ERROR_MESSAGE", args);
+                Debug.LogWarning("[InteractiveObject] Player level too low for this portal.");
+                AtavismEventSystem.DispatchEvent("ERROR_MESSAGE", new string[] { "You cannot enter this instance because your level is too low." });
             }
             else if (Time.time < cooldownEnds)
             {
-                // Send error message
-                string[] args = new string[1];
-#if AT_I2LOC_PRESET
-            args[0] = I2.Loc.LocalizationManager.GetTranslation("You cannot perform that action yet.");
-#else
-                args[0] = "You cannot perform that action yet.";
-#endif
-                AtavismEventSystem.DispatchEvent("ERROR_MESSAGE", args);
+                Debug.LogWarning($"[InteractiveObject] Interaction is on cooldown. Time left: {cooldownEnds - Time.time:F2}s");
+                AtavismEventSystem.DispatchEvent("ERROR_MESSAGE", new string[] { "You cannot perform that action yet." });
             }
             else
             {
+                Debug.Log($"[InteractiveObject] Sending ao.INTERACT_WITH_OBJECT for ID: {id}");
                 Dictionary<string, object> props = new Dictionary<string, object>();
                 props.Add("objectID", id);
                 props.Add("state", MoveToNextState());

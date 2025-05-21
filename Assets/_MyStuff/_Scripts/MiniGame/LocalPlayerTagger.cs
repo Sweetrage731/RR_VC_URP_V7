@@ -1,7 +1,7 @@
 using UnityEngine;
 
 /// <summary>
-/// Automatically tags the local player object as 'Player' for minigame collectible logic.
+/// Auto-tags the local Atavism player object as "Player" for minigame collectible logic.
 /// </summary>
 public class LocalPlayerTagger : MonoBehaviour
 {
