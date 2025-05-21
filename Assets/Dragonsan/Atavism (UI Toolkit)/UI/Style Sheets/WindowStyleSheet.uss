@@ -3,9 +3,16 @@
     height: 620px;
     width: 420px;
     -unity-font: url('project://database/Assets/Dragonsan/AtavismObjects/Fonts/Cambria.ttf?fileID=12800000&guid=36ef3a2444bc15847bd874b9b0c98ae6&type=3#Cambria');
-    color: rgb(210, 210, 210);
     font-size: 11px;
-    -unity-background-image-tint-color: rgb(255, 255, 255);
+    color: #cceeff;
+    background-color: rgba(15, 10, 30, 0.92);
+    border-radius: 18px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #6f4fd2;
+    padding: 12px;
+    text-shadow: 0 0 4px #88ccff;
+    -unity-background-image-tint-color: white;
 }
 
 .screen-top {
@@ -35,8 +42,12 @@
 }
 
 .Window-title {
-    left: 35%;
-    font-size: 25px;
+    font-size: 26px;
+    color: #99ddff;
+    -unity-font-style: bold;
+    text-shadow: 0 0 6px #66bbff;
+    text-align: center;
+    margin-top: 5px;
 }
 
 .Window-close-button {
