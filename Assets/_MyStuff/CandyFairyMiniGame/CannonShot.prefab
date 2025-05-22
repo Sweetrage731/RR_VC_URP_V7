@@ -4822,7 +4822,7 @@ GameObject:
   - component: {fileID: 5065660399477816699}
   - component: {fileID: 4856948923542676017}
   - component: {fileID: 3399190819417666097}
-  - component: {fileID: 1944652192955336729}
+  - component: {fileID: 2647324944360763701}
   m_Layer: 22
   m_Name: CannonShot
   m_TagString: Untagged
@@ -9670,7 +9670,7 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.45
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1944652192955336729
+--- !u!114 &2647324944360763701
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9679,8 +9679,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 2715257979917759449}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e827861ed71c624c9093e3e5d598e05, type: 3}
+  m_Script: {fileID: 11500000, guid: 83b2533aff8c6ec4cab88f725a490cbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionEffectPrefab: {fileID: 5631071702999694778, guid: feae21b5b29dba949afe1fcf07eb6fe4, type: 3}
   lifetime: 5
+  hitEffect: {fileID: 5631071702999694778, guid: feae21b5b29dba949afe1fcf07eb6fe4, type: 3}

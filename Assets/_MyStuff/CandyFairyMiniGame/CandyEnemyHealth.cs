@@ -3,6 +3,7 @@ using UnityEngine;
 public class CandyEnemyHealth : MonoBehaviour
 {
     public int maxHealth = 3;
+    public int points = 10; // Set this per monster in the Inspector
     private int currentHealth;
 
     public GameObject deathEffect;
@@ -30,7 +31,11 @@ public class CandyEnemyHealth : MonoBehaviour
         if (deathEffect)
             Instantiate(deathEffect, transform.position, Quaternion.identity);
 
+        Debug.Log("Enemy died.");
+
+        // Add score
+        CandyScoreManager.AddPoints(points);
+
         Destroy(gameObject);
-        // TODO: Add score reward here
     }
 }

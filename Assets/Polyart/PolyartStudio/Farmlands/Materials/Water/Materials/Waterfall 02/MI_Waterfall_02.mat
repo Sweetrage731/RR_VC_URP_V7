@@ -16,7 +16,7 @@ Material:
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 4999
+  m_CustomRenderQueue: 3000
   stringTagMap: {}
   disabledShaderPasses: []
   m_LockedProperties: 
@@ -59,8 +59,21 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _AlphaCutoff: 0.5
     - _BottomFoamDistortion: 0.077
     - _BottomFoamExtendMax: 0.338
     - _BottomFoamExtendMin: -0.13
@@ -82,6 +95,10 @@ Material:
     - _DebugNormals: 1
     - _DebugVoronoiFoam: 0
     - _DebugWaterColor: 0
+    - _EdgeFoamDistance: 1
+    - _EdgeFoamOpacity: 1
+    - _EdgeFoamStep: 0.1
+    - _EnvironmentReflections: 1
     - _InitialOpacityGradience: 9.16
     - _NoiseLinesDistortion: 0.3
     - _NoiseLinesHeightlerp: -0.67
@@ -91,6 +108,9 @@ Material:
     - _NoiseLinesSpeed: -1.62
     - _NoiseLinesStep: 0
     - _NormalStrength: 1.23
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    - _ReceiveShadows: 1
     - _SmallDots1Distortion: 0.0341
     - _SmallDots1Opacity: 0.313
     - _SmallDots1Speed: -0.42
@@ -100,6 +120,7 @@ Material:
     - _SmallDots2Speed: -0.6
     - _SmallDots2Step: 0.81
     - _Smoothness: 0.807
+    - _SpecularHighlights: 1
     - _StartNoiseHarshDistortion: 0.069
     - _StartNoiseHarshSpeed: -0.71
     - _StartNoiseHarshStep: 0.156
@@ -130,8 +151,10 @@ Material:
     - _Color2: {r: 0, g: 0.5294118, b: 0.76470596, a: 0}
     - _Color3: {r: 0.38875046, g: 0.85076356, b: 0.9056604, a: 0}
     - _Color4: {r: 1, g: 1, b: 1, a: 0}
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _NoiseLinesScale: {r: 0.57, g: 15.36, b: 0, a: 0}
     - _SmallDots1Scale: {r: 0.7, g: 2.2, b: 0, a: 0}
     - _SmallDots2Scale: {r: 0.62, g: 2.24, b: -0.17, a: 0}
     - _StartNoiseHarshTiling: {r: 0.71, g: 4.3, b: 0, a: 0}
   m_BuildTextureStacks: []
+  m_AllowLocking: 1
